@@ -1,17 +1,17 @@
 #!/bin/bash
 
-data_prefix='./workspace/data/self_no_indirect_data/gq'
-model_dir='./workspace/self_no_indirect_model2015/'
+data_prefix='./workspace/data/gq'
+model_dir='./workspace/model/'
 if [ ! -d "$model_dir" ]; then mkdir -p "$model_dir"; fi
 
-CUDA_VISIBLE_DEVICES=0 nohup python3 train.py \
+CUDA_VISIBLE_DEVICES=0  nohup python3 train.py \
                         -data $data_prefix \
                         -save_model $model_dir \
                         -world_size 1 \
-                        -gpu_ranks 0  \
-                        -save_checkpoint_steps 5000 \
-                        -valid_steps 5000 \
-                        -report_every 20 \
+                        -gpu_ranks 0 \
+                        -save_checkpoint_steps 10000 \
+                        -valid_steps 10000 \
+                        -report_every 10000 \
                         -keep_checkpoint 50 \
                         -seed 3435 \
                         -train_steps 300000 \
@@ -25,7 +25,7 @@ CUDA_VISIBLE_DEVICES=0 nohup python3 train.py \
                         -decay_method noam \
                         -learning_rate 0.5 \
                         -max_grad_norm 0.0 \
-                        -batch_size 4096 \
+                        -batch_size 2048 \
                         -batch_type tokens \
                         -normalization tokens \
                         -dropout 0.3 \
@@ -33,8 +33,6 @@ CUDA_VISIBLE_DEVICES=0 nohup python3 train.py \
                         -max_generator_batches 100 \
                         -param_init 0.0 \
                         -param_init_glorot \
-                        -valid_batch_size 4 \
-                        -accum_count 1  > no_indirect_self_2015 2>&1 & 
-
+                        -valid_batch_size 8 > b2048.log 2>&1 &
 
 

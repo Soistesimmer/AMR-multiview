@@ -3,7 +3,7 @@ import json
 
 parser=argparse.ArgumentParser()
 parser.add_argument('-input')
-parser.add_argument('-output')
+parser.add_argument('-output', default=None)
 parser.add_argument('-vocab')
 args=parser.parse_args()
 
@@ -26,6 +26,7 @@ def find_relation(example):
     child=None
     if example[0]!='(':
         child=example[0]
+        concept_list.append(child)
         example=example[1:]
     else:
         for i,item in enumerate(example):
@@ -41,12 +42,12 @@ def find_relation(example):
 
 # example="and :op1 ( lawyer :domain ( person :name ( name :op1 sulaiman :op2 al-rushoodi ) :arg1-of ( include :arg2 ( group :consist-of ( activist :arg1-of ( detain :time ( date-entity :year 2004 ) ) ) ) ) ) ) :op2 ( have-org-role :arg0 person :arg3 judge :time former )"
 with open(args.input, 'r')as input:
-    train=json.load(input)
-    for instance in train:
-        example=instance['amr']
+    for instance in input.readlines():
+        example=instance
         example=example.split()
         break_node(example)
-with open(args.output, 'w')as output:
-    output.writelines('\n'.join(concept_list))
+if args.output is not None:
+    with open(args.output, 'w')as output:
+        output.writelines('\n'.join(concept_list))
 with open(args.vocab, 'w')as output:
     output.writelines('\n'.join(set(concept_list)))
