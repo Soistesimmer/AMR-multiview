@@ -351,10 +351,9 @@ class Dataset(torchtext.data.Dataset):
             out_fields = get_mask_fields(out_fields)
         else:
             # examples_iter = src_examples_iter
-            examples_iter = (_join_dicts(src, structure, mask) for src, structure, mask in
-                             zip(src_examples_iter, structure_examples_iter, mask_examples_iter))
+            examples_iter = (_join_dicts(src, structure) for src, structure in
+                             zip(src_examples_iter, structure_examples_iter))
             out_fields = get_structure_fields(out_fields)
-            out_fields = get_mask_fields(out_fields)
             fields['structure'].nesting_field.vocab = fields['structure'].vocab
 
         keys = out_fields.keys()  # dict_keys(['src', 'indices', 'tgt', 'structure'])

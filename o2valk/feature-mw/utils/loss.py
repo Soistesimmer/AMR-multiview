@@ -229,7 +229,7 @@ class NMTLossCompute(LossComputeBase):
     def _make_shard_state(self, batch, output, attns=None):
         return {
             "output": output,
-            "target": (batch.tgt[1:], batch.src[0]),
+            "target": (batch.tgt[1:], batch.src[0][1:]),
         }
 
     def _compute_loss(self, batch, output, target):

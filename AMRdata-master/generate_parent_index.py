@@ -12,13 +12,15 @@ def charge_one_dot(str):
     else:
         return False
 
-def gen_par_index_seq(example):
+def gen_par_index_seq(example, with_r):
     tokens=example.split()
     alignment={}
     root_f={}
     for tok in tokens:
         tok=tok.split('-')
-        if tok[1].endswith('r'):
+        if with_r:
+            pass
+        elif tok[1].endswith('r'):
             continue
         alignment[tok[1]]=tok[0]
     for ali in alignment:
@@ -27,12 +29,14 @@ def gen_par_index_seq(example):
                 if alignment[ali] in root_f:
                     root_f[alignment[ali]].append(alignment[ali2])
                     # print('WARN: multi-in alert!', example)
-                root_f[alignment[ali]]=[alignment[ali2]]
+                else:
+                    root_f[alignment[ali]]=[alignment[ali2]]
     return root_f
 
 
 if __name__ == '__main__':
-    # example='1-1.2.1.r 2-1.1 6-1.1.1 7-1.1.1.1.r 8-1.1.1.1 10-1.1.1.2.3 11-1.1.1.2 12-1.1.1.2.3.r 13-1.1.1.2.2 13-1.1.1.2.2.1.1 14-1.1.1.2.2.1 16-1.2.1 17-1.2.1.r 18-1.2 19-1.2.2 21-1.3.1 22-1.3.1.r 23-1.3 24-1.3.2 26-1.4.1 27-1.4 28-1.4.2.1.1 30-1.4.2.1 31-1.4.2'
-    with open('/home/wangante/work-code-20190910/AMRdata-master/LDC2015/dev.align') as file:
-        for example in file.readlines():
-            gen_par_index_seq(example)
+    example='0-1.1.1 1-1.1 2-1.3 2-1.3.r 3-1 4-1.2.r 6-1.2.1 8-1.2.2 9-1.2'
+    print(gen_par_index_seq(example, True))
+    # with open('/home/wangante/work-code-20190910/AMRdata-master/LDC2015/dev.align') as file:
+    #     for example in file.readlines():
+    #         gen_par_index_seq(example, False)

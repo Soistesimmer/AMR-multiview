@@ -108,7 +108,7 @@ class Trainer(object):
         # Set model in training mode.
         self.model.train()
 
-    def train(self, train_iter_fct, valid_iter_fct, train_steps, valid_steps):
+    def train(self, train_iter_fct, valid_iter_fct, train_steps, valid_steps, ratio):
         """
         The main training loops.
         by iterating over training data (i.e. `train_iter_fct`)
@@ -169,7 +169,7 @@ class Trainer(object):
 
                         self._gradient_accumulation(
                             true_batchs, normalization, total_stats,
-                            report_stats)
+                            report_stats, ratio)
 
                         report_stats = self._maybe_report_training(
                             step, train_steps,
@@ -229,7 +229,7 @@ class Trainer(object):
             structure = structure.transpose(1, 2)
 
             # F-prop through the model.
-            outputs, attns = self.model(src, tgt, structure, src_lengths)
+            outputs, attns = self.model(src, tgt, structure, None, src_lengths)
 
             # Compute loss.
             batch_stats = self.valid_loss.monolithic_compute_loss(
@@ -244,7 +244,7 @@ class Trainer(object):
         return stats
 
     def _gradient_accumulation(self, true_batchs, normalization, total_stats,
-                               report_stats):
+                               report_stats, ratio):
         if self.grad_accum_count > 1:
             self.model.zero_grad()
 
@@ -283,8 +283,8 @@ class Trainer(object):
                 # 3. Compute loss in shards for memory efficiency.
                 batch_stats = self.train_loss.sharded_compute_loss(
                     batch, outputs, attns, j,
-                    trunc_size, self.shard_size, normalization)
-                loss=p
+                    trunc_size, self.shard_size, normalization, ratio)
+                loss=p*(1-ratio)
                 loss.backward()
                 total_stats.update(batch_stats)
                 report_stats.update(batch_stats)

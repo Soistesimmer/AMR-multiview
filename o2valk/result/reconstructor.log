@@ -1,0 +1,1974 @@
+[2019-10-25 14:54:32,043 INFO] Input args: Namespace(accum_count=1, adagrad_accumulator_init=0, adam_beta1=0.9, adam_beta2=0.98, batch_size=2048, batch_type='tokens', config=None, data='./workspace/data_wb/gq', dec_layers=6, dec_rnn_size=512, decay_method='noam', decay_steps=10000, dropout=0.3, enc_layers=6, enc_rnn_size=512, epochs=0, exp='', exp_host='', fix_word_vecs_dec=False, fix_word_vecs_enc=False, gpu_backend='nccl', gpu_ranks=[0], gpu_verbose_level=0, gpuid=[], heads=8, keep_checkpoint=50, label_smoothing=0.1, learning_rate=0.5, learning_rate_decay=0.5, log_file='', log_file_level='0', master_ip='localhost', master_port=10000, max_generator_batches=100, max_grad_norm=0.0, normalization='tokens', optim='adam', param_init=0.0, param_init_glorot=True, position_encoding=True, pre_word_vecs_dec=None, pre_word_vecs_enc=None, ratio=0.85, report_every=10000, reset_optim='none', save_checkpoint_steps=10000, save_config=None, save_model='./workspace/model_wb/', seed=3435, self_attn_type='scaled-dot', share_decoder_embeddings=True, share_embeddings=True, src_word_vec_size=512, start_decay_steps=50000, tensorboard=False, tensorboard_log_dir='runs/onmt', tgt_word_vec_size=512, train_from='', train_steps=300000, transformer_ff=2048, truncated_decoder=0, valid_batch_size=8, valid_steps=10000, warmup_steps=16000, world_size=1)
+[2019-10-25 14:54:34,116 INFO]  * vocabulary size. source = 10174; target = 10174; structure = 5002
+[2019-10-25 14:54:34,116 INFO] Building model...
+[2019-10-25 14:54:54,599 INFO] NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (word): Embedding(10174, 512, padding_idx=1)
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3)
+        )
+      )
+    )
+    (structure_embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (word): Embedding(5002, 64, padding_idx=1)
+      )
+    )
+    (transformer): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (att_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (ffn_layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (structure_layer_norm): LayerNorm(torch.Size([64]), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.3)
+      )
+    )
+    (layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (word): Embedding(10174, 512, padding_idx=1)
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+    )
+    (layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+  )
+  (ddecoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (word): Embedding(10174, 512, padding_idx=1)
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.3)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (linear_structure_k): Linear(in_features=64, out_features=64, bias=True)
+          (linear_structure_v): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax()
+          (dropout): Dropout(p=0.3)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (dropout_1): Dropout(p=0.3)
+          (relu): ReLU()
+        )
+        (layer_norm_1): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.3)
+      )
+    )
+    (layer_norm): LayerNorm(torch.Size([512]), eps=1e-06, elementwise_affine=True)
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=512, out_features=10174, bias=True)
+    (1): LogSoftmax()
+  )
+)
+[2019-10-25 14:54:54,604 INFO] encoder: 24495232
+[2019-10-25 14:54:54,604 INFO] decoder: 50647998
+[2019-10-25 14:54:54,604 INFO] * number of parameters: 75143230
+[2019-10-25 14:54:54,606 INFO] Starting training on GPU: [0]
+[2019-10-25 14:54:54,606 INFO] Start training...
+[2019-10-25 14:54:57,159 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 14:56:40,076 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 14:58:43,559 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:00:55,595 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:03:17,088 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:05:39,596 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:08:00,686 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:10:27,440 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:12:53,718 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:15:16,633 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:17:39,560 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:20:06,826 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:22:29,238 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:24:55,893 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:27:21,827 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:29:47,665 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:32:12,858 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:34:40,221 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:37:09,990 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:39:33,158 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:41:59,111 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:44:22,841 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:46:48,451 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:49:12,609 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:51:39,255 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:54:11,506 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:56:38,776 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 15:59:06,226 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:01:33,791 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:04:04,603 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:06:34,437 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:09:04,393 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:11:28,208 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:13:53,194 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:16:20,183 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:18:44,657 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:21:10,227 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:23:35,187 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:25:58,175 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:28:28,432 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:30:54,886 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:33:18,606 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:35:43,995 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:35:45,528 INFO] Step 10000/300000; acc:  43.52; ppl: 25.94; xent: 3.26; lr: 0.00011;   0/9842 tok/s;   6048 sec
+[2019-10-25 16:35:48,180 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-25 16:35:54,377 INFO] Validation perplexity: 68.7082
+[2019-10-25 16:35:54,377 INFO] Validation accuracy: 33.5984
+[2019-10-25 16:35:54,379 INFO] Saving checkpoint ./workspace/model_wb/_step_10000.pt
+[2019-10-25 16:38:20,755 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:40:42,630 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:43:05,106 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:45:30,755 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:47:57,204 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:50:21,414 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:52:47,361 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:55:13,614 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 16:57:39,894 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:00:09,483 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:02:35,425 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:05:02,135 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:07:26,836 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:09:50,531 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:12:15,500 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:14:39,625 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:17:01,804 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:19:25,465 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:21:51,842 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:24:21,723 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:26:47,933 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:29:15,000 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:31:41,789 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:34:04,564 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:36:32,605 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:38:58,366 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:41:20,625 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:43:45,697 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:46:06,489 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:48:36,550 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:51:02,549 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:53:28,800 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:55:51,518 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 17:58:18,885 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:00:43,835 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:03:11,877 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:05:35,392 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:08:00,725 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:10:29,743 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:12:54,976 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:15:21,406 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:17:47,783 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:17:52,637 INFO] Step 20000/300000; acc:  71.45; ppl:  3.66; xent: 1.30; lr: 0.00016;   0/9715 tok/s;  12175 sec
+[2019-10-25 18:17:53,517 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-25 18:17:59,400 INFO] Validation perplexity: 12.0466
+[2019-10-25 18:17:59,400 INFO] Validation accuracy: 58.3374
+[2019-10-25 18:17:59,402 INFO] Saving checkpoint ./workspace/model_wb/_step_20000.pt
+[2019-10-25 18:20:28,082 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:22:53,274 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:25:19,653 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:27:46,184 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:30:11,038 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:32:35,711 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:35:02,820 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:37:29,747 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:39:58,087 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:42:20,329 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:44:48,662 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:47:15,856 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:49:45,705 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:52:13,582 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:54:39,907 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:57:06,503 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 18:59:34,716 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:01:59,492 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:04:23,419 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:06:49,099 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:09:15,454 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:11:44,804 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:14:07,222 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:16:33,320 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:19:01,377 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:21:28,266 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:23:56,693 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:26:23,717 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:28:50,449 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:31:15,167 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:33:42,999 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:36:12,588 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:38:39,145 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:41:09,295 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:43:33,133 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:46:01,879 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:48:27,573 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:50:53,082 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:53:21,005 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:55:48,223 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 19:58:15,853 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:00:41,346 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:00:48,695 INFO] Step 30000/300000; acc:  84.04; ppl:  1.95; xent: 0.67; lr: 0.00013;   0/9639 tok/s;  18352 sec
+[2019-10-25 20:00:49,357 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-25 20:00:55,256 INFO] Validation perplexity: 10.7486
+[2019-10-25 20:00:55,256 INFO] Validation accuracy: 61.5511
+[2019-10-25 20:00:55,258 INFO] Saving checkpoint ./workspace/model_wb/_step_30000.pt
+[2019-10-25 20:03:14,785 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:05:37,297 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:08:01,595 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:10:25,980 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:12:53,716 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:15:21,417 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:17:46,204 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:20:12,841 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:22:35,708 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:25:07,179 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:27:36,345 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:30:03,212 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:32:29,886 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:34:55,101 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:37:20,290 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:39:41,919 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:42:08,678 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:44:35,714 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:47:01,260 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:49:25,217 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:51:54,660 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:54:21,197 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:56:47,688 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 20:59:10,383 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:01:35,177 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:04:01,096 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:06:27,872 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:08:55,136 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:11:22,031 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:13:47,618 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:16:11,534 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:18:35,357 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:21:03,370 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:23:26,031 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:25:53,108 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:28:15,243 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:30:39,041 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:33:05,361 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:35:30,388 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:37:57,234 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:40:21,915 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:42:48,500 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:42:56,086 INFO] Step 40000/300000; acc:  88.56; ppl:  1.61; xent: 0.47; lr: 0.00011;   0/9716 tok/s;  24479 sec
+[2019-10-25 21:42:56,708 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-25 21:43:02,574 INFO] Validation perplexity: 10.9955
+[2019-10-25 21:43:02,575 INFO] Validation accuracy: 62.4201
+[2019-10-25 21:43:02,577 INFO] Saving checkpoint ./workspace/model_wb/_step_40000.pt
+[2019-10-25 21:45:21,454 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:47:47,279 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:50:11,861 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:52:36,279 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:55:01,522 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:57:27,313 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 21:59:51,712 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:02:15,162 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:04:41,927 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:07:09,790 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:09:35,808 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:12:00,670 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:14:28,000 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:17:02,354 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:19:48,783 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:22:37,878 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:25:30,637 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:28:13,635 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:31:08,131 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:34:00,109 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:36:50,605 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:39:35,124 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:42:27,151 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:45:21,651 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:48:07,768 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:50:53,420 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:53:40,843 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:56:29,656 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 22:59:20,497 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:02:09,197 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:04:51,808 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:07:35,680 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:10:23,745 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:13:08,829 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:16:02,755 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:18:51,803 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:21:36,233 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:24:30,789 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:27:24,634 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:30:12,181 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:32:59,474 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:35:43,726 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:35:56,907 INFO] Step 50000/300000; acc:  91.08; ppl:  1.45; xent: 0.37; lr: 0.00010;   0/8782 tok/s;  31260 sec
+[2019-10-25 23:35:57,543 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-25 23:36:03,625 INFO] Validation perplexity: 11.9711
+[2019-10-25 23:36:03,626 INFO] Validation accuracy: 63.1114
+[2019-10-25 23:36:03,628 INFO] Saving checkpoint ./workspace/model_wb/_step_50000.pt
+[2019-10-25 23:38:36,416 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:41:09,118 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:43:54,552 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:46:40,293 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:49:25,146 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:52:13,182 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:54:58,737 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-25 23:57:45,823 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:00:31,993 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:03:19,573 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:06:09,548 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:08:57,545 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:11:42,452 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:14:32,234 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:17:18,445 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:20:12,190 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:23:02,999 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:25:49,991 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:28:38,150 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:31:34,686 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:34:29,323 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:37:18,768 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:40:08,453 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:42:59,034 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:45:42,956 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:48:31,871 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:51:16,579 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:54:04,654 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:56:47,956 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 00:59:44,528 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:02:27,424 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:04:54,253 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:07:39,463 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:10:23,668 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:13:10,191 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:15:56,492 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:18:45,807 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:21:33,971 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:24:29,835 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:27:16,954 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:30:17,785 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:33:01,157 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:33:13,875 INFO] Step 60000/300000; acc:  92.74; ppl:  1.37; xent: 0.31; lr: 0.00009;   0/8458 tok/s;  38297 sec
+[2019-10-26 01:33:14,440 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 01:33:20,098 INFO] Validation perplexity: 12.8412
+[2019-10-26 01:33:20,098 INFO] Validation accuracy: 63.0349
+[2019-10-26 01:33:20,100 INFO] Saving checkpoint ./workspace/model_wb/_step_60000.pt
+[2019-10-26 01:36:47,534 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:39:48,090 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:42:37,251 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:45:20,267 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:48:19,464 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:51:13,328 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:54:04,963 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:56:54,950 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 01:59:47,157 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:02:36,528 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:05:30,892 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:08:30,184 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:11:14,913 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:14:06,564 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:16:54,842 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:19:52,820 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:22:31,323 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:25:34,074 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:28:05,281 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:30:40,703 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:33:09,791 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:36:05,304 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:39:01,739 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:41:58,420 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:44:55,215 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:47:46,987 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:50:40,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:53:26,629 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:56:09,941 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 02:58:59,625 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:01:54,572 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:04:53,873 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:07:41,228 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:10:41,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:13:37,343 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:16:40,103 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:19:29,889 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:22:25,092 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:25:16,365 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:28:05,783 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:31:01,287 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:33:54,487 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:34:09,873 INFO] Step 70000/300000; acc:  93.92; ppl:  1.31; xent: 0.27; lr: 0.00008;   0/8206 tok/s;  45553 sec
+[2019-10-26 03:34:10,447 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 03:34:16,167 INFO] Validation perplexity: 13.2518
+[2019-10-26 03:34:16,168 INFO] Validation accuracy: 63.2235
+[2019-10-26 03:34:16,169 INFO] Saving checkpoint ./workspace/model_wb/_step_70000.pt
+[2019-10-26 03:37:27,017 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:40:05,866 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:42:58,551 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:45:50,056 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:48:38,139 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:51:23,041 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:53:59,608 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:56:31,618 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 03:59:21,458 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:02:13,408 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:04:59,582 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:07:48,667 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:10:41,338 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:13:35,366 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:16:29,413 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:19:37,188 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:22:34,786 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:25:29,467 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:28:28,888 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:31:18,022 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:34:09,884 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:36:57,969 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:39:48,934 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:42:39,825 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:45:28,960 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:48:17,871 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:51:09,495 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:54:00,822 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:56:49,161 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 04:59:39,904 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:02:28,457 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:05:24,602 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:08:13,263 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:11:04,077 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:13:51,236 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:16:37,010 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:19:12,610 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:21:54,514 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:24:41,695 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:27:32,191 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:30:24,124 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:33:13,112 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:33:32,528 INFO] Step 80000/300000; acc:  94.79; ppl:  1.27; xent: 0.24; lr: 0.00008;   0/8308 tok/s;  52715 sec
+[2019-10-26 05:33:33,282 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 05:33:40,713 INFO] Validation perplexity: 13.9432
+[2019-10-26 05:33:40,714 INFO] Validation accuracy: 63.3956
+[2019-10-26 05:33:40,716 INFO] Saving checkpoint ./workspace/model_wb/_step_80000.pt
+[2019-10-26 05:36:22,156 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:39:18,208 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:42:08,361 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:45:03,373 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:47:51,569 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:50:39,600 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:53:23,040 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:56:13,119 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 05:59:04,204 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:01:54,223 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:04:42,096 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:07:32,327 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:10:17,406 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:13:12,278 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:16:02,830 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:18:47,976 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:21:42,165 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:24:27,986 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:27:22,522 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:30:08,087 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:33:01,751 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:35:54,809 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:38:44,602 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:41:28,771 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:44:01,382 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:46:42,361 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:49:37,455 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:52:39,142 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:55:31,777 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 06:58:17,464 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:01:04,131 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:03:55,412 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:06:42,738 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:09:27,784 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:12:27,731 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:15:08,215 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:17:57,354 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:20:42,801 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:23:31,912 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:26:24,061 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:29:10,658 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:31:59,146 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:32:17,765 INFO] Step 90000/300000; acc:  95.46; ppl:  1.24; xent: 0.22; lr: 0.00007;   0/8356 tok/s;  59841 sec
+[2019-10-26 07:32:18,338 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 07:32:24,365 INFO] Validation perplexity: 14.338
+[2019-10-26 07:32:24,365 INFO] Validation accuracy: 63.4831
+[2019-10-26 07:32:24,367 INFO] Saving checkpoint ./workspace/model_wb/_step_90000.pt
+[2019-10-26 07:35:08,362 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:38:02,310 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:40:52,103 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:43:43,710 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:46:36,887 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:49:25,713 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:52:32,644 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:55:22,622 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 07:58:12,751 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:01:04,613 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:04:06,522 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:07:08,129 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:09:48,864 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:12:27,585 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:15:10,986 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:18:07,682 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:20:57,237 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:23:51,534 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:26:40,276 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:29:31,893 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:32:12,228 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:35:05,165 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:37:51,598 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:40:41,133 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:43:29,696 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:46:18,483 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:49:05,253 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:51:56,773 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:54:44,805 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 08:57:35,903 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:00:27,552 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:03:13,177 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:06:00,083 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:08:49,226 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:11:44,553 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:14:31,066 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:17:18,935 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:20:08,078 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:23:21,169 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:26:14,730 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:29:07,759 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:31:56,281 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:32:18,519 INFO] Step 100000/300000; acc:  95.97; ppl:  1.22; xent: 0.20; lr: 0.00007;   0/8269 tok/s;  67041 sec
+[2019-10-26 09:32:19,092 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 09:32:24,836 INFO] Validation perplexity: 14.7421
+[2019-10-26 09:32:24,836 INFO] Validation accuracy: 63.617
+[2019-10-26 09:32:24,838 INFO] Saving checkpoint ./workspace/model_wb/_step_100000.pt
+[2019-10-26 09:35:11,353 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:37:57,225 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:40:52,330 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:43:55,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:46:40,537 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:49:40,505 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:52:21,692 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:55:21,508 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 09:58:10,247 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:01:04,257 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:03:51,892 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:06:42,912 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:09:33,178 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:12:24,887 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:15:16,413 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:18:00,967 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:20:49,175 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:23:44,102 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:26:33,635 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:29:21,390 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:32:06,743 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:34:59,036 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:38:09,309 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:41:14,740 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:44:07,004 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:47:01,257 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:49:42,630 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:52:32,098 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:55:24,933 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 10:58:03,710 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:00:35,979 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:03:29,658 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:06:17,930 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:09:10,471 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:11:55,914 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:14:45,738 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:17:41,178 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:20:34,170 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:23:25,439 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:26:15,818 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:29:16,426 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:32:20,938 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:32:41,666 INFO] Step 110000/300000; acc:  96.38; ppl:  1.20; xent: 0.18; lr: 0.00007;   0/8240 tok/s;  74265 sec
+[2019-10-26 11:32:42,262 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 11:32:48,055 INFO] Validation perplexity: 15.003
+[2019-10-26 11:32:48,055 INFO] Validation accuracy: 63.5377
+[2019-10-26 11:32:48,058 INFO] Saving checkpoint ./workspace/model_wb/_step_110000.pt
+[2019-10-26 11:35:45,117 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:38:22,170 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:41:03,917 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:43:53,652 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:46:49,083 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:49:33,134 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:52:29,922 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:55:31,914 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 11:58:34,623 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:01:35,546 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:04:22,196 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:07:19,273 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:10:06,161 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:13:05,229 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:15:54,929 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:18:49,465 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:21:35,633 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:24:03,226 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:26:42,927 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:29:35,991 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:32:29,641 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:35:27,753 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:38:22,756 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:41:15,777 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:44:12,496 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:47:06,571 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:49:58,510 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:52:53,470 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:55:45,272 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 12:58:30,101 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:01:30,653 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:04:24,822 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:07:22,756 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:10:21,732 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:13:13,100 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:15:59,699 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:18:50,416 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:21:55,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:24:55,236 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:27:43,708 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:30:37,313 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:33:30,081 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:34:00,948 INFO] Step 120000/300000; acc:  96.71; ppl:  1.19; xent: 0.17; lr: 0.00006;   0/8179 tok/s;  81544 sec
+[2019-10-26 13:34:01,544 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 13:34:07,201 INFO] Validation perplexity: 15.0574
+[2019-10-26 13:34:07,202 INFO] Validation accuracy: 63.7263
+[2019-10-26 13:34:07,204 INFO] Saving checkpoint ./workspace/model_wb/_step_120000.pt
+[2019-10-26 13:37:25,527 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:40:11,265 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:43:05,109 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:45:55,426 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:48:38,873 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:51:28,093 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:54:24,679 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 13:57:20,938 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:00:16,312 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:03:08,084 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:06:01,415 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:09:00,429 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:11:49,213 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:14:42,100 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:17:44,804 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:20:33,745 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:23:42,965 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:26:46,000 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:29:31,788 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:32:28,282 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:35:25,810 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:38:15,744 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:41:16,972 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:44:07,641 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:47:02,767 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:50:01,476 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:52:52,668 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:55:44,088 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 14:58:30,287 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:01:31,735 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:04:29,160 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:07:25,780 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:10:06,403 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:12:42,776 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:15:21,853 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:18:21,251 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:21:23,818 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:24:21,035 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:27:17,934 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:30:11,002 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:33:18,845 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:36:20,302 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:36:51,938 INFO] Step 130000/300000; acc:  96.98; ppl:  1.17; xent: 0.16; lr: 0.00006;   0/8074 tok/s;  88915 sec
+[2019-10-26 15:36:52,529 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 15:37:01,454 INFO] Validation perplexity: 15.1958
+[2019-10-26 15:37:01,455 INFO] Validation accuracy: 63.7591
+[2019-10-26 15:37:01,457 INFO] Saving checkpoint ./workspace/model_wb/_step_130000.pt
+[2019-10-26 15:39:47,149 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:42:33,535 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:45:24,304 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:48:17,784 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:51:25,627 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:54:21,258 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 15:57:18,659 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:00:12,657 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:03:14,453 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:05:57,699 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:09:02,563 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:12:00,663 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:15:05,378 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:17:49,565 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:20:47,487 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:23:45,682 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:26:49,731 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:29:44,206 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:32:43,753 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:35:22,234 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:37:50,070 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:40:34,907 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:43:39,690 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:46:35,432 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:49:29,218 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:52:18,946 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:55:28,164 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 16:58:42,439 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:01:55,818 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:05:18,083 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:08:43,851 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:12:04,705 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:15:20,789 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:18:30,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:21:40,193 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:25:04,701 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:28:20,749 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:31:43,715 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:35:07,787 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:38:19,329 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:41:39,039 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:44:55,940 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:45:37,345 INFO] Step 140000/300000; acc:  97.21; ppl:  1.16; xent: 0.15; lr: 0.00006;   0/7705 tok/s;  96640 sec
+[2019-10-26 17:45:37,938 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 17:45:43,860 INFO] Validation perplexity: 15.461
+[2019-10-26 17:45:43,860 INFO] Validation accuracy: 63.9886
+[2019-10-26 17:45:43,862 INFO] Saving checkpoint ./workspace/model_wb/_step_140000.pt
+[2019-10-26 17:48:19,969 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:51:33,316 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:55:00,916 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 17:58:21,840 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:01:35,628 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:04:45,750 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:07:58,094 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:11:20,630 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:14:43,484 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:18:13,991 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:21:36,041 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:25:04,838 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:28:24,099 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:31:40,665 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:34:56,499 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:38:22,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:41:42,992 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:45:00,019 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:48:14,662 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:51:28,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:54:43,808 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 18:57:57,144 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:01:18,762 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:04:44,038 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:08:04,227 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:11:27,135 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:14:45,734 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:18:05,127 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:21:27,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:24:43,800 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:28:07,392 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:31:24,384 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:34:29,921 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:37:53,744 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:41:21,028 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:44:45,590 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:48:11,324 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:51:38,598 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:54:53,008 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 19:58:17,843 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:01:38,998 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:04:56,843 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:05:47,110 INFO] Step 150000/300000; acc:  97.40; ppl:  1.16; xent: 0.15; lr: 0.00006;   0/7082 tok/s; 105050 sec
+[2019-10-26 20:05:47,671 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 20:05:53,868 INFO] Validation perplexity: 15.4643
+[2019-10-26 20:05:53,868 INFO] Validation accuracy: 63.934
+[2019-10-26 20:05:53,870 INFO] Saving checkpoint ./workspace/model_wb/_step_150000.pt
+[2019-10-26 20:08:29,924 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:11:59,660 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:15:23,358 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:18:44,806 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:21:58,667 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:25:21,953 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:28:42,067 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:32:01,198 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:35:23,888 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:38:43,929 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:42:10,174 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:45:28,146 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:48:56,234 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:52:24,872 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:55:55,215 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 20:59:18,663 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:02:32,773 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:05:55,438 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:09:19,671 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:12:42,353 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:16:06,063 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:19:24,223 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:22:43,964 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:26:05,003 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:29:28,359 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:32:56,935 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:36:17,378 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:39:39,944 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:43:00,214 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:46:22,995 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:49:50,019 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:53:00,163 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:56:23,888 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 21:59:44,111 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:03:00,413 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:06:25,480 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:09:47,769 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:13:06,680 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:16:26,551 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:19:48,687 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:23:11,364 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:26:32,615 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:27:26,425 INFO] Step 160000/300000; acc:  97.56; ppl:  1.15; xent: 0.14; lr: 0.00006;   0/7003 tok/s; 113549 sec
+[2019-10-26 22:27:27,041 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-26 22:27:32,756 INFO] Validation perplexity: 15.7509
+[2019-10-26 22:27:32,757 INFO] Validation accuracy: 63.9613
+[2019-10-26 22:27:32,758 INFO] Saving checkpoint ./workspace/model_wb/_step_160000.pt
+[2019-10-26 22:29:57,272 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:33:09,102 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:36:30,957 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:39:49,976 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:43:08,793 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:46:33,073 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:49:57,842 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:53:22,509 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 22:56:46,585 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:00:06,456 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:03:33,108 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:06:53,160 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:10:20,570 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:13:40,521 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:17:05,596 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:20:26,166 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:23:46,141 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:27:14,549 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:30:37,029 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:33:54,552 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:37:16,810 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:40:44,913 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:44:09,025 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:47:33,578 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:50:52,746 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:54:15,961 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-26 23:57:31,378 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:00:37,985 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:03:54,857 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:07:18,063 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:10:41,605 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:14:05,477 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:17:34,765 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:20:56,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:24:26,070 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:27:51,411 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:31:14,643 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:34:40,114 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:38:00,173 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:41:26,047 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:44:45,438 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:48:07,132 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:49:05,205 INFO] Step 170000/300000; acc:  97.71; ppl:  1.14; xent: 0.13; lr: 0.00005;   0/7004 tok/s; 122048 sec
+[2019-10-27 00:49:05,805 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 00:49:11,527 INFO] Validation perplexity: 15.8916
+[2019-10-27 00:49:11,527 INFO] Validation accuracy: 64.0378
+[2019-10-27 00:49:11,529 INFO] Saving checkpoint ./workspace/model_wb/_step_170000.pt
+[2019-10-27 00:51:40,252 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:55:01,945 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 00:58:28,913 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:01:51,547 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:05:12,442 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:08:40,508 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:12:00,667 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:15:22,311 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:18:51,545 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:22:17,735 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:25:35,190 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:28:38,807 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:31:56,071 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:35:22,853 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:38:47,587 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:42:08,721 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:45:31,244 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:49:00,916 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:52:21,679 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:55:48,284 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 01:59:11,188 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:02:42,993 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:06:09,011 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:09:34,368 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:12:50,970 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:16:08,507 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:19:31,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:22:54,828 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:26:15,713 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:29:45,924 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:33:12,244 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:36:37,992 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:39:58,644 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:43:19,124 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:46:41,817 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:49:59,530 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:53:25,540 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:56:30,713 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 02:59:51,298 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:03:15,463 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:06:41,270 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:09:59,966 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:11:02,849 INFO] Step 180000/300000; acc:  97.83; ppl:  1.14; xent: 0.13; lr: 0.00005;   0/6988 tok/s; 130566 sec
+[2019-10-27 03:11:03,411 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 03:11:09,120 INFO] Validation perplexity: 16.1585
+[2019-10-27 03:11:09,120 INFO] Validation accuracy: 63.9695
+[2019-10-27 03:11:09,122 INFO] Saving checkpoint ./workspace/model_wb/_step_180000.pt
+[2019-10-27 03:13:34,526 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:16:57,998 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:20:14,532 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:23:36,540 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:26:54,403 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:30:25,099 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:33:45,516 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:37:03,486 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:40:27,711 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:43:51,187 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:47:09,317 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:50:26,279 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:53:45,344 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 03:57:08,557 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:00:26,636 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:03:52,024 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:07:16,210 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:10:33,375 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:14:01,610 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:17:21,112 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:20:36,101 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:23:42,871 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:27:03,171 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:30:24,560 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:33:49,528 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:37:08,509 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:40:25,358 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:43:47,223 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:47:08,227 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:50:27,406 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:53:49,548 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 04:57:09,333 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:00:24,970 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:03:40,709 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:07:00,347 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:10:18,658 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:13:36,312 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:16:49,742 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:20:12,806 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:23:29,240 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:26:39,753 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:30:07,766 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:31:07,885 INFO] Step 190000/300000; acc:  97.93; ppl:  1.13; xent: 0.13; lr: 0.00005;   0/7081 tok/s; 138971 sec
+[2019-10-27 05:31:08,451 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 05:31:14,125 INFO] Validation perplexity: 15.6406
+[2019-10-27 05:31:14,125 INFO] Validation accuracy: 64.3138
+[2019-10-27 05:31:14,127 INFO] Saving checkpoint ./workspace/model_wb/_step_190000.pt
+[2019-10-27 05:33:36,982 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:36:57,361 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:40:18,134 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:43:35,958 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:46:52,541 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:49:55,321 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:52:31,999 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:55:01,417 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 05:57:33,566 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:00:08,446 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:02:44,495 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:05:21,613 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:07:54,855 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:10:32,214 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:13:09,244 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:15:45,356 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:18:19,325 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:20:53,639 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:23:33,630 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:26:02,619 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:28:32,803 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:31:06,413 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:33:37,925 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:36:13,927 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:38:48,009 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:41:27,217 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:44:05,006 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:46:42,233 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:49:22,232 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:51:57,944 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:54:37,070 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:57:20,411 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 06:59:56,028 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:02:34,476 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:05:07,563 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:07:46,334 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:10:19,295 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:12:53,244 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:15:26,886 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:18:03,509 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:20:39,139 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:23:14,149 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:24:01,595 INFO] Step 200000/300000; acc:  98.03; ppl:  1.13; xent: 0.12; lr: 0.00005;   0/8790 tok/s; 145744 sec
+[2019-10-27 07:24:02,165 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 07:24:07,764 INFO] Validation perplexity: 15.9951
+[2019-10-27 07:24:07,764 INFO] Validation accuracy: 64.1635
+[2019-10-27 07:24:07,766 INFO] Saving checkpoint ./workspace/model_wb/_step_200000.pt
+[2019-10-27 07:25:57,474 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:28:26,949 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:30:57,839 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:33:36,767 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:36:06,538 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:38:42,966 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:41:15,816 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:43:47,958 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:46:22,926 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:48:56,726 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:51:31,604 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:54:04,343 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:56:35,396 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 07:59:10,880 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:01:44,175 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:04:18,241 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:06:50,972 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:09:23,302 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:11:57,425 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:14:33,385 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:17:08,123 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:19:42,371 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:22:17,788 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:24:48,927 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:27:22,750 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:29:58,216 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:32:30,440 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:35:04,461 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:37:34,638 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:40:12,850 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:42:50,863 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:45:22,337 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:47:56,183 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:50:31,667 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:53:02,506 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:55:39,509 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 08:58:14,384 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:00:50,377 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:03:22,725 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:05:52,629 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:08:24,931 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:10:57,018 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:11:50,953 INFO] Step 210000/300000; acc:  98.11; ppl:  1.13; xent: 0.12; lr: 0.00005;   0/9204 tok/s; 152214 sec
+[2019-10-27 09:11:51,505 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 09:11:57,047 INFO] Validation perplexity: 16.3498
+[2019-10-27 09:11:57,048 INFO] Validation accuracy: 64.1936
+[2019-10-27 09:11:57,050 INFO] Saving checkpoint ./workspace/model_wb/_step_210000.pt
+[2019-10-27 09:13:39,197 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:16:10,624 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:18:44,262 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:21:19,015 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:23:51,809 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:26:27,592 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:29:04,432 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:31:33,079 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:34:03,734 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:36:37,172 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:39:09,156 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:41:39,180 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:44:09,721 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:46:42,592 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:49:18,707 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:51:54,226 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:54:27,864 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:57:01,027 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 09:59:33,556 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:02:08,255 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:04:39,021 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:07:10,198 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:09:44,358 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:12:15,304 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:14:54,841 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:17:28,379 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:19:59,861 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:22:31,605 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:25:07,128 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:27:38,372 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:30:14,419 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:32:49,967 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:35:23,149 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:37:54,702 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:40:31,199 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:42:59,441 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:45:35,139 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:48:07,458 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:50:37,160 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:53:07,696 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:55:43,635 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:58:17,586 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 10:59:12,152 INFO] Step 220000/300000; acc:  98.19; ppl:  1.12; xent: 0.11; lr: 0.00005;   0/9240 tok/s; 158655 sec
+[2019-10-27 10:59:12,821 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 10:59:18,383 INFO] Validation perplexity: 16.2151
+[2019-10-27 10:59:18,384 INFO] Validation accuracy: 64.3002
+[2019-10-27 10:59:18,386 INFO] Saving checkpoint ./workspace/model_wb/_step_220000.pt
+[2019-10-27 11:01:02,056 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:03:34,086 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:06:06,232 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:08:37,836 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:11:11,224 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:13:46,718 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:16:16,526 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:18:44,258 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:21:11,335 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:23:39,807 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:26:09,414 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:28:36,849 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:31:06,918 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:33:33,664 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:36:01,441 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:38:34,441 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:41:02,260 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:43:36,654 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:46:26,450 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:49:35,216 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:52:53,339 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:56:06,932 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 11:59:20,578 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:02:32,185 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:05:43,516 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:08:54,410 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:12:03,988 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:14:59,834 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:17:47,816 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:20:30,372 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:23:05,955 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:25:39,399 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:28:11,417 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:30:47,684 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:33:20,315 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:35:58,855 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:38:29,254 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:40:59,847 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:43:35,251 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:46:07,821 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:48:40,001 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:51:12,644 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:52:07,068 INFO] Step 230000/300000; acc:  98.25; ppl:  1.12; xent: 0.11; lr: 0.00005;   0/8786 tok/s; 165430 sec
+[2019-10-27 12:52:07,619 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 12:52:13,127 INFO] Validation perplexity: 16.1193
+[2019-10-27 12:52:13,127 INFO] Validation accuracy: 64.2646
+[2019-10-27 12:52:13,129 INFO] Saving checkpoint ./workspace/model_wb/_step_230000.pt
+[2019-10-27 12:53:52,233 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:56:24,406 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 12:58:58,541 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:01:32,981 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:04:06,375 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:06:42,746 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:09:16,609 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:11:51,059 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:14:24,943 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:16:58,051 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:19:34,169 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:22:03,125 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:24:31,228 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:27:06,383 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:29:41,171 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:32:14,395 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:34:48,162 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:37:20,950 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:39:49,860 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:42:26,448 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:45:01,251 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:47:35,728 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:50:10,247 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:52:40,967 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:55:12,458 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 13:57:48,487 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:00:21,062 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:02:54,073 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:05:28,050 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:07:57,870 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:10:34,305 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:13:05,720 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:15:36,225 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:18:08,389 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:20:41,700 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:23:12,974 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:25:43,057 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:28:14,770 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:30:48,089 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:33:21,914 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:35:51,365 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:38:21,042 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:39:21,461 INFO] Step 240000/300000; acc:  98.32; ppl:  1.12; xent: 0.11; lr: 0.00005;   0/9250 tok/s; 171864 sec
+[2019-10-27 14:39:22,059 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 14:39:27,555 INFO] Validation perplexity: 16.4036
+[2019-10-27 14:39:27,555 INFO] Validation accuracy: 64.4341
+[2019-10-27 14:39:27,557 INFO] Saving checkpoint ./workspace/model_wb/_step_240000.pt
+[2019-10-27 14:41:05,010 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:43:39,087 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:46:11,616 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:48:42,154 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:51:13,519 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:53:44,450 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:56:20,578 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 14:58:58,476 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:01:36,294 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:04:09,400 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:06:40,274 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:09:13,095 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:11:43,145 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:14:13,918 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:16:43,820 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:19:13,848 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:21:49,710 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:24:18,265 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:26:49,075 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:29:22,578 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:31:54,009 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:34:28,026 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:36:58,242 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:39:32,554 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:42:03,042 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:44:37,073 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:47:06,961 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:49:37,130 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:52:08,078 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:54:39,684 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:57:14,286 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 15:59:46,031 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:02:15,038 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:04:47,675 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:07:21,880 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:09:50,230 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:12:25,085 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:14:53,054 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:17:27,906 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:19:58,101 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:22:29,603 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:25:01,709 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:26:02,069 INFO] Step 250000/300000; acc:  98.37; ppl:  1.11; xent: 0.11; lr: 0.00004;   0/9301 tok/s; 178265 sec
+[2019-10-27 16:26:02,647 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 16:26:08,280 INFO] Validation perplexity: 16.6421
+[2019-10-27 16:26:08,281 INFO] Validation accuracy: 64.2236
+[2019-10-27 16:26:08,282 INFO] Saving checkpoint ./workspace/model_wb/_step_250000.pt
+[2019-10-27 16:27:46,874 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:30:21,153 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:32:50,936 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:35:24,204 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:37:55,865 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:40:26,211 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:43:00,297 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:45:32,005 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:48:06,529 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:50:38,140 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:53:10,019 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:55:33,347 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 16:58:05,307 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:00:36,640 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:03:09,606 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:05:38,832 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:08:09,261 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:10:40,450 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:13:07,340 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:15:40,251 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:18:07,384 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:20:38,622 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:23:10,108 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:25:37,194 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:28:05,044 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:30:41,598 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:33:13,289 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:35:43,739 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:38:14,563 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:40:41,909 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:43:08,031 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:45:36,804 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:48:07,100 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:50:39,127 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:53:08,649 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:55:39,120 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 17:58:11,294 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:00:43,646 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:03:16,780 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:05:44,641 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:08:15,275 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:10:44,107 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:11:49,312 INFO] Step 260000/300000; acc:  98.43; ppl:  1.11; xent: 0.11; lr: 0.00004;   0/9382 tok/s; 184612 sec
+[2019-10-27 18:11:49,947 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 18:11:55,518 INFO] Validation perplexity: 16.5861
+[2019-10-27 18:11:55,518 INFO] Validation accuracy: 64.3275
+[2019-10-27 18:11:55,520 INFO] Saving checkpoint ./workspace/model_wb/_step_260000.pt
+[2019-10-27 18:13:24,994 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:15:51,357 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:18:22,105 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:20:51,750 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:23:25,719 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:25:55,159 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:28:27,770 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:30:56,296 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:33:16,719 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:35:49,508 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:38:23,278 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:40:52,596 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:43:22,206 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:45:54,383 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:48:19,607 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:50:48,963 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:53:16,569 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:55:46,427 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 18:58:11,730 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:00:41,618 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:03:10,892 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:05:42,231 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:08:17,454 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:10:49,459 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:13:17,037 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:15:46,092 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:18:20,081 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:20:48,098 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:23:16,987 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:25:47,517 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:28:13,796 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:30:44,398 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:33:14,313 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:35:45,638 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:38:14,029 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:40:46,660 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:43:15,150 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:45:47,940 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:48:21,826 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:50:56,737 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:53:25,813 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:55:58,061 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 19:57:02,958 INFO] Step 270000/300000; acc:  98.47; ppl:  1.11; xent: 0.10; lr: 0.00004;   0/9427 tok/s; 190926 sec
+[2019-10-27 19:57:03,566 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 19:57:09,118 INFO] Validation perplexity: 16.6627
+[2019-10-27 19:57:09,118 INFO] Validation accuracy: 64.2701
+[2019-10-27 19:57:09,120 INFO] Saving checkpoint ./workspace/model_wb/_step_270000.pt
+[2019-10-27 19:58:38,527 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:01:08,861 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:03:38,349 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:06:09,381 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:08:36,952 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:11:02,425 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:13:34,315 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:16:03,386 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:18:33,058 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:21:02,412 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:23:37,069 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:26:03,584 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:28:34,410 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:31:05,804 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:33:43,773 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:36:15,755 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:38:48,045 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:41:20,724 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:43:50,856 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:46:20,487 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:48:50,351 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:51:14,736 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:53:45,020 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:56:17,696 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 20:58:51,960 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:01:21,695 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:03:51,055 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:06:21,622 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:08:52,587 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:11:24,191 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:13:56,463 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:16:29,459 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:18:58,931 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:21:29,159 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:23:54,987 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:26:22,907 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:28:54,104 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:31:25,658 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:33:53,365 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:36:21,504 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:38:53,730 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:41:22,337 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:42:27,892 INFO] Step 280000/300000; acc:  98.51; ppl:  1.11; xent: 0.10; lr: 0.00004;   0/9414 tok/s; 197251 sec
+[2019-10-27 21:42:28,444 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 21:42:34,008 INFO] Validation perplexity: 16.9322
+[2019-10-27 21:42:34,008 INFO] Validation accuracy: 64.281
+[2019-10-27 21:42:34,010 INFO] Saving checkpoint ./workspace/model_wb/_step_280000.pt
+[2019-10-27 21:44:00,139 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:46:22,661 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:48:53,717 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:51:24,106 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:53:54,351 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:56:24,399 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 21:58:51,847 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:01:22,631 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:03:51,880 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:06:24,602 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:08:54,012 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:11:20,721 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:13:45,269 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:16:15,506 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:18:43,555 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:21:12,485 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:23:40,446 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:26:11,248 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:28:44,399 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:31:15,896 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:33:43,677 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:36:13,411 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:38:40,053 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:41:07,072 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:43:41,596 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:46:11,517 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:48:43,770 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:51:13,967 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:53:47,689 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:56:14,180 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 22:58:43,817 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:01:10,068 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:03:38,208 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:06:06,962 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:08:31,787 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:11:02,400 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:13:30,832 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:16:03,485 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:18:34,110 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:21:04,553 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:23:32,764 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:25:58,927 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:27:10,886 INFO] Step 290000/300000; acc:  98.56; ppl:  1.10; xent: 0.10; lr: 0.00004;   0/9472 tok/s; 203534 sec
+[2019-10-27 23:27:11,446 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-27 23:27:17,099 INFO] Validation perplexity: 17.0281
+[2019-10-27 23:27:17,100 INFO] Validation accuracy: 64.2865
+[2019-10-27 23:27:17,102 INFO] Saving checkpoint ./workspace/model_wb/_step_290000.pt
+[2019-10-27 23:28:46,179 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:31:15,031 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:33:46,287 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:36:11,173 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:38:40,822 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:41:17,202 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:43:47,467 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:46:23,942 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:48:57,405 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:51:27,522 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:53:56,485 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:56:27,133 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-27 23:58:58,500 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:01:27,830 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:03:56,647 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:06:27,058 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:08:57,650 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:11:27,075 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:14:01,010 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:16:27,666 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:18:57,895 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:21:28,075 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:23:57,336 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:26:27,856 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:28:57,035 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:31:36,634 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:34:02,649 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:36:36,451 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:39:03,416 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:41:33,812 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:44:05,299 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:46:36,124 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:49:08,040 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:51:39,422 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:54:15,019 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:56:51,720 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 00:59:23,499 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:01:53,661 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:04:19,396 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:06:56,917 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:09:27,202 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:12:03,968 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833
+[2019-10-28 01:13:21,508 INFO] Step 300000/300000; acc:  98.59; ppl:  1.10; xent: 0.10; lr: 0.00004;   0/9345 tok/s; 209904 sec
+[2019-10-28 01:13:22,093 INFO] Loading valid dataset from ./workspace/data_wb/gq_valid.0.pt, number of examples: 1368
+[2019-10-28 01:13:27,671 INFO] Validation perplexity: 16.6979
+[2019-10-28 01:13:27,672 INFO] Validation accuracy: 64.3548
+[2019-10-28 01:13:27,673 INFO] Saving checkpoint ./workspace/model_wb/_step_300000.pt
+[2019-10-28 01:13:41,301 INFO] Loading train dataset from ./workspace/data_wb/gq_train.0.pt, number of examples: 16833

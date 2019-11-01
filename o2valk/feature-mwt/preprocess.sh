@@ -2,7 +2,7 @@
 
 train_test_data_dir='/home/wangante/work-code-20190910/AMRdata-master/LDC2015/0'
 
-data_dir='./workspace/data/'
+data_dir='./workspace/data_wr/'
 if [ ! -d "$data_dir" ]; then mkdir -p "$data_dir"; fi
 data_prefix="$data_dir/gq"
 

@@ -203,6 +203,9 @@ def train_opts(parser):
               help="""Random seed used for the experiments
                        reproducibility.""")
 
+    # structure ratio**
+    group.add('--ratio', '-ratio', type=float, default=1., help="The ratio balancing transformer and structure module.")
+
     # Init options
     group = parser.add_argument_group('Initialization')
     group.add('--param_init', '-param_init', type=float, default=0.1,

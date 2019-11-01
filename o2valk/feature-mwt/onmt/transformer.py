@@ -2,6 +2,7 @@
 This file is for models creation, which consults options
 and creates each encoder and decoder accordingly.
 """
+import math
 import re
 import torch
 import torch.nn as nn
@@ -32,8 +33,10 @@ class NMTModel(nn.Module):
         _, memory_bank, lengths = self.encoder(src, structure, lengths)  # src: ......<EOS>
         self.decoder.init_state(src, memory_bank)
         dec_out, attns = self.decoder(tgt)
-        bi_out = self.biaffine(dec_out[1:], mask)
-        return dec_out, attns, bi_out
+        if mask is not None:
+            bi_out = self.biaffine(dec_out[1:], mask)
+            return dec_out, attns, bi_out
+        return dec_out, attns
 
 
 class Biaffine(nn.Module):
@@ -54,8 +57,13 @@ class Biaffine(nn.Module):
         out_=torch.matmul((torch.cat((o_head,o_dep),2)),self.W).unsqueeze(2)
         out=out+out_+self.b
         out=F.log_softmax(out,2)
-        out=torch.masked_select(out.reshape(out.size(0),-1), mask)
-        out=out.sum()
+        batch_size = out.size(0)
+        seq_length=out.size(1)
+        out=torch.masked_select(out.reshape(batch_size,-1), mask)
+        mask=mask.reshape(batch_size,seq_length,seq_length)
+        tmp=mask.sum(2)
+        count=tmp[tmp>0].size(0)
+        out=out.sum()/count
         return -out
 
 
