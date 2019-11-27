@@ -1,0 +1,3058 @@
+# AMR-English alignment release (generated on Sun Mar 6, 2016 at 21:21:33)
+
+# ::id bolt12_64545_0526.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There are many who have a sense of urgency , quietly watching how things develop , you are dragons coiling , you are tigers crouching , I admire noble @-@ minded patriots .
+# ::alignments 1-1.2.1.r 2-1.1 6-1.1.1 7-1.1.1.1.r 8-1.1.1.1 10-1.1.1.2.3 11-1.1.1.2 12-1.1.1.2.3.r 13-1.1.1.2.2 13-1.1.1.2.2.1.1 14-1.1.1.2.2.1 16-1.2.1 17-1.2.1.r 18-1.2 19-1.2.2 21-1.3.1 22-1.3.1.r 23-1.3 24-1.3.2 26-1.4.1 27-1.4 28-1.4.2.1.1 30-1.4.2.1 31-1.4.2
+(m / multi-sentence 
+      :snt1 (m2 / many~e.2 
+            :ARG0-of (s / sense-01~e.6 
+                  :ARG1~e.7 (u / urgency~e.8) 
+                  :time (w / watch-01~e.11 
+                        :ARG0 m2 
+                        :ARG1 (t3 / thing~e.13 
+                              :manner-of (d / develop-02~e.14 
+                                    :ARG0 (t / thing~e.13))) 
+                        :manner~e.12 (q / quiet-04~e.10 
+                              :ARG1 m2)))) 
+      :snt2 (d2 / dragon~e.18 
+            :domain~e.1,17 (y / you~e.16) 
+            :ARG0-of (c / coil-01~e.19)) 
+      :snt3 (t2 / tiger~e.23 
+            :domain~e.22 (y2 / you~e.21) 
+            :ARG0-of (c2 / crouch-01~e.24)) 
+      :snt4 (a / admire-01~e.27 
+            :ARG0 (i / i~e.26) 
+            :ARG1 (p / patriot~e.31 
+                  :ARG0-of (m3 / mind-04~e.30 
+                        :mod (n / noble~e.28)))))
+
+# ::id bolt12_64545_0526.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Has history given us too many lessons ? , 530 , 412 , 64
+# ::alignments 1-1.1.2 2-1.1 3-1.1.4 4-1.1.3.1.1 5-1.1.3.1 6-1.1.3 7-1.1.1 7-1.1.1.r 9-1.2.1 11-1.2.2 13-1.2.3
+(m2 / multi-sentence 
+      :snt1 (g / give-01~e.2 :mode~e.7 interrogative~e.7 
+            :ARG0 (h / history~e.1) 
+            :ARG1 (l / lesson~e.6 
+                  :quant (m / many~e.5 
+                        :degree (t / too~e.4))) 
+            :ARG2 (w / we~e.3)) 
+      :snt2 (a / and :op1 530~e.9 :op2 412~e.11 :op2 64~e.13))
+
+# ::id bolt12_64545_0527.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok taking a look
+# ::alignments 0-1 2-1
+(l / look-01~e.0,2)
+
+# ::id bolt12_64545_0528.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok the ones who are suffering are the ordinary people : even if the body of a salted fish is turned over , it is still a salted fish ...
+# ::alignments 3-1.2.3.r 4-1.1 7-1.1.1.1 8-1.1.1 10-1.2.4 11-1.2.4 13-1.2.4.1.1 14-1.2.4.1.1.1.r 16-1.2.4.1.1.1.1 17-1.2.4.1.1.1 19-1.2.4.1 20-1.2.4.1.2 22-1.2.3 23-1.2.3.r 24-1.2.2 26-1.2.1 27-1.2
+(m / multi-sentence 
+      :snt1 (s / suffer-01~e.4 
+            :ARG0 (p / person~e.8 
+                  :mod (o2 / ordinary~e.7))) 
+      :snt2 (f / fish~e.27 
+            :ARG1-of (s2 / salt-01~e.26) 
+            :mod (s3 / still~e.24) 
+            :domain~e.3,23 f2~e.22 
+            :concession (e / even-if~e.10,11 
+                  :op1 (t / turn-01~e.19 
+                        :ARG1 (b / body~e.13 
+                              :poss~e.14 (f2 / fish~e.17 
+                                    :ARG1-of (s4 / salt-01~e.16))) 
+                        :direction (o3 / over~e.20)))))
+
+# ::id bolt12_64545_0529.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Freedom of speech\thought , if people express a view somewhat different than the traditional view , and put forward slightly different criticism , then they are called slaves of foreigners , or are accused of reverence for and fascination by foreign things ,
+# ::alignments 0-1.4 4-1.3.r 5-1.1.1 6-1.3.1 8-1.3.1.2 9-1.3.1.2.2.1 10-1.3.1.2.2 11-1.3.1.2.2.2.r 13-1.3.1.2.2.2.1 14-1.3.1.2.2.2 16-1.3 19-1.3.2.2.1 20-1.3.2.2 21-1.3.2 24-1.3.2.1 26-1.1 27-1.1.2 28-1.1.2.1.r 29-1.1.2.1 31-1 33-1.2 34-1.2.2.r 35-1.2.2.1 37-1.2.2 38-1.2.2.2 39-1.2.2.1.2.r 40-1.2.2.1.2.1 41-1.2.2.1.2
+(o / or~e.31 
+      :op1 (c / call-01~e.26 
+            :ARG1 (p / person~e.5) 
+            :ARG2 (s / slave~e.27 
+                  :poss~e.28 (f / foreign~e.29))) 
+      :op2 (a / accuse-01~e.33 
+            :ARG1 p 
+            :ARG2~e.34 (a2 / and~e.37 
+                  :op1 (r / revere-01~e.35 
+                        :ARG0 p 
+                        :ARG1~e.39 (t / thing~e.41 
+                              :mod (f3 / foreign~e.40))) 
+                  :op2 (f2 / fascinate-01~e.38 
+                        :ARG0 t 
+                        :ARG1 p))) 
+      :condition~e.4 (a3 / and~e.16 
+            :op1 (e / express-01~e.6 
+                  :ARG0 p 
+                  :ARG1 (v / view-02~e.8 
+                        :ARG0 p 
+                        :ARG1-of (d / differ-02~e.10 
+                              :degree (s3 / somewhat~e.9) 
+                              :compared-to~e.11 (v2 / view-02~e.14 
+                                    :mod (t2 / tradition~e.13))))) 
+            :op2 (c2 / criticize-01~e.21 
+                  :ARG0 p~e.24 
+                  :ARG1-of (d2 / differ-02~e.20 
+                        :degree (s4 / slight~e.19)))) 
+      :topic (f4 / free-04~e.0 
+            :ARG3 (s5 / slash 
+                  :op1 (s2 / speak-01) 
+                  :op2 (t3 / think-01))))
+
+# ::id bolt12_64545_0529.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok What is more they are considered traitors of China , which is a fact of cultural tyranny in the cloak of nationalism and patriotism .
+# ::alignments 1-1.1.1.r 2-1.2 3-1.1.1 4-1.1.1.r 5-1 6-1.1 6-1.1.2 6-1.1.2.r 7-1.1.2.1.r 8-1.1.2.1.2.1 11-1.1.1.r 15-1.3.1 19-1.3.2 20-1.3.2.1.r 21-1.3.2.1.1 22-1.3.2.1 23-1.3.2.1.2
+(c / consider-01~e.5 
+      :ARG1 (p2 / person~e.6 
+            :domain~e.1,4,11 (t2 / they~e.3) 
+            :ARG0-of~e.6 (b / betray-01~e.6 
+                  :ARG1~e.7 (c2 / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.8)))) 
+      :mod (m / more~e.2) 
+      :mod (t4 / tyrannize-01 
+            :ARG2 (c3 / culture~e.15) 
+            :ARG1-of (c4 / cloak-01~e.19 
+                  :ARG2~e.20 (a / and~e.22 
+                        :op1 (n / nationalism~e.21) 
+                        :op2 (p / patriotism~e.23)))))
+
+# ::id bolt12_64545_0530.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In fact , the US no longer needs to use force to deal with China , they have achieved the result of " defeating enemy soldiers without fighting ".
+# ::alignments 0-1.2.4 1-1.2.4 4-1.2.1.2.1 5-1.2.3 6-1.2.3 7-1.2 9-1.2.2 10-1.2.2.2 12-1.2.2.3 13-1.2.2.3.2.r 14-1.2.2.3.2.2.1 18-1.1 20-1.1.2 23-1.1.2.1 24-1.1.2.1.2.1.2 25-1.1.2.1.2 26-1.1.2.1.3.1 26-1.1.2.1.3.1.r 27-1.1.2.1.3
+(c3 / cause-01 
+      :ARG0 (a2 / achieve-01~e.18 
+            :ARG0 c 
+            :ARG1 (r / result-01~e.20 
+                  :ARG2 (d2 / defeat-01~e.23 
+                        :ARG0 c 
+                        :ARG1 (s / soldier~e.25 
+                              :ARG0-of (h / have-rel-role-91 
+                                    :ARG1 c 
+                                    :ARG2 (e2 / enemy~e.24))) 
+                        :manner (f3 / fight-01~e.27 :polarity~e.26 -~e.26 
+                              :ARG0 c)))) 
+      :ARG1 (n / need-01~e.7 
+            :ARG0 (c / country :wiki "United_States" 
+                  :name (n3 / name :op1 "US"~e.4)) 
+            :ARG1 (u / use-01~e.9 
+                  :ARG0 c 
+                  :ARG1 (f / force-04~e.10) 
+                  :ARG2 (d / deal-01~e.12 
+                        :ARG0 c 
+                        :ARG2~e.13 (c2 / country :wiki "China" 
+                              :name (n2 / name :op1 "China"~e.14)))) 
+            :time (n4 / no-longer~e.5,6) 
+            :mod (i / in-fact~e.0,1)))
+
+# ::id bolt12_64545_0531.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Is the article too intense , is the United States so good ?
+# ::alignments 2-1.1.2 3-1.1.3 4-1.1 8-1.2.2.2.1 9-1.2.2.2.2 10-1.2.3 11-1.2 12-1.1.1 12-1.1.1.r 12-1.2.1 12-1.2.1.r
+(m / multi-sentence 
+      :snt1 (i / intense-02~e.4 :mode~e.12 interrogative~e.12 
+            :ARG1 (a / article~e.2) 
+            :degree (t / too~e.3)) 
+      :snt2 (g / good-02~e.11 :mode~e.12 interrogative~e.12 
+            :ARG1 (c / country :wiki "United_States" 
+                  :name (n / name :op1 "United"~e.8 :op2 "States"~e.9)) 
+            :degree (s / so~e.10)))
+
+# ::id bolt12_64545_0531.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If things are not seen by eyes and heard by ears yourself , do not assume their existence , three people create a tiger .
+# ::alignments 0-1.1.5.r 1-1.1.5.1.3 3-1.1.5.1.1 3-1.1.5.1.1.r 3-1.1.5.2.1 4-1.1.5.1 5-1.1.5.1.2.r 6-1.1.5.1.2 7-1.1.5 8-1.1.5.2 9-1.1.5.2.2.r 10-1.1.5.2.2 11-1.1.5.1.2.1 14-1.1.1 14-1.1.1.r 15-1.1 17-1.1.4 19-1.2.1.1 20-1.2.1 21-1.2 23-1.2.2
+(m / multi-sentence 
+      :snt1 (a / assume-02~e.15 :polarity~e.14 -~e.14 :mode imperative 
+            :ARG0 y 
+            :ARG1 (e / exist-01~e.17 
+                  :ARG1 t2) 
+            :condition~e.0 (a2 / and~e.7 
+                  :op1 (s / see-01~e.4 :polarity~e.3 -~e.3 
+                        :ARG0~e.5 (e2 / eye~e.6 
+                              :part-of (y / you~e.11)) 
+                        :ARG1 (t2 / thing~e.1)) 
+                  :op2 (h / hear-01~e.8 :polarity -~e.3 
+                        :ARG0~e.9 (e3 / ear~e.10 
+                              :part-of y) 
+                        :ARG1 t2))) 
+      :snt2 (c / create-01~e.21 
+            :ARG0 (p / person~e.20 :quant 3~e.19) 
+            :ARG1 (t / tiger~e.23)))
+
+# ::id bolt12_64545_0532.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Just passing by and taking a look . Won't express my opinion
+# ::alignments 0-1.1.1.1 1-1.1.1 2-1.1.1 3-1.1 4-1.1.2 6-1.1.2 8-1.2.1 8-1.2.1.r 9-1.2 10-1.2.2 10-1.2.2.r 11-1.2.3 11-1.2.3.1 11-1.2.3.1.r
+(m / multi-sentence 
+      :snt1 (a / and~e.3 
+            :op1 (p / pass-by-17~e.1,2 
+                  :mod (j / just~e.0)) 
+            :op2 (l / look-01~e.4,6)) 
+      :snt2 (e / express-01~e.9 :polarity~e.8 -~e.8 
+            :ARG0~e.10 (i / i~e.10) 
+            :ARG1 (t / thing~e.11 
+                  :ARG1-of~e.11 (o / opine-01~e.11 
+                        :ARG0 i))))
+
+# ::id bolt12_64545_0533.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Came to study and learn
+# ::alignments 0-1 1-1.1.r 2-1.1.1 3-1.1 4-1.1.2
+(c / come-01~e.0 
+      :purpose~e.1 (a / and~e.3 
+            :op1 (s / study-01~e.2) 
+            :op2 (l / learn-01~e.4)))
+
+# ::id bolt12_64545_0535.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Very attractive
+# ::alignments 0-1.1 1-1
+(a2 / attract-01~e.1 
+      :degree (v / very~e.0))
+
+# ::id bolt12_64545_0536.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It should vigorously advocated
+# ::alignments 0-1.1.1 1-1 2-1.1.2 2-1.1.2.r 3-1.1
+(r / recommend-01~e.1 
+      :ARG1 (a / advocate-01~e.3 
+            :ARG1 (i / it~e.0) 
+            :manner~e.2 (v / vigorous~e.2)))
+
+# ::id bolt12_64545_0538.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Some people - do n't forget you are Chinese ; if the country needs me , I 'll be compelled by my sense of righteousness !
+# ::alignments 0-1.1.2.1 1-1.1.2 1-1.1.3 4-1.1.1 4-1.1.1.r 5-1.1 6-1.1.3.2 7-1.1.3.2.r 8-1.1.3.1.2.1 10-1.2.3.r 12-1.2.3.1 13-1.2.3 14-1.2.3.2 15-1.2.3.2 16-1.2.3.2 19-1.2 20-1.2.1.r 21-1.2.1.1 21-1.2.1.1.r 22-1.2.1 23-1.2.1.2.r 24-1.2.1.2
+(m / multi-sentence 
+      :snt1 (f / forget-01~e.5 :polarity~e.4 -~e.4 
+            :ARG0 (p / person~e.1 
+                  :mod (s / some~e.0)) 
+            :ARG1 (p2 / person~e.1 
+                  :mod (c / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.8)) 
+                  :domain~e.7 p~e.6)) 
+      :snt2 (c2 / compel-01~e.19 
+            :ARG0~e.20 (s2 / sense-01~e.22 
+                  :ARG0~e.21 i~e.21 
+                  :ARG1~e.23 (r / righteousness~e.24)) 
+            :ARG1 (i / i) 
+            :condition~e.10 (n / need-01~e.13 
+                  :ARG0 (c3 / country~e.12) 
+                  :ARG1 i~e.14,15,16)))
+
+# ::id bolt12_64545_0538.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I really especially hate those who are eating Chinese things and drinking Chinese things , but who say America is so whatever , those dogs , if America is so good go find your American illegitimate fathers
+# ::alignments 0-1.1.1 1-1.1.4 2-1.1.3 3-1.1 4-1.1.2.1 4-1.1.2.3.1 6-1.1.2.5.1.2.r 7-1.1.2.2 8-1.1.2.2.1.1.2.1 9-1.1.2.2.1 10-1.1.2.5.2.1 11-1.1.2.4 12-1.1.2.4.1 13-1.1.2.4.1 15-1.1.2.5.2 17-1.1.2.5 18-1.1.2.5.1.2.2.1 19-1.1.2.5.1.2.r 20-1.1.2.5.1.1 21-1.1.2.5.1 23-1.1.2.1 23-1.1.2.3.1 24-1.1.2.3 26-1.2.4.r 27-1.2.4.1.2.1 29-1.2.4.2 30-1.2.4 31-1.2 32-1.2.3 33-1.2.2 33-1.2.2.r 35-1.2.3.2 35-1.2.3.2.1 35-1.2.3.2.1.1 35-1.2.3.2.1.1.r 35-1.2.3.2.1.r 36-1.2.3.2.2.2
+(m / multi-sentence 
+      :snt1 (h / hate-01~e.3 
+            :ARG0 (i / i~e.0) 
+            :ARG1 (p / person 
+                  :mod (t3 / that~e.4,23) 
+                  :ARG0-of (e2 / eat-01~e.7 
+                        :ARG1 (t2 / thing~e.9 
+                              :mod (c3 / country :wiki "China" 
+                                    :name (n2 / name :op1 "China"~e.8)))) 
+                  :mod (d2 / dog~e.24 
+                        :mod (t / that~e.4,23)) 
+                  :ARG0-of (d / drink-01~e.11 
+                        :ARG1 t2~e.12,13) 
+                  :ARG0-of (s / say-01~e.17 
+                        :ARG1 (w / whatever~e.21 
+                              :degree (s2 / so~e.20) 
+                              :domain~e.6,19 (c4 / country :wiki "United_States" 
+                                    :name (n / name :op1 "America"~e.18))) 
+                        :ARG1-of (c5 / contrast-01~e.15 
+                              :ARG2 (a2 / and~e.10 
+                                    :op1 e2 
+                                    :op2 d)))) 
+            :mod (e / especially~e.2) 
+            :degree (r / really~e.1)) 
+      :snt2 (g / go-05~e.31 :mode imperative 
+            :ARG0~e.33 (y / you~e.33) 
+            :ARG1 (f / find-01~e.32 
+                  :ARG0 y 
+                  :ARG1 (p2 / person~e.35 
+                        :ARG1-of~e.35 (l / legitimate-02~e.35 :polarity~e.35 -~e.35) 
+                        :ARG0-of (h2 / have-rel-role-91 
+                              :ARG1 y 
+                              :ARG2 (f2 / father~e.36)))) 
+            :condition~e.26 (g2 / good-02~e.30 
+                  :ARG1 (c6 / country :wiki "United_States" 
+                        :name (n3 / name :op1 "America"~e.27)) 
+                  :degree (s3 / so~e.29))))
+
+# ::id bolt12_64545_0539.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I feel our people should learn more from the DPRK , the banner of socialism needs to be held , but Mao Zedong Thought can n't be forgotten !
+# ::alignments 0-1.1.1 1-1.1 2-1.1.2.1.1.1.1 2-1.1.2.1.1.1.1.r 3-1.1.2.1.1.1 4-1.1.2.1 5-1.1.2.1.1 6-1.1.2.1.1.3 7-1.1.2.1.1.2.r 9-1.1.2.1.1.2.2.1 12-1.1.2.2.1.1 13-1.1.2.2.1.1.1.r 14-1.1.2.2.1.1.1.2.1 15-1.1.2.2 18-1.1.2.2.1 20-1 21-1.2.2.1.1.1.2.1 22-1.2.2.1.1.1.2.2 23-1.2.2.1 23-1.2.2.1.1 23-1.2.2.1.1.r 24-1.2 25-1.2.1 25-1.2.1.r 27-1.2.2
+(c / contrast-01~e.20 
+      :ARG1 (f / feel-02~e.1 
+            :ARG0 (i / i~e.0) 
+            :ARG1 (a / and 
+                  :op1 (r / recommend-01~e.4 
+                        :ARG1 (l / learn-01~e.5 
+                              :ARG0 (p / people~e.3 
+                                    :poss~e.2 (w / we~e.2)) 
+                              :ARG2~e.7 (c2 / country :wiki "North_Korea" 
+                                    :name (n3 / name :op1 "DPRK"~e.9)) 
+                              :quant (m / more~e.6))) 
+                  :op2 (n / need-01~e.15 
+                        :ARG1 (h / hold-01~e.18 
+                              :ARG1 (b / banner~e.12 
+                                    :poss~e.13 (p4 / political-movement :wiki "Socialism" 
+                                          :name (n4 / name :op1 "socialism"~e.14))))))) 
+      :ARG2 (p3 / possible-01~e.24 :polarity~e.25 -~e.25 
+            :ARG1 (f2 / forget-01~e.27 
+                  :ARG1 (t / thing~e.23 
+                        :ARG1-of~e.23 (t2 / think-01~e.23 
+                              :ARG0 (p2 / person :wiki "Mao_Zedong" 
+                                    :name (n2 / name :op1 "Mao"~e.21 :op2 "Zedong"~e.22)))))))
+
+# ::id bolt12_64545_0539.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Only Mao Zedong Thought , can save the nation !
+# ::alignments 0-1.1.1.1 1-1.1.1.2.1.2.1 2-1.1.1.2.1.2.2 3-1.1.1 3-1.1.1.2 3-1.1.1.2.r 5-1 6-1.1 8-1.1.2
+(p / possible-01~e.5 
+      :ARG1 (s / save-02~e.6 
+            :ARG0 (t / thing~e.3 
+                  :mod (o / only~e.0) 
+                  :ARG1-of~e.3 (t2 / think-01~e.3 
+                        :ARG0 (p2 / person :wiki "Mao_Zedong" 
+                              :name (n2 / name :op1 "Mao"~e.1 :op2 "Zedong"~e.2)))) 
+            :ARG1 (n / nation~e.8)))
+
+# ::id bolt12_64545_0540.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There too many traitors of China !
+# ::alignments 1-1.1.1 2-1.1 3-1 3-1.2 3-1.2.r 4-1.2.1.r 5-1.2.1.2.1
+(p / person~e.3 
+      :quant (m / many~e.2 
+            :degree (t2 / too~e.1)) 
+      :ARG0-of~e.3 (b / betray-01~e.3 
+            :ARG1~e.4 (c / country :wiki "China" 
+                  :name (n / name :op1 "China"~e.5))))
+
+# ::id bolt12_64545_0541.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Patriotism is the bottom line . Everyone must prove worthy of the nation
+# ::alignments 0-1.1.1 1-1.1.1.r 3-1.1.2 4-1.1 6-1.2.1 7-1.2 8-1.2.2 9-1.2.2.2 10-1.2.2.2.2.r 12-1.2.2.2.2
+(m / multi-sentence 
+      :snt1 (l / line~e.4 
+            :domain~e.1 (p / patriotism~e.0) 
+            :mod (b / bottom~e.3)) 
+      :snt2 (o / obligate-01~e.7 
+            :ARG0 (e / everyone~e.6) 
+            :ARG1 (p2 / prove-01~e.8 
+                  :ARG0 e 
+                  :ARG1 (d / deserve-01~e.9 
+                        :ARG0 e 
+                        :ARG1~e.10 (n / nation~e.12)))))
+
+# ::id bolt12_64545_0542.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I think it is not those elites , but that some corrupt officials were bribed
+# ::alignments 0-1.1 1-1 4-1.2.1.1 4-1.2.1.1.r 5-1.2.1.2 6-1.2.1 8-1.2 9-1.2.1.2 10-1.2.2.1.2 11-1.2.2.1 11-1.2.2.1.1 11-1.2.2.1.1.r 12-1.2.2.1.3.1 14-1.2.2
+(t / think-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (c / contrast-01~e.8 
+            :ARG1 (e / elite~e.6 :polarity~e.4 -~e.4 
+                  :mod (t2 / that~e.5,9)) 
+            :ARG2 (b / bribe-01~e.14 
+                  :ARG1 (p / person~e.11 
+                        :ARG1-of~e.11 (c2 / corrupt-01~e.11) 
+                        :quant (s / some~e.10) 
+                        :ARG0-of (h / have-org-role-91 
+                              :ARG2 (o / official~e.12))))))
+
+# ::id bolt12_64545_0543.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Remove this group of jerks !
+# ::alignments 0-1 1-1.3.1 2-1.3 3-1.3.2.r 4-1.3.2 5-1.1 5-1.1.r
+(r / remove-01~e.0 :mode~e.5 imperative~e.5 
+      :ARG0 (y / you) 
+      :ARG1 (g / group~e.2 
+            :mod (t / this~e.1) 
+            :consist-of~e.3 (j / jerk~e.4)))
+
+# ::id bolt12_64545_0545.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I 'm just taking a look
+# ::alignments 0-1.1 2-1.2 3-1 5-1
+(l / look-01~e.3,5 
+      :ARG0 (i / i~e.0) 
+      :mod (j / just~e.2))
+
+# ::id bolt12_64545_0546.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There are so many traitors in the history of China - we need to be vigilant .
+# ::alignments 2-1.3.1.1.1 3-1.3.1.1 4-1.3.1 4-1.3.1.3 4-1.3.1.3.r 5-1.3.1.2.r 7-1.3.1.2 8-1.3.1.2.1.r 9-1.3.1.2.1.2.1 11-1.1 12-1 13-1.3 15-1.2
+(n / need-01~e.12 
+      :ARG0 (w / we~e.11) 
+      :ARG1 (v / vigilant~e.15) 
+      :ARG1-of (c / cause-01~e.13 
+            :ARG0 (p / person~e.4 
+                  :quant (m / many~e.3 
+                        :degree (s / so~e.2)) 
+                  :time~e.5 (h / history~e.7 
+                        :poss~e.8 (c2 / country :wiki "China" 
+                              :name (n2 / name :op1 "China"~e.9))) 
+                  :ARG0-of~e.4 (b / betray-01~e.4))))
+
+# ::id bolt12_64545_0546.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok With the chaos in East and North Africa , we also had no choice but to prevent the running dog traitors from colluding with Western imperialism .
+# ::alignments 2-1.3.1 3-1.3.1.1.r 4-1.3.1.1.1.2.1 5-1.3.1.1 6-1.3.1.1.2.2.1 7-1.3.1.1.2.2.2 9-1.1 10-1.4 11-1 15-1 15-1.3 15-1.3.r 16-1.2 18-1.2.2.1 19-1.2.2.2 20-1.2.2 20-1.2.2.3 20-1.2.2.3.r 21-1.2.3.r 22-1.2.3 23-1.2.3.2.r 24-1.2.3.2.1.2.1 25-1.2.3.2
+(o / obligate-01~e.11,15 
+      :ARG1 (w / we~e.9) 
+      :ARG2 (p / prevent-01~e.16 
+            :ARG0 w 
+            :ARG1 (p2 / person~e.20 
+                  :ARG0-of (r / run-02~e.18) 
+                  :mod (d / dog~e.19) 
+                  :ARG0-of~e.20 (b / betray-01~e.20)) 
+            :ARG2~e.21 (c3 / collude-01~e.22 
+                  :ARG0 p2 
+                  :ARG1~e.23 (i / imperialism~e.25 
+                        :mod (w4 / world-region :wiki "Western_world" 
+                              :name (n3 / name :op1 "West"~e.24))))) 
+      :ARG1-of~e.15 (c4 / cause-01~e.15 
+            :ARG0 (c2 / chaos~e.2 
+                  :location~e.3 (a2 / and~e.5 
+                        :op1 (w2 / world-region :wiki "East_Africa" 
+                              :name (n / name :op1 "East"~e.4 :op2 "Africa")) 
+                        :op2 (w3 / world-region :wiki "North_Africa" 
+                              :name (n2 / name :op1 "North"~e.6 :op2 "Africa"~e.7))))) 
+      :mod (a / also~e.10))
+
+# ::id bolt12_64545_0547.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Everything has its set number , it 's not time for a change in the weather in China , traitors can only bark madly like dogs and nothing else , can only make them disappointed .
+# ::alignments 0-1.1.1 1-1.1 2-1.1.2.2 2-1.1.2.2.r 3-1.1.2.1 4-1.1.2 7-1.1 8-1.2.1 8-1.2.1.r 9-1.2 10-1.2.2.r 12-1.2.2 15-1.2.2.1 17-1.2.2.2.2.1 19-1.3.1.1.1 19-1.3.1.1.1.1 19-1.3.1.1.1.1.r 20-1.3 21-1.3.1.1.3 22-1.3.1.1 23-1.3.1.1.2 24-1.3.1.1.4 25-1.3.1.1.4.1 26-1.3.1 27-1.3.1.2.1 28-1.3.1.2 30-1.3 30-1.4 31-1.4.1.2 32-1.2.2 33-1.4.1.1 34-1.4.1
+(m3 / multi-sentence 
+      :snt1 (h / have-03~e.1,7 
+            :ARG0 (e / everything~e.0) 
+            :ARG1 (n / number~e.4 
+                  :ARG1-of (s / set-16~e.3) 
+                  :poss~e.2 e~e.2)) 
+      :snt2 (t / time~e.9 :polarity~e.8 -~e.8 
+            :time-of~e.10 (c / change-01~e.12,32 
+                  :ARG1 (w / weather~e.15) 
+                  :location (c2 / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.17)))) 
+      :snt3 (p / possible-01~e.20,30 
+            :ARG1 (a / and~e.26 
+                  :op1 (b / bark-01~e.22 
+                        :ARG0 (p2 / person~e.19 
+                              :ARG0-of~e.19 (b2 / betray-01~e.19)) 
+                        :manner (m / mad-02~e.23) 
+                        :mod (o / only~e.21) 
+                        :ARG1-of (r / resemble-01~e.24 
+                              :ARG2 (d3 / dog~e.25))) 
+                  :op2 (e2 / else~e.28 
+                        :mod (n3 / nothing~e.27)))) 
+      :snt4 (p3 / possible-01~e.30 
+            :ARG1 (d2 / disappoint-01~e.34 
+                  :ARG1 (t2 / they~e.33) 
+                  :mod (o2 / only~e.31))))
+
+# ::id bolt12_64545_0547.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It won't be long until people are coming from all directions to the Chinese court . Leading the world . This is the intent of heaven .
+# ::alignments 1-1.3.4.1.1 1-1.3.4.1.1.r 3-1.3.4.1 5-1.3.1 7-1.3 8-1.3.2.r 9-1.3.2.1 10-1.3.2 11-1.3.3.r 13-1.3.3.1.2.1 14-1.3.3 16-1.1 18-1.1.1 20-1.2.2 23-1.2 24-1.2.1.r 25-1.2.1
+(m / multi-sentence 
+      :snt2 (l / lead-02~e.16 
+            :ARG1 (w / world~e.18)) 
+      :snt3 (i / intend-01~e.23 
+            :ARG0~e.24 (h / heaven~e.25) 
+            :ARG1 (t / this~e.20)) 
+      :snt1 (c / come-01~e.7 
+            :ARG1 (p / person~e.5) 
+            :ARG3~e.8 (d / direction~e.10 
+                  :mod (a / all~e.9)) 
+            :ARG4~e.11 (c2 / court~e.14 
+                  :mod (c3 / country :wiki "China" 
+                        :name (n / name :op1 "China"~e.13))) 
+            :time (b / before 
+                  :op1 (l2 / long~e.3 :polarity~e.1 -~e.1))))
+
+# ::id bolt12_64545_0548.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Following with interest .
+# ::alignments 0-1 1-1.1.r 2-1.1
+(f / follow-02~e.0 
+      :manner~e.1 (i / interest-01~e.2))
+
+# ::id bolt12_64545_0550.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This just is a specialty of modern China there 's nothing we can do
+# ::alignments 0-1.1.2 1-1.1.3 6-1.1.1 6-1.1.1.3 6-1.1.1.3.r 7-1.1.1.2.1 10-1.2.1.2 11-1.2.1.1 12-1.2 13-1.2.1
+(a / and 
+      :op1 (s / specialize-01 
+            :ARG0 (c2 / country~e.6 :wiki "China" 
+                  :name (n2 / name :op1 "China"~e.7) 
+                  :ARG1-of~e.6 (m / modern-02~e.6)) 
+            :ARG1 (t2 / this~e.0) 
+            :mod (j2 / just~e.1)) 
+      :op2 (p / possible-01~e.12 
+            :ARG1 (d / do-02~e.13 
+                  :ARG0 (w / we~e.11) 
+                  :ARG1 (n / nothing~e.10))))
+
+# ::id bolt12_64545_0551.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There are too many traitors among our compatriots ,
+# ::alignments 2-1.1.1.1 3-1.1.1 4-1.1 4-1.1.2 4-1.1.2.r 5-1 6-1.2.1 6-1.2.1.r 7-1.2
+(i / include-91~e.5 
+      :ARG1 (p / person~e.4 
+            :quant (m / many~e.3 
+                  :degree (t2 / too~e.2)) 
+            :ARG0-of~e.4 (b / betray-01~e.4)) 
+      :ARG2 (c / compatriot~e.7 
+            :poss~e.6 (w / we~e.6)))
+
+# ::id bolt12_64545_0552.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Freedom of speech is relative . We need take national conditions into account .
+# ::alignments 0-1.1.1 1-1.1.1.1.r 2-1.1.1.1 4-1.1 6-1.2.1 7-1.2 9-1.2.2.2.1 10-1.2.2.2 12-1.2.2
+(m / multi-sentence 
+      :snt1 (r / relative-05~e.4 
+            :ARG1 (f / free-04~e.0 
+                  :ARG3~e.1 (s2 / speak-01~e.2))) 
+      :snt2 (n / need-01~e.7 
+            :ARG0 (w / we~e.6) 
+            :ARG1 (a / account-01~e.12 
+                  :ARG0 w 
+                  :ARG1 (c / condition~e.10 
+                        :mod (n2 / nation~e.9)))))
+
+# ::id bolt12_64545_0553.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Freedom of speech\thought , if people express a view somewhat different than the traditional view , and put forward slightly different criticism , then they are called slaves of foreigners , or are accused of reverence for and fascination by foreign things ,
+# ::alignments 0-1.1 4-1.2.3.r 5-1.2.3.1.1 6-1.2.3.1 8-1.2.3.1.2 9-1.2.3.1.2.1.2 10-1.2.3.1.2.1 13-1.2.3.1.2.1.1.1 14-1.2.3.1.2.1.1 16-1.2.3 17-1.2.3.2 19-1.2.3.2.2.2.1 20-1.2.3.2.2.2 21-1.2.3.2.2 26-1.2.1 27-1.2.1.2 28-1.2.1.2.1.r 29-1.2.1.2.1 31-1.2 33-1.2.2 34-1.2.2.2.r 35-1.2.2.2.1 37-1.2.2.2 38-1.2.2.2.2 39-1.2.2.2.1.2.r 40-1.2.2.2.1.2.1 41-1.2.2.2.1.2
+(m / multi-sentence 
+      :snt1 (f / free-04~e.0 
+            :ARG3 (s5 / slash 
+                  :op1 (s4 / speak-01) 
+                  :op2 (t3 / think-01))) 
+      :snt2 (o / or~e.31 
+            :op1 (c / call-01~e.26 
+                  :ARG1 p2 
+                  :ARG2 (s3 / slave~e.27 
+                        :poss~e.28 (f2 / foreign~e.29))) 
+            :op2 (a2 / accuse-01~e.33 
+                  :ARG1 p2 
+                  :ARG2~e.34 (a4 / and~e.37 
+                        :op1 (r / revere-01~e.35 
+                              :ARG0 p2 
+                              :ARG1~e.39 (t2 / thing~e.41 
+                                    :mod (f3 / foreign~e.40))) 
+                        :op2 (f4 / fascinate-01~e.38 
+                              :ARG0 t2 
+                              :ARG1 p2))) 
+            :condition~e.4 (a3 / and~e.16 
+                  :op1 (e / express-01~e.6 
+                        :ARG0 (p2 / person~e.5) 
+                        :ARG1 (v3 / view-02~e.8 
+                              :ARG1-of (d / differ-02~e.10 
+                                    :ARG1 (v2 / view-02~e.14 
+                                          :mod (t / tradition~e.13)) 
+                                    :degree (s / somewhat~e.9)))) 
+                  :op2 (p / put-02~e.17 
+                        :ARG0 p2 
+                        :ARG1 (c2 / criticize-01~e.21 
+                              :ARG0 p2 
+                              :ARG1-of (d2 / differ-02~e.20 
+                                    :degree (s2 / slight~e.19)))))))
+
+# ::id bolt12_64545_0553.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok to the person who said this I 'd like to ask which one of those mentioned above is your dad
+# ::alignments 2-1.2.2 2-1.2.2.1 2-1.2.2.1.1.1 2-1.2.3 4-1.2.3.1 5-1.2.3.1.1 6-1.1 8-1 10-1.2 13-1.2.2.1.1.1.1.r 14-1.2.2.1.1.1.1 15-1.2.2.1.1.1.2 16-1.2.2.1.1.1.2.1 17-1.2.2.1.r 18-1.2.2.2.1 18-1.2.2.2.1.r 19-1.2.2.2.2
+(l / like-02~e.8 
+      :ARG0 (i / i~e.6) 
+      :ARG1 (a / ask-01~e.10 
+            :ARG0 i 
+            :ARG1 (p4 / person~e.2 
+                  :domain~e.17 (p2 / person~e.2 
+                        :ARG1-of (i2 / include-91 
+                              :ARG2 (p3 / person~e.2 
+                                    :mod~e.13 (t2 / that~e.14) 
+                                    :ARG1-of (m / mention-01~e.15 
+                                          :location (a3 / above~e.16))))) 
+                  :ARG0-of (h / have-rel-role-91 
+                        :ARG1~e.18 p~e.18 
+                        :ARG2 (d / dad~e.19))) 
+            :ARG2 (p / person~e.2 
+                  :ARG0-of (s / say-01~e.4 
+                        :ARG1 (t / this~e.5)))))
+
+# ::id bolt12_64545_0554.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For fans of military affairs , fascinated with armaments , fascinated with military clothing qualities , those who wanted to become soldiers but for various reasons did not succeed , we welcome you to join Military Fans ' Alliance , qq group 181729561 . Those who enter the group must adhere to the system within the group - be patriotic , must modify your group business card to be consistent with the format of other people 's . This group only permits males the enter , if you do n't conform , do n't ally together with us , do n't follow the system within the group , we will ask you to please voluntarily leave the group .
+# ::alignments 1-1.3.1.2 2-1.3.1.2 3-1.3.1.2 4-1.3.1.2 5-1.3.1.2 6-1.3.1.2 7-1.3.1.2 8-1.3.1.2 9-1.3.1.2 10-1.3.1.2 11-1.3.1.2 12-1.3.1.2 13-1.3.1.2 14-1.3.1.2 15-1.3.1.2 16-1.3.1.2 17-1.3.1.2 18-1.3.1.2 19-1.3.1.2 20-1.3.1.2 21-1.3.1.2 22-1.3.1.2 23-1.3.1.2 24-1.3.1.2 25-1.3.1.2 26-1.3.1.2 27-1.3.1.2 28-1.3.1.2 30-1.3.1.1 31-1.3.1 32-1.3.1.3.1 34-1.3.1.3 35-1.3.1.3.2.2.1 36-1.3.1.3.2.2.2 37-1.3.1.3.2.2.2 38-1.3.1.3.2.2.3 40-1.3.1.3.2.3.1.3.2.1 41-1.3.1.3.2.3.1.2 42-1.3.1.3.2.3.1.1 46-1.1.1.1 48-1.1.1.1.1 49-1.1 50-1.1.2.1 51-1.1.2.1.2.r 53-1.1.2.1.2 56-1.1.2.1.2.1 58-1.1.2.2.1.r 59-1.1.2.2 61-1.1 62-1.1.2.3 63-1.2.4.1.3 63-1.2.4.1.3.r 64-1.1.2.3.2.1 64-1.3.1.3.2.3.1.2 65-1.1.2.3.2.2 66-1.1.2.3.2 69-1.1.2.3.3 70-1.1.2.3.3.2.r 72-1.1.2.3.3.2 74-1.1.2.3.3.2.1.1 75-1.1.1 75-1.1.2.3.3.2.1 76-1.1 76-1.3.1.3.2 76-1.3.1.3.2.3 76-1.3.1.3.2.3.r 78-1.2.1.1 79-1.2.1 80-1.2.3 81-1.2 82-1.2.2.1 84-1.2.2 86-1.2.4.1.4.r 87-1.2.4.1.4.1.2 89-1.2.4.1.4.1.1 89-1.2.4.1.4.1.1.r 90-1.2.4.1.4.1 93-1.2.4.1.4.2.1 93-1.2.4.1.4.2.1.r 94-1.2.4.1.4.2 96-1.2.4.1.4.2.3.r 97-1.2.4.1.4.2.3 100-1.2.4.1.4.3.1 100-1.2.4.1.4.3.1.r 101-1.2.4.1.4.3 103-1.2.4.1.4.3.3 106-1.2.4.1.4.3.3.1 108-1.2.4.1.1 110-1.2.4.1 111-1.2.4.1.2.2 113-1.2.4.1.2.1 113-1.2.4.1.2.1.r 114-1.2.4.1.2.3 115-1.2.4.1.2 117-1.3.1.3.2.3.1.2
+(m / multi-sentence 
+      :snt2 (o2 / obligate-01~e.49,61,76 
+            :ARG1 (p3 / person~e.75 
+                  :ARG0-of (e / enter-01~e.46 
+                        :ARG1 (g3 / group~e.48))) 
+            :ARG2 (a4 / and 
+                  :op1 (a5 / adhere-01~e.50 
+                        :ARG0 p3 
+                        :ARG2~e.51 (s2 / system~e.53 
+                              :location g3~e.56)) 
+                  :op2 (p / patriotic~e.59 
+                        :domain~e.58 p3) 
+                  :op3 (m3 / modify-01~e.62 
+                        :ARG0 p3 
+                        :ARG1 (c2 / card~e.66 
+                              :mod (g4 / group~e.64) 
+                              :mod (b2 / business~e.65) 
+                              :poss p3) 
+                        :ARG2 (c3 / consistent-01~e.69 
+                              :ARG1 c2 
+                              :ARG2~e.70 (f2 / format~e.72 
+                                    :poss (p5 / person~e.75 
+                                          :mod (o3 / other~e.74))))))) 
+      :snt3 (p2 / permit-01~e.81 
+            :ARG0 (g2 / group~e.79 
+                  :mod (t / this~e.78)) 
+            :ARG1 (e2 / enter-01~e.84 
+                  :ARG0 (m2 / male~e.82) 
+                  :ARG1 g2) 
+            :mod (o / only~e.80) 
+            :ARG0-of (c8 / cause-01 
+                  :ARG1 (a / ask-02~e.110 
+                        :ARG0 (w3 / we~e.108) 
+                        :ARG1 (l / leave-11~e.115 :polite~e.113 +~e.113 
+                              :ARG0 y2~e.111 
+                              :ARG1-of (v / volunteer-01~e.114 
+                                    :ARG0 y2)) 
+                        :ARG2~e.63 (y2 / you~e.63) 
+                        :condition~e.86 (a2 / and 
+                              :op1 (c / conform-01~e.90 :polarity~e.89 -~e.89 
+                                    :ARG1 y2~e.87) 
+                              :op2 (a3 / ally-01~e.94 :polarity~e.93 -~e.93 
+                                    :ARG1 y2 
+                                    :ARG2~e.96 w3~e.97) 
+                              :op3 (f / follow-02~e.101 :polarity~e.100 -~e.100 
+                                    :ARG0 y2 
+                                    :ARG1 (s / system~e.103 
+                                          :location g2~e.106)))))) 
+      :snt1 (s5 / say-01 
+            :ARG1 (w / welcome-01~e.31 
+                  :ARG0 (w2 / we~e.30) 
+                  :ARG1 f4~e.1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 
+                  :ARG2 (j / join-01~e.34 
+                        :ARG0 f4~e.32 
+                        :ARG1 (o4 / organization~e.76 :wiki - 
+                              :name (n / name :op1 "Military"~e.35 :op2 "Fans'"~e.36,37 :op3 "Alliance"~e.38) 
+                              :ARG0-of~e.76 (h2 / have-03~e.76 
+                                    :ARG1 (n2 / number :value 181729561~e.42 
+                                          :mod (g5 / group~e.41,64,117) 
+                                          :mod (p4 / product :wiki "Tencent_QQ" 
+                                                :name (n3 / name :op1 "QQ"~e.40))))))) 
+            :ARG2 (f4 / fan 
+                  :topic (a8 / affair-02 
+                        :ARG2 (m5 / military)) 
+                  :ARG1-of (f3 / fascinate-01 
+                        :ARG0 (a6 / and 
+                              :op1 (a7 / armament) 
+                              :op2 (q / quality 
+                                    :mod (c4 / clothing 
+                                          :mod (m4 / military))))) 
+                  :ARG0-of (w4 / want-01 
+                        :ARG1 (b3 / become-01 
+                              :ARG1 (y / you) 
+                              :ARG2 (s4 / soldier)) 
+                        :ARG1-of (c7 / contrast-01 
+                              :ARG2 (s3 / succeed-01 :polarity - 
+                                    :ARG0 y 
+                                    :ARG1 b3 
+                                    :ARG1-of (c6 / cause-01 
+                                          :ARG0 (r / reason 
+                                                :mod (v2 / various)))))))))
+
+# ::id bolt12_64545_0555.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Support , bump
+# ::alignments 0-1.1 2-1.2
+(a / and 
+      :op1 (s / support-01~e.0) 
+      :op2 (b / bump-02~e.2))
+
+# ::id bolt12_64545_0556.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In critical moments , we are all descendants of Yan emperor and Huang emperor .
+# ::alignments 1-1.3.1 2-1.3 4-1.1 6-1.1.1 9-1.2.1.2.1 10-1.2.1.3.1 11-1.2 12-1.2.2.2.1 13-1.2.2.3
+(d / descend-01 
+      :ARG0 (w / we~e.4 
+            :mod (a / all~e.6)) 
+      :source (a2 / and~e.11 
+            :op1 (p / person :wiki "Yan_Emperor" 
+                  :name (n / name :op1 "Yan"~e.9) 
+                  :ARG0-of (h / have-org-role-91 
+                        :ARG2 (e / emperor~e.10))) 
+            :op2 (p2 / person :wiki "Murong_Huang" 
+                  :name (n2 / name :op1 "Huang"~e.12) 
+                  :ARG0-of h~e.13)) 
+      :time (m / moment~e.2 
+            :ARG1-of (c / critical-02~e.1)))
+
+# ::id bolt12_64545_0556.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Look at the Kuomintang @-@ Communist cooperation of those years and you will know ...
+# ::alignments 0-1.1 1-1.1.3.r 3-1.1.3.1.2.1 5-1.1.3.2.2.1 6-1.1.3 7-1.1.3.3.r 8-1.1.3.3.1 9-1.1.3.3 11-1.1.2 13-1.2
+(a / and 
+      :op1 (l / look-01~e.0 :mode imperative 
+            :ARG0 (y / you~e.11) 
+            :ARG1~e.1 (c / cooperate-01~e.6 
+                  :ARG0 (p / political-party :wiki "Kuomintang" 
+                        :name (n / name :op1 "Kuomintang"~e.3)) 
+                  :ARG1 (p2 / political-party :wiki "Communist_Party_of_China" 
+                        :name (n2 / name :op1 "Communist"~e.5)) 
+                  :time~e.7 (y2 / year~e.9 
+                        :mod (t / that~e.8)))) 
+      :op2 (k / know-01~e.13 
+            :ARG0 y))
+
+# ::id bolt12_64545_0556.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In the peaceful years , creating a ruckus does n't influence everybody cooperating when it 's time for war ...
+# ::alignments 2-1.4.1 3-1.4 5-1.2 7-1.2.1 9-1.1 9-1.1.r 10-1 11-1.3.1 12-1.3 13-1.3.2.r 15-1 16-1.4.r 18-1.3.2
+(i / influence-01~e.10,15 :polarity~e.9 -~e.9 
+      :ARG0 (c / create-01~e.5 
+            :ARG1 (r / ruckus~e.7)) 
+      :ARG2 (c2 / cooperate-01~e.12 
+            :ARG1 (e / everybody~e.11) 
+            :time~e.13 (w / war~e.18)) 
+      :time~e.16 (y / year~e.3 
+            :mod (p / peaceful~e.2)))
+
+# ::id bolt12_64545_0557.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It can compete with articles from the Cultural Revolution , magnifying a problem to become a question of principle or of ideological line , buttoning the hat .
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2.r 4-1.1.2 5-1.1.2.1.r 7-1.1.2.1.2.1 8-1.1.2.1.2.2 10-1.1.3 12-1.1.3.2 14-1.1.3.3 16-1.1.3.3.2 17-1.1.3.3.2.1.r 18-1.1.3.3.2.1.1 19-1.1.3.3.2.1 21-1.1.3.3.2.1.2.1 22-1.1.3.3.2.1.2 24-1.1.4 26-1.1.4.2
+(p3 / possible-01~e.1 
+      :ARG1 (c / compete-01~e.2 
+            :ARG0 (i / it~e.0) 
+            :ARG1~e.3 (a / article~e.4 
+                  :source~e.5 (e / event :wiki "Cultural_Revolution" 
+                        :name (n / name :op1 "Cultural"~e.7 :op2 "Revolution"~e.8))) 
+            :manner (m / magnify-01~e.10 
+                  :ARG0 i 
+                  :ARG1 (p / problem~e.12) 
+                  :purpose (b / become-01~e.14 
+                        :ARG1 p 
+                        :ARG2 (q / question~e.16 
+                              :topic~e.17 (o / or~e.19 
+                                    :op1 (p2 / principle~e.18) 
+                                    :op2 (l / line~e.22 
+                                          :mod (i2 / ideology~e.21)))))) 
+            :manner (b2 / button-01~e.24 
+                  :ARG0 i 
+                  :ARG1 (h / hat~e.26))))
+
+# ::id bolt12_64545_0558.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok the fifth column will make those with vested interests in the Communist Party terrified , it 's a good thing
+# ::alignments 1-1.1.1 1-1.1.1.1 1-1.1.1.1.r 2-1.1 7-1.2.1.2 8-1.2 8-1.2.1 8-1.2.1.r 9-1.2.1.1.r 11-1.2.1.1.2.1 12-1.2.1.1.2.2 13-1 18-1.3.1 19-1.3
+(t / terrify-01~e.13 
+      :ARG0 (c / column~e.2 
+            :ord (o / ordinal-entity~e.1 :value~e.1 5~e.1)) 
+      :ARG1 (p / person~e.8 
+            :ARG1-of~e.8 (i / interest-01~e.8 
+                  :ARG2~e.9 (p2 / political-party :wiki "Communist_Party_of_China" 
+                        :name (n / name :op1 "Communist"~e.11 :op2 "Party"~e.12)) 
+                  :ARG2-of (v / vest-01~e.7))) 
+      :mod (t2 / thing~e.19 
+            :ARG1-of (g / good-02~e.18)))
+
+# ::id bolt12_64545_0559.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If you want to destroy a people , first of all is his national culture , whose tool is language and writing . Currently the one which everyone who is going to the next grade or entering a higher school must all be tested on is English @-
+# ::alignments 0-1.1.5.r 1-1.1.5.1 2-1.1.5 4-1.1.5.2 6-1.1.5.2.2 8-1.1.4 9-1.1.4 10-1.1.4 12-1.1.1 12-1.1.1.r 13-1.1.2 14-1.1 17-1.1.3 18-1.1.3.1.r 19-1.1.3.1.1 20-1.1.3.1 21-1.1.3.1.2 23-1.2.1.3 27-1.2.1.1.1 27-1.2.1.1.2 30-1.2.1.1.1.1 31-1.2.1.1.1.1.1.r 33-1.2.1.1.1.1.1.1 34-1.2.1.1.1.1.1 35-1.2.1.1 36-1.2.1.1.2.1 38-1.2.1.1.2.1.1.1 38-1.2.1.1.2.1.1.1.1 38-1.2.1.1.2.1.1.1.1.r 39-1.2.1.1.2.1.1 40-1.2 41-1.2.1.1.3 43-1.2.1 46-1.2.1.2.2.1
+(m / multi-sentence 
+      :snt1 (c2 / culture~e.14 
+            :poss~e.12 p~e.12 
+            :mod (n3 / nation~e.13) 
+            :poss-of (t2 / tool~e.17 
+                  :domain~e.18 (a / and~e.20 
+                        :op1 (l2 / language~e.19) 
+                        :op2 (w2 / write-01~e.21))) 
+            :mod (f / first-of-all~e.8,9,10) 
+            :condition~e.0 (w / want-01~e.2 
+                  :ARG0 (y / you~e.1) 
+                  :ARG1 (d / destroy-01~e.4 
+                        :ARG0 y 
+                        :ARG1 (p / people~e.6)))) 
+      :snt2 (o / obligate-01~e.40 
+            :ARG1 (t / test-01~e.43 
+                  :ARG1 (o2 / or~e.35 
+                        :op1 (e / everyone~e.27 
+                              :ARG1-of (g / go-01~e.30 
+                                    :ARG4~e.31 (g2 / grade~e.34 
+                                          :mod (n2 / next~e.33)))) 
+                        :op2 (e3 / everyone~e.27 
+                              :ARG0-of (e2 / enter-01~e.36 
+                                    :ARG1 (s / school~e.39 
+                                          :mod (h / high~e.38 
+                                                :degree~e.38 (m2 / more~e.38))))) 
+                        :mod (a3 / all~e.41)) 
+                  :ARG2 (l / language :wiki "English_language" 
+                        :name (n / name :op1 "English"~e.46)) 
+                  :time (c / current~e.23))))
+
+# ::id bolt12_64545_0559.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok -@ turn
+# ::alignments 1-1
+(t / turn-01~e.1)
+
+# ::id bolt12_64545_0560.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok you are a dragon coiling , you are a tiger crouching , it makes sense , wait for the opportunity
+# ::alignments 0-1.1.1.2 1-1.1.1.2.r 3-1.1.1 4-1.1.1.1 6-1.3.2 7-1.1.2.2.r 9-1.1.2 10-1.1.2.1 12-1.2.1 13-1.2 14-1.2 16-1.3 17-1.3.3.r 19-1.3.3
+(m2 / multi-sentence 
+      :snt1 (a / and 
+            :op1 (d / dragon~e.3 
+                  :ARG1-of (c2 / coil-01~e.4) 
+                  :domain~e.1 (y2 / you~e.0)) 
+            :op2 (t / tiger~e.9 
+                  :ARG0-of (c3 / crouch-01~e.10) 
+                  :domain~e.7 y2)) 
+      :snt2 (s2 / sense-02~e.13,14 
+            :ARG1 (i / it~e.12)) 
+      :snt3 (w / wait-01~e.16 :mode imperative 
+            :ARG1 (y / you~e.6) 
+            :ARG2~e.17 (o / opportunity~e.19)))
+
+# ::id bolt12_64545_0561.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In fact , US no longer needs to use force to deal with China , they have reached a result of " defeating enemy soldiers without fighting " ...
+# ::alignments 0-1.2.4 1-1.2.4 3-1.2.1.2.1 4-1.2.3 5-1.2.3 6-1.2 8-1.2.2 9-1.2.2.2 11-1.2.2.3 12-1.2.2.3.2.r 13-1.2.2.3.2.2.1 17-1.1 19-1.1.2 22-1.1.2.1 23-1.1.2.1.2.1.2 24-1.1.2.1.2 25-1.1.2.1.3.1 25-1.1.2.1.3.1.r 26-1.1.2.1.3
+(c3 / cause-01 
+      :ARG0 (r2 / reach-01~e.17 
+            :ARG0 c 
+            :ARG1 (r / result-01~e.19 
+                  :ARG2 (d2 / defeat-01~e.22 
+                        :ARG0 c 
+                        :ARG1 (s / soldier~e.24 
+                              :ARG0-of (h / have-rel-role-91 
+                                    :ARG1 c 
+                                    :ARG2 (e / enemy~e.23))) 
+                        :manner (f3 / fight-01~e.26 :polarity~e.25 -~e.25 
+                              :ARG0 c)))) 
+      :ARG1 (n / need-01~e.6 
+            :ARG0 (c / country :wiki "United_States" 
+                  :name (n3 / name :op1 "US"~e.3)) 
+            :ARG1 (u / use-01~e.8 
+                  :ARG0 c 
+                  :ARG1 (f / force-04~e.9) 
+                  :ARG2 (d / deal-01~e.11 
+                        :ARG0 c 
+                        :ARG2~e.12 (c2 / country :wiki "China" 
+                              :name (n2 / name :op1 "China"~e.13)))) 
+            :time (n4 / no-longer~e.4,5) 
+            :mod (i / in-fact~e.0,1)))
+
+# ::id bolt12_64545_0561.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yes . There are many slaves of foreigners . It 's time we should renovate !
+# ::alignments 0-1.1 4-1.2.1 5-1.2 6-1.2.2.r 7-1.2.2 11-1.3 11-1.3.1.r 12-1.3.1.1.1 13-1.3.1 14-1.3.1.1
+(m / multi-sentence 
+      :snt1 (y / yes~e.0) 
+      :snt2 (s / slave~e.5 
+            :quant (m2 / many~e.4) 
+            :poss~e.6 (f / foreign~e.7)) 
+      :snt3 (t / time~e.11 
+            :time-of~e.11 (r / recommend-01~e.13 
+                  :ARG1 (r2 / renovate-01~e.14 
+                        :ARG0 (w / we~e.12)))))
+
+# ::id bolt12_64545_0562.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The ruling authorities actually should pay attention to these kinds of capitulators and traitors of China ! Comrade Deng Xiaoping once said that the Communist Party will not be overthrown - if it falls , it will be brought down from within the party itself . Former US Ambassador to China Mr. Huntsman once said in a speech in the US : we will raise eight hundred thousand spokespeople in China , let the Chinese themselves topple China - and the CIA then used an annual eight million yuan subsidy to help these domestic so @-@ called elite , vowing that they want to let them raise the wind to make waves domestically , citizens definitely need to be alert for this and cannot let outsiders use us .
+# ::alignments 1-1.1.1.1.1 2-1.1.1.1 3-1.1.2 4-1.1 6-1.1.1 7-1.1.1.2.r 8-1.1.1.2.3.1 9-1.1.1.2.3 11-1.1.1.2 11-1.1.1.2.1 11-1.1.1.2.1.r 13-1.1.1.2.2 13-1.1.1.2.2.r 14-1.1.1.2.2.1.r 15-1.1.1.2.2.1.2.1 16-1.3.1.2.2.1.r 17-1.2.1.3.1 18-1.2.1.2.1 19-1.2.1.2.2 20-1.2.3 21-1.2 22-1.2.2.r 24-1.2.2.1.2.2.1 25-1.2.2.1.2.2.2 27-1.2.2.1.1 27-1.2.2.1.1.r 29-1.2.2.1 31-1.2.2.2.3.r 32-1.2.2.2.3.1 33-1.2.2.2.3 38-1.2.2.2 39-1.2.2.2 40-1.2.2.2.2.r 43-1.2.2.1.2 46-1.3.1.1.3.4 47-1.3.1.1.3.1.2.1 48-1.3.1.1.3.2 50-1.3.1.1.3.3.2.1 51-1.3.1.1.2.1 52-1.3.1.1.2.2 53-1.3.1.3 54-1.3.1 55-1.3.1.4.r 57-1.3.1.4 58-1.3.1.2.r 60-1.3.1.2.1.1 62-1.3.1.2.1.1 64-1.3.1.2.1 65-1.3.1.2.1.2.1 66-1.3.1.2.1.2.1 67-1.3.1.2.1.2.1 68-1.3.1.2.1.2 69-1.3.1.2.1.2.2.r 70-1.3.1.2.1.2.2 72-1.3.1.2.2.1 72-1.3.1.2.2.1.r 74-1.3.1.2.2.3 76-1.3.1.2.2 77-1.3.1.2.2.3 79-1.3 79-1.3.1.2 79-1.3.2 79-1.3.2.r 81-1.3.2.1.1.2.1 82-1.3.2.1.4 83-1.3.2.1 84-1.3.2.1.2.1.2.1 85-1.3.2.1.2.1 85-1.3.2.1.2.1.2 85-1.3.2.1.2.1.2.1 85-1.3.2.1.2.1.2.1.r 85-1.3.2.1.2.1.2.2 85-1.3.2.1.2.1.2.2.r 85-1.3.2.1.2.1.2.r 86-1.3.2.1.2.1.1.1 87-1.3.2.1.2.1.1.1 88-1.3.2.1.2.1.1.2 89-1.3.2.1.2 91-1.3.2.1.3 92-1.4.2.1.2 93-1.3.2.1.3.2.1 94-1.3.2.1.3.2.2.1 96-1.3.2.1.3.2.2 97-1.3.2.1.3.2 99-1.3.2.2 102-1.3.2.2.2 103-1.3.2.2.2.2.r 104-1.3.2.2.2.2 106-1.3.2.2.2.2.2.1 108-1.3.2.2.2.2.2.1.2 110-1.3.2.2.2.2.2.1.3 111-1.3.2.2.2.2.2.1.3.2 112-1.3.2.2.2.2.2.1.3.3 114-1.4.1 115-1.4.3 116-1.4 119-1.4.2.1 121-1.4.2.1.2 122-1.4.2 123-1.4.2.2.1 123-1.4.2.2.1.r 124-1.4.2.2 125-1.4.2.2.3.1 126-1.3.2.2.2.2.2.1.3.r 126-1.4.2.2.3 127-1.4.2.2.3.2
+(m / multi-sentence 
+      :snt1 (r / recommend-01~e.4 
+            :ARG1 (a2 / attend-02~e.6 
+                  :ARG0 (a12 / authority~e.2 
+                        :ARG0-of (r2 / rule-03~e.1)) 
+                  :ARG1~e.7 (p / person~e.11 
+                        :ARG0-of~e.11 (c11 / capitulate-01~e.11) 
+                        :ARG0-of~e.13 (b2 / betray-01~e.13 
+                              :ARG1~e.14 (c2 / country :wiki "China" 
+                                    :name (n / name :op1 "China"~e.15))) 
+                        :mod (k / kind~e.9 
+                              :mod (t7 / this~e.8)))) 
+            :ARG1-of (a4 / actual-02~e.3)) 
+      :snt2 (s / say-01~e.21 
+            :ARG0 (p4 / person :wiki "Deng_Xiaoping" 
+                  :name (n3 / name :op1 "Deng"~e.18 :op2 "Xiaoping"~e.19) 
+                  :ARG0-of (h3 / have-rel-role-91 
+                        :ARG2 (c3 / comrade~e.17))) 
+            :ARG1~e.22 (a / and 
+                  :op1 (o2 / overthrow-01~e.29 :polarity~e.27 -~e.27 
+                        :ARG1 (p3 / political-party~e.43 :wiki "Communist_Party_of_China" 
+                              :name (n4 / name :op1 "Communist"~e.24 :op2 "Party"~e.25))) 
+                  :op2 (b / bring-down-03~e.38,39 
+                        :ARG1 p3 
+                        :source~e.40 p3 
+                        :condition~e.31 (f / fall-05~e.33 
+                              :ARG1 p3~e.32))) 
+            :time (o / once~e.20)) 
+      :snt3 (a13 / and~e.79 
+            :op1 (s2 / say-01~e.54 
+                  :ARG0 (p6 / person :wiki "Jon_Huntsman,_Jr." 
+                        :name (n5 / name :op1 "Mr."~e.51 :op2 "Huntsman"~e.52) 
+                        :ARG0-of (h2 / have-org-role-91 
+                              :ARG1 (c / country :wiki "United_States" 
+                                    :name (n2 / name :op1 "US"~e.47)) 
+                              :ARG2 (a5 / ambassador~e.48) 
+                              :location (c5 / country :wiki "China" 
+                                    :name (n6 / name :op1 "China"~e.50)) 
+                              :time (f2 / former~e.46))) 
+                  :ARG1~e.58 (a6 / and~e.79 
+                        :op1 (r3 / raise-01~e.64 
+                              :ARG0 (w / we~e.60,62) 
+                              :ARG1 (s7 / spokesperson~e.68 :quant 800000~e.65,66,67 
+                                    :location~e.69 c5~e.70)) 
+                        :op2 (t3 / topple-01~e.76 :mode~e.16,72 imperative~e.72 
+                              :ARG0 (p5 / person 
+                                    :mod c5) 
+                              :ARG1 c5~e.74,77)) 
+                  :time (o3 / once~e.53) 
+                  :medium~e.55 (s3 / speech~e.57 
+                        :location c)) 
+            :op2~e.79 (a7 / and~e.79 
+                  :op1 (u3 / use-01~e.83 
+                        :ARG0 (g / government-organization :wiki "Central_Intelligence_Agency" 
+                              :name (n10 / name :op1 "CIA"~e.81)) 
+                        :ARG1 (s4 / subsidy~e.89 
+                              :mod (r5 / rate-entity-91~e.85 
+                                    :ARG1 (m2 / monetary-quantity :quant 8000000~e.86,87 
+                                          :unit (y / yuan~e.88)) 
+                                    :ARG2~e.85 (t / temporal-quantity~e.85 :quant~e.85 1~e.84,85 
+                                          :unit~e.85 (y2 / year~e.85)))) 
+                        :ARG2 (h / help-01~e.91 
+                              :ARG0 g 
+                              :ARG1 (e2 / elite~e.97 
+                                    :mod (d / domestic~e.93) 
+                                    :ARG1-of (c10 / call-01~e.96 
+                                          :mod (s6 / so~e.94)))) 
+                        :time (t2 / then~e.82)) 
+                  :op2 (v / vow-01~e.99 
+                        :ARG0 g 
+                        :ARG1 (w2 / want-01~e.102 
+                              :ARG0 g 
+                              :ARG1~e.103 (a9 / allow-01~e.104 
+                                    :ARG0 g 
+                                    :ARG1 (a8 / and 
+                                          :op1 (r4 / raise-01~e.106 
+                                                :ARG0 e2 
+                                                :ARG1 (w3 / wind~e.108) 
+                                                :purpose~e.126 (m3 / make-01~e.110 
+                                                      :ARG0 g 
+                                                      :ARG1 (w4 / wave~e.111) 
+                                                      :location (d2 / domestic~e.112))))))))) 
+      :snt4 (n7 / need-01~e.116 
+            :ARG0 (c9 / citizen~e.114) 
+            :ARG1 (a3 / and~e.122 
+                  :op1 (a10 / alert-01~e.119 
+                        :ARG1 c9 
+                        :ARG2 (t6 / this~e.92,121)) 
+                  :op2 (l / let-01~e.124 :polarity~e.123 -~e.123 
+                        :ARG0 c9 
+                        :ARG1 (u / use-01~e.126 
+                              :ARG0 (o5 / outsider~e.125) 
+                              :ARG1 (w5 / we~e.127)))) 
+            :mod (d3 / definite~e.115)))
+
+# ::id bolt12_64545_0563.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I have reasons to say this : these last several days I have seen the suggestions given by the experts - with a glimpse I see they are disciples of Wang Jingwei !
+# ::alignments 0-1.1.1.1 2-1 2-1.1 2-1.1.r 3-1.1 4-1.1.1 8-1.1.1.2.1.3 8-1.1.1.2.1.3.1 8-1.1.1.2.1.3.1.r 8-1.1.1.2.1.3.2.r 9-1.1.1.2.1.3.2 10-1.1.1.2.1.3.2.1.2 11-1.1.1.2.1.3.2.1.1 13-1.1.1.2.1 15-1.1.1.2.1.2 15-1.1.1.2.1.2.1 15-1.1.1.2.1.2.1.r 16-1.1.1.2.1.2.1 17-1.1.1.2.1.2.1.1.r 19-1.1.1.2.1.2.1.1 19-1.1.1.2.1.2.1.1.1 19-1.1.1.2.1.2.1.1.1.r 21-1.1.1.2.r 23-1.1.1.2.2.3 24-1.1.1.2.1.3.2.1.1 25-1.1.1.2.1 25-1.1.1.2.2 27-1.1.1.2.2.2.2.r 28-1.1.1.2.2.2 29-1.1.1.2.2.2.1.r 30-1.1.1.2.2.2.1.2.1 31-1.1.1.2.2.2.1.2.2
+(r / reason~e.2 
+      :ARG0-of~e.2 (c2 / cause-01~e.2,3 
+            :ARG1 (s / say-01~e.4 
+                  :ARG0 (i / i~e.0) 
+                  :ARG1~e.21 (a / and 
+                        :op1 (s2 / see-01~e.13,25 
+                              :ARG0 i 
+                              :ARG1 (t3 / thing~e.15 
+                                    :ARG1-of~e.15 (s5 / suggest-01~e.15,16 
+                                          :ARG0~e.17 (p2 / person~e.19 
+                                                :ARG1-of~e.19 (e3 / expert-01~e.19)))) 
+                              :time (b / before~e.8 
+                                    :op1~e.8 (n2 / now~e.8) 
+                                    :duration~e.8 (s6 / several~e.9 
+                                          :op1 (t4 / temporal-quantity :quant 1~e.11,24 
+                                                :unit (d2 / day~e.10))))) 
+                        :op2 (s4 / see-01~e.25 
+                              :ARG0 i 
+                              :ARG1 (d / disciple~e.28 
+                                    :poss~e.29 (p / person :wiki "Wang_Jingwei" 
+                                          :name (n / name :op1 "Wang"~e.30 :op2 "Jingwei"~e.31)) 
+                                    :domain~e.27 p2) 
+                              :manner (g2 / glimpse-01~e.23 
+                                    :ARG0 i))))))
+
+# ::id bolt12_64545_0564.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Western society allows these people to see the dawn of fairness and justice of democracy .
+# ::alignments 0-1.1.1.2.1 1-1.1 2-1 3-1.2.1.1 4-1.2.1 6-1.2 8-1.2.2 9-1.2.2.1.r 10-1.2.2.1.1 11-1.2.2.1 12-1.2.2.1.2 13-1.2.2.1.1.1.r 14-1.2.2.1.1.1
+(a / allow-01~e.2 
+      :ARG0 (s / society~e.1 
+            :mod (w2 / world-region :wiki "Western_world" 
+                  :name (n / name :op1 "West"~e.0))) 
+      :ARG1 (s2 / see-01~e.6 
+            :ARG0 (p / person~e.4 
+                  :mod (t / this~e.3)) 
+            :ARG1 (d / dawn-02~e.8 
+                  :ARG1~e.9 (a2 / and~e.11 
+                        :op1 (f / fair-01~e.10 
+                              :ARG1~e.13 (d2 / democracy~e.14)) 
+                        :op2 (j / justice~e.12 
+                              :domain d2)))))
+
+# ::id bolt12_64545_0564.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The domestic political development is truly too slow , being criticized by people whose ideology is a bit advanced is inevitable . Can we blame others for this ?
+# ::alignments 1-1.1.1.1.2 2-1.1.1.1.1 3-1.1.1.1 5-1.1.1.3 6-1.1.1.2 7-1.1.1 10-1.1.2.2.1 11-1.1.2.2.1.1.r 12-1.1.2.2.1.1 14-1.1.2.2.1.1.1 17-1.1.2.2.1.1.1.1.1 18-1.1.2.2.1.1.1.1 20-1.1.2 20-1.1.2.1 20-1.1.2.1.r 20-1.1.2.2 20-1.1.2.2.r 22-1.1.2 22-1.2 23-1.2.2.1 24-1.2.2 25-1.2.2.2 26-1.2.2.3.r 27-1.2.2.3 28-1.2.1 28-1.2.1.r
+(m / multi-sentence 
+      :snt1 (c2 / cause-01 
+            :ARG0 (s / slow-05~e.7 
+                  :ARG1 (d / develop-02~e.3 
+                        :ARG1 (p / politics~e.2) 
+                        :location (d2 / domestic~e.1)) 
+                  :degree (t / too~e.6) 
+                  :ARG1-of (t2 / true-01~e.5)) 
+            :ARG1 (p4 / possible-01~e.20,22 :polarity~e.20 -~e.20 
+                  :ARG1~e.20 (a / avoid-01~e.20 
+                        :ARG1 (c / criticize-01~e.10 
+                              :ARG0~e.11 (p3 / person~e.12 
+                                    :poss-of (i / ideology~e.14 
+                                          :ARG1-of (a2 / advanced-02~e.18 
+                                                :degree (b2 / bit~e.17)))) 
+                              :ARG1 d)))) 
+      :snt2 (p2 / possible-01~e.22 :mode~e.28 interrogative~e.28 
+            :ARG1 (b / blame-01~e.24 
+                  :ARG0 (w / we~e.23) 
+                  :ARG1 (o / other~e.25) 
+                  :ARG2~e.26 (t3 / this~e.27))))
+
+# ::id bolt12_64545_0564.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Saying that someone is bribed is improper ?
+# ::alignments 0-1.3 1-1.3.1.r 2-1.3.1.1 4-1.3.1 5-1.3.r 6-1 6-1.1 6-1.1.r 7-1.2 7-1.2.r
+(p / proper~e.6 :polarity~e.6 -~e.6 :mode~e.7 interrogative~e.7 
+      :domain~e.5 (s / say-01~e.0 
+            :ARG1~e.1 (b / bribe-01~e.4 
+                  :ARG1 (s2 / someone~e.2))))
+
+# ::id bolt12_64545_0564.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok People are all selfish , reality also is often gray .
+# ::alignments 0-1.1.1 1-1.1.1.r 2-1.1.1.1 3-1.1 5-1.2.1 6-1.2.3 8-1.2.2 9-1.2
+(a3 / and 
+      :op1 (s / selfish~e.3 
+            :domain~e.1 (p / person~e.0 
+                  :mod (a / all~e.2))) 
+      :op2 (g / gray-02~e.9 
+            :ARG1 (r / reality~e.5) 
+            :frequency (o / often~e.8) 
+            :mod (a2 / also~e.6)))
+
+# ::id bolt12_64545_0564.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Some propaganda activities of ZF have soon become viewed as jokes by the people .
+# ::alignments 0-1.2.2.3 1-1.2.2.2 2-1.2.2 3-1.2.2.1.r 4-1.2.2.1.2.1 6-1.3 7-1 8-1.2 9-1.2.3.r 9-1.3.r 10-1.2.3 10-1.2.3.1 10-1.2.3.1.r 11-1.2.1.r 13-1.2.1
+(b / become-01~e.7 
+      :ARG1 a 
+      :ARG2 (v / view-02~e.8 
+            :ARG0~e.11 (p2 / person~e.13) 
+            :ARG1 (a / activity-06~e.2 
+                  :ARG0~e.3 (o / organization :wiki - 
+                        :name (n / name :op1 "ZF"~e.4)) 
+                  :ARG1 (p / propaganda~e.1) 
+                  :quant (s / some~e.0)) 
+            :ARG2~e.9 (t / thing~e.10 
+                  :ARG2-of~e.10 (j / joke-01~e.10))) 
+      :time~e.9 (s2 / soon~e.6))
+
+# ::id bolt12_64545_0564.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In this environment , what 's wrong if they criticize the previous stupefying propaganda a bit ?
+# ::alignments 1-1.3.1 2-1.3 4-1.1 5-1.1.r 6-1 8-1.2.1 9-1.2 11-1.2.2.1 12-1.2.2.2 13-1.2.2 15-1.2.3
+(w / wrong-02~e.6 
+      :ARG1~e.5 (a2 / amr-unknown~e.4) 
+      :ARG2 (c / criticize-01~e.9 
+            :ARG0 (t / they~e.8) 
+            :ARG1 (p / propaganda~e.13 
+                  :time (p2 / previous~e.11) 
+                  :ARG1-of (s / stupefy-01~e.12)) 
+            :degree (b / bit~e.15)) 
+      :location (e / environment~e.2 
+            :mod (t2 / this~e.1)))
+
+# ::id bolt12_64545_0564.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok We can n't look over the old accounts of the previous so @-@ called anti @-@ Japanese war .
+# ::alignments 0-1.2.1 1-1 2-1.1 2-1.1.r 3-1.2 4-1.2 6-1.2.2.2 7-1.2.2 8-1.2.2.1.r 10-1.2.2.1.2 11-1.2.2.1.3.1 13-1.2.2.1.1.2.r 13-1.2.2.1.3 16-1.2.2.1.1.2.1 17-1.2.2.1
+(p / possible-01~e.1 :polarity~e.2 -~e.2 
+      :ARG1 (l / look-over-06~e.3,4 
+            :ARG0 (w / we~e.0) 
+            :ARG1 (a / account-01~e.7 
+                  :ARG1~e.8 (w2 / war-01~e.17 
+                        :ARG1 (c2 / country :wiki "Japan" 
+                              :name~e.13 (n2 / name :op1 "Japan"~e.16)) 
+                        :time (p2 / previous~e.10) 
+                        :ARG1-of (c / call-01~e.13 
+                              :mod (s / so~e.11))) 
+                  :mod (o / old~e.6))))
+
+# ::id bolt12_64545_0564.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Take a look at North Korea , that 's our country many years ago . Take a look at their ridiculous propaganda .
+# ::alignments 0-1.1 2-1.1 3-1.1.3.r 4-1.1.3.2.1 5-1.1.3.2.2 9-1.1.3.3.1.1 9-1.1.3.3.1.1.r 10-1.1.3.3.1 11-1.1.3.3.1.2.2 12-1.1.3.3.1.2.2.1.2 13-1.1.3.3.1.2 13-1.1.3.3.1.2.1 13-1.1.3.3.1.2.1.r 15-1.1 17-1.2 18-1.2.3.r 19-1.2.3.2 19-1.2.3.2.r 20-1.2.3.1 21-1.2.3
+(m / multi-sentence 
+      :snt1 (l / look-01~e.0,2,15 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG1~e.3 (c / country :wiki "North_Korea" 
+                  :name (n / name :op1 "North"~e.4 :op2 "Korea"~e.5) 
+                  :ARG1-of (r2 / resemble-01 
+                        :ARG2 (c2 / country~e.10 
+                              :poss~e.9 (w / we~e.9) 
+                              :time (b / before~e.13 
+                                    :op1~e.13 (n2 / now~e.13) 
+                                    :quant (m2 / many~e.11 
+                                          :op1 (t2 / temporal-quantity :quant 1 
+                                                :unit (y3 / year~e.12)))))))) 
+      :snt2 (l2 / look-01~e.17 :mode imperative 
+            :ARG0 (y2 / you) 
+            :ARG1~e.18 (p / propaganda~e.21 
+                  :ARG1-of (r / ridiculous-02~e.20) 
+                  :poss~e.19 (t / they~e.19))))
+
+# ::id bolt12_64545_0565.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The United States ' dream of occupying the whole world has never stopped , it is constantly being planned .
+# ::alignments 1-1.1.2.1.2.1 2-1.1.2.1.2.2 3-1.1.2.1.r 4-1.1.2 5-1.1.2.2.r 6-1.1.2.2 8-1.1.2.2.2.1 9-1.1.2.2.2 11-1.1.1 11-1.1.1.r 11-1.1.3 12-1.1 14-1.2.1 16-1.2.2 16-1.2.2.r 18-1.2
+(a / and 
+      :op1 (s / stop-01~e.12 :polarity~e.11 -~e.11 
+            :ARG1 (d / dream-01~e.4 
+                  :ARG0~e.3 (c / country :wiki "United_States" 
+                        :name (n / name :op1 "United"~e.1 :op2 "States"~e.2)) 
+                  :ARG1~e.5 (o / occupy-01~e.6 
+                        :ARG0 c 
+                        :ARG1 (w / world~e.9 
+                              :mod (w2 / whole~e.8)))) 
+            :time (e / ever~e.11)) 
+      :op2 (p / plan-01~e.18 
+            :ARG1 d~e.14 
+            :manner~e.16 (c2 / constant~e.16)))
+
+# ::id bolt12_6454_5051.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok These days , there 's a kind of feeling that 's more and more intense : It 's that America , through long @-@ term bribing of the Chinese intellectual elite has already succeeded in setting up a " fifth column ".
+# ::alignments 0-1.2.4.1 1-1.2.4 4-1.2.1 6-1.2.2 8-1.2.1 10-1.2.1 11-1.2.3.1 12-1.2.3.1 13-1.2.3.1 14-1.2 14-1.2.3 14-1.2.3.r 17-1.1 19-1.1.1.2.1 22-1.1.3.2 25-1.1.3 26-1.1.3.1.r 28-1.1.3.1.2.2.1 29-1.1.3.1.1 30-1.1.3.1 31-1.1 32-1.1.4 33-1.1 34-1.1.2.r 35-1.1.2 36-1.1.2 39-1.1.2.1.1 39-1.1.2.1.1.1 39-1.1.2.1.1.1.r 40-1.1.2.1
+(m / multi-sentence 
+      :snt2 (s / succeed-01~e.17,31,33 
+            :ARG0 (c / country :wiki "United_States" 
+                  :name (n2 / name :op1 "America"~e.19)) 
+            :ARG1~e.34 (s2 / set-up-03~e.35,36 
+                  :ARG1 (c2 / column~e.40 
+                        :mod (o / ordinal-entity~e.39 :value~e.39 5~e.39))) 
+            :manner (b / bribe-01~e.25 
+                  :ARG1~e.26 (e / elite~e.30 
+                        :mod (i3 / intellectual~e.29) 
+                        :mod (c3 / country :wiki "China" 
+                              :name (n / name :op1 "China"~e.28))) 
+                  :ARG1-of (l / long-03~e.22)) 
+            :time (a / already~e.32)) 
+      :snt1 (t2 / thing~e.14 
+            :ARG1-of (f / feel-01~e.4,8,10) 
+            :mod (k / kind~e.6) 
+            :ARG1-of~e.14 (i / intense-02~e.14 
+                  :degree (m2 / more-and-more~e.11,12,13)) 
+            :time (d / day~e.1 
+                  :mod (t / this~e.0))))
+
+# ::id bolt12_6454_5051.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok These people may consider themselves to be culture celebrities or may be of high authority and important position , and are distributed in various circles in society , taking great pains to promote American values* and brainwash the Chinese people on behalf of the Americans .
+# ::alignments 0-1.1.1.1.1.1 1-1.1.1.1.1 2-1.1.1 3-1.1.1.1 7-1.1.1.1.3.1 8-1.1.1.1.3 9-1.1 10-1.1.1 10-1.1.2 13-1.1.2.1.2.1.1 14-1.1.2.1.2.1 15-1.1.2.1.2 16-1.1.2.1.2.2.1 17-1.1.2.1.2.2 19-1 19-1.1.2.1.2 21-1.2 22-1.2.2.r 23-1.2.2.1 24-1.2.2 25-1.2.2.2.r 26-1.2.2.2 28-1.3 29-1.3.2.1 30-1.3.2 31-1.3.3.r 32-1.3.3.1 33-1.3.3.1.2.1.2.1 35-1.3.3 36-1.3.3.2 38-1.3.3.2.2.1.2.1 39-1.3.3.2.2 39-1.3.3.2.3 40-1.3.3.2.3.r 41-1.3.3.2.3.r 42-1.3.3.2.3.1.r 42-1.3.3.2.3.r 44-1.3.3.2.3.1
+(a / and~e.19 
+      :op1 (o / or~e.9 
+            :op1 (p / possible-01~e.2,10 
+                  :ARG1 (c / consider-02~e.3 
+                        :ARG0 (p2 / person~e.1 
+                              :mod (t / this~e.0)) 
+                        :ARG1 p2 
+                        :ARG2 (c2 / celebrity~e.8 
+                              :mod (c3 / culture~e.7)))) 
+            :op2 (p3 / possible-01~e.10 
+                  :ARG1 (h / have-03 
+                        :ARG0 p2 
+                        :ARG1 (a2 / and~e.15,19 
+                              :op1 (a3 / authority~e.14 
+                                    :ARG1-of (h2 / high-02~e.13)) 
+                              :op2 (p4 / position~e.17 
+                                    :mod (i / important~e.16)))))) 
+      :op2 (d / distribute-01~e.21 
+            :ARG1 p2 
+            :location~e.22 (c4 / circle~e.24 
+                  :mod (v / various~e.23) 
+                  :location~e.25 (s / society~e.26))) 
+      :op3 (t2 / take-01~e.28 
+            :ARG0 p2 
+            :ARG1 (p5 / pain~e.30 
+                  :degree (g / great~e.29)) 
+            :purpose~e.31 (a4 / and~e.35 
+                  :op1 (p6 / promote-02~e.32 
+                        :ARG0 p2 
+                        :ARG1 (v2 / value 
+                              :mod (c5 / country :wiki "United_States" 
+                                    :name (n2 / name :op1 "America"~e.33)))) 
+                  :op2 (b / brainwash-01~e.36 
+                        :ARG0 p2 
+                        :ARG1 (p7 / person~e.39 
+                              :mod (c6 / country :wiki "China" 
+                                    :name (n / name :op1 "China"~e.38))) 
+                        :prep-on-behalf-of~e.40,41,42 (p8 / person~e.39 
+                              :mod~e.42 c5~e.44)))))
+
+# ::id bolt12_6454_5051.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Why is this kind of feeling getting more and more intense ?
+# ::alignments 0-1 0-1.1 0-1.1.r 2-1.2.1.2.1 3-1.2.1.2 5-1.2.1.1 7-1.2.2 8-1.2.2 9-1.2.2
+(c / cause-01~e.0 
+      :ARG0~e.0 (a2 / amr-unknown~e.0) 
+      :ARG1 (i / intensify-01 
+            :ARG1 (t / thing 
+                  :ARG1-of (f / feel-01~e.5) 
+                  :mod (k / kind~e.3 
+                        :mod (t2 / this~e.2))) 
+            :degree (m3 / more-and-more~e.7,8,9)))
+
+# ::id bolt12_6454_5051.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Because these days , I 've been reading part of the " Specialist Professor " blog , it would have been okay if I did n't read it , but after I read it , it made me really surprised .
+# ::alignments 0-1.1 1-1.1.2.1 2-1.1.2 4-1.1.1.1 7-1.1.1 8-1.1.1.2 8-1.1.1.2.1.r 12-1.1.1.2.1.2.1 13-1.1.1.2.1.2.2 15-1.1.1.2.1 17-1.2.1.1.3 21-1.2.1 23-1.2.1.1.2 25-1.2.1.1.1 25-1.2.1.1.1.r 26-1.2.1.1 27-1.2.1.1.3 29-1.2 30-1.2.2.4 31-1.2.2.2 32-1.2.2.4.1 33-1.2.2.4.1 34-1.2.2.4.1 35-1.2.2.4.1 36-1.2.2.4.1 37-1.2.2.4.1 38-1.2.2.3 39-1.2.2
+(m2 / multi-sentence 
+      :snt1 (c2 / cause-01~e.0 
+            :ARG0 (r / read-01~e.7 
+                  :ARG0 (i / i~e.4) 
+                  :ARG1 (p / part~e.8 
+                        :part-of~e.8 (b / blog~e.15 :wiki - 
+                              :name (n / name :op1 "Specialist"~e.12 :op2 "Professor"~e.13)))) 
+            :time (d / day~e.2 
+                  :mod (t / this~e.1))) 
+      :snt2 (c / contrast-01~e.29 
+            :ARG1 (o / okay-04~e.21 
+                  :ARG1 (r2 / read-01~e.26 :polarity~e.25 -~e.25 
+                        :ARG0 (i3 / i~e.23) 
+                        :ARG1 (i2 / it~e.17,27))) 
+            :ARG2 (s / surprise-01~e.39 
+                  :ARG0 i2 
+                  :ARG1 i3~e.31 
+                  :degree (r3 / really~e.38) 
+                  :time (a / after~e.30 
+                        :op1 r2~e.32,33,34,35,36,37))))
+
+# ::id bolt12_6454_5051.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For example , Assistant Professor Zhang Ming of Renmin University , the political intentions of many of his blogs are extremely obvious .
+# ::alignments 0-1 1-1 3-1.1.3.2.1 4-1.1.3.2 5-1.1.2.1 6-1.1.2.2 7-1.1.3 8-1.1.3.1.2.1 9-1.1.3.1.2.2 12-1.2.1.2 13-1.2.1 13-1.2.1.1 13-1.2.1.1.r 14-1.2.1.1.1.r 15-1.2.1.1.1.2 16-1.2.1.1.1.2.r 18-1.2.1.1.1 18-1.2.1.1.1.1.1 20-1.2.2 21-1.2
+(e3 / exemplify-01~e.0,1 
+      :ARG0 (p2 / person :wiki - 
+            :name (n / name :op1 "Zhang"~e.5 :op2 "Ming"~e.6) 
+            :ARG0-of (h / have-org-role-91~e.7 
+                  :ARG1 (u / university :wiki "Renmin_University_of_China" 
+                        :name (n2 / name :op1 "Renmin"~e.8 :op2 "University"~e.9)) 
+                  :ARG2 (p / professor~e.4 
+                        :mod (a / assistant~e.3)))) 
+      :ARG1 (o / obvious-01~e.21 
+            :ARG1 (t / thing~e.13 
+                  :ARG1-of~e.13 (i / intend-01~e.13 
+                        :ARG0~e.14 (b2 / blog~e.18 
+                              :ARG1-of (i3 / include-91 
+                                    :ARG2 (b / blog~e.18 
+                                          :poss p2)) 
+                              :quant~e.16 (m / many~e.15))) 
+                  :mod (p3 / politics~e.12)) 
+            :degree (e2 / extreme~e.20)))
+
+# ::id bolt12_6454_5051.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Such as , in one blog he attributed the reason for the prevalence of hostility in China to elementary school textbooks having " Wang Erxiao ", and he disparaged good articles that promote patriotism as not even worth a penny .
+# ::alignments 4-1.1.1.4.1 5-1.1.1.4 6-1.1.1.1 7-1.1.1 9-1.1.1.2 9-1.1.1.2.1 9-1.1.1.2.1.r 12-1.1.1.2.1.1 13-1.1.1.2.1.1.1.r 14-1.1.1.2.1.1.1 15-1.1.1.2.1.1.2.r 16-1.1.1.2.1.1.2.2.1 17-1.1.1.2 17-1.1.1.2.1 17-1.1.1.2.1.r 17-1.1.1.3.r 18-1.1.1.3.1.1.1 19-1.1.1.3.1.1 20-1.1.1.3.1 21-1.1.1.3 23-1.1.1.3.2.2.1 24-1.1.1.3.2.2.2 27-1.1.1.1 28-1.1.2 29-1.1.2.2.2 30-1.1.2.2 32-1.1.2.2.1 33-1.1.2.2.1.1 34-1.1.2.3.r 35-1.1.2.3.1 35-1.1.2.3.1.r 36-1.1.2.3.3.1 37-1.1.2.3 39-1.1.2.3.3
+(e3 / exemplify-01 
+      :ARG0 (a / and 
+            :op1 (a2 / attribute-01~e.7 
+                  :ARG0 (h / he~e.6,27) 
+                  :ARG1 (t2 / thing~e.9,17 
+                        :ARG0-of~e.9,17 (c2 / cause-01~e.9,17 
+                              :ARG1 (p6 / prevail-02~e.12 
+                                    :ARG1~e.13 (h2 / hostile~e.14) 
+                                    :location~e.15 (c / country :wiki "China" 
+                                          :name (n2 / name :op1 "China"~e.16))))) 
+                  :ARG2~e.17 (h3 / have-03~e.21 
+                        :ARG0 (t / textbook~e.20 
+                              :mod (s / school~e.19 
+                                    :mod (e / elementary~e.18))) 
+                        :ARG1 (p2 / person :wiki - 
+                              :name (n / name :op1 "Wang"~e.23 :op2 "Erxiao"~e.24))) 
+                  :medium (b2 / blog~e.5 :quant 1~e.4)) 
+            :op2 (d / disparage-01~e.28 
+                  :ARG0 h 
+                  :ARG1 (a3 / article~e.30 
+                        :ARG0-of (p3 / promote-01~e.32 
+                              :ARG1 (p4 / patriotism~e.33)) 
+                        :ARG1-of (g / good-02~e.29)) 
+                  :consist-of~e.34 (w / worth-01~e.37 :polarity~e.35 -~e.35 
+                        :ARG1 a3 
+                        :ARG2 (p5 / penny~e.39 
+                              :mod (e2 / even~e.36))))))
+
+# ::id bolt12_6454_5051.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Another example is so @-@ called " sexologist " and " social activist " Li Yinhe - one , her stuff is not similar to things like the treatise " Haite Sexology Report "; two , she has no deep thought ; and three , she has no significant contributions .
+# ::alignments 0-1.1.2 1-1.1 3-1.1.1.3.1.1 5-1.1.1.3.1 7-1.1.1.3 11-1.1.1.4.1 12-1.1.1.4 14-1.1.1.2.1 15-1.1.1.2.2 17-1.2.2 19-1.2.3.1 19-1.2.3.1.r 20-1.2.3 22-1.2.1 22-1.2.1.r 23-1.2 24-1.2.4.r 25-1.2.4 26-1.2.4.1.r 28-1.2.4.1 30-1.2.4.1.2.1 31-1.2.4.1.2.2 32-1.2.4.1.2.3 34-1.3.2 36-1.3.3 37-1.3 38-1.3.1 38-1.3.1.r 39-1.3.4 40-1.3 43-1.4.2 45-1.4.3 47-1.4.1 47-1.4.1.r 48-1.4.4 49-1.4
+(m / multi-sentence 
+      :snt1 (e / exemplify-01~e.1 
+            :ARG0 (p / person :wiki "Li_Yinhe" 
+                  :name (n / name :op1 "Li"~e.14 :op2 "Yinhe"~e.15) 
+                  :mod (s / sexologist~e.7 
+                        :ARG1-of (c / call-01~e.5 
+                              :mod (s3 / so~e.3))) 
+                  :mod (a2 / activist~e.12 
+                        :mod (s2 / social~e.11) 
+                        :ARG1-of c)) 
+            :mod (a3 / another~e.0)) 
+      :snt2 (r / resemble-01~e.23 :polarity~e.22 -~e.22 :li 1~e.17 
+            :ARG1 (s4 / stuff~e.20 
+                  :poss~e.19 (s6 / she~e.19)) 
+            :ARG2~e.24 (t / thing~e.25 
+                  :example~e.26 (t2 / treatise~e.28 :wiki - 
+                        :name (n3 / name :op1 "Haite"~e.30 :op2 "Sexology"~e.31 :op3 "Report"~e.32)))) 
+      :snt3 (t3 / think-01~e.37,40 :polarity~e.38 -~e.38 :li 2~e.34 
+            :ARG0 (s7 / she~e.36) 
+            :ARG1-of (d / deep-02~e.39)) 
+      :snt4 (c2 / contribute-01~e.49 :polarity~e.47 -~e.47 :li 3~e.43 
+            :ARG0 (s8 / she~e.45) 
+            :ARG1-of (s5 / significant-02~e.48)))
+
+# ::id bolt12_6454_5051.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok She main relies on doing something novel and different and on shocking viewpoints to attract people 's eyes , but without real ability or learning , she 's purely a jumping clown ,
+# ::alignments 0-1.2.1 1-1.2.4 2-1.2 3-1.2.2.r 4-1.2.2.1 5-1.2.2.1.1 6-1.2.2.1.1.1 8-1.2.2.1.1.2 9-1.2.2 11-1.2.2.2.1 12-1.2.2.2 14-1.2.3 15-1.2.3.2.1 16-1.2.3.2.1.r 17-1.2.3.2 19-1.2.5.4 20-1.2.5.1 20-1.2.5.1.r 21-1.2.5.2.2 22-1.2.5.2 23-1.2.5 24-1.2.5.3 26-1.1.1 27-1.1.1.r 28-1.1.3 30-1.1.2 31-1.1
+(m2 / multi-sentence 
+      :snt2 (c3 / clown~e.31 
+            :domain~e.27 (s / she~e.26) 
+            :ARG0-of (j / jump-03~e.30) 
+            :ARG1-of (p / pure-02~e.28)) 
+      :snt1 (r / rely-01~e.2 
+            :ARG0 (s4 / she~e.0) 
+            :ARG1~e.3 (a2 / and~e.9 
+                  :op1 (d / do-02~e.4 
+                        :ARG1 (s3 / something~e.5 
+                              :mod (n / novel~e.6) 
+                              :ARG1-of (d2 / differ-02~e.8))) 
+                  :op2 (v / viewpoint~e.12 
+                        :ARG0-of (s2 / shock-01~e.11))) 
+            :ARG2 (a4 / attract-01~e.14 
+                  :ARG0 s 
+                  :ARG1 (e / eye~e.17 
+                        :part-of~e.16 (p2 / person~e.15))) 
+            :mod (m / main~e.1) 
+            :manner (o / or~e.23 :polarity~e.20 -~e.20 
+                  :op1 (c / capable-01~e.22 
+                        :ARG1 s4 
+                        :ARG1-of (r2 / real-04~e.21)) 
+                  :op2 (l / learn-01~e.24 
+                        :ARG0 s4) 
+                  :ARG2-of (c2 / contrast-01~e.19 
+                        :ARG1 r))))
+
+# ::id bolt12_6454_5051.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This kind of person puts on the big " specialist " hat just to intimidate people ; the key is that she is concerned about politics yet does n't understand politics , is willing to be a slave of foreigners yet is arrogant and overbearing , is ignorant yet feels fine .
+# ::alignments 0-1.1.1.1.1 1-1.1.1.1 3-1.1.1 4-1.1 5-1.1 7-1.1.2.1.1.1 9-1.1.2.1 9-1.1.2.1.1 9-1.1.2.1.1.r 11-1.1.2 12-1.1.3.3 14-1.1.3 15-1.1.1 15-1.1.3.2 18-1.2 19-1.2.1.2.2.2.2.r 21-1.2.1.3.2.1 22-1.2.1.2.2.2.2.r 23-1.2.1.1.2 25-1.2.1.1.1.3 26-1.2.1.1.1.4 28-1.2.1.1.1.1 28-1.2.1.1.1.1.r 29-1.2.1.1.1 30-1.2.1.1.1.3 32-1.2.1.2.2.2.2.r 33-1.2.1.2.2 34-1.2.1.2.2.2.r 35-1.2.1.2.2.2.2.r 37-1.2.1.2.2.2 38-1.2.1.2.2.2.1.r 39-1.2.1.2.2.2.1 40-1.2.1.1.1.4 41-1.2.1.2.1.1.1.r 42-1.2.1.2.1.1 43-1.2.1.2.1 44-1.2.1.2.1.2 46-1.2.1.2.1.2.1.r 47-1.2.1.3.2 48-1.2.1.1.1.4 49-1.2.1.3.1 50-1.2.1.3.1.2
+(m / multi-sentence 
+      :snt1 (p / put-on-08~e.4,5 
+            :ARG0 (p2 / person~e.3,15 
+                  :mod (k / kind~e.1 
+                        :mod (t / this~e.0))) 
+            :ARG1 (h / hat~e.11 
+                  :mod (p6 / person~e.9 
+                        :ARG0-of~e.9 (s / specialize-01~e.9 
+                              :mod (b / big~e.7)))) 
+            :purpose (i / intimidate-01~e.14 
+                  :ARG0 p2 
+                  :ARG1 (p3 / person~e.15) 
+                  :mod (j / just~e.12))) 
+      :snt2 (k2 / key-02~e.18 
+            :ARG1 (a5 / and 
+                  :op1 (h2 / have-concession-91 
+                        :ARG1 (u / understand-01~e.29 :polarity~e.28 -~e.28 
+                              :ARG0 s2 
+                              :ARG1 (p5 / politics~e.25,30) 
+                              :mod (y / yet~e.26,40,48)) 
+                        :ARG2 (c2 / concern-01~e.23 
+                              :ARG0 p5 
+                              :ARG1 s2)) 
+                  :op2 (h3 / have-concession-91 
+                        :ARG1 (a3 / and~e.43 
+                              :op1 (a / arrogance~e.42 
+                                    :domain~e.41 s2) 
+                              :op2 (o / overbearing~e.44 
+                                    :domain~e.46 s2)) 
+                        :ARG2 (w / will-02~e.33 
+                              :ARG0 s2 
+                              :ARG1~e.34 (s3 / slave~e.37 
+                                    :beneficiary~e.38 (f / foreign~e.39) 
+                                    :domain~e.19,22,32,35 s2))) 
+                  :op3 (h4 / have-concession-91 
+                        :ARG1 (f2 / feel-01~e.49 
+                              :ARG0 s2 
+                              :ARG1 (f3 / fine-04~e.50 
+                                    :ARG1 s2)) 
+                        :ARG2 (i2 / ignorant-02~e.47 
+                              :ARG1 (s2 / she~e.21))))))
+
+# ::id bolt12_6454_5051.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Like in the essay " A bit less hostility , a bit more harmony ", she completely denigrates class struggle and the anti @-@ pornography @-@ and @-@ illegal @-@ publications drive as social hostility ;
+# ::alignments 0-1 1-1.1.r 3-1.1.5 6-1.1.5.1.1.1.1.1 7-1.1.5.1.1.1.1 8-1.1.5.1.1.1 11-1.1.5.1.1.2.1.1 12-1.1.5.1.1.2.1 13-1.1.5.1.1.2 15-1.1.1 16-1.1.4 17-1.1 18-1.1.2.1.1 19-1.1.2.1 20-1.1.2 22-1.1.2.2.1 24-1.1.2.2.1.1.1 26-1.1.2.2.1.1 28-1.1.2.2.1.1.2.1 28-1.1.2.2.1.1.2.1.1 28-1.1.2.2.1.1.2.1.1.r 30-1.1.2.2.1.1.2 31-1.1.2.2 32-1.1.3.r 33-1.1.3.1 34-1.1.3
+(e2 / exemplify-01~e.0 
+      :ARG0~e.1 (d / denigrate-01~e.17 
+            :ARG0 (s / she~e.15) 
+            :ARG1 (a / and~e.20 
+                  :op1 (s2 / struggle-01~e.19 
+                        :mod (c2 / class~e.18)) 
+                  :op2 (d2 / drive-04~e.31 
+                        :ARG1 (o / oppose-01~e.22 
+                              :ARG1 (a4 / and~e.26 
+                                    :op1 (p2 / pornography~e.24) 
+                                    :op2 (p3 / publication~e.30 
+                                          :ARG1-of (l2 / legal-02~e.28 :polarity~e.28 -~e.28)))))) 
+            :ARG2~e.32 (h / hostility~e.34 
+                  :mod (s3 / social~e.33)) 
+            :ARG1-of (c / complete-02~e.16) 
+            :medium (e / essay~e.3 
+                  :ARG1-of (t / title-01 
+                        :ARG2 (a3 / and 
+                              :op1 (h2 / hostility~e.8 
+                                    :quant (l / less~e.7 
+                                          :degree (b / bit~e.6))) 
+                              :op2 (h3 / harmony~e.13 
+                                    :quant (m / more~e.12 
+                                          :degree (b2 / bit~e.11))))))))
+
+# ::id bolt12_6454_5051.11 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok in the essay " China has already become the country which worships money most on the earth ", she attributes Chinese society 's worship of money to atheism ;
+# ::alignments 2-1.4 4-1.4.1.1.1 6-1.4.1.1.3 7-1.4.1.1 9-1.4.1.1.2 11-1.4.1.1.2.1 12-1.4.1.1.2.1.1 13-1.4.1.1.2.1.2 14-1.4.1.1.2.2.r 16-1.4.1.1.2.2 18-1.1 19-1 20-1.2.1.1.2.1 21-1.2.1 22-1.2.1.r 23-1.2 24-1.2.2.r 25-1.2.2 26-1.3.r 27-1.3
+(a / attribute-01~e.19 
+      :ARG0 (s / she~e.18) 
+      :ARG1 (w / worship-01~e.23 
+            :ARG0~e.22 (s2 / society~e.21 
+                  :mod (c / country :wiki "China" 
+                        :name (n / name :op1 "China"~e.20))) 
+            :ARG1~e.24 (m / money~e.25)) 
+      :ARG2~e.26 (a2 / atheism~e.27) 
+      :medium (e / essay~e.2 
+            :ARG1-of (t / title-01 
+                  :ARG2 (b / become-01~e.7 
+                        :ARG1 c~e.4 
+                        :ARG2 (c2 / country~e.9 
+                              :ARG0-of (w2 / worship-01~e.11 
+                                    :ARG1 (m2 / money~e.12) 
+                                    :degree (m3 / most~e.13)) 
+                              :compared-to~e.14 (e2 / earth~e.16)) 
+                        :time (a3 / already~e.6)))))
+
+# ::id bolt12_6454_5051.12 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok the essay " Are you studying Paul or studying Bill ? ", she blathers that " people who study Paul will become terrorists ";
+# ::alignments 1-1.3 4-1.3.1.1.2 5-1.3.1.1 6-1.3.1.1.3.1 7-1.3.1.1.3 8-1.3.1.1 9-1.3.1.1.3.2.2.1 10-1.3.1.1.1 10-1.3.1.1.1.r 12-1.1 13-1 16-1.2.1 18-1.2.1.1 19-1.2.1.1.1.2.1 21-1.2 22-1.2.2
+(b2 / blather-01~e.13 
+      :ARG0 (s2 / she~e.12) 
+      :ARG1 (b / become-01~e.21 
+            :ARG1 (p2 / person~e.16 
+                  :ARG0-of (s3 / study-01~e.18 
+                        :ARG1 (p3 / person :wiki - 
+                              :name (n2 / name :op1 "Paul"~e.19)))) 
+            :ARG2 (t2 / terrorist~e.22)) 
+      :medium (e / essay~e.1 
+            :ARG1-of (t / title-01 
+                  :ARG2 (s / study-01~e.5,8 :mode~e.10 interrogative~e.10 
+                        :ARG0 (y / you~e.4) 
+                        :ARG1 (o / or~e.7 
+                              :op1 p3~e.6 
+                              :op2 (p4 / person :wiki - 
+                                    :name (n / name :op1 "Bill"~e.9)))))))
+
+# ::id bolt12_6454_5051.13 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok in the essay " Recommendation for establishment of a constitutional court to solve the problem of pornographic products ", she takes citizens publishing pornographic novels to be freedom of speech , and says the Beijing anti @-@ pornography drive is unconstitutional behavior , etc.
+# ::alignments 2-1.3 4-1.3.1.1 5-1.3.1.1.1.r 6-1.3.1.1.1 7-1.3.1.1.1.1.r 9-1.3.1.1.1.1.1 10-1.3.1.1.1.1 12-1.3.1.1.1.2 14-1.3.1.1.1.2.2 15-1.3.1.1.1.2.2.1.r 16-1.3.1.1.1.2.2.1.1 17-1.3.1.1.1.2.2.1 19-1.1.1 20-1.1 21-1.1.2.1 22-1.1.2 23-1.1.2.2.1 24-1.1.2.2 27-1.1.3 28-1.1.3.1.r 29-1.1.3.1 31-1 32-1.2 34-1.2.2.1.1.2.1 35-1.2.2.1.2 37-1.2.2.1.2.1 38-1.2.2.1 40-1.2.2.2 40-1.2.2.2.1 40-1.2.2.2.1.r 41-1.2.2 43-1
+(a / and~e.31,43 
+      :op1 (t / take-04~e.20 
+            :ARG0 (s2 / she~e.19) 
+            :ARG1 (p / publish-01~e.22 
+                  :ARG0 (c / citizen~e.21) 
+                  :ARG1 (n / novel~e.24 
+                        :mod (p2 / pornographic~e.23))) 
+            :ARG2 (f / free-04~e.27 
+                  :ARG3~e.28 (s3 / speak-01~e.29))) 
+      :op2 (s / say-01~e.32 
+            :ARG0 s2 
+            :ARG1 (b2 / behave-01~e.41 
+                  :ARG0 (d / drive-04~e.38 
+                        :ARG0 (c2 / city :wiki "Beijing" 
+                              :name (n2 / name :op1 "Beijing"~e.34)) 
+                        :ARG1 (o / oppose-01~e.35 
+                              :ARG1 (p6 / pornography~e.37))) 
+                  :ARG1 (c7 / constitution~e.40 :polarity~e.40 -~e.40))) 
+      :medium (e / essay~e.2 
+            :ARG1-of (t3 / title-01 
+                  :ARG2 (r / recommend-01~e.4 
+                        :ARG1~e.5 (e2 / establish-01~e.6 
+                              :ARG1~e.7 (c5 / court~e.10 
+                                    :mod (c6 / constitutional~e.9)) 
+                              :purpose (s4 / solve-01~e.12 
+                                    :ARG0 c5 
+                                    :ARG1 (p3 / problem~e.14 
+                                          :topic~e.15 (p7 / product~e.17 
+                                                :mod (p5 / pornography~e.16)))))))))
+
+# ::id bolt12_6454_5051.14 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Especially today 's masterpiece , " Why is it worth paying such close attention to the Jianghe obscene goods case ? ", where she is once again crying foul over several people suspected of involvement in erotic business activities who are being dealt with by Beijing City , as well as detailing a list of erotic products , with a deeper intent of doing publicity for other people ."
+# ::alignments 0-1.3.2 1-1.3.1 2-1.3.1.r 3-1.3 6-1.2.3 6-1.3.3.1 9-1.3.3.1.2 11-1.3.3.1.2.1.2.1 12-1.3.3.1.2.1.2 13-1.3.3.1.2.1 16-1.3.3.1.2.1.1.3.1 17-1.3.3.1.2.1.1.2.1 18-1.3.3.1.2.1.1.2 19-1.3.3.1.2.1.1 22-1.3.3.1.1 23-1.1.1 25-1.1.3.1 26-1.1.3 27-1.1 28-1.1.4 30-1.1.2.1 31-1.1.2 32-1.1.2.3 33-1.1.2.3.1.r 34-1.1.2.3.1 35-1.1.2.3.1.2.r 36-1.1.2.3.1.2.1.1 37-1.1.2.3.1.2.1 38-1.1.2.3.1.2 39-1.3.3.1.1 42-1.1.2.2 45-1.1.2.2.1.2.1 46-1.1.2.2.1.2.2 48-1 49-1 50-1 51-1.2 53-1.2.2 54-1.2.2.1.r 55-1.2.2.1.1 56-1.2.2.1 58-1.2.3.1.r 60-1.2.3.1.2 60-1.2.3.1.2.1 60-1.2.3.1.2.1.r 61-1.2.3.1 63-1.1.2.2 66-1.2.3.1.1.1.1 67-1.2.3.1.1.1
+(a / and~e.48,49,50 
+      :op1 (c / cry-01~e.27 
+            :ARG0 (s / she~e.23) 
+            :ARG1 (p / person~e.31 
+                  :quant (s3 / several~e.30) 
+                  :ARG2-of (d / deal-01~e.42,63 
+                        :ARG0 (g2 / government-organization :wiki "Government_of_China" 
+                              :name (n / name :op1 "Beijing"~e.45 :op2 "City"~e.46))) 
+                  :ARG2-of (s2 / suspect-01~e.32 
+                        :ARG1~e.33 (i / involve-01~e.34 
+                              :ARG1 p 
+                              :ARG2~e.35 (a3 / activity-06~e.38 
+                                    :ARG1 (b / business~e.37 
+                                          :mod (e / erotic~e.36)))))) 
+            :mod (a2 / again~e.26 
+                  :mod (o / once~e.25)) 
+            :manner (f / foul~e.28)) 
+      :op2 (d2 / detail-01~e.51 
+            :ARG0 s 
+            :ARG1 (l2 / list~e.53 
+                  :consist-of~e.54 (p6 / product~e.56 
+                        :mod (e2 / erotic~e.55))) 
+            :ARG1-of (c2 / cause-01~e.6 
+                  :ARG0-of~e.58 (i2 / intend-01~e.61 
+                        :ARG1 (p3 / publicize-01 
+                              :beneficiary (p4 / person~e.67 
+                                    :mod (o2 / other~e.66))) 
+                        :ARG1-of (d3 / deep-02~e.60 
+                              :degree~e.60 (m / more~e.60))))) 
+      :medium (m2 / masterpiece~e.3 
+            :time~e.2 (t / today~e.1) 
+            :mod (e3 / especially~e.0) 
+            :ARG1-of (t2 / title-01 
+                  :ARG2 (c3 / cause-01~e.6 
+                        :ARG0 (a5 / amr-unknown~e.22,39) 
+                        :ARG1 (w / worth-02~e.9 
+                              :ARG2 (a4 / attend-02~e.13 
+                                    :ARG1 (c5 / case-03~e.19 :wiki - 
+                                          :ARG1 (g / good~e.18 
+                                                :mod (o3 / obscene~e.17)) 
+                                          :name (n2 / name :op1 "Jianghe"~e.16)) 
+                                    :ARG1-of (c4 / close-10~e.12 
+                                          :degree (s4 / such~e.11))))))))
+
+# ::id bolt12_6454_5051.15 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok But these kind of jerky articles actually being put on top by Sina blog is really preposterous !
+# ::alignments 0-1 1-1.1.2.2.1.1 2-1.1.2.2.1 4-1.1.2.2.2 5-1.1.2.2 6-1.1.2.4 7-1.1.2.r 8-1.1.2 9-1.1.2.3.r 10-1.1.2.3 11-1.1.2.1.r 12-1.1.2.1.2.1 13-1.1.2.1 14-1.1.2.r 15-1.1.1 16-1.1
+(c / contrast-01~e.0 
+      :ARG2 (p2 / preposterous~e.16 
+            :degree (r / really~e.15) 
+            :domain~e.7,14 (p / put-01~e.8 
+                  :ARG0~e.11 (b / blog~e.13 :wiki "Sina_Weibo" 
+                        :name (n / name :op1 "Sina"~e.12)) 
+                  :ARG1 (a / article~e.5 
+                        :mod (k / kind~e.2 
+                              :mod (t / this~e.1)) 
+                        :mod (j / jerky~e.4)) 
+                  :ARG2~e.9 (t2 / top~e.10) 
+                  :ARG1-of (a2 / actual-02~e.6))))
+
+# ::id bolt12_6454_5051.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok And there is also Sichuanese poet Liu Shahe , who , while America clear to the eye and with swelling gall engages in containment of China and the people of the whole nation are feeling indignant , actually comes out with the fallacy " China and America are friendly ", and tries to pour spirit @-@ confusing soup on the Chinese people willfully and without fear ;
+# ::alignments 0-1.5.3 3-1.3 5-1 6-1.2.1 7-1.2.2 11-1.5.3.r 11-1.6.2.r 12-1.6.2 13-1.6.2 14-1.6.2 15-1.6.2 16-1.6.2 17-1.6.2 18-1.6.2 19-1.6.2 20-1.6.2 21-1.6.2 22-1.6.2 23-1.6.2 24-1.5.r 25-1.5.3.1.2.2 26-1.5.3 28-1.5.3.2.1 29-1.5.3.2.1.1.r 31-1.5.3.2.1.1.1 32-1.5.3.2.1.1 34-1.5.3.2 35-1.5.3.2.2 37-1.5.2 38-1.5 39-1.5 40-1.5.1.r 42-1.5.1.3 44-1.5.1.1 45-1.5.3 46-1.5.1.2 48-1.5.1 50-1.5.3 51-1.6 53-1.6.1 54-1.6.1.1.1.1 56-1.6.1.1.1 57-1.6.1.1 58-1.6.1.2.r 60-1.6.1.2.1.2.1 61-1.6.1.2 64-1.6.1.3.1 64-1.6.1.3.1.r 65-1.6.1.3
+(p3 / poet~e.5 :wiki "Liu_Shahe" 
+      :name (n / name :op1 "Liu"~e.6 :op2 "Shahe"~e.7) 
+      :mod (a3 / also~e.3) 
+      :mod (p5 / province :wiki "Sichuan" 
+            :name (n5 / name :op1 "Shichuan")) 
+      :ARG0-of~e.24 (c7 / come-out-09~e.38,39 
+            :ARG1~e.40 (f4 / friendly-01~e.48 
+                  :ARG1 c3~e.44 
+                  :ARG2 c5~e.46 
+                  :mod (f3 / fallacy~e.42)) 
+            :ARG1-of (a2 / actual-02~e.37) 
+            :time~e.11 (a / and~e.0,26,45,50 
+                  :op1 (e / engage-01 
+                        :ARG1 (c5 / country :wiki "United_States" 
+                              :name (n4 / name :op1 "America")) 
+                        :ARG2 (c / contain-02 
+                              :ARG0 c5 
+                              :ARG1 c3~e.25) 
+                        :ARG1-of (c4 / clear-06 
+                              :ARG2 (e2 / eye)) 
+                        :manner (s / swell-01 
+                              :ARG1 (g / gall 
+                                    :part-of c5))) 
+                  :op2 (f2 / feel-01~e.34 
+                        :ARG0 (p4 / person~e.28 
+                              :poss~e.29 (n2 / nation~e.32 
+                                    :mod (w2 / whole~e.31))) 
+                        :ARG1 (i / indignant~e.35)))) 
+      :ARG0-of (t / try-01~e.51 
+            :ARG1 (p / pour-01~e.53 
+                  :ARG1 (s2 / soup~e.57 
+                        :ARG0-of (c2 / confuse-01~e.56 
+                              :ARG1 (s3 / spirit~e.54))) 
+                  :ARG3~e.58 (p2 / people~e.61 
+                        :mod (c3 / country :wiki "China" 
+                              :name (n3 / name :op1 "China"~e.60))) 
+                  :manner (f / fear-01~e.65 :polarity~e.64 -~e.64 
+                        :ARG0 p3) 
+                  :ARG1-of (w3 / will-02 
+                        :ARG0 p3)) 
+            :time~e.11 e~e.12,13,14,15,16,17,18,19,20,21,22,23))
+
+# ::id bolt12_6454_5051.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yi Zhongtian , who got famous by remarking upon the " three countries ", whose talent and learning I have always respected , but I did n't expect that he was actually supporting the big traitor of China , Mao Yushi , saying some things like " I believe whoever disrespects Mao Yushi is not human ", once again making me very much drop my glasses !
+# ::alignments 0-1.2.1 1-1.2.2 4-1 4-1.3 4-1.3.r 5-1.3.1 6-1.3.1.2.r 7-1.3.1.2 11-1.3.1.2.2.1 12-1.3.1.2.2 15-1.4.4.1.1 16-1.4.4.1 17-1.4.4.1.2.1 18-1.4.1 20-1.4.2 21-1.4 23-1.4.3 24-1.4.3.1.2 26-1.4.3.1.1 26-1.4.3.1.1.r 27-1.4.3.1 31-1.4.3.1.3.3 32-1.4.3.1.3 34-1.4.3.1.3.2.3.2 35-1.4.3.1.3.2 35-1.4.3.1.3.2.3 35-1.4.3.1.3.2.3.r 36-1.4.3.1.3.2.3.1.r 37-1.4.3.1.3.2.3.1.2.1 39-1.4.3.1.3.2.2.1 40-1.4.3.1.3.2.2.2 42-1.4.3.1.3.4 43-1.4.3.1.3.4.2.1 44-1.4.3.1.3.4.2 44-1.4.4.1.2 45-1.4.3.1.3.4.2.2.r 47-1.4.1 48-1.4.3.1.3.4.2.2 49-1.4.3.1.3.4.2.2.2.2 49-1.4.3.1.3.4.2.2.2.2.1 49-1.4.3.1.3.4.2.2.2.2.1.r 50-1.4.3.1.3.4.2.2.2.2.2 51-1.4.3.1.3.4.2.2.2.2.2.1 52-1.4.3.1.3.4.2.2.2.2.2.1 53-1.4.3.1.3.4.2.2.2.2.r 54-1.4.3.1.3.4.2.2.2.1 54-1.4.3.1.3.4.2.2.2.1.r 55-1.4.3.1.3.4.2.2.2 57-1.4.3.1.3.4.3.2.1 58-1.4.3.1.3.4.3.2 59-1.4.3.1.3.4.3 60-1.4.3.1.3.4.3.1.1 61-1.4.3.1.3.4.3.1.3.1 62-1.4.3.1.3.4.3.1.3 63-1.4.3.1.3.4.3.1 64-1.4.3.1.3.4.3.1.2.1 64-1.4.3.1.3.4.3.1.2.1.r 65-1.4.3.1.3.4.3.1.2
+(p / person~e.4 :wiki "Yi_Zhongtian" 
+      :name (n / name :op1 "Yi"~e.0 :op2 "Zhongtian"~e.1) 
+      :ARG1-of~e.4 (g2 / get-03~e.4 
+            :ARG2 (f / fame-01~e.5 
+                  :ARG1 p 
+                  :ARG2~e.6 (r2 / remark-01~e.7 
+                        :ARG0 p 
+                        :topic (c2 / country~e.12 :quant 3~e.11)))) 
+      :ARG1-of (r / respect-01~e.21 
+            :ARG0 (i / i~e.18,47) 
+            :time (a / always~e.20) 
+            :ARG1-of (c / contrast-01~e.23 
+                  :ARG2 (e / expect-01~e.27 :polarity~e.26 -~e.26 
+                        :ARG0 i~e.24 
+                        :ARG1 (s / support-01~e.32 
+                              :ARG0 p 
+                              :ARG1 (p2 / person~e.35 :wiki "Mao_Yushi" 
+                                    :name (n2 / name :op1 "Mao"~e.39 :op2 "Yushi"~e.40) 
+                                    :ARG0-of~e.35 (b / betray-01~e.35 
+                                          :ARG1~e.36 (c3 / country :wiki "China" 
+                                                :name (n3 / name :op1 "China"~e.37)) 
+                                          :mod (b2 / big~e.34))) 
+                              :ARG1-of (a3 / actual-02~e.31) 
+                              :manner (s2 / say-01~e.42 
+                                    :ARG0 p 
+                                    :ARG1 (t3 / thing~e.44 
+                                          :quant (s3 / some~e.43) 
+                                          :example~e.45 (b3 / believe-01~e.48 
+                                                :ARG0 p 
+                                                :ARG1 (h / human~e.55 :polarity~e.54 -~e.54 
+                                                      :domain~e.53 (p3 / person~e.49 
+                                                            :mod~e.49 (a5 / any~e.49) 
+                                                            :ARG0-of (d / disrespect-01~e.50 
+                                                                  :ARG1 p2~e.51,52))))) 
+                                    :ARG0-of (m2 / make-02~e.59 
+                                          :ARG1 (d2 / drop-01~e.63 
+                                                :ARG0 i~e.60 
+                                                :ARG1 (g / glasses~e.65 
+                                                      :poss~e.64 i~e.64) 
+                                                :degree (m / much~e.62 
+                                                      :degree (v / very~e.61))) 
+                                          :mod (a4 / again~e.58 
+                                                :mod (o / once~e.57))))))) 
+            :ARG1-of (c4 / cause-01 
+                  :ARG0 (a2 / and~e.16 
+                        :op1 (t / talent~e.15 
+                              :poss p) 
+                        :op2 (t4 / thing~e.44 
+                              :ARG1-of (l / learn-01~e.17 
+                                    :ARG0 p))))))
+
+# ::id bolt12_6454_5051.18 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Also , as for the rumor on the internet a short time ago " Complete notes on 100 Chinese celebrities who accepted political contributions from the Ford Foundation ", I feel that the segment of the intellectual elite in China who are " becoming treasonous " are increasingly ardent and have already become willful and without fear , to a level of publicly harming the country .
+# ::alignments 0-1.3 2-1.4.3.r 5-1.4 6-1.4.2.r 8-1.4.2 10-1.4.3.2 11-1.4.3.r 12-1.4.3 12-1.4.3.1 12-1.4.3.1.r 14-1.4.1.2 15-1.4.1 16-1.4.1.1.r 17-1.4.1.1.1 18-1.4.1.1.2 19-1.4.1.1 21-1.4.1.1.3 22-1.4.1.1.3.1.1.2 23-1.4.1.1.3.1 23-1.4.1.1.3.1.1 23-1.4.1.1.3.1.1.r 24-1.4.1.1.3.1.1.1.r 26-1.4.1.1.3.1.1.1.2.1 27-1.4.1.1.3.1.1.1.2.2 29-1.1 30-1 31-1.2.r 33-1.2.1.1 33-1.2.1.1.1 33-1.2.1.1.1.r 34-1.2.1.1.1.1.r 36-1.2.1.1.1.1.1 37-1.2.1.1.1.1 38-1.2.1.1.1.1.2.r 39-1.2.1.1.1.1.2.2.1 41-1.2.1.1.r 43-1.2.1.1.2 46-1.2.1.1.r 47-1.2.1.2 48-1.2.1 49-1.2 51-1.2.2.3 52-1.2.2 53-1.2.2.2.1 54-1.2.2.2 55-1.2.2.2.2.1 55-1.2.2.2.2.1.r 56-1.2.2.2.2 62-1.2.3.3 63-1.2.3 65-1.2.3.2
+(f / feel-01~e.30 
+      :ARG0 (i / i~e.29) 
+      :ARG1~e.31 (a2 / and~e.49 
+            :op1 (a3 / ardent~e.48 
+                  :domain~e.41,46 (t2 / thing~e.33 
+                        :ARG2-of~e.33 (s / segment-01~e.33 
+                              :ARG1~e.34 (e / elite~e.37 
+                                    :mod (i3 / intellectual~e.36) 
+                                    :location~e.38 (c / country :wiki "China" 
+                                          :name (n3 / name :op1 "China"~e.39)))) 
+                        :ARG1-of (b / become-01~e.43 
+                              :ARG2 (p / person 
+                                    :ARG0-of (b4 / betray-01)))) 
+                  :ARG1-of (i2 / increase-01~e.47)) 
+            :op2 (b2 / become-01~e.52 
+                  :ARG1 t2 
+                  :ARG2 (a4 / and~e.54 
+                        :op1 (w / willful~e.53) 
+                        :op2 (f2 / fear-01~e.56 :polarity~e.55 -~e.55 
+                              :ARG0 t2)) 
+                  :time (a5 / already~e.51)) 
+            :degree (h / harm-01~e.63 
+                  :ARG0 t2 
+                  :ARG1 (c2 / country~e.65) 
+                  :ARG1-of (p2 / public-02~e.62))) 
+      :mod (a / also~e.0) 
+      :topic (r / rumor-01~e.5 
+            :ARG1 (n / note~e.15 
+                  :topic~e.16 (c3 / celebrity~e.19 :quant 100~e.17 
+                        :mod c~e.18 
+                        :ARG0-of (a6 / accept-01~e.21 
+                              :ARG1 (t3 / thing~e.23 
+                                    :ARG1-of~e.23 (c5 / contribute-01~e.23 
+                                          :ARG0~e.24 (o / organization :wiki "Ford_Foundation" 
+                                                :name (n2 / name :op1 "Ford"~e.26 :op2 "Foundation"~e.27)) 
+                                          :mod (p3 / politics~e.22))))) 
+                  :ARG1-of (c4 / complete-02~e.14)) 
+            :medium~e.6 (i4 / internet~e.8) 
+            :time~e.2,11 (b3 / before~e.12 
+                  :op1~e.12 (n4 / now~e.12) 
+                  :ARG1-of (s2 / short-07~e.10))))
+
+# ::id bolt12_6454_5051.19 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok But I do not understand , when these people frequently make treasonous remarks , why no one curbs them and they , moreover , can continue to occupy high positions , calling the wind and rousing the rain among the intelligentsia and in public opinion ?
+# ::alignments 0-1 1-1.1.2 3-1.1.1 3-1.1.1.r 4-1.1 6-1.1.3.2 6-1.1.4.r 7-1.1.4.1.1 8-1.1.4.1 9-1.1.4.3 10-1.1.4 12-1.1.4 14-1.1.3 14-1.1.3.1 14-1.1.3.1.r 14-1.1.3.2 14-1.1.3.2.r 15-1.1.3.1.1.1.1 16-1.1.3.1.1.1.1 17-1.1.3.1.1.1 18-1.1.3.1.1.1.2 19-1.1.3.1.1 22-1.1.3.1.1 22-1.1.3.1.1.2.2 24-1.1.3.1.1.2 25-1.1.3.1.1.2.1 28-1.1.3.1.1.2.1.2.2 29-1.1.3.1.1.2.1.2 31-1.1.3.1.1.2.1.2.3.1 33-1.1.3.1.1.2.1.2.3.1.2 34-1.1.3.1.1.2.1.2.3 35-1.1.3.1.1.2.1.2.3.2 37-1.1.3.1.1.2.1.2.3.2.2 40-1.1.3.1.1.2.1.2.3.3.1 41-1.1.3.1.1.2.1.2.3.3 42-1.1.3.1.1.2.1.2.3.3.r 43-1.1.3.1.1.2.1.2.3.3.2.1.1 44-1.1.3.1.1.2.1.2.3.3.2 44-1.1.3.1.1.2.1.2.3.3.2.1 44-1.1.3.1.1.2.1.2.3.3.2.1.r
+(c5 / contrast-01~e.0 
+      :ARG2 (u / understand-01~e.4 :polarity~e.3 -~e.3 
+            :ARG0 (i / i~e.1) 
+            :ARG1 (t3 / thing~e.14 
+                  :ARG0-of~e.14 (c / cause-01~e.14 
+                        :ARG1 (a2 / and~e.19,22 
+                              :op1 (c2 / curb-01~e.17 
+                                    :ARG0 (n / no-one~e.15,16) 
+                                    :ARG1 p~e.18) 
+                              :op2 (p2 / possible-01~e.24 
+                                    :ARG1 (c3 / continue-01~e.25 
+                                          :ARG0 p 
+                                          :ARG1 (p5 / position-01~e.29 
+                                                :ARG1 p 
+                                                :ARG1-of (h / high-02~e.28) 
+                                                :time-of (a3 / and~e.34 
+                                                      :op1 (c4 / call-02~e.31 
+                                                            :ARG0 p 
+                                                            :ARG1 (w / wind~e.33)) 
+                                                      :op2 (r2 / rouse-01~e.35 
+                                                            :ARG0 p 
+                                                            :ARG1 (r / rain-01~e.37)) 
+                                                      :location~e.42 (a / and~e.41 
+                                                            :op1 (i2 / intelligentsia~e.40) 
+                                                            :op2 (t4 / thing~e.44 
+                                                                  :ARG1-of~e.44 (o / opine-01~e.44 
+                                                                        :ARG0 (p4 / public~e.43))))))) 
+                                    :mod (m2 / moreover~e.22)))) 
+                  :mod~e.14 (a4 / amr-unknown~e.6,14)) 
+            :time~e.6 (r4 / remark-01~e.10,12 
+                  :ARG0 (p / person~e.8 
+                        :mod (t2 / this~e.7)) 
+                  :ARG1 (t / thing 
+                        :ARG0-of (b / betray-01)) 
+                  :ARG1-of (f / frequent-02~e.9))))
+
+# ::id bolt12_6454_5051.20 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Contacting " Southern newspapers ", which were temporarily fierce a short while ago , I feel that part of the intellectual elite have possibly sunk together with media personalities !
+# ::alignments 0-1.3.1 2-1.3.1.1.1 3-1.3.1.1 7-1.3.1.1.2.1 8-1.3.1.1.2 10-1.3.1.1.2.2.2.1 11-1.3.1.1.2.2.2 11-1.3.1.1.2.2.r 12-1.3.1.1.2.2 12-1.3.1.1.2.2.1 12-1.3.1.1.2.2.1.r 14-1.1 15-1 16-1.2.r 17-1.2.1.1 18-1.2.1.1.1.r 20-1.2.1.1.1.1 21-1.2.1.1.1 23-1.2 24-1.2.1 26-1.2.1.2.r 27-1.2.1.2.1 28-1.2.1.2
+(f / feel-01~e.15 
+      :ARG0 (i / i~e.14) 
+      :ARG1~e.16 (p / possible-01~e.23 
+            :ARG1 (s2 / sink-01~e.24 
+                  :ARG0 (p4 / part~e.17 
+                        :part-of~e.18 (e / elite~e.21 
+                              :mod (i2 / intellectual~e.20))) 
+                  :accompanier~e.26 (p3 / personality~e.28 
+                        :mod (m / media~e.27)))) 
+      :ARG1-of (c2 / cause-01 
+            :ARG0 (c / contact-01~e.0 
+                  :ARG1 (n / newspaper~e.3 
+                        :location (s / south~e.2) 
+                        :mod (f2 / fierce~e.8 
+                              :duration (t / temporary~e.7) 
+                              :time~e.11 (b / before~e.12 
+                                    :op1~e.12 (n2 / now~e.12) 
+                                    :quant (w / while~e.11 
+                                          :ARG1-of (s3 / short-07~e.10))))))))
+
+# ::id bolt12_6454_5051.21 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I remember , 60 @-@ some years ago the US had just fought a war with China , and still threatened China with the use of nuclear weapons ;
+# ::alignments 0-1.1 1-1 3-1.2.1.4.2.1.1 6-1.2.1.4.2.1.2 7-1.2.1.4 7-1.2.1.4.1 7-1.2.1.4.1.r 9-1.2.1.1.2.1 11-1.2.1.3 14-1.2.1 15-1.2.1.2.r 16-1.2.1.2.2.1 18-1.2 19-1.2.2.4 20-1.2.2 21-1.2.2.3 22-1.2.2.2.r 24-1.2.2.2 25-1.2.2.2.2.r 26-1.2.2.2.2.1 27-1.2.2.2.2
+(r / remember-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (a / and~e.18 
+            :op1 (w3 / war-01~e.14 
+                  :ARG0 (c / country :wiki "United_States" 
+                        :name (n3 / name :op1 "US"~e.9)) 
+                  :ARG1~e.15 (c2 / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.16)) 
+                  :mod (j / just~e.11) 
+                  :time (b / before~e.7 
+                        :op1~e.7 (n4 / now~e.7) 
+                        :quant (m / more-than 
+                              :op1 (t / temporal-quantity :quant 60~e.3 
+                                    :unit (y / year~e.6))))) 
+            :op2 (t2 / threaten-01~e.20 
+                  :ARG0 c 
+                  :ARG1~e.22 (u / use-01~e.24 
+                        :ARG0 c 
+                        :ARG1~e.25 (w2 / weapon~e.27 
+                              :mod (n / nucleus~e.26))) 
+                  :ARG2 c2~e.21 
+                  :mod (s2 / still~e.19))))
+
+# ::id bolt12_6454_5051.22 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 40 @-@ some years ago , the US entered Vietnam with the intention of containing China ;
+# ::alignments 0-1.3.2.1.1 3-1.3.2.1.2 4-1.3 4-1.3.1 4-1.3.1.r 7-1.1.2.1 8-1 9-1.2.2.1 13-1.4.r 14-1.4 15-1.4.2.2.1
+(e / enter-01~e.8 
+      :ARG0 (c / country :wiki "United_States" 
+            :name (n3 / name :op1 "US"~e.7)) 
+      :ARG1 (c2 / country :wiki "Vietnam" 
+            :name (n / name :op1 "Vietnam"~e.9)) 
+      :time (b / before~e.4 
+            :op1~e.4 (n4 / now~e.4) 
+            :quant (m / more-than 
+                  :op1 (t / temporal-quantity :quant 40~e.0 
+                        :unit (y / year~e.3)))) 
+      :purpose~e.13 (c3 / contain-02~e.14 
+            :ARG0 c 
+            :ARG1 (c4 / country :wiki "China" 
+                  :name (n2 / name :op1 "China"~e.15))))
+
+# ::id bolt12_6454_5051.23 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok although 32 years ago it had established relations with China , 22 years ago it again started imposing sanctions on China , 12 years ago it bombed a Chinese embassy , 10 years ago the South China Sea collision incident occurred , and two years ago it restarted its containment of China with great fanfare .
+# ::alignments 0-1 1-1.2.3.2.1 2-1.2.3.2.2 3-1.2.3 3-1.2.3.1 3-1.2.3.1.r 4-1.2.1 6-1.2 7-1.2.2 8-1.2.2.2.r 9-1.2.2.2.2.1 11-1.1.1.4.2.1 12-1.1.1.4.2.2 13-1.1.1.4 13-1.1.1.4.1 13-1.1.1.4.1.r 14-1.1.1.1 15-1.1.1.3 16-1.1.1 17-1.1.1.2 18-1.1.1.2.2 18-1.1.1.2.2.1 18-1.1.1.2.2.1.r 19-1.1.1.2.3.r 20-1.1.1.2.3 22-1.1.2.3.2.1 23-1.1.2.3.2.2 24-1.1.2.3 24-1.1.2.3.1 24-1.1.2.3.1.r 25-1.1.2.1 26-1.1.2 28-1.1.2.2.1 29-1.1.2.2 31-1.1.3.2.2.1 32-1.1.3.2.2.2 33-1.1.3.2 33-1.1.3.2.1 33-1.1.3.2.1.r 35-1.1.3.1.2.1 36-1.1.3.1.2.2 37-1.1.3.1.2.3 38-1.1.3 42-1.1 43-1.1.4.3.2.1 44-1.1.4.3.2.2 45-1.1.4.3 45-1.1.4.3.1 45-1.1.4.3.1.r 46-1.1.4.1 47-1.1.4 48-1.1.4.2.1 48-1.1.4.2.1.r 49-1.1.4.2 50-1.1.4.2.2.r 51-1.1.4.2.2 52-1.1.4.2.3.r 53-1.1.4.2.3.1 54-1.1.4.2.3
+(h / have-concession-91~e.0 
+      :ARG1 (a / and~e.42 
+            :op1 (s / start-01~e.16 
+                  :ARG0 i~e.14 
+                  :ARG1 (i2 / impose-01~e.17 
+                        :ARG0 i 
+                        :ARG1 (t6 / thing~e.18 
+                              :ARG2-of~e.18 (s2 / sanction-02~e.18)) 
+                        :ARG2~e.19 c~e.20) 
+                  :mod (a3 / again~e.15) 
+                  :time (b6 / before~e.13 
+                        :op1~e.13 (n7 / now~e.13) 
+                        :quant (t2 / temporal-quantity :quant 22~e.11 
+                              :unit (y2 / year~e.12)))) 
+            :op2 (b / bomb-01~e.26 
+                  :ARG0 i~e.25 
+                  :ARG1 (e2 / embassy~e.29 
+                        :mod c~e.28) 
+                  :time (b5 / before~e.24 
+                        :op1~e.24 (n6 / now~e.24) 
+                        :quant (t3 / temporal-quantity :quant 12~e.22 
+                              :unit (y3 / year~e.23)))) 
+            :op3 (c3 / collide-01~e.38 
+                  :location (s3 / sea :wiki "South_China_Sea" 
+                        :name (n / name :op1 "South"~e.35 :op2 "China"~e.36 :op3 "Sea"~e.37)) 
+                  :time (b4 / before~e.33 
+                        :op1~e.33 (n5 / now~e.33) 
+                        :quant (t4 / temporal-quantity :quant 10~e.31 
+                              :unit (y4 / year~e.32)))) 
+            :op4 (r2 / restart-01~e.47 
+                  :ARG0 i~e.46 
+                  :ARG1 (c2 / contain-02~e.49 
+                        :ARG0~e.48 i~e.48 
+                        :ARG1~e.50 c~e.51 
+                        :manner~e.52 (f / fanfare~e.54 
+                              :mod (g / great~e.53 
+                                    :degree (m / more)))) 
+                  :time (b3 / before~e.45 
+                        :op1~e.45 (n4 / now~e.45) 
+                        :quant (t5 / temporal-quantity :quant 2~e.43 
+                              :unit (y5 / year~e.44))))) 
+      :ARG2 (e / establish-01~e.6 
+            :ARG0 (i / it~e.4) 
+            :ARG1 (r / relation-03~e.7 
+                  :ARG0 i 
+                  :ARG2~e.8 (c / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.9))) 
+            :time (b2 / before~e.3 
+                  :op1~e.3 (n3 / now~e.3) 
+                  :quant (t / temporal-quantity :quant 32~e.1 
+                        :unit (y / year~e.2)))))
+
+# ::id bolt12_6454_5051.24 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I do n't understand , why are we Chinese so forgetful ?
+# ::alignments 0-1.2 2-1.1 2-1.1.r 3-1 5-1.3 5-1.3.1 5-1.3.1.r 7-1.3.1.1.1 8-1.3.1.1.1.1.2.1 9-1.3.1 9-1.3.1.1.2
+(u / understand-01~e.3 :polarity~e.2 -~e.2 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (a / amr-unknown~e.5 
+            :ARG0-of~e.5 (c / cause-01~e.5,9 
+                  :ARG1 (f / forget-01 
+                        :ARG0 (w / we~e.7 
+                              :mod (c2 / country :wiki "China" 
+                                    :name (n / name :op1 "China"~e.8))) 
+                        :degree (s / so~e.9)))))
+
+# ::id bolt12_6454_5051.25 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Why are there still so many people ignoring their conscience and speaking on the behalf of the US ?
+# ::alignments 0-1 0-1.1 0-1.1.r 3-1.2.4 4-1.2.1.1 5-1.2.1 6-1.2 7-1.2.2 8-1.2.2.1.1 8-1.2.2.1.1.r 9-1.2.2.1 11-1.2.3 12-1.2.3.1.r 14-1.2.3.1.r 15-1.2.3.1.r 17-1.2.3.1.2.1
+(c / cause-01~e.0 
+      :ARG0~e.0 (a / amr-unknown~e.0) 
+      :ARG1 (p / person~e.6 
+            :quant (m / many~e.5 
+                  :degree (s2 / so~e.4)) 
+            :ARG0-of (i / ignore-01~e.7 
+                  :ARG1 (c3 / conscience~e.9 
+                        :poss~e.8 p~e.8)) 
+            :ARG0-of (s / speak-01~e.11 
+                  :prep-on-behalf-of~e.12,14,15 (c2 / country :wiki "United_States" 
+                        :name (n / name :op1 "US"~e.17))) 
+            :mod (s3 / still~e.3)))
+
+# ::id bolt12_6454_5051.26 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Without taking a big loss , people do n't improve their abilities to remember - this is possibly the greatest weakness of us Chinese .
+# ::alignments 0-1.1.4.1 0-1.1.4.1.r 3-1.1.4.3 4-1.1.4 6-1.1.2 8-1.1.1 8-1.1.1.r 9-1.1 10-1.1.3.1 10-1.1.3.1.r 11-1.1.3 13-1.1.3.2 15-1.2.2 17-1.2.4 19-1.2.3 19-1.2.3.1 19-1.2.3.1.r 20-1.2 21-1.2.1.r 22-1.2.1 23-1.2.1.1.2.1
+(m / multi-sentence 
+      :snt1 (i / improve-01~e.9 :polarity~e.8 -~e.8 
+            :ARG0 (p / person~e.6) 
+            :ARG1 (c2 / capable-01~e.11 
+                  :ARG1~e.10 p~e.10 
+                  :ARG2 (r / remember-01~e.13 
+                        :ARG0 p)) 
+            :manner (l / lose-02~e.4 :polarity~e.0 -~e.0 
+                  :ARG0 p 
+                  :mod (b / big~e.3))) 
+      :snt2 (w / weak-02~e.20 
+            :ARG1~e.21 (w2 / we~e.22 
+                  :mod (c / country :wiki "China" 
+                        :name (n / name :op1 "China"~e.23))) 
+            :ARG2 (t / this~e.15) 
+            :mod (g / great~e.19 
+                  :degree~e.19 (m2 / most~e.19)) 
+            :ARG1-of (p3 / possible-01~e.17)))
+
+# ::id bolt12_6454_5051.27 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Therefore , it also stands to reason that the forces of the traitors of China are rampaging and the fifth column is running rampant
+# ::alignments 0-1 3-1.1.3 4-1.1 5-1.1.2.r 6-1.1.2 7-1.1.1.r 9-1.1.1.1.1 10-1.1.1.1.1.1.r 12-1.1.1.1.1.1 12-1.1.1.1.1.1.1 12-1.1.1.1.1.1.1.r 13-1.1.1.1.1.1.1.1.r 14-1.1.1.1.1.1.1.1.2.1 16-1.1.1.1 17-1.1.1 19-1.1.1.2.1.1 19-1.1.1.2.1.1.1 19-1.1.1.2.1.1.1.r 20-1.1.1.2.1 22-1.1.1.2 23-1.1.1.2.2
+(i / infer-01~e.0 
+      :ARG1 (s / stand-01~e.4 
+            :ARG1~e.7 (a2 / and~e.17 
+                  :op1 (r2 / rampage-01~e.16 
+                        :ARG0 (f / force~e.9 
+                              :poss~e.10 (p / person~e.12 
+                                    :ARG0-of~e.12 (b / betray-01~e.12 
+                                          :ARG1~e.13 (c / country :wiki "China" 
+                                                :name (n / name :op1 "China"~e.14)))))) 
+                  :op2 (r3 / run-01~e.22 
+                        :ARG1 (c2 / column~e.20 
+                              :ord (o / ordinal-entity~e.19 :value~e.19 5~e.19)) 
+                        :manner (r4 / rampant~e.23))) 
+            :prep-to~e.5 (r / reason-01~e.6) 
+            :mod (a / also~e.3)))
+
+# ::id bolt12_6454_5052.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It 's entirely possible - do n't we ourselves raise " traitors to China " among primary school students ?
+# ::alignments 2-1.1.1 3-1.1 5-1.2.4.2.1.1 6-1.2.2 6-1.2.2.r 7-1.2.3 8-1.2.3 9-1.2 11-1.2.4 11-1.2.4.1 11-1.2.4.1.r 12-1.2.4.1.1.r 13-1.2.4.1.1.2.1 15-1.2.4.2 16-1.2.4.2.1.1.1.1 17-1.2.4.2.1.1.1 18-1.2.4.2.1 18-1.2.4.2.1.1 18-1.2.4.2.1.1.r 19-1.2.1 19-1.2.1.r
+(m / multi-sentence 
+      :snt1 (p / possible-01~e.3 
+            :mod (e / entire~e.2)) 
+      :snt2 (r / raise-03~e.9 :mode~e.19 interrogative~e.19 :polarity~e.6 -~e.6 
+            :ARG0 (w / we~e.7,8) 
+            :ARG1 (p4 / person~e.11 
+                  :ARG0-of~e.11 (b / betray-01~e.11 
+                        :ARG1~e.12 (c / country :wiki "China" 
+                              :name (n / name :op1 "China"~e.13))) 
+                  :ARG1-of (i / include-91~e.15 
+                        :ARG2 (p2 / person~e.18 
+                              :ARG0-of~e.18 (s / study-01~e.5,18 
+                                    :location (s2 / school~e.17 
+                                          :mod (p3 / primary~e.16))))))))
+
+# ::id bolt12_6454_5054.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It 's entirely possible - do n't we ourselves raise " traitors to China " among primary school students ?
+# ::alignments 2-1.1.1 3-1.1 5-1.2.4.2.1.1 6-1.2.2 6-1.2.2.r 7-1.2.3 8-1.2.3 9-1.2 11-1.2.4 11-1.2.4.1 11-1.2.4.1.r 12-1.2.4.1.1.r 13-1.2.4.1.1.2.1 15-1.2.4.2 16-1.2.4.2.1.1.1.1 17-1.2.4.2.1.1.1 18-1.2.4.2.1 18-1.2.4.2.1.1 18-1.2.4.2.1.1.r 19-1.2.1 19-1.2.1.r
+(m / multi-sentence 
+      :snt1 (p / possible-01~e.3 
+            :mod (e / entire~e.2)) 
+      :snt2 (r / raise-03~e.9 :mode~e.19 interrogative~e.19 :polarity~e.6 -~e.6 
+            :ARG0 (w / we~e.7,8) 
+            :ARG1 (p4 / person~e.11 
+                  :ARG0-of~e.11 (b / betray-01~e.11 
+                        :ARG1~e.12 (c / country :wiki "China" 
+                              :name (n / name :op1 "China"~e.13))) 
+                  :ARG1-of (i / include-91~e.15 
+                        :ARG2 (p2 / person~e.18 
+                              :ARG0-of~e.18 (s / study-01~e.5,18 
+                                    :location (s2 / school~e.17 
+                                          :mod (p3 / primary~e.16))))))))
+
+# ::id bolt12_6454_5055.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Just passing through , taking a look
+# ::alignments 0-1.1.1 1-1.1 2-1.1.2 2-1.1.2.r 4-1.2 6-1.2
+(a / and 
+      :op1 (p / pass-03~e.1 
+            :mod (j / just~e.0) 
+            :path~e.2 (t2 / through~e.2)) 
+      :op2 (l / look-01~e.4,6))
+
+# ::id bolt12_6454_5056.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Passing through ...
+# ::alignments 0-1 1-1.1 1-1.1.r
+(p / pass-03~e.0 
+      :path~e.1 (t / through~e.1))
+
+# ::id bolt12_6454_5057.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Mr. Zhengqing , the things you say are quite astonishing , there possibly is a suspicion that there are fragments , even if they are a fifth column , they would n't be so bare @-@ boned , we should allow the existence of different opinions , the times are really different , no matter if its democracy or pan @-@ Occidentalism , neither are beneficial to China , do n't be afraid , what do you say
+# ::alignments 0-1.1.3.2.1 1-1.1.3.2.2 4-1.1.2.1 5-1.7.1 6-1.1 6-1.1.2.1.1 6-1.7 7-1.2.2.1.2.r 8-1.1.2.2 9-1.1.2 12-1.2 13-1.2.2.1.2.r 15-1.2.1 19-1.2.1.1 21-1.2.2 22-1.2.2 23-1.2.2.1.2 24-1.2.2.1.2.r 26-1.2.2.1.1 26-1.2.2.1.1.1 26-1.2.2.1.1.1.r 27-1.2.2.1 31-1.2.1.1.1.1 31-1.2.1.1.1.1.r 33-1.2.1.1.1.2 34-1.2.1.1.1.3 36-1.2.1.1.1 38-1.3.1.1 39-1.3 40-1.3.1 43-1.3.1.2.r 44-1.3.1.2.1.1 45-1.3.1.2 45-1.3.1.2.1 45-1.3.1.2.1.r 48-1.4.1 50-1.4.2 51-1.4 53-1.5 54-1.5 55-1.2.2 57-1.5.2.1 58-1.5.2 59-1.5.2.2 61-1.5.2.2 63-1.5.1.1 63-1.5.1.1.r 65-1.5.1 66-1.5.1.3.r 67-1.5.1.3.2.1 70-1.6.1 70-1.6.1.r 72-1.6 74-1.7.2 76-1.6.3 76-1.7.1 77-1.7
+(m / multi-sentence 
+      :snt1 (s5 / say-01~e.6 
+            :ARG0 (i / i) 
+            :ARG1 (a2 / astonish-01~e.9 
+                  :ARG0 (t / thing~e.4 
+                        :ARG1-of (s / say-01~e.6 
+                              :ARG0 p2)) 
+                  :degree (q / quite~e.8)) 
+            :ARG2 (p2 / person :wiki - 
+                  :name (n / name :op1 "Mr."~e.0 :op2 "Zhengqing"~e.1))) 
+      :snt2 (p / possible-01~e.12 
+            :ARG1 (s2 / suspect-01~e.15 
+                  :ARG1 (f2 / fragment~e.19 
+                        :mod (b / bone~e.36 :polarity~e.31 -~e.31 
+                              :degree (s3 / so~e.33) 
+                              :ARG1-of (b2 / bare-02~e.34)))) 
+            :concession (e2 / even-if~e.21,22,55 
+                  :op1 (c / column~e.27 
+                        :ord (o3 / ordinal-entity~e.26 :value~e.26 5~e.26) 
+                        :domain~e.7,13,24 f2~e.23))) 
+      :snt3 (r / recommend-01~e.39 
+            :ARG1 (a3 / allow-01~e.40 
+                  :ARG0 (w / we~e.38) 
+                  :ARG1~e.43 (t5 / thing~e.45 
+                        :ARG1-of~e.45 (o4 / opine-01~e.45 
+                              :ARG1-of (d2 / differ-02~e.44))))) 
+      :snt4 (d / differ-02~e.51 
+            :ARG1 (t2 / time~e.48) 
+            :degree (r2 / really~e.50)) 
+      :snt5 (r3 / regardless-91~e.53,54 
+            :ARG1 (b3 / benefit-01~e.65 :polarity~e.63 -~e.63 
+                  :ARG0 o2 
+                  :ARG1~e.66 (c2 / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.67))) 
+            :ARG2 (o2 / or~e.58 
+                  :op1 (d3 / democracy~e.57) 
+                  :op2 (p3 / pan-occidentalism~e.59,61))) 
+      :snt6 (f / fear-01~e.72 :polarity~e.70 -~e.70 :mode imperative 
+            :ARG0 (y / you~e.76)) 
+      :snt7 (s4 / say-01~e.6,77 
+            :ARG0 (y2 / you~e.5,76) 
+            :ARG1 (a4 / amr-unknown~e.74)))
+
+# ::id bolt12_6454_5059.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Mr. Zhengqing , the things you say are quite astonishing , there possibly is a suspicion that there are fragments , even if they are a fifth column , they would n't be so bare @-@ boned ,
+# ::alignments 0-1.3.2.2.1 1-1.3.2.2.2 4-1.3.1.1 5-1.3.1.1.1.1 6-1.3 6-1.3.1.1.1 8-1.3.1.2 9-1.3.1 12-1.1 15-1.1.1 19-1.1.1.1 21-1.2.2 22-1.2.2 23-1.2.2.1.1 24-1.2.1.3.r 24-1.2.2.1.1.r 26-1.2.2.1.2 26-1.2.2.1.2.1 26-1.2.2.1.2.1.r 27-1.2.2.1 29-1.2.1.3 31-1.2.1.1 31-1.2.1.1.r 32-1.2.1.3.r 33-1.2.1.4 34-1.2.1.2 36-1.2.1
+(m / multi-sentence 
+      :snt2 (p / possible-01~e.12 
+            :ARG1 (s / suspect-01~e.15 
+                  :ARG1 (f / fragment~e.19))) 
+      :snt3 (h / have-concession-91 
+            :ARG1 (b3 / bone~e.36 :polarity~e.31 -~e.31 
+                  :ARG1-of (b / bare-02~e.34) 
+                  :domain~e.24,32 (t2 / they~e.29) 
+                  :degree (s3 / so~e.33)) 
+            :ARG2 (e / even-if~e.21,22 
+                  :op1 (c2 / column~e.27 
+                        :domain~e.24 t2~e.23 
+                        :ord (o / ordinal-entity~e.26 :value~e.26 5~e.26)))) 
+      :snt1 (s4 / say-01~e.6 
+            :ARG1 (a2 / astonish-01~e.9 
+                  :ARG0 (t / thing~e.4 
+                        :ARG1-of (s2 / say-01~e.6 
+                              :ARG0 p2~e.5)) 
+                  :degree (q / quite~e.8)) 
+            :ARG2 (p2 / person :wiki - 
+                  :name (n / name :op1 "Mr."~e.0 :op2 "Zhengqing"~e.1))))
+
+# ::id bolt12_6454_5059.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok we should allow the existence of different opinions , the times are really different , no matter if its democracy or pan @-@ Occidentalism , neither are beneficial to China , do n't be afraid , what do you say
+# ::alignments 0-1.1.1.1 1-1.1 2-1.1.1 4-1.1.1.2 5-1.1.1.2.1.r 6-1.1.1.2.1.2 7-1.1.1.2.1 7-1.1.1.2.1.1 7-1.1.1.2.1.1.r 10-1.2.1 12-1.2.2 13-1.2 15-1.5 16-1.5 19-1.5.2.1 20-1.5.2 21-1.5.2.2 23-1.5.2.2 25-1.5.1.1 25-1.5.1.1.r 27-1.5.1 28-1.5.1.3.r 29-1.5.1.3.2.1 32-1.3.1 32-1.3.1.r 34-1.3 36-1.4.2 38-1.3.3 38-1.4.1 39-1.4
+(m / multi-sentence 
+      :snt1 (r / recommend-01~e.1 
+            :ARG1 (a2 / allow-01~e.2 
+                  :ARG0 (w / we~e.0) 
+                  :ARG1 (e / exist-01~e.4 
+                        :ARG1~e.5 (t2 / thing~e.7 
+                              :ARG1-of~e.7 (o / opine-01~e.7) 
+                              :ARG1-of (d / differ-02~e.6))))) 
+      :snt2 (d2 / differ-02~e.13 
+            :ARG1 (t / time~e.10) 
+            :degree (r2 / really~e.12)) 
+      :snt4 (f / fear-01~e.34 :polarity~e.32 -~e.32 :mode imperative 
+            :ARG0 (y / you~e.38)) 
+      :snt5 (s / say-01~e.39 
+            :ARG0 (y2 / you~e.38) 
+            :ARG1 (a / amr-unknown~e.36)) 
+      :snt3 (r3 / regardless-91~e.15,16 
+            :ARG1 (b2 / benefit-01~e.27 :polarity~e.25 -~e.25 
+                  :ARG0 o3 
+                  :ARG1~e.28 (c / country :wiki "China" 
+                        :name (n / name :op1 "China"~e.29))) 
+            :ARG2 (o3 / or~e.20 
+                  :op1 (d4 / democracy~e.19) 
+                  :op2 (p / pan-occidentalism~e.21,23))))
+
+# ::id bolt12_64556_5610.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Little Japan , born of dog feces and the dead US economy almost can n't survive . They are preparing to start a war , to pass on debt to others .
+# ::alignments 0-1.1.2.1.3 1-1.1.2.1.2.1 3-1.1.2.1 3-1.1.2.1.4 3-1.1.2.1.4.r 4-1.1.2.1.4.1.r 5-1.1.2.1.4.1.1.1 6-1.1.2.1.4.1.1 7-1.1.2.1.4.1 9-1.1.2.1.4.1.2.2 10-1.1.2.1.4.1.2.1.2.1 11-1.1.2.1.4.1.2 12-1.1.3 13-1.1 14-1.1.1 14-1.1.1.r 15-1.1.2 17-1.2.1 19-1.2 21-1.2.2.1 23-1.2.2.1.2 25-1.2.2.r 26-1.2.2.2 27-1.2.2.2 28-1.2.2.2.2 29-1.2.2.2.3.r 30-1.2.2.2.3
+(m / multi-sentence 
+      :snt1 (p2 / possible-01~e.13 :polarity~e.14 -~e.14 
+            :ARG1 (s2 / survive-01~e.15 
+                  :ARG0 (c3 / country~e.3 :wiki "Japan" 
+                        :name (n3 / name :op1 "Japan"~e.1) 
+                        :mod (l2 / little~e.0) 
+                        :ARG1-of~e.3 (b2 / bear-02~e.3 
+                              :ARG0~e.4 (a4 / and~e.7 
+                                    :op1 (f / feces~e.6 
+                                          :mod (d2 / dog~e.5)) 
+                                    :op2 (e / economy~e.11 
+                                          :mod (c / country :wiki "United_States" 
+                                                :name (n / name :op1 "US"~e.10)) 
+                                          :ARG1-of (d3 / die-01~e.9)))))) 
+            :mod (a3 / almost~e.12)) 
+      :snt2 (p3 / prepare-02~e.19 
+            :ARG0 (t / they~e.17) 
+            :ARG1~e.25 (a / and 
+                  :op1 (s / start-01~e.21 
+                        :ARG0 t 
+                        :ARG1 (w / war~e.23)) 
+                  :op2 (p / pass-on-09~e.26,27 
+                        :ARG0 t 
+                        :ARG1 (d / debt~e.28) 
+                        :ARG2~e.29 (o / other~e.30)))))
+
+# ::id bolt12_64556_5611.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok China can not be so " Doctrine of the Mean "~
+# ::alignments 0-1.2.4.2.1 1-1 2-1.1 2-1.1.r 3-1.2.4.r 4-1.2.3 6-1.2.2.1 7-1.2.2.2 8-1.2.2.3 9-1.2.2.4
+(p / possible-01~e.1 :polarity~e.2 -~e.2 
+      :ARG1 (t2 / thing :wiki "Doctrine_of_the_Mean" 
+            :name (n2 / name :op1 "Doctrine"~e.6 :op2 "of"~e.7 :op3 "the"~e.8 :op4 "Mean"~e.9) 
+            :degree (s / so~e.4) 
+            :domain~e.3 (c / country :wiki "China" 
+                  :name (n / name :op1 "China"~e.0))))
+
+# ::id bolt12_64556_5612.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If we greatly value making peace with wolves , we will pay a painful price !
+# ::alignments 0-1.3.r 1-1.3.1 2-1.3.3 3-1.3 4-1.3.2 5-1.3.2.2 6-1.3.2.3.r 7-1.3.2.3 9-1.1 11-1 13-1.2.1.1 14-1.2 14-1.2.1 14-1.2.1.r
+(p / pay-01~e.11 
+      :ARG0 (w / we~e.9) 
+      :ARG1 (t / thing~e.14 
+            :ARG2-of~e.14 (p2 / price-01~e.14 
+                  :ARG0-of (p3 / pain-01~e.13))) 
+      :condition~e.0 (v / value-02~e.3 
+            :ARG0 w~e.1 
+            :ARG1 (m / make-18~e.4 
+                  :ARG0 w 
+                  :ARG1 (p4 / peace~e.5) 
+                  :prep-with~e.6 (w2 / wolf~e.7)) 
+            :degree (g / great~e.2)))
+
+# ::id bolt12_64556_5612.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If we act like a turtle , will the various powers let us off ? It 's time to abolish cultural troupes and sports teams ! Use the funds on the front @-@ line of defense .
+# ::alignments 0-1.1.4.r 1-1.1.4.1 2-1.1.4 5-1.1.4.2 9-1.1.2.1 10-1.1.2 11-1.1 12-1.1.1.r 12-1.1.3 13-1.1.3.1 14-1.1.1 14-1.1.1.r 17-1.2 17-1.2.1.r 19-1.2.1 20-1.2.1.1.1.1 21-1.2.1.1.1 22-1.2.1.1 23-1.2.1.1.2.1 24-1.2.1.1.2 25-1.3.1 25-1.3.1.r 26-1.3 28-1.3.3 29-1.3.4.r 31-1.3.4.2 33-1.3.4 34-1.3.4.1.r 35-1.3.4.1
+(m / multi-sentence 
+      :snt1 (l / let-01~e.11 :mode~e.12,14 interrogative~e.14 
+            :ARG0 (p / power~e.10 
+                  :mod (v / various~e.9)) 
+            :ARG1 (w / we~e.12 
+                  :mod (o / off~e.13)) 
+            :condition~e.0 (a / act-01~e.2 
+                  :ARG0 w~e.1 
+                  :ARG1 (t / turtle~e.5))) 
+      :snt2 (t2 / time~e.17 
+            :time-of~e.17 (a2 / abolish-01~e.19 
+                  :ARG1 (a3 / and~e.22 
+                        :op1 (t3 / troupe~e.21 
+                              :mod (c / culture~e.20)) 
+                        :op2 (t4 / team~e.24 
+                              :mod (s / sport~e.23))))) 
+      :snt3 (u2 / use-01~e.26 :mode~e.25 imperative~e.25 
+            :ARG0 (y / you) 
+            :ARG1 (f / fund~e.28) 
+            :ARG2~e.29 (l2 / line~e.33 
+                  :mod~e.34 (d / defend-01~e.35) 
+                  :mod (f2 / front~e.31))))
+
+# ::id bolt12_64556_5612.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Looking the territorial seas with smoke of beacon @-@ fires up everywhere , what can being a great sports and arts nation accomplish ?
+# ::alignments 0-1.2 2-1.2.1.1 3-1.2.1 4-1.2.1.2.r 5-1.2.1.2 6-1.2.1.2.1.r 7-1.2.1.2.1.1 9-1.2.1.2.1 10-1.2.1.2.3 11-1.2.1.2.2 13-1.1.2 14-1 17-1.1.1.3 18-1.1.1.1 20-1.1.1.2 21-1.1.1 22-1.1
+(p / possible-01~e.14 
+      :ARG1 (a3 / accomplish-01~e.22 
+            :ARG0 (n / nation~e.21 
+                  :mod (s / sport~e.18) 
+                  :mod (a2 / art~e.20) 
+                  :mod (g / great~e.17)) 
+            :ARG1 (a4 / amr-unknown~e.13)) 
+      :condition (l / look-01~e.0 
+            :ARG1 (s2 / sea~e.3 
+                  :location (t / territory~e.2) 
+                  :prep-with~e.4 (s3 / smoke~e.5 
+                        :source~e.6 (f / fire~e.9 
+                              :mod (b / beacon~e.7)) 
+                        :location (e / everywhere~e.11) 
+                        :location (u / up~e.10)))))
+
+# ::id bolt12_64556_5612.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It 's time to wake up ! The wrong thinking and policies of high @-@ level decision @-@ making should be amended
+# ::alignments 1-1.2.1.1.1 2-1.1 3-1.1.1.r 4-1.1.1 5-1.1.1 8-1.2.1.1.1.1 9-1.2.1.1.1 10-1.2.1.1 11-1.2.1.1.2 12-1.2.1.1.2.1.r 13-1.2.1.1.2.1.1.1 15-1.2.1.1.2.1.1 16-1.2.1.1.2.1 18-1.2.1.1.2.1 19-1.2 21-1.2.1
+(m / multi-sentence 
+      :snt1 (t / time~e.2 
+            :time-of~e.3 (w2 / wake-up-02~e.4,5)) 
+      :snt2 (r / recommend-01~e.19 
+            :ARG1 (a / amend-01~e.21 
+                  :ARG1 (a2 / and~e.10 
+                        :op1 (t3 / think-01~e.1,9 
+                              :ARG2-of (w / wrong-04~e.8)) 
+                        :op2 (p / policy-01~e.11 
+                              :ARG1~e.12 (d / decide-01~e.16,18 
+                                    :mod (l / level~e.15 
+                                          :ARG1-of (h / high-02~e.13))))))))
+
+# ::id bolt12_64556_5612.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok We should put our efforts to developing science and technology ; we will be beaten if left behind ; use the limited military expenses on commanders and soldiers on the front line !
+# ::alignments 0-1.1.2 1-1.1 2-1.1.1 3-1.1.1.2.1 3-1.1.1.2.1.r 4-1.1.1.2 5-1.1.1.3.r 6-1.1.1.3 7-1.1.1.3.2.1 8-1.1.1.3.2 9-1.1.1.3.2.2 11-1.2.1 14-1.2 15-1.2.2.r 16-1.2.2 17-1.2.2 19-1.3 21-1.3.3.2 22-1.3.3.1.1 23-1.3.3.1 24-1.3.4.r 25-1.3.4.1.1.1 26-1.3.4 27-1.3.4.2.1.1 30-1.3.4.3.1 31-1.3.4.3 32-1.3.1 32-1.3.1.r
+(m / multi-sentence 
+      :snt1 (r / recommend-01~e.1 
+            :ARG1 (p / put-01~e.2 
+                  :ARG0 w 
+                  :ARG1 (e / effort-01~e.4 
+                        :ARG0~e.3 w~e.3) 
+                  :ARG2~e.5 (d / develop-02~e.6 
+                        :ARG0 w 
+                        :ARG1 (a / and~e.8 
+                              :op1 (s / science~e.7) 
+                              :op2 (t / technology~e.9)))) 
+            :ARG2 (w / we~e.0)) 
+      :snt2 (b / beat-03~e.14 
+            :ARG1 (w2 / we~e.11) 
+            :condition~e.15 (l / leave-behind-18~e.16,17 
+                  :ARG1 w2)) 
+      :snt3 (u / use-01~e.19 :mode~e.32 imperative~e.32 
+            :ARG0 (y / you) 
+            :ARG1 (m3 / monetary-quantity 
+                  :ARG1-of (e2 / expend-01~e.23 
+                        :ARG2 (m4 / military~e.22)) 
+                  :ARG1-of (l2 / limit-01~e.21)) 
+            :ARG2~e.24 (a2 / and~e.26 
+                  :op2 (p2 / person 
+                        :ARG0-of (h / have-org-role-91 
+                              :ARG2 (c2 / commander~e.25))) 
+                  :op2 (p3 / person 
+                        :ARG0-of (h2 / have-org-role-91 
+                              :ARG2 (s2 / soldier~e.27))) 
+                  :location (l3 / line~e.31 
+                        :mod (f / front~e.30)))))
+
+# ::id bolt12_64556_5613.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Mister , if the Diaoyu Islands are ours , please prove it with actions
+# ::alignments 0-1.3 2-1.2.6.r 4-1.2.6.2.2.1 5-1.2.6.2.2.2 7-1.2.6.1 9-1.2.1 9-1.2.1.r 10-1.2 12-1.2.5.r 13-1.2.5
+(s / say-01 
+      :ARG0 (i3 / i) 
+      :ARG1 (p2 / prove-01~e.10 :polite~e.9 +~e.9 :mode imperative 
+            :ARG0 m 
+            :ARG1 w 
+            :manner~e.12 (a / act-02~e.13 
+                  :ARG0 m) 
+            :condition~e.2 (o / own-01 
+                  :ARG0 (w / we~e.7) 
+                  :ARG1 (i2 / island :wiki "Senkaku_Islands" 
+                        :name (n2 / name :op1 "Diaoyu"~e.4 :op2 "Islands"~e.5)))) 
+      :ARG2 (m / mister~e.0))
+
+# ::id bolt12_64556_5614.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Quoting the post of Xiao Jianjia ( 277703234 ) at 10 @:@ 10 @:@ 11 on September 11 th , 2010 , Saturday
+# ::alignments 0-1 2-1.1 2-1.1.2 2-1.1.2.r 3-1.1.2.1.r 4-1.1.2.1.2.1 5-1.1.2.1.2.2 7-1.1.1 9-1.1.2.2.r 10-1.1.2.2.4 12-1.1.2.2.4 14-1.1.2.2.2 14-1.1.2.2.4 16-1.1.2.2.1 16-1.1.2.2.1.r 17-1.1.2.2.2 17-1.1.2.2.4 20-1.1.2.2.3 22-1.1.2.2.5
+(q / quote-01~e.0 
+      :ARG2 (t / thing~e.2 :mod 277703234~e.7 
+            :ARG1-of~e.2 (p / post-01~e.2 
+                  :ARG0~e.3 (p2 / person :wiki - 
+                        :name (n / name :op1 "Xiao"~e.4 :op2 "Jianjia"~e.5)) 
+                  :time~e.9 (d / date-entity :month~e.16 9~e.16 :day 11~e.14,17 :year 2010~e.20 :time "10:10:11"~e.10,12,14,17 
+                        :weekday (s / saturday~e.22)))))
+
+# ::id bolt12_64556_5614.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok China can not be so " Doctrine of the Mean "~
+# ::alignments 0-1.5.2.1 1-1 1-1.4 1-1.4.r 2-1.4.1 2-1.4.1.r 3-1.5.r 4-1.3 6-1.2.1 7-1.2.2 8-1.2.3 9-1.2.4
+(t2 / thing~e.1 :wiki "Doctrine_of_the_Mean" 
+      :name (n2 / name :op1 "Doctrine"~e.6 :op2 "of"~e.7 :op3 "the"~e.8 :op4 "Mean"~e.9) 
+      :degree (s / so~e.4) 
+      :ARG1-of~e.1 (p / possible-01~e.1 :polarity~e.2 -~e.2) 
+      :domain~e.3 (c / country :wiki "China" 
+            :name (n / name :op1 "China"~e.0)))
+
+# ::id bolt12_64556_5614.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This is worth pondering a little !
+# ::alignments 0-1.2.1 2-1 3-1.2 5-1.2.2
+(w / worth-02~e.2 
+      :ARG1 t 
+      :ARG2 (p / ponder-01~e.3 
+            :ARG1 (t / this~e.0) 
+            :mod (l / little~e.5)))
+
+# ::id bolt12_64556_5614.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Good things also need to be promoted . Flying radars , factory direct , purchase once and have free lifetime high @-@ speed internet access , the latest technology product . Easy to carry and also high @-@ speed and stable . You will be able to have free high @-@ speed internet access wherever you go with a flight radar as big as a bowl ! People who are smart certainly know how to enjoy life better , I wish you a happy life , thanks for finishing reading ! Contact Q q 514194237
+# ::alignments 0-1.1.1.1.1 1-1.1.1.1 1-1.5.2 2-1.1.2 3-1.1 6-1.1.1 8-1.2.5.2.1 9-1.2.5.2 11-1.2.5.2.2 12-1.2.5.4 14-1.2.5 15-1.2.5.3 18-1.2.4 19-1.2.3 20-1.2.2.1.1 22-1.2.2.1 23-1.2.2 24-1.2 27-1.2.2.2.1.1.1 27-1.2.2.2.1.1.1.1 27-1.2.2.2.1.1.1.1.r 28-1.2.2.2.1.1 29-1.2.2.2.1 31-1.3.1.1 33-1.3.1 34-1.3 34-1.3.2 34-1.3.2.r 35-1.3.2.3 36-1.3.2.2.1 38-1.3.2.2 39-1.3.2 40-1.3.2.1 42-1.4.1.1 45-1.4 47-1.4.1 48-1.4.1.2.2 49-1.4.1.2.1.1.1 51-1.4.1.2.1.1 52-1.4.1.2.1 53-1.4.1.2 54-1.4.1.2.1.1.r 54-1.4.1.2.3 54-1.4.1.2.3.1 54-1.4.1.2.3.1.r 54-1.4.1.2.3.r 55-1.2.1 55-1.4.1.1 56-1.4.1.2.3.2 57-1.4.1.2.4.r 59-1.4.1.2.4.1 60-1.4.1.2.4 61-1.4.1.2.4.2.r 62-1.4.1.2.4.2 63-1.4.1.2.4.2.2.r 65-1.4.1.2.4.2.2 67-1.5.1 70-1.5.1.1 71-1.5.3 72-1.5 73-1.5.2.1.r 75-1.5.2.1 76-1.5.2.1.2 77-1.4.1.2.4.2.1.r 77-1.5.2.1.3 77-1.5.2.1.3.1 77-1.5.2.1.3.1.r 79-1.6.1.1 80-1.6.1 81-1.6.1.3 83-1.6.1.2.1 84-1.6.1.2 86-1.6.2 87-1.6.2.3.r 88-1.6.2.3 89-1.6.2.3.2 91-1.7
+(m / multi-sentence 
+      :snt1 (n / need-01~e.3 
+            :ARG1 (p / promote-01~e.6 
+                  :ARG1 (t / thing~e.1 
+                        :ARG1-of (g / good-02~e.0))) 
+            :mod (a6 / also~e.2)) 
+      :snt2 (a / access-01~e.24 
+            :ARG0 (y / you~e.55) 
+            :ARG1 (i / internet~e.23 
+                  :mod (s3 / speed~e.22 
+                        :ARG1-of (h / high-02~e.20)) 
+                  :ARG1-of (m3 / mean-01 
+                        :ARG2 (p3 / product~e.29 
+                              :mod (t2 / technology~e.28 
+                                    :mod (l2 / late~e.27 
+                                          :degree~e.27 (m2 / most~e.27)))))) 
+            :duration (l / lifetime~e.19) 
+            :ARG1-of (f / free-03~e.18) 
+            :condition (p2 / purchase-01~e.14 
+                  :ARG0 y 
+                  :ARG1 (r / radar~e.9 
+                        :ARG1-of (f2 / fly-01~e.8) 
+                        :source (f3 / factory~e.11)) 
+                  :mod (o / once~e.15) 
+                  :ARG1-of (d / direct-02~e.12))) 
+      :snt3 (a4 / and~e.34 
+            :op1 (c / carry-01~e.33 
+                  :ARG1-of (e / easy-05~e.31)) 
+            :op2~e.34 (a5 / and~e.34,39 
+                  :op1 (s / stable-03~e.40) 
+                  :op2 (s4 / speed~e.38 
+                        :ARG1-of (h2 / high-02~e.36)) 
+                  :mod (a7 / also~e.35))) 
+      :snt4 (p4 / possible-01~e.45 
+            :ARG1 (h4 / have-03~e.47 
+                  :ARG0 (y2 / you~e.42,55) 
+                  :ARG1 (a2 / access-01~e.53 
+                        :ARG1 (i3 / internet~e.52 
+                              :mod~e.54 (s5 / speed~e.51 
+                                    :ARG1-of (h3 / high-02~e.49))) 
+                        :ARG1-of (f4 / free-03~e.48) 
+                        :location~e.54 (l5 / location~e.54 
+                              :mod~e.54 (a9 / any~e.54) 
+                              :ARG4-of (g2 / go-02~e.56 
+                                    :ARG0 y2)) 
+                        :instrument~e.57 (r2 / radar~e.60 
+                              :ARG1-of (f5 / fly-01~e.59) 
+                              :mod~e.61 (b / big~e.62 
+                                    :degree~e.77 (e2 / equal) 
+                                    :compared-to~e.63 (b2 / bowl~e.65)))))) 
+      :snt5 (k / know-01~e.72 
+            :ARG0 (p5 / person~e.67 
+                  :ARG1-of (s2 / smart-06~e.70)) 
+            :ARG1 (t6 / thing~e.1 
+                  :manner-of~e.73 (e3 / enjoy-01~e.75 
+                        :ARG0 p5 
+                        :ARG1 (l3 / life~e.76) 
+                        :ARG1-of (g3 / good-02~e.77 
+                              :degree~e.77 (m4 / more~e.77)))) 
+            :mod (c2 / certain~e.71)) 
+      :snt6 (a3 / and 
+            :op1 (w / wish-01~e.80 
+                  :ARG0 (i4 / i~e.79) 
+                  :ARG1 (l4 / life~e.84 
+                        :ARG1-of (h5 / happy-02~e.83)) 
+                  :ARG2 (y3 / you~e.81)) 
+            :op2 (t3 / thank-01~e.86 
+                  :ARG0 i4 
+                  :ARG1 y3 
+                  :ARG2~e.87 (f6 / finish-up-04~e.88 
+                        :ARG0 y3 
+                        :ARG1 (r3 / read-01~e.89 
+                              :ARG0 y3)))) 
+      :snt7 (c3 / contact-01~e.91 
+            :ARG1 (a8 / amr-unintelligible :value "Qq514194237")))
+
+# ::id bolt12_64556_5615.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Love our China , boycott Japanese goods
+# ::alignments 0-1.1 1-1.1.3.3 1-1.1.3.3.r 2-1.1.3.2.1 4-1.2 5-1.2.3.1.2.1 6-1.2.3
+(a / and 
+      :op1 (l2 / love-01~e.0 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG1 (c / country :wiki "China" 
+                  :name (n / name :op1 "China"~e.2) 
+                  :poss~e.1 (w / we~e.1))) 
+      :op2 (b / boycott-01~e.4 :mode imperative 
+            :ARG0 y 
+            :ARG1 (g / good~e.6 
+                  :mod (c2 / country :wiki "Japan" 
+                        :name (n2 / name :op1 "Japan"~e.5)))))
+
+# ::id bolt12_64556_5616.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The Chinese government is incompetent , sooner or later it will collapse !
+# ::alignments 1-1.1.2.1.1.2.1 2-1.1.2 2-1.1.2.1 2-1.1.2.1.r 4-1.1 4-1.1.1 4-1.1.1.r 6-1.2.2.1 6-1.2.2.1.1 6-1.2.2.1.1.r 7-1.2.2 8-1.2.2.2 8-1.2.2.2.1 8-1.2.2.2.1.r 9-1.2.1 11-1.2
+(a / and 
+      :op1 (c3 / competent-01~e.4 :polarity~e.4 -~e.4 
+            :ARG1 (g / government-organization~e.2 
+                  :ARG0-of~e.2 (g3 / govern-01~e.2 
+                        :ARG1 (c / country :wiki "China" 
+                              :name (n / name :op1 "China"~e.1))))) 
+      :op2 (c2 / collapse-01~e.11 
+            :ARG1 g~e.9 
+            :time (o / or~e.7 
+                  :op1 (s / soon~e.6 
+                        :degree~e.6 (m / more~e.6)) 
+                  :op2 (l / late~e.8 
+                        :degree~e.8 (m2 / more~e.8)))))
+
+# ::id bolt12_64556_5617.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Give me five hundred thousand elite soldiers and I will make Japan flat in half a year !
+# ::alignments 0-1.1 1-1.1.4 2-1.1.3.1 3-1.1.3.1 4-1.1.3.1 5-1.1.3.2 6-1.1.3 7-1 8-1.1.4 11-1.2.2.2.1 14-1.2.3.2.1 16-1.2.3.2.2 17-1.1.1 17-1.1.1.r
+(a / and~e.7 
+      :op1 (g / give-01~e.0 :mode~e.17 imperative~e.17 
+            :ARG0 (y / you) 
+            :ARG1 (s / soldier~e.6 :quant 500000~e.2,3,4 
+                  :mod (e / elite~e.5)) 
+            :ARG2 (i / i~e.1,8)) 
+      :op2 (f / flatten-01 
+            :ARG0 i 
+            :ARG1 (c / country :wiki "Japan" 
+                  :name (n / name :op1 "Japan"~e.11)) 
+            :time (a2 / after 
+                  :op1 (n2 / now) 
+                  :quant (t / temporal-quantity :quant "1/2"~e.14 
+                        :unit (y2 / year~e.16)))))
+
+# ::id bolt12_64556_5618.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok China , no matter how much you exercise forbearance , there is nobody who will say good words about you , and others will still bully you as usual
+# ::alignments 0-1.2.2.1 2-1.1.3 3-1.1.3 6-1.1.3.1.1.1 7-1.1.3.1.1 8-1.1.3.1.1.2 12-1.1.1.1 15-1 15-1.1.1 16-1.1.1.2.1 17-1.1.1.2 18-1.1.1.3.r 19-1.1.1.3 21-1.1 22-1.1.2.1 24-1.1.2.4 25-1.1.2 26-1.1.2.2 27-1.1.2.3 28-1.1.2.3
+(s / say-01~e.15 
+      :ARG1 (a / and~e.21 
+            :op1 (s2 / say-01~e.15 
+                  :ARG0 (n2 / nobody~e.12) 
+                  :ARG1 (w / word~e.17 
+                        :ARG1-of (g / good-02~e.16)) 
+                  :topic~e.18 c~e.19) 
+            :op2 (b / bully-01~e.25 
+                  :ARG0 (o / other~e.22) 
+                  :ARG1 c~e.26 
+                  :mod (a2 / as-usual~e.27,28) 
+                  :mod (s3 / still~e.24)) 
+            :ARG1-of (r / regardless-91~e.2,3 
+                  :ARG2 (t / thing 
+                        :degree-of (e / exercise-01~e.7 
+                              :ARG0 c~e.6 
+                              :ARG1 (f / forbearance~e.8))))) 
+      :ARG2 (c / country :wiki "China" 
+            :name (n / name :op1 "China"~e.0)))
+
+# ::id bolt12_64556_5619.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok My husband is a veteran . He said if a war takes place , he would stand in the very frontline of the war - rather die on the war field than live on in degradation
+# ::alignments 0-1.1.1.1.1 0-1.1.1.1.1.r 1-1.1.1.1.2 2-1.1.1.r 4-1.1 6-1.2.1 7-1.2 8-1.2.2.3.r 10-1.2.2.3 14-1.2.1 16-1.2.2 17-1.2.2.2.r 19-1.2.2.2.2 20-1.2.2.2 21-1.2.2.2.1.r 23-1.2.2.2.1 25-1.3 26-1.3.1 27-1.3.1.1.r 29-1.3.1.1.1 30-1.3.1.1 32-1.3.2 34-1.3.2.1.r 35-1.3.2.1
+(m / multi-sentence 
+      :snt1 (v / veteran~e.4 
+            :domain~e.2 (p / person 
+                  :ARG0-of (h / have-rel-role-91 
+                        :ARG1~e.0 (i / i~e.0) 
+                        :ARG2 (h3 / husband~e.1)))) 
+      :snt2 (s / say-01~e.7 
+            :ARG0 (h2 / he~e.6,14) 
+            :ARG1 (s2 / stand-01~e.16 
+                  :ARG1 h2 
+                  :ARG2~e.17 (f / frontline~e.20 
+                        :mod~e.21 w~e.23 
+                        :mod (v2 / very~e.19)) 
+                  :condition~e.8 (w / war~e.10))) 
+      :snt3 (c2 / contrast-01~e.25 
+            :ARG1 (d / die-01~e.26 
+                  :location~e.27 (f2 / field~e.30 
+                        :mod (w2 / war~e.29))) 
+            :ARG2 (l / live-01~e.32 
+                  :manner~e.34 (d2 / degrade-01~e.35))))
+
+# ::id bolt12_64556_5620.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The Diaoyu Islands are ours , are n't they ? Um ... Yes , it seems like they were , but now some say they were , some say they were n't . Bit of a mess . Or talk about the matter of development first ?
+# ::alignments 1-1.1.2.2.1 2-1.1.2.2.2 4-1.1.1 7-1.2.1.2.2.1 7-1.2.1.2.2.1.r 8-1.2.2.1.1 9-1.2.2.2.1.r 10-1.2.2.2 15-1.2.2 17-1.2.2.1.1 20-1.2 21-1.2.1.3 22-1.2.1.1.1 22-1.2.1.2.1 23-1.2.1.1 23-1.2.1.2 24-1.2.2.1.1 27-1.2.1.1.1 27-1.2.1.2.1 28-1.2.1.1 28-1.2.1.2 29-1.2.2.1.1 31-1.2.1.2.2.1 31-1.2.1.2.2.1.r 33-1.3.1 36-1.3 38-1.4 39-1.4.1 40-1.4.1.2.1.r 42-1.4.1.2 44-1.4.1.2.1 45-1.4.1.3 46-1.4.1.1 46-1.4.1.1.r
+(m / multi-sentence 
+      :snt1 (o2 / own-01 
+            :ARG0 (w / we~e.4) 
+            :ARG1 (i / island :wiki "Senkaku_Islands" 
+                  :name (n / name :op1 "Diaoyu"~e.1 :op2 "Islands"~e.2)) 
+            :ARG1-of (r / request-confirmation-91)) 
+      :snt2 (h / have-concession-91~e.20 
+            :ARG1 (a / and 
+                  :op1 (s2 / say-01~e.23,28 
+                        :ARG0 (s4 / some~e.22,27) 
+                        :ARG1 (o3 / own-01 
+                              :ARG1 t2)) 
+                  :op2 (s3 / say-01~e.23,28 
+                        :ARG0 (s5 / some~e.22,27) 
+                        :ARG1 (o4 / own-01 :polarity~e.7,31 -~e.7,31 
+                              :ARG1 t2)) 
+                  :time (n2 / now~e.21)) 
+            :ARG2 (s / seem-01~e.15 
+                  :ARG1 (o5 / own-01 
+                        :ARG1 (t2 / they~e.8,17,24,29)) 
+                  :mod (u / um~e.10 :mode~e.9 expressive))) 
+      :snt3 (m2 / mess~e.36 
+            :degree (b2 / bit~e.33)) 
+      :snt4 (o / or~e.38 
+            :op2 (t / talk-01~e.39 :mode~e.46 interrogative~e.46 
+                  :ARG1 (m3 / matter~e.42 
+                        :topic~e.40 (d / develop-01~e.44)) 
+                  :time (f / first~e.45))))
+
+# ::id bolt12_64556_5620.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Let 's do this , once again , listen carefully : The Diaoyu Islands are whose ? Are whose ? Are whose ?
+# ::alignments 0-1.2.1.r 1-1.1.1 1-1.2.1 1-1.2.1.r 2-1.1 3-1.1.2 5-1.1.3.1 6-1.1.3 8-1.2 9-1.2.3 9-1.2.3.r 12-1.3.2.2.1 13-1.3.2.2.2 15-1.3.1 15-1.4.1 15-1.5.1 16-1.2.1.r 18-1.3.1 18-1.4.1 18-1.5.1 19-1.2.1.r 21-1.3.1 21-1.4.1 21-1.5.1 22-1.2.1.r
+(m / multi-sentence 
+      :snt1 (d / do-02~e.2 
+            :ARG0 (w / we~e.1) 
+            :ARG1 (t / this~e.3) 
+            :mod (a / again~e.6 
+                  :mod (o / once~e.5))) 
+      :snt2 (l / listen-01~e.8 :mode~e.0,1,16,19,22 imperative~e.1 
+            :ARG0 (y / you) 
+            :manner~e.9 (c / careful~e.9)) 
+      :snt3 (o2 / own-01 
+            :ARG0 (a3 / amr-unknown~e.15,18,21) 
+            :ARG1 (i2 / island :wiki "Senkaku_Islands" 
+                  :name (n / name :op1 "Diaoyu"~e.12 :op2 "Islands"~e.13))) 
+      :snt4 (o3 / own-01 
+            :ARG0 (a4 / amr-unknown~e.15,18,21)) 
+      :snt5 (o4 / own-01 
+            :ARG0 (a5 / amr-unknown~e.15,18,21)))
+
+# ::id bolt12_64556_5620.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Oh , yours ? Or his ? Say it , hurry up and say it , shout it out , hurry up and shout the Diaoyu Islands are yours !
+# ::alignments 0-1.1.3 0-1.1.3.1 0-1.1.3.1.r 2-1.1.2 2-1.3.1.2 3-1.1.1 3-1.1.1.r 4-1.2 5-1.2.1.2 5-1.2.1.2.r 6-1.1.1 6-1.1.1.r 6-1.2.1.1 6-1.2.1.1.r 6-1.3.1.1.r 7-1.3.2.2 8-1.3.2.2 10-1.3.2.1 12-1.3 12-1.3.2 12-1.3.2.r 13-1.3.1 14-1.3.1.3 16-1.3.3 17-1.3.1.3 18-1.3.3 20-1.3.4.1 22-1.3.4 23-1.3.4.2 25-1.3.4.2.2.2.2.1 26-1.3.4.2.2.2.2.2 28-1.3.1.2 29-1.3.1.1 29-1.3.1.1.r 29-1.3.2.1.1 29-1.3.2.1.1.r
+(m / multi-sentence 
+      :snt1 (o3 / own-01 :mode~e.3,6 interrogative~e.3,6 
+            :ARG0 (y / you~e.2) 
+            :mod (o / oh~e.0 :mode~e.0 expressive~e.0)) 
+      :snt2 (o2 / or~e.4 
+            :op2 (o4 / own-01 :mode~e.6 interrogative~e.6 
+                  :ARG0~e.5 (h3 / he~e.5))) 
+      :snt3 (a / and~e.12 
+            :op1 (s / say-01~e.13 :mode~e.6,29 imperative~e.29 
+                  :ARG0 (y2 / you~e.2,28) 
+                  :ARG1 (i / it~e.14,17)) 
+            :op2~e.12 (a2 / and~e.12 
+                  :op1 (h4 / hurry-01~e.10 :mode~e.29 imperative~e.29 
+                        :ARG0 y2 
+                        :ARG1 y2) 
+                  :op2 s~e.7,8) 
+            :op3 (s3 / shout-out-03~e.16,18 
+                  :ARG0 y2 
+                  :ARG1 o5) 
+            :op4 (a3 / and~e.22 
+                  :op1 h4~e.20 
+                  :op2 (s2 / shout-01~e.23 
+                        :ARG0 y2 
+                        :ARG1 (o5 / own-01 
+                              :ARG0 y2 
+                              :ARG1 (i2 / island :wiki "Senkaku_Islands" 
+                                    :name (n / name :op1 "Diaoyu"~e.25 :op2 "Islands"~e.26)))))))
+
+# ::id bolt12_64556_5620.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , you see you see , they started to catch people , run fast , do n't shout any more , run , beat whoever shouts again .
+# ::alignments 0-1.1.4 0-1.1.4.1 0-1.1.4.1.r 0-1.2.3.1.r 2-1.1.1.1 3-1.1.1 3-1.1.2 4-1.1.1.1 4-1.2.1.2 5-1.1.1 5-1.1.2 7-1.1.3.1 8-1.1.3 10-1.1.3.2 11-1.1.3.2.2 13-1.2.1 13-1.2.3 14-1.2.1.3 17-1.2.2.1 17-1.2.2.1.r 18-1.2.2 19-1.2.2.4 20-1.2.2.4 22-1.2.1 24-1.2.4 25-1.2.4.3 25-1.2.4.3.1 25-1.2.4.3.1.r 26-1.2.4.3.2 27-1.2.4.3.2.1
+(m / multi-sentence 
+      :snt1 (a5 / and 
+            :op1 (s2 / see-03~e.3,5 
+                  :ARG0 (y / you~e.2,4)) 
+            :op2 (s / see-03~e.3,5 
+                  :ARG0 y) 
+            :op3 (s7 / start-01~e.8 
+                  :ARG0 (t2 / they~e.7) 
+                  :ARG1 (c3 / catch-03~e.10 
+                        :ARG0 t2 
+                        :ARG1 (p2 / person~e.11))) 
+            :mod (a / ah~e.0 :mode~e.0 expressive~e.0)) 
+      :snt2 (a2 / and 
+            :op1 (r / run-02~e.13,22 :mode imperative 
+                  :ARG0 (y3 / you~e.4) 
+                  :ARG1-of (f / fast-02~e.14)) 
+            :op2 (s4 / shout-01~e.18 :polarity~e.17 -~e.17 :mode imperative 
+                  :ARG0 y3 
+                  :time (a4 / anymore~e.19,20)) 
+            :op3 (r2 / run-02~e.13 :mode~e.0 imperative 
+                  :ARG0 y3) 
+            :op4 (b / beat-01~e.24 :mode imperative 
+                  :ARG0 y3 
+                  :ARG1 (p / person~e.25 
+                        :mod~e.25 (a6 / any~e.25) 
+                        :ARG0-of (s5 / shout-01~e.26 
+                              :mod (a3 / again~e.27))))))
+
+# ::id bolt12_64556_5620.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I 'll ask again whose the Diaoyu Islands are , but do n't shout loud , discuss this matter in a gentlemanly fashion
+# ::alignments 0-1.2.1 2-1.2 3-1.2.3 6-1.2.2.2.2.1 7-1.2.2.2.2.2 10-1 12-1.1.1.1 12-1.1.1.1.r 13-1.1.1 14-1.1.1.3 16-1.1.2 17-1.1.2.2.1 18-1.1.2.2
+(h / have-concession-91~e.10 
+      :ARG1 (a3 / and 
+            :op1 (s / shout-01~e.13 :polarity~e.12 -~e.12 
+                  :ARG0 (y / you) 
+                  :manner (l / loud~e.14)) 
+            :op2 (d / discuss-01~e.16 
+                  :ARG0 y 
+                  :ARG1 (m / matter~e.18 
+                        :mod (t / this~e.17)) 
+                  :manner (g / gentleman))) 
+      :ARG2 (a / ask-01~e.2 
+            :ARG0 (i / i~e.0) 
+            :ARG1 (o / own-01 
+                  :ARG0 (p / person) 
+                  :ARG1 (i2 / island :wiki "Senkaku_Islands" 
+                        :name (n / name :op1 "Diaoyu"~e.6 :op2 "Islands"~e.7))) 
+            :mod (a2 / again~e.3)))
+
+# ::id bolt12_64556_5620.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Oh , let me explain a bit , the Diaoyu Islands did not ever exist . This is a misunderstanding , misunderstanding , misunderstanding heh heh
+# ::alignments 0-1.1.4 0-1.1.4.1 0-1.1.4.1.r 0-1.2.5.1 2-1.1 2-1.1.1 2-1.1.1.r 3-1.1.3.1 4-1.1.3 6-1.1.3.3 9-1.1.3.2.2.2.1 10-1.1.3.2.2.2.2 12-1.1.3.2.1 12-1.1.3.2.1.r 13-1.1.3.2.3 14-1.1.3.2 16-1.2.4 17-1.2.4.r 19-1.2.1 19-1.2.2 19-1.2.3 21-1.2.1 21-1.2.2 21-1.2.3 23-1.2.1 23-1.2.2 23-1.2.3 24-1.2.5 25-1.2.5
+(m / multi-sentence 
+      :snt1 (l / let-01~e.2 :mode~e.2 imperative~e.2 
+            :ARG0 (y / you) 
+            :ARG1 (e / explain-01~e.4 
+                  :ARG0 (i2 / i~e.3) 
+                  :ARG1 (e2 / exist-01~e.14 :polarity~e.12 -~e.12 
+                        :ARG1 (i / island :wiki "Senkaku_Islands" 
+                              :name (n / name :op1 "Diaoyu"~e.9 :op2 "Islands"~e.10)) 
+                        :time (e3 / ever~e.13)) 
+                  :degree (b / bit~e.6)) 
+            :mod (o / oh~e.0 :mode~e.0 expressive~e.0)) 
+      :snt2 (a / and 
+            :op1 (m2 / misunderstand-01~e.19,21,23) 
+            :op2 (m3 / misunderstand-01~e.19,21,23) 
+            :op3 (m4 / misunderstand-01~e.19,21,23) 
+            :domain~e.17 (t / this~e.16) 
+            :mod (h / heh-heh~e.24,25 :mode expressive~e.0)))
+
+# ::id bolt12_64556_5620.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It should be called , called , called the Senkaku Islands , heh heh the Senkaku Islands , good good , so it seems the Diaoyu Islands issue does not exist any more
+# ::alignments 0-1.1.1.1.1 1-1.1 3-1.1.1.1 3-1.1.1.2 3-1.1.1.3 5-1.1.1.1 7-1.1.1.1 7-1.1.1.1.2.2.r 9-1.1.1.1.2.2.1 10-1.1.1.1.2.2.2 12-1.1.1.1.2.3 13-1.1.1.1.2.3 15-1.1.1.1.2.2.1 16-1.1.1.1.2.2.2 18-1.2.1.2 19-1.2.1.2 19-1.2.1.3 21-1.2 22-1.1.1.1.1 23-1.2.1 25-1.2.1.1.2.1.2.1 26-1.2.1.1.2.1.2.2 27-1.2.1.1.2 29-1.2.1.1.1 29-1.2.1.1.1.r 30-1.2.1.1 31-1.2.1.1.3 32-1.2.1.1.3
+(m / multi-sentence 
+      :snt1 (r / recommend-01~e.1 
+            :ARG1 (a / and 
+                  :op1 (c / call-01~e.3,5,7 
+                        :ARG1 (i / it~e.0,22) 
+                        :ARG2 (i2 / island :wiki "Senkaku_Islands" 
+                              :name~e.7 (n / name :op1 "Senkaku"~e.9,15 :op2 "Islands"~e.10,16) 
+                              :mod (h / heh-heh~e.12,13 :mode expressive))) 
+                  :op2 (c2 / call-01~e.3 
+                        :ARG1 i 
+                        :ARG2 i2) 
+                  :op3 (c3 / call-01~e.3 
+                        :ARG1 i 
+                        :ARG2 i2))) 
+      :snt2 (c4 / cause-01~e.21 
+            :ARG1 (s / seem-01~e.23 
+                  :ARG1 (e / exist-01~e.30 :polarity~e.29 -~e.29 
+                        :ARG1 (i4 / issue-02~e.27 
+                              :ARG0 (i3 / island :wiki "Senkaku_Islands" 
+                                    :name (n2 / name :op1 "Diaoyu"~e.25 :op2 "Islands"~e.26))) 
+                        :time (a3 / anymore~e.31,32)) 
+                  :ARG1-of (g / good-02~e.18,19) 
+                  :ARG1-of (g2 / good-02~e.19))))
+
+# ::id bolt12_64556_5620.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Just call them the Senkaku Islands , cheers , for wisely solving the Diaoyu ... ah no , the Senkaku Islands matter , ( ⊙ _ ⊙ )
+# ::alignments 0-1.1.5 1-1.1 2-1.1.3 4-1.1.4.2.1 5-1.1.4.2.2 7-1.2 10-1.2.1.1.3 10-1.2.1.1.3.r 11-1.2.1.1 13-1.2.1.1.2.2.1.2.2.1 15-1.2.1.1.2.1 15-1.2.1.1.2.1.1 15-1.2.1.1.2.1.1.r 16-1.2.1.1.2.2.1.1 16-1.2.1.1.2.2.1.1.r 19-1.2.1.1.2.3 20-1.1.4 20-1.2.1.1.2.2.1.2 21-1.2.1.1.2 21-1.2.1.1.2.2.1
+(m2 / multi-sentence 
+      :snt1 (c / call-01~e.1 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG1 (t / they~e.2) 
+            :ARG2 (i2 / island~e.20 :wiki "Senkaku_Islands" 
+                  :name (n2 / name :op1 "Senkaku"~e.4 :op2 "Islands"~e.5)) 
+            :mod (j / just~e.0)) 
+      :snt2 (c2 / cheer~e.7 
+            :ARG1-of (c4 / cause-01 
+                  :ARG0 (s / solve-01~e.11 
+                        :ARG0 (y3 / you) 
+                        :ARG1 (m3 / matter~e.21 
+                              :mod (a2 / ah~e.15 :mode~e.15 expressive~e.15) 
+                              :ARG1-of (c3 / contrast-01 
+                                    :ARG2 (m / matter~e.21 :polarity~e.16 -~e.16 
+                                          :topic (i3 / island~e.20 :wiki "Senkaku_Islands" 
+                                                :name (n3 / name :op1 "Diaoyu"~e.13)))) 
+                              :topic i2~e.19) 
+                        :manner~e.10 (w / wise~e.10)))))
+
+# ::id bolt12_64556_5620.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In a joyful , harmonious , friendly , and peaceful atmosphere , it came to an complete ending .
+# ::alignments 2-1.3.1 4-1.3.2 6-1.3.3 9-1.3.4 10-1.3 12-1.1 16-1.2 17-1
+(e / end-01~e.17 
+      :ARG1 (i / it~e.12) 
+      :ARG1-of (c / complete-02~e.16) 
+      :location (a / atmosphere~e.10 
+            :mod (j / joyful~e.2) 
+            :mod (h / harmonious~e.4) 
+            :ARG1-of (f / friendly-01~e.6) 
+            :mod (p / peaceful~e.9)))
+
+# ::id bolt12_64556_5620.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Who is shouting again outside , go , all disperse , do n't gather and watch any more , things whose nature has been decided , won't be changed any more ?
+# ::alignments 0-1.1 2-1 3-1.4 4-1.3 6-1.2.1 8-1.2.2.3.1 9-1.2.2 12-1.2.3.1.1 12-1.2.3.1.1.r 12-1.2.3.2.1 12-1.2.3.2.1.r 13-1.2.3.1 14-1.2.3 15-1.2.3.2 16-1.2.3.3 17-1.2.3.3 19-1.2.4.2 20-1.1 21-1.2.4.2.1 24-1.2.4.2.1.1 26-1.2.4.1 26-1.2.4.1.r 28-1.2.4 29-1.2.4.3 30-1.2.4.3 31-1.2.1.1.r 31-1.2.2.1.r
+(s / shout-01~e.2 
+      :ARG0 (a2 / amr-unknown~e.0,20) 
+      :ARG1 (a6 / and 
+            :op1 (g / go-01~e.6 :mode~e.31 imperative 
+                  :ARG1 y2) 
+            :op2 (d / disperse-01~e.9 :mode~e.31 imperative 
+                  :ARG0 y2 
+                  :ARG1 (y2 / you 
+                        :mod (a4 / all~e.8))) 
+            :op3 (a / and~e.14 
+                  :op1 (g2 / gather-03~e.13 :polarity~e.12 -~e.12 :mode imperative 
+                        :ARG0 (y3 / you)) 
+                  :op2 (w / watch-01~e.15 :polarity~e.12 -~e.12 :mode imperative 
+                        :ARG0 y3) 
+                  :time (a5 / anymore~e.16,17)) 
+            :op4 (c / change-01~e.28 :polarity~e.26 -~e.26 
+                  :ARG1 (t / thing~e.19 
+                        :poss-of (n / nature~e.21 
+                              :ARG3-of (d2 / decide-01~e.24))) 
+                  :time (a7 / anymore~e.29,30))) 
+      :location (o / outside~e.4) 
+      :mod (a3 / again~e.3))
+
+# ::id bolt12_64556_5620.11 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok That is not good . How can we speak in such a untrustworthy manner , we are a responsible big country - let the matter be , do not mention it again , to develop the economy is of overriding importance .
+# ::alignments 0-1.1.2 2-1.1.1 2-1.1.1.r 3-1.1 5-1.2.1.2 5-1.2.1.2.r 6-1.2 7-1.2.1.1 8-1.2.1 10-1.2.1.3.2 12-1.2.1.3 12-1.2.1.3.1 12-1.2.1.3.1.r 13-1.2.1.3.r 15-1.2.2.1.1 16-1.2.2.1.1.r 18-1.2.2.1.3 19-1.2.2.1.2 20-1.2.2.1 22-1.3.2.1 22-1.3.2.1.1 22-1.3.2.1.1.r 24-1.3.2.1.3 28-1.3.2.2.1 28-1.3.2.2.1.r 29-1.3.2.2 31-1.3.2.2.4 33-1.3 34-1.3.1.2 36-1.3.1.2.1 37-1.3.1.2.r 39-1.3.1.1 40-1.3.1
+(m / multi-sentence 
+      :snt1 (g / good-02~e.3 :polarity~e.2 -~e.2 
+            :ARG1 (t / that~e.0)) 
+      :snt2 (p / possible-01~e.6 
+            :ARG1 (s / speak-01~e.8 
+                  :ARG0 (w / we~e.7) 
+                  :manner~e.5 (a / amr-unknown~e.5) 
+                  :manner~e.13 (t2 / trustworthy~e.12 :polarity~e.12 -~e.12 
+                        :mod (s2 / such~e.10))) 
+            :ARG1-of (c / cause-01 
+                  :ARG0 (c2 / country~e.20 
+                        :domain~e.16 (w2 / we~e.15) 
+                        :mod (b / big~e.19) 
+                        :ARG1-of (r / responsible-02~e.18)))) 
+      :snt3 (c3 / cause-01~e.33 
+            :ARG0 (i / important~e.40 
+                  :ARG0-of (o / override-01~e.39) 
+                  :domain~e.37 (d / develop-02~e.34 
+                        :ARG1 (e / economy~e.36))) 
+            :ARG1 (a2 / and 
+                  :op1 (l / let-01~e.22 :mode~e.22 imperative~e.22 
+                        :ARG0 (y / you) 
+                        :ARG1 (m3 / matter~e.24)) 
+                  :op2 (m4 / mention-01~e.29 :polarity~e.28 -~e.28 
+                        :ARG0 y 
+                        :ARG1 m3 
+                        :mod (a3 / again~e.31)))))
+
+# ::id bolt12_64556_5620.12 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Why are you still not leaving , all of you get out , OK , you won't go , right ? call 110 and have plainclothes police move in , uh . ? Still not dispersed , OK , it seems it won't work if I do n't real weapons , armed police , steel army , come on , if it does n't work , pull out the Third Artillery Troops , fire . .
+# ::alignments 0-1.1 0-1.1.1 0-1.1.1.r 0-1.5 2-1.1.2.2 3-1.1.2.3 4-1.1.2.1 4-1.1.2.1.r 4-1.5.2.1.3.1 5-1.1.2 7-1.2.3.1 9-1.2.3 10-1.2 10-1.5.2.1.3 11-1.2.4 13-1.2.5 15-1.3.2 15-1.4.1.2 15-1.5.1.2 15-1.6.2 15-1.7.2 16-1.3.1 16-1.3.1.r 17-1.3 19-1.3.3 20-1.2.1.r 20-1.4.1.1.r 21-1.4.1 22-1.4.1.3.1 23-1.4 24-1.4.2 25-1.4.2.2.1.1 26-1.4.2.2.1 27-1.4.2.2 30-1.4.3 32-1.4.3.1.r 32-1.6.1.r 32-1.6.6.1.r 32-1.7.1.r 33-1.5.1.3 34-1.5.1.1 34-1.5.1.1.r 35-1.5.1 37-1.5.2.2 39-1.5.2.1.2 40-1.5.2 41-1.5.2.1.2 42-1.5.2.1.1 42-1.5.2.1.1.r 43-1.5.2.1 44-1.5.2.1.3.r 45-1.5.2.1.3.2 47-1.5.2.1.3.1.r 48-1.5.2.1.3.3.1.1 49-1.5.2.1.3.3.1 51-1.5.2.1.3.3.2.1 52-1.5.2.1.3.3.2 54-1.5.2.1.3.3.3.1 55-1.5.2.1.3.3.3 57-1.6.6 58-1.6.6 60-1.6.5.r 61-1.6.5.2 63-1.6.5.1 63-1.6.5.1.r 64-1.6.5 66-1.6 67-1.6.4 69-1.6.3.2.1 70-1.6.3.2.2 71-1.6.3.2.3 73-1.7
+(m / multi-sentence 
+      :snt1 (c3 / cause-01~e.0 
+            :ARG0~e.0 (a7 / amr-unknown~e.0) 
+            :ARG1 (l / leave-11~e.5 :polarity~e.4 -~e.4 
+                  :ARG0 (y / you~e.2) 
+                  :mod (s / still~e.3))) 
+      :snt2 (g / get-05~e.10 :mode~e.20 imperative 
+            :ARG0 y2 
+            :ARG1 (y2 / you~e.9 
+                  :mod (a2 / all~e.7)) 
+            :ARG2 (o / out~e.11) 
+            :ARG1-of (o3 / okay-01~e.13)) 
+      :snt3 (g2 / go-01~e.17 :polarity~e.16 -~e.16 
+            :ARG1 (y4 / you~e.15) 
+            :ARG1-of (r3 / request-confirmation-91~e.19 
+                  :ARG2 y4)) 
+      :snt4 (a3 / and~e.23 
+            :op1 (c / call-02~e.21 :mode~e.20 imperative 
+                  :ARG0 (y5 / you~e.15) 
+                  :ARG1 (p5 / phone-number-entity :value 110~e.22)) 
+            :op2 (h / have-04~e.24 
+                  :ARG0 y 
+                  :ARG1 (m2 / move-01~e.27 
+                        :ARG1 (p / police~e.26 
+                              :mod (p2 / plainclothes~e.25)))) 
+            :mod (u / uh~e.30 :mode~e.32 expressive)) 
+      :snt5 (c2 / cause-01~e.0 
+            :ARG0 (d / disperse-01~e.35 :polarity~e.34 -~e.34 
+                  :ARG1 (y3 / you~e.15) 
+                  :mod (s3 / still~e.33)) 
+            :ARG1 (s2 / seem-01~e.40 
+                  :ARG1 (w / work-09~e.43 :polarity~e.42 -~e.42 
+                        :ARG1 (i4 / it~e.39,41) 
+                        :condition~e.44 (g3 / get-01~e.10 :polarity~e.47 -~e.4 
+                              :ARG0 (i / i~e.45) 
+                              :ARG1 (a4 / and 
+                                    :op1 (w2 / weapon~e.49 
+                                          :ARG1-of (r / real-04~e.48)) 
+                                    :op2 (p3 / police~e.52 
+                                          :ARG1-of (a5 / arm-01~e.51)) 
+                                    :op3 (a6 / army~e.55 
+                                          :mod (s4 / steel~e.54))))) 
+                  :ARG1-of (o4 / okay-01~e.37))) 
+      :snt6 (p4 / pull-01~e.66 :mode~e.32 imperative 
+            :ARG0 (y6 / you~e.15) 
+            :ARG1 (m3 / military :wiki - 
+                  :name (n / name :op1 "Third"~e.69 :op2 "Artillery"~e.70 :op3 "Troops"~e.71)) 
+            :ARG2 (o2 / out~e.67) 
+            :condition~e.60 (w3 / work-09~e.64 :polarity~e.63 -~e.63 
+                  :ARG1 (i2 / it~e.61)) 
+            :mod (c4 / come-on-25~e.57,58 :mode~e.32 imperative 
+                  :ARG1 y6)) 
+      :snt7 (f / fire-01~e.73 :mode~e.32 imperative 
+            :ARG0 (y7 / you~e.15)))
+
+# ::id bolt12_64556_5620.13 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Sweep the floor sweep the floor we are about to do cleaning , to welcome the next dawn
+# ::alignments 0-1.1 2-1.1.3 3-1.1 3-1.2 5-1.1.3 6-1.3.1.1 8-1.3.1.2 9-1.3.1.2 11-1.3.1 13-1.3.1.2 14-1.3.1.3 16-1.3.1.3.2.1 17-1.3.1.3.2
+(a / and 
+      :op1 (s / sweep-01~e.0,3 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG2 (f / floor~e.2,5)) 
+      :op2 (s2 / sweep-01~e.3 :mode imperative 
+            :ARG0 y 
+            :ARG2 f) 
+      :ARG1-of (c / cause-01 
+            :ARG0 (c2 / clean-01~e.11 
+                  :ARG0 (w / we~e.6) 
+                  :time (a2 / about-to~e.8,9,13) 
+                  :purpose (w2 / welcome-01~e.14 
+                        :ARG0 w 
+                        :ARG1 (d / dawn~e.17 
+                              :mod (n / next~e.16))))))
+
+# ::id bolt12_64556_5621.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Dammit ! The Manchu government still charged while holding a kitchen knife ! How about now ? Oh ! Is our ZF protesting ? I believe there are n't any damn Japanese ordinary people who do n't support it . Hey , ZF ! It 's time to wake up . The ordinary people are all making fists ...
+# ::alignments 0-1.1 1-1.1.1 1-1.1.1.r 3-1.2.1.2.2.1 4-1.2.1 4-1.2.1.1 4-1.2.1.1.r 5-1.2.2 6-1.2 7-1.2.3.r 8-1.2.3 10-1.2.3.2.1 11-1.2.3.2 12-1.4.1.r 13-1.3.1 15-1.3 16-1.4.1.r 17-1.4 17-1.4.1 17-1.4.1.r 18-1.4.1 18-1.4.1.r 19-1.3.1.r 20-1.5.2.3 20-1.5.2.3.r 21-1.5.2.2.1 22-1.5 23-1.5.1 23-1.5.1.r 24-1.6.1 24-1.7.1 25-1.6 28-1.6.2.1.r 30-1.6.2.4 31-1.6.2.2.2.1 32-1.6.2.3 33-1.6.2 34-1.3.1 36-1.6.2.1 36-1.6.2.1.r 36-1.6.2.5.1 36-1.6.2.5.1.r 37-1.6.2.5 38-1.6.2.5.2 40-1.4.1.r 40-1.7.2 42-1.7.3.2.1 43-1.4.1.r 44-1.6.2.5.2 45-1.3.1.r 46-1.8 47-1.8.1.r 48-1.8.1 49-1.8.1 52-1.9.1.1 53-1.9.1 55-1.9.1.2 56-1.9 57-1.9.2
+(m / multi-sentence 
+      :snt1 (d / dammit~e.0 :mode~e.1 expressive~e.1) 
+      :snt2 (c / charge-02~e.6 
+            :ARG0 (g / government-organization~e.4 
+                  :ARG0-of~e.4 (g2 / govern-01~e.4) 
+                  :mod (e2 / ethnic-group :wiki "Manchu_people" 
+                        :name (n / name :op1 "Manchu"~e.3))) 
+            :mod (s / still~e.5) 
+            :time~e.7 (h / hold-01~e.8 
+                  :ARG0 g 
+                  :ARG1 (k / knife~e.11 
+                        :mod (k2 / kitchen~e.10)))) 
+      :snt3 (n2 / now~e.15 
+            :domain~e.19,45 (a2 / amr-unknown~e.13,34)) 
+      :snt4 (o / oh~e.17 :mode~e.12,16,17,18,40,43 expressive~e.17,18) 
+      :snt5 (p / protest-01~e.22 :mode~e.23 interrogative~e.23 
+            :ARG0 (o4 / organization :wiki - 
+                  :name (n3 / name :op1 "ZF"~e.21) 
+                  :poss~e.20 (w2 / we~e.20))) 
+      :snt6 (b / believe-01~e.25 
+            :ARG0 (i / i~e.24) 
+            :ARG1 (p2 / person~e.33 :polarity~e.28,36 -~e.36 
+                  :mod (c2 / country :wiki "Japan" 
+                        :name (n4 / name :op1 "Japan"~e.31)) 
+                  :mod (o2 / ordinary~e.32) 
+                  :ARG1-of (d2 / damn-01~e.30) 
+                  :ARG0-of (s2 / support-01~e.37 :polarity~e.36 -~e.36 
+                        :ARG1 (i2 / it~e.38,44)))) 
+      :snt7 (s3 / say-01 
+            :ARG0 (i3 / i~e.24) 
+            :ARG1 (h2 / hey~e.40) 
+            :ARG2 (o5 / organization :wiki - 
+                  :name (n5 / name :op1 "ZF"~e.42))) 
+      :snt8 (t3 / time~e.46 
+            :time-of~e.47 (w / wake-up-02~e.48,49 
+                  :ARG1 (y / you))) 
+      :snt9 (m2 / make-01~e.56 
+            :ARG0 (p3 / person~e.53 
+                  :mod (o3 / ordinary~e.52) 
+                  :mod (a3 / all~e.55)) 
+            :ARG1 (f / fist~e.57)))
+
+# ::id bolt12_64556_5622.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 1 . Establish guaranteed funds , improve working environment and mechanisms , recruit back to China the hundreds of thousands of IT professionals who have emigrated to and linger in the United States and around the world .
+# ::alignments 0-1.1 2-1.2 3-1.2.1.1 4-1.2.1 6-1.3 7-1.3.1.3 8-1.3.1.1 9-1.3.1 10-1.3.1.2 12-1.4 13-1.4.3 14-1.4.2.r 15-1.4.2.2.1 17-1.4.1.1 17-1.4.1.1.1 17-1.4.1.1.1.r 18-1.4.1.1.1 19-1.4.1.1 19-1.4.1.1.1 19-1.4.1.1.1.r 20-1.4.1.1.r 22-1.4.1 25-1.4.1.2 27-1.4.1.2.1 28-1.4.1.4 29-1.4.1.2.1.r 31-1.4.1.2.1.1.2.1 32-1.4.1.2.1.1.2.2 33-1.4.1.2.1 34-1.4.1.2.1.2 36-1.4.1.2.1.2.1
+(a / and :li 1~e.0 
+      :op1 (e / establish-01~e.2 
+            :ARG1 (f / fund~e.4 
+                  :ARG1-of (g / guarantee-01~e.3))) 
+      :op2 (i / improve-01~e.6 
+            :ARG1 (a2 / and~e.9 
+                  :op1 (e2 / environment~e.8) 
+                  :op2 (m / mechanism~e.10) 
+                  :mod (w / work-01~e.7))) 
+      :op3 (r / recruit-01~e.12 
+            :ARG1 (p / professional~e.22 
+                  :quant~e.20 (m2 / multiple~e.17,19 :op1~e.17,19 100000~e.17,18,19) 
+                  :ARG0-of (e3 / emigrate-01~e.25 
+                        :ARG2~e.29 (a3 / and~e.27,33 
+                              :op1 (c / country :wiki "United_States" 
+                                    :name (n / name :op1 "United"~e.31 :op2 "States"~e.32)) 
+                              :op2 (a4 / around~e.34 
+                                    :op1 (w2 / world~e.36)))) 
+                  :topic (t / technology 
+                        :mod (i2 / information)) 
+                  :ARG1-of (l / linger-01~e.28 
+                        :ARG2 a3)) 
+            :destination~e.14 (c2 / country :wiki "China" 
+                  :name (n2 / name :op1 "China"~e.15)) 
+            :direction (b / back~e.13)))
+
+# ::id bolt12_64556_5622.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 2 . Create a few nuclear @-@ powered aircraft carrier battle groups .
+# ::alignments 0-1.1 2-1 4-1.2.2 5-1.2.3.2.1 7-1.2.3.2 8-1.2.3.1 9-1.2.3 10-1.2.1 11-1.2
+(c / create-01~e.2 :li 2~e.0 
+      :ARG1 (g / group~e.11 
+            :mod (b / battle-01~e.10) 
+            :quant (f / few~e.4) 
+            :consist-of (c2 / carrier~e.9 
+                  :mod (a / aircraft~e.8) 
+                  :ARG1-of (p / power-01~e.7 
+                        :ARG0 (n / nucleus~e.5)))))
+
+# ::id bolt12_64556_5622.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 3 . Manufacture 5000 advanced combat aircraft of various kinds .
+# ::alignments 0-1.1 2-1 3-1.2.1 4-1.2.3 5-1.2.2 6-1.2 7-1.2.4.r 8-1.2.4.1 9-1.2.4
+(m / manufacture-01~e.2 :li 3~e.0 
+      :ARG1 (a / aircraft~e.6 :quant 5000~e.3 
+            :purpose (c / combat-01~e.5) 
+            :ARG1-of (a2 / advanced-02~e.4) 
+            :mod~e.7 (k / kind~e.9 
+                  :mod (v / various~e.8))))
+
+# ::id bolt12_64556_5622.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 4 . Accelerate the research and deployment of high @-@ speed intercontinental ballistic missiles which can break missile defense systems and whose range is more than 10,000 nautical miles .
+# ::alignments 0-1.1 2-1 4-1.2.1 5-1.2 6-1.2.2 7-1.2.1.1.r 8-1.2.1.1.2.1 10-1.2.1.1.2 11-1.2.1.1.3 12-1.2.1.1.1 13-1.2.1.1 15-1.2.1.1.5.2 16-1.2.1.1.5 17-1.2.1.1.5.1.1.1 18-1.2.1.1.5.1.1 19-1.2.1.1.5.1 22-1.2.1.1.4 24-1.2.1.1.4.1 25-1.2.1.1.4.1 26-1.2.1.1.4.1.1.1 27-1.2.1.1.4.1.1.2.1 28-1.2.1.1.4.1.1.2
+(a / accelerate-01~e.2 :li 4~e.0 
+      :ARG1 (a2 / and~e.5 
+            :op1 (r / research-01~e.4 
+                  :ARG1~e.7 (m / missile~e.13 
+                        :mod (b / ballistic~e.12) 
+                        :mod (s2 / speed~e.10 
+                              :ARG1-of (h / high-02~e.8)) 
+                        :mod (i / intercontinental~e.11) 
+                        :ARG1-of (r2 / range-01~e.22 
+                              :ARG2 (m2 / more-than~e.24,25 
+                                    :op1 (d / distance-quantity :quant 10000~e.26 
+                                          :unit (m3 / mile~e.28 
+                                                :mod (n / nautical~e.27))))) 
+                        :ARG2-of (b2 / break-01~e.16 
+                              :ARG1 (s / system~e.19 
+                                    :ARG2-of (d2 / defend-01~e.18 
+                                          :ARG3 (m4 / missile~e.17))) 
+                              :ARG1-of (p / possible-01~e.15)))) 
+            :op2 (d3 / deploy-01~e.6 
+                  :ARG1 m)))
+
+# ::id bolt12_64556_5622.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 5 . Resume nuclear experiments , and establish military forces in space .
+# ::alignments 0-1.1 2-1.2 3-1.2.1.1 4-1.2.1 6-1 7-1.3 8-1.3.1.1 9-1.3.1 10-1.3.2.r 11-1.3.2
+(a / and~e.6 :li 5~e.0 
+      :op1 (r / resume-01~e.2 
+            :ARG1 (e2 / experiment-01~e.4 
+                  :mod (n / nucleus~e.3))) 
+      :op2 (e / establish-01~e.7 
+            :ARG1 (f / force~e.9 
+                  :mod (m / military~e.8)) 
+            :location~e.10 (s / space~e.11)))
+
+# ::id bolt12_64556_5622.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 6 . Retain 1000 nuclear bombs equivalent to ten million tons of TNT , and when necessary , install nuclear warheads on all short @- and middle @-@ range missiles .
+# ::alignments 0-1.1 2-1.2 3-1.2.1.1 4-1.2.1.2 5-1.2.1 6-1.2.1.3 7-1.2.1.3.1.r 8-1.2.1.3.1.1.1 9-1.2.1.3.1.1.1 10-1.2.1.3.1.1.2 11-1.2.1.3.1.1.r 12-1.2.1.3.1 14-1 15-1.3.3.r 16-1.3.3 18-1.3 19-1.3.1.1 20-1.3.1 21-1.3.2.r 22-1.3.2.3 23-1.3.2.1.1.1 25-1.3.2 26-1.3.2.2.1.1 28-1.3.2.1.1 28-1.3.2.2.1 29-1.3.2.1 29-1.3.2.2
+(a / and~e.14 :li 6~e.0 
+      :op1 (r / retain-01~e.2 
+            :ARG1 (b / bomb~e.5 :quant 1000~e.3 
+                  :mod (n / nucleus~e.4) 
+                  :ARG1-of (e / equal-01~e.6 
+                        :ARG2~e.7 (t / trinitrotoluene~e.12 
+                              :quant~e.11 (m / mass-quantity :quant 10000000~e.8,9 
+                                    :unit (t2 / ton~e.10)))))) 
+      :op2 (i / install-01~e.18 
+            :ARG1 (w / warhead~e.20 
+                  :mod (n3 / nucleus~e.19)) 
+            :ARG2~e.21 (a2 / and~e.25 
+                  :op1 (m2 / missile~e.29 
+                        :ARG1-of (r2 / range-01~e.28 
+                              :ARG2 (s / short-07~e.23))) 
+                  :op2 (m3 / missile~e.29 
+                        :ARG1-of (r3 / range-01~e.28 
+                              :ARG2 (m4 / middle~e.26))) 
+                  :mod (a3 / all~e.22)) 
+            :time~e.15 (n4 / need-01~e.16)))
+
+# ::id bolt12_64556_5622.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 7 . Retain 30 strategic nuclear submarines with the ability to inflict three devastating nuclear strikes against enemies .
+# ::alignments 0-1.1 2-1 3-1.2.1 4-1.2.3 5-1.2.2 6-1.2 7-1.2.4.r 9-1.2.4 11-1.2.4.1 12-1.2.4.1.2.1 13-1.2.4.1.2.4 14-1.2.4.1.2.3 15-1.2.4.1.2 17-1.2.4.1.3.1.1
+(r / retain-01~e.2 :li 7~e.0 
+      :ARG1 (s / submarine~e.6 :quant 30~e.3 
+            :mod (n / nucleus~e.5) 
+            :mod (s2 / strategy~e.4) 
+            :ARG1-of~e.7 (c / capable-01~e.9 
+                  :ARG2 (i / inflict-01~e.11 
+                        :ARG0 s 
+                        :ARG1 (s3 / strike-01~e.15 :quant 3~e.12 
+                              :ARG0 s 
+                              :mod (n2 / nucleus~e.14) 
+                              :ARG0-of (d / devastate-01~e.13)) 
+                        :ARG2 (p / person 
+                              :ARG0-of (h / have-rel-role-91 
+                                    :ARG2 (e / enemy~e.17)))))))
+
+# ::id bolt12_64556_5622.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 8 . Abandon the commitment to not use nuclear weapons first .
+# ::alignments 0-1.1 2-1 4-1.2 6-1.2.1.1 6-1.2.1.1.r 7-1.2.1 8-1.2.1.2.1 9-1.2.1.2 10-1.2.1.3 10-1.1.r
+(a / abandon-03~e.2 :li~e.10 8~e.0 
+      :ARG1 (c / commit-01~e.4 
+            :ARG2 (u / use-01~e.7 :polarity~e.6 -~e.6 
+                  :ARG1 (w / weapon~e.9 
+                        :mod (n / nucleus~e.8)) 
+                  :time (f / first~e.10))))
+
+# ::id bolt12_64556_5622.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok 9 . Retain the right of pre @-@ emptive strike when national security is threatened .
+# ::alignments 0-1.1 2-1 4-1.2 9-1.2.1 10-1.3.r 11-1.3.1.1 12-1.3.1 14-1.3
+(r / retain-01~e.2 :li 9~e.0 
+      :ARG1 (r2 / right-05~e.4 
+            :ARG2 (s2 / strike-01~e.9 
+                  :ARG0-of (p / preempt-01))) 
+      :time~e.10 (t / threaten-01~e.14 
+            :ARG2 (s / security~e.12 
+                  :mod (n / nation~e.11))))
+
+# ::id bolt12_64556_5622.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It does n't matter much when you open your mouth , but how about money , do you really think China is very strong ?
+# ::alignments 2-1.2.1 2-1.2.1.r 3-1.2 4-1.2.3 5-1.2.2.1.r 6-1.2.2.1.1 7-1.2.2.1 8-1.2.2.1.2.1 8-1.2.2.1.2.1.r 9-1.2.2.1.2 11-1 13-1.1.3.3.r 14-1.1.3.3 17-1.2.2.1.1 18-1.1.4 19-1.1 20-1.1.3.1.2.1 22-1.1.3.2 23-1.1.3 24-1.1.1 24-1.1.1.r
+(h / have-concession-91~e.11 
+      :ARG1 (t / think-01~e.19 :mode~e.24 interrogative~e.24 
+            :ARG0 y 
+            :ARG1 (s / strong-02~e.23 
+                  :ARG1 (c2 / country :wiki "China" 
+                        :name (n / name :op1 "China"~e.20)) 
+                  :degree (v / very~e.22) 
+                  :topic~e.13 (m3 / money~e.14)) 
+            :ARG1-of (r / real-04~e.18)) 
+      :ARG2 (m / matter-01~e.3 :polarity~e.2 -~e.2 
+            :ARG1 (t2 / time 
+                  :time-of~e.5 (o / open-01~e.7 
+                        :ARG0 (y / you~e.6,17) 
+                        :ARG1 (m2 / mouth~e.9 
+                              :part-of~e.8 y~e.8))) 
+            :degree (m4 / much~e.4)))
+
+# ::id bolt12_64556_5623.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The government is incompetent to this point !
+# ::alignments 1-1.2 1-1.2.1 1-1.2.1.r 3-1 3-1.1 3-1.1.r 4-1.3.r 5-1.3.1 6-1.3
+(c / competent-01~e.3 :polarity~e.3 -~e.3 
+      :ARG1 (g / government-organization~e.1 
+            :ARG0-of~e.1 (g2 / govern-01~e.1)) 
+      :degree~e.4 (p / point~e.6 
+            :mod (t / this~e.5)))
+
+# ::id bolt12_64556_5624.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Invade and occupy openly China 's sacred territory , " the Diaoyu Islands ", defying world opinion .
+# ::alignments 0-1.1 1-1 2-1.2 3-1.4 4-1.1.3.2.2.1 5-1.1.3.2.r 6-1.1.3.1 7-1.1.3 11-1.1.3.3.1.2.1 12-1.1.3.3.1.2.2 14-1.3 15-1.3.2.1.1 16-1.3.2 16-1.3.2.1 16-1.3.2.1.r
+(a / and~e.1 
+      :op1 (i / invade-01~e.0 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG1 (t / territory~e.7 
+                  :mod (s / sacred~e.6) 
+                  :poss~e.5 (c / country :wiki "China" 
+                        :name (n2 / name :op1 "China"~e.4)) 
+                  :ARG1-of (m / mean-01 
+                        :ARG2 (i2 / island :wiki "Senkaku_Islands" 
+                              :name (n / name :op1 "Diaoyu"~e.11 :op2 "Islands"~e.12))))) 
+      :op2 (o / occupy-01~e.2 
+            :ARG0 y 
+            :ARG1 t) 
+      :manner (d / defy-01~e.14 
+            :ARG0 y 
+            :ARG1 (t2 / thing~e.16 
+                  :ARG1-of~e.16 (o3 / opine-01~e.16 
+                        :ARG0 (w / world~e.15)))) 
+      :ARG1-of (o2 / open-04~e.3))
+
+# ::id bolt12_64556_5626.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Our China is a country governed with protocol . We do n't want to bother ourselves arguing with the likes of that small country ... really TMD disgusting
+# ::alignments 0-1.1.1.3 0-1.1.1.3.r 1-1.1.1.2.1 2-1.1.1.r 4-1.1 5-1.1.2 6-1.1.2.1.r 7-1.1.2.1 9-1.2.2 11-1.2.1 11-1.2.1.r 12-1.2 14-1.2.3 15-1.2.2 16-1.2.3.3 17-1.2.3.3.2.r 19-1.2.3.3.2.1 21-1.2.3.3.2.1.1.2 22-1.2.3.3.2.1.1.1 23-1.2.3.3.2 23-1.2.3.3.2.1.1 25-1.3.2.1 26-1.3.3.2.1 27-1.3.2
+(m / multi-sentence 
+      :snt1 (c / country~e.4 
+            :domain~e.2 (c2 / country :wiki "China" 
+                  :name (n / name :op1 "China"~e.1) 
+                  :poss~e.0 (w3 / we~e.0)) 
+            :ARG1-of (g / govern-01~e.5 
+                  :manner~e.6 (p / protocol~e.7))) 
+      :snt2 (w / want-01~e.12 :polarity~e.11 -~e.11 
+            :ARG0 (w2 / we~e.9,15) 
+            :ARG1 (b / bother-01~e.14 
+                  :ARG0 w2 
+                  :ARG1 w2 
+                  :ARG2 (a / argue-02~e.16 
+                        :ARG0 w2 
+                        :ARG1~e.17 (c4 / country~e.23 
+                              :ARG1-of (r2 / resemble-01~e.19 
+                                    :ARG2 (c3 / country~e.23 
+                                          :mod (s / small~e.22) 
+                                          :mod (t / that~e.21))))))) 
+      :snt3 (s2 / say-01 
+            :ARG0 (i / i) 
+            :ARG1 (d / disgust-01~e.27 
+                  :degree (r / really~e.25)) 
+            :ARG2 (p2 / person :wiki - 
+                  :name (n2 / name :op1 "TMD"~e.26))))
+

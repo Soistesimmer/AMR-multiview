@@ -1,6 +1,6 @@
 #!/bin/bash
 
-train_test_data_dir='/home/wangante/work-code-20190910/AMRdata-master/LDC2015/0'
+train_test_data_dir='/home/wangante/work-code-20190910/AMRdata-origin/LDC2015/0'
 
 data_dir='./workspace/data/'
 if [ ! -d "$data_dir" ]; then mkdir -p "$data_dir"; fi

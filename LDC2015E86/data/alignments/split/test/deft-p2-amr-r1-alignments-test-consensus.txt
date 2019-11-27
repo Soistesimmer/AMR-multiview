@@ -1,0 +1,1508 @@
+# AMR-English alignment release (generated on Sat Aug 1, 2015 at 16:29:51)
+
+# ::id wb.eng_0003.1 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Braawwk !
+# ::alignments 0-1
+(b / braawwk~e.0)
+
+# ::id wb.eng_0003.2 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Braawwkkk !
+# ::alignments 0-1
+(b / braawwkkk~e.0)
+
+# ::id wb.eng_0003.3 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok It did n't take long .
+# ::alignments 0-1.1 2-1.2.1 2-1.2.1.r 3-1 4-1.2
+(t / take-10~e.3 
+      :ARG0 (i / it~e.0) 
+      :ARG1 (l / long-03~e.4 :polarity~e.2 -~e.2 
+            :ARG1 i))
+
+# ::id wb.eng_0003.4 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Route 288 , the circumferential highway running around the south - western quadrant of the Richmond New Urban Region , opened in late 2004 .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 4-1.1.4 5-1.1 6-1.1.3 7-1.1.3.1 9-1.1.3.1.1.2 11-1.1.3.1.1.2 12-1.1.3.1.1 13-1.1.3.1.1.1.r 15-1.1.3.1.1.1.2.1 16-1.1.3.1.1.1.2.2 17-1.1.3.1.1.1.2.3 18-1.1.3.1.1.1.2.4 20-1 21-1.2.r 22-1.2 23-1.2.1.1
+(o / open-01~e.20 
+      :ARG1 (h / highway~e.5 :wiki "Virginia_State_Route_288" 
+            :name (r / name :op1 "Route"~e.0 :op2 288~e.1) 
+            :ARG1-of (r3 / run-04~e.6 
+                  :direction (a / around~e.7 
+                        :op1 (q / quadrant~e.12 
+                              :part-of~e.13 (c / country-region :wiki - 
+                                    :name (r2 / name :op1 "Richmond"~e.15 :op2 "New"~e.16 :op3 "Urban"~e.17 :op4 "Region"~e.18)) 
+                              :mod (s / south-west~e.9,11)))) 
+            :mod (c2 / circumference~e.4)) 
+      :time~e.21 (l / late~e.22 
+            :op1 (d / date-entity :year 2004~e.23)))
+
+# ::id wb.eng_0003.5 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Already it is changing development patterns for the worse and causing localized traffic congestion around its exits .
+# ::alignments 0-1.3 1-1.1.1 3-1.1 4-1.1.2.1 5-1.1.2 8-1.1.3.1 9-1 10-1.1.3 10-1.2 11-1.2.2.3 12-1.2.2.2 13-1.2.2 14-1.2.2.1 15-1.2.2.1.1.1 15-1.2.2.1.1.1.r 16-1.2.2.1.1
+(a / and~e.9 
+      :op1 (c / change-01~e.3 
+            :ARG0 (i / it~e.1) 
+            :ARG1 (p / pattern~e.5 
+                  :mod (d / develop-02~e.4)) 
+            :ARG1-of (c4 / cause-01~e.10 
+                  :ARG0 (w / worsen-01~e.8 
+                        :ARG1 p))) 
+      :op2 (c2 / cause-01~e.10 
+            :ARG0 i 
+            :ARG1 (c3 / congest-01~e.13 
+                  :ARG1 (a2 / around~e.14 
+                        :op1 (e / exit~e.16 
+                              :poss~e.15 i~e.15)) 
+                  :ARG2 (t / traffic~e.12) 
+                  :ARG1-of (l2 / localize-01~e.11))) 
+      :time (a3 / already~e.0))
+
+# ::id wb.eng_0003.6 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok The Richmond Times - Dispatch tells the tale today about the impact on the Huguenot Trail in Powhatan County .
+# ::alignments 1-1.1.2.1 2-1.1.2.2 4-1.1.2.2 5-1 7-1.2 8-1.3 9-1.2.1.r 11-1.2.1 12-1.2.1.1.r 14-1.2.1.1.2.1 15-1.2.1.1.2.2 17-1.2.1.1.3.2.1 18-1.2.1.1.3.2.2
+(t / tell-01~e.5 
+      :ARG0 (n / newspaper :wiki "Richmond_Times-Dispatch" 
+            :name (r / name :op1 "Richmond"~e.1 :op2 "Times-Dispatch"~e.2,4)) 
+      :ARG1 (t2 / tale~e.7 
+            :topic~e.9 (i / impact-01~e.11 
+                  :ARG1~e.12 (r2 / road :wiki - 
+                        :name (h / name :op1 "Huguenot"~e.14 :op2 "Trail"~e.15) 
+                        :location (c / county :wiki "Powhatan_County,_Virginia" 
+                              :name (p / name :op1 "Powhatan"~e.17 :op2 "County"~e.18))))) 
+      :time (t3 / today~e.8))
+
+# ::id wb.eng_0003.7 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Traffic has more than doubled in one section of Huguenot Trail since 288 opened , reports Will Jones .
+# ::alignments 0-1.2.1 2-1.2.3 3-1.2.3 4-1.2 5-1.2.1.1.r 6-1.2.1.1.1 7-1.2.1.1 8-1.2.1.1.2.r 9-1.2.1.1.2.2.1 10-1.2.1.1.2.2.2 11-1.2.2 12-1.2.2.1.1.2.1 13-1.2.2.1 15-1 16-1.1.2.1 17-1.1.2.2
+(r2 / report-01~e.15 
+      :ARG0 (p / person :wiki - 
+            :name (w / name :op1 "Will"~e.16 :op2 "Jones"~e.17)) 
+      :ARG1 (d / double-01~e.4 
+            :ARG1 (t / traffic~e.0 
+                  :location~e.5 (s / section~e.7 :quant 1~e.6 
+                        :part-of~e.8 (r / road :wiki - 
+                              :name (h / name :op1 "Huguenot"~e.9 :op2 "Trail"~e.10)))) 
+            :time (s2 / since~e.11 
+                  :op1 (o / open-01~e.13 
+                        :ARG1 (r3 / road :wiki "Virginia_State_Route_288" 
+                              :name (x / name :op1 288~e.12)))) 
+            :mod (m / more-than~e.2,3)))
+
+# ::id wb.eng_0003.8 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Speeding and accidents have surged as well :
+# ::alignments 0-1.1.1 1-1.1 2-1.1.2 4-1 5-1.2 6-1.2
+(s / surge-01~e.4 
+      :ARG1 (a / and~e.1 
+            :op1 (s2 / speed-01~e.0) 
+            :op2 (a2 / accident~e.2)) 
+      :mod (a3 / as-well~e.5,6))
+
+# ::id wb.eng_0003.9 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok 17 accidents have been reported near the intersection of Winterfield Road so far this year , up from 12 for all of 2004 .
+# ::alignments 0-1.1.2 1-1.1 1-1.1.2.1.1.1 4-1 5-1.1.1 7-1.1.1.1 8-1.1.1.1.1.r 9-1.1.1.1.1.2.1 10-1.1.1.1.1.2.2 11-1.2 12-1.2 13-1.2.1.1 14-1.2.1 16-1.1.2.1 17-1.1.2.1.1.r 18-1.1.2.1.1 19-1.1.2.1.1.1.1.r 20-1.1.2.1.1.1.1 21-1.1.2.1.1.1.1.1.r 22-1.1.2.1.1.1.1.1.1
+(r / report-01~e.4 
+      :ARG1 (a / accident~e.1 
+            :ARG1-of (n / near-02~e.5 
+                  :ARG2 (i4 / intersect-01~e.7 
+                        :ARG0~e.8 (r2 / road :wiki - 
+                              :name (w / name :op1 "Winterfield"~e.9 :op2 "Road"~e.10)))) 
+            :quant (x / 17~e.0 
+                  :ARG4-of (u / up-02~e.16 
+                        :ARG3~e.17 (x2 / 12~e.18 
+                              :quant-of (a3 / accident~e.1 
+                                    :time~e.19 (a2 / all~e.20 
+                                          :op1~e.21 (d / date-entity :year 2004~e.22))))))) 
+      :time (s2 / so-far~e.11,12 
+            :op1 (y / year~e.14 
+                  :mod (t / this~e.13))))
+
+# ::id wb.eng_0003.10 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Dale Totten , resident engineer for the Virginia Department of Transportation , noted that VDOT would four - lane the road for about $ 13 million if it had more money .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 3-1.1.3.2.2 3-1.1.3.2.2.1 3-1.1.3.2.2.1.r 4-1.1.3.2 4-1.1.3.2.1 4-1.1.3.2.1.r 5-1.1.3 7-1.1.3.1.2.1 8-1.1.3.1.2.2 9-1.1.3.1.2.3 10-1.1.3.1.2.4 12-1 16-1.2.1 18-1.2 20-1.2.3 22-1.2.5.1 23-1.2.5.1.1.2 24-1.2.5.1.1.1 25-1.2.5.1.1.1 26-1.2.4.r 27-1.2.4.1 28-1.2.4 29-1.2.4.2.1 30-1.2.4.2 30-1.2.5.1.1
+(n / note-01~e.12 
+      :ARG0 (p / person :wiki - 
+            :name (d / name :op1 "Dale"~e.0 :op2 "Totten"~e.1) 
+            :ARG0-of (h2 / have-org-role-91~e.5 
+                  :ARG1 (g / government-organization :wiki "Virginia_Department_of_Transportation" 
+                        :name (v / name :op1 "Virginia"~e.7 :op2 "Department"~e.8 :op3 "of"~e.9 :op4 "Transportation"~e.10)) 
+                  :ARG2 (p3 / person~e.4 
+                        :ARG0-of~e.4 (e2 / engineer-01~e.4) 
+                        :mod (p2 / person~e.3 
+                              :ARG0-of~e.3 (r / reside-01~e.3))))) 
+      :ARG1 (l2 / lane-01~e.18 :quant 4~e.16 
+            :ARG0 g 
+            :ARG1 (r2 / road~e.20) 
+            :condition~e.26 (h / have-03~e.28 
+                  :ARG0 g~e.27 
+                  :ARG1 (m2 / money~e.30 
+                        :mod (m3 / more~e.29))) 
+            :ARG1-of (c / cost-01 
+                  :ARG2 (a / about~e.22 
+                        :op1 (m / monetary-quantity~e.30 :quant 13000000~e.24,25 
+                              :unit (d2 / dollar~e.23))))))
+
+# ::id wb.eng_0003.11 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Of course , VDOT has no more money for road construction in the Richmond region .
+# ::alignments 0-1.4 1-1.4 3-1.2.2.1 4-1 5-1.1 5-1.1.r 7-1.3 8-1.3.1.r 9-1.3.1.1 10-1.3.1 11-1.3.1.1.1.r 13-1.3.1.1.1.1.2.1 14-1.3.1.1.1
+(h / have-03~e.4 :polarity~e.5 -~e.5 
+      :ARG0 (g / government-organization :wiki "Virginia_Department_of_Transportation" 
+            :name (v / name :op1 "VDOT"~e.3)) 
+      :ARG1 (m / money~e.7 
+            :purpose~e.8 (c2 / construct-01~e.10 
+                  :ARG1 (r2 / road~e.9 
+                        :location~e.11 (r3 / region~e.14 
+                              :part (c / city :wiki "Richmond,_Virginia" 
+                                    :name (r / name :op1 "Richmond"~e.13)))))) 
+      :mod (o / of-course~e.0,1))
+
+# ::id wb.eng_0003.12 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok One reason is that VDOT , at the behest of local politicians and boosters , spent all its friggin ' money on 288 !
+# ::alignments 4-1.1.1.2.1 10-1.1.4.1.3 11-1.1.4.1.1 12-1.1.4.1 13-1.1.4.1.2 13-1.1.4.1.2.1 13-1.1.4.1.2.1.r 15-1.1 16-1.1.3.3 17-1.1.3.1 17-1.1.3.1.r 20-1.1.3 21-1.1.2.r 22-1.1.2.2.1
+(c / cause-01 
+      :ARG0 (s / spend-01~e.15 
+            :ARG0 (g / government-organization :wiki "Virginia_Department_of_Transportation" 
+                  :name (v / name :op1 "VDOT"~e.4)) 
+            :ARG1~e.21 (r / road :wiki "Virginia_State_Route_288" 
+                  :name (n / name :op1 288~e.22)) 
+            :ARG3 (m / money~e.20 
+                  :poss~e.17 g~e.17 
+                  :mod (x / friggin') 
+                  :mod (a / all~e.16)) 
+            :ARG1-of (c2 / cause-01 
+                  :ARG0 (a2 / and~e.12 
+                        :op1 (p / politician~e.11) 
+                        :op2 (p2 / person~e.13 
+                              :ARG0-of~e.13 (b2 / boost-01~e.13)) 
+                        :ARG1-of (l / local-02~e.10)))))
+
+# ::id wb.eng_0003.13 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Where 's Homer Simpson when you need him ?
+# ::alignments 0-1.2 1-1 2-1.1.2.1 3-1.1.2.2 4-1.3.r 5-1.3.1 6-1.3 7-1.3.2
+(b / be-located-at-91~e.1 
+      :ARG1 (p / person :wiki "Homer_Simpson" 
+            :name (h / name :op1 "Homer"~e.2 :op2 "Simpson"~e.3)) 
+      :ARG2 (a / amr-unknown~e.0) 
+      :time~e.4 (n / need-01~e.6 
+            :ARG0 (y / you~e.5) 
+            :ARG1 p~e.7))
+
+# ::id wb.eng_0003.14 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok This is a major `` D'oh ! '' moment .
+# ::alignments 0-1.2 1-1.2.r 3-1.1 5-1.3 6-1.3.1 6-1.3.1.r 8-1
+(m / moment~e.8 
+      :ARG1-of (m2 / major-02~e.3) 
+      :domain~e.1 (t / this~e.0) 
+      :mod (d / d'oh~e.5 :mode~e.6 expressive~e.6))
+
+# ::id wb.eng_0003.15 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok As we predicted , Route 288 is generating residential development in scarcely populated areas all around its exits , overtaxing the local country roads .
+# ::alignments 1-1.3.1 2-1.3 4-1.1.2.1 5-1.1.2.2 7-1 8-1.2.1 9-1.2 10-1.2.2.r 11-1.2.2.1.1 12-1.2.2.1 13-1.2.2 14-1.2.2.2.2 15-1.2.2.2 16-1.2.2.2.1.1 16-1.2.2.2.1.1.r 17-1.2.2.2.1 19-1.2.3 21-1.2.3.1.1 22-1.2.3.1.1.1 23-1.2.3.1
+(g / generate-01~e.7 
+      :ARG0 (r2 / road :wiki "Virginia_State_Route_288" 
+            :name (r / name :op1 "Route"~e.4 :op2 288~e.5)) 
+      :ARG1 (d / develop-02~e.9 
+            :ARG1 (r3 / residence~e.8) 
+            :location~e.10 (a / area~e.13 
+                  :ARG1-of (p2 / populate-01~e.12 
+                        :mod (s / scarce~e.11)) 
+                  :location (a2 / around~e.15 
+                        :op1 (e / exit~e.17 
+                              :part-of~e.16 r2~e.16) 
+                        :mod (a3 / all~e.14))) 
+            :ARG0-of (o / overtax-01~e.19 
+                  :ARG2 (r4 / road~e.23 
+                        :ARG1-of (l / local-02~e.21 
+                              :ARG2 (c2 / country~e.22))))) 
+      :ARG1-of (p / predict-01~e.2 
+            :ARG0 (w / we~e.1)))
+
+# ::id wb.eng_0003.16 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok While the limited access highway might provide limited traffic relief for people driving back and forth between Chesterfield and Goochland counties , other people are making choices about where they live and work ,
+# ::alignments 0-1 2-1.2.1.1.1.1 3-1.2.1.1.1 4-1.2.1.1 5-1.2 6-1.2.1 7-1.2.1.1.1.1 8-1.2.1.2 9-1.2.1 10-1.2.1.3.r 11-1.2.1.3 12-1.2.1.3.1 13-1.2.1.3.1.2.1 14-1.2.1.3.1.2 15-1.2.1.3.1.2.2 16-1.2.1.3.1.1 17-1.2.1.3.1.1.1.2.1 18-1.2.1.3.1.1 19-1.2.1.3.1.1.2.2.1 20-1.2.1.3.1.1.1.2.2 20-1.2.1.3.1.1.2.2.2 22-1.1.1.1 23-1.1.1 25-1.1 26-1.1 27-1.1.2.r 28-1.1.2.2.1.r 29-1.1.2.2.1.1 30-1.1.2.2.1 31-1.1.2 32-1.1.2.1.1
+(c5 / contrast-01~e.0 
+      :ARG1 (c2 / choose-01~e.25,26 
+            :ARG0 (p / person~e.23 
+                  :mod (o / other~e.22)) 
+            :ARG1~e.27 (a / and~e.31 
+                  :op1 (l / location 
+                        :location-of (w / work-01~e.32 
+                              :ARG0 p)) 
+                  :op2 (l4 / location 
+                        :location-of~e.28 (l2 / live-01~e.30 
+                              :ARG0 p~e.29)))) 
+      :ARG2 (p4 / possible-01~e.5 
+            :ARG1 (r2 / relieve-01~e.6,9 
+                  :ARG0 (h / highway~e.4 
+                        :ARG1-of (a2 / access-01~e.3 
+                              :ARG1-of (l3 / limit-01~e.2,7))) 
+                  :ARG1 (t / traffic~e.8) 
+                  :ARG2~e.10 (p2 / person~e.11 
+                        :ARG0-of (d / drive-01~e.12 
+                              :location (b / between~e.16,18 
+                                    :op1 (c3 / county :wiki "Chesterfield_County,_Virginia" 
+                                          :name (c / name :op1 "Chesterfield"~e.17 :op2 "County"~e.20)) 
+                                    :op2 (c4 / county :wiki "Goochland_County,_Virginia" 
+                                          :name (g3 / name :op1 "Goochland"~e.19 :op2 "County"~e.20))) 
+                              :direction (a3 / and~e.14 
+                                    :op1 (b2 / back~e.13) 
+                                    :op2 (f / forth~e.15)))))))
+
+# ::id wb.eng_0003.17 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok and they are creating traffic congestion in new places .
+# ::alignments 0-1 1-1.1.1 3-1.1 4-1.1.2.1 5-1.1.2 6-1.1.2.2.r 7-1.1.2.2.1 8-1.1.2.2
+(a / and~e.0 
+      :op2 (c / create-01~e.3 
+            :ARG0 (t / they~e.1) 
+            :ARG1 (c2 / congest-01~e.5 
+                  :ARG2 (t2 / traffic~e.4) 
+                  :location~e.6 (p / place~e.8 
+                        :mod (n / new~e.7)))))
+
+# ::id wb.eng_0003.18 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok The only thing that surprises me is how rapidly this is happening .
+# ::alignments 1-1.1.2 4-1 5-1.2 7-1.1.1.r 8-1.1 9-1.1.1
+(s / surprise-01~e.4 
+      :ARG0 (r / rapid~e.8 
+            :manner-of~e.7 (t / this~e.9) 
+            :mod (o / only~e.1)) 
+      :ARG1 (i / i~e.5))
+
+# ::id wb.eng_0003.19 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Even I thought there might be a lag of three or four years .
+# ::alignments 0-1.1.1 1-1.1 2-1 4-1.2 7-1.2.1 8-1.2.1.1.r 9-1.2.1.1.1.1 10-1.2.1.1 11-1.2.1.1.2.1 12-1.2.1.1.1.2 12-1.2.1.1.2.2
+(t2 / think-01~e.2 
+      :ARG0 (i / i~e.1 
+            :mod (e / even~e.0)) 
+      :ARG1 (p / possible-01~e.4 
+            :ARG1 (l / lag-01~e.7 
+                  :ARG2~e.8 (o2 / or~e.10 
+                        :op1 (t3 / temporal-quantity :quant 3~e.9 
+                              :unit (y3 / year~e.12)) 
+                        :op2 (t / temporal-quantity :quant 4~e.11 
+                              :unit (y2 / year~e.12))))))
+
+# ::id wb.eng_0003.20 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok If Route 288 has already created a $ 13 million road - construction in just this one exist , think of the liability it has created for all of its exits !
+# ::alignments 1-1.4.1.1.2.1 2-1.4.1.1.2.2 4-1.4.1.3 5-1.4.1 7-1.4.1.2.2.1.2 8-1.4.1.2.2.1.1 9-1.4.1.2.2.1.1 10-1.4.1.2.1 12-1.4.1.2 14-1.4.1.2.3.3 15-1.4.1.2.3.2 16-1.4.1.2.3.1 19-1 20-1.3.r 22-1.3 23-1.3.1.1 25-1.3.1 27-1.3.1.2.1 29-1.3.1.2.2 29-1.3.1.2.2.r 30-1.3.1.2 30-1.4.1.2.3 31-1.1 31-1.1.r
+(t / think-01~e.19 :mode~e.31 imperative~e.31 
+      :ARG0 (y / you) 
+      :ARG1~e.20 (l / liable-01~e.22 
+            :ARG1-of (c / create-01~e.25 
+                  :ARG0 r2~e.23 
+                  :ARG3 (e / exit~e.30 
+                        :mod (a / all~e.27) 
+                        :poss~e.29 r2~e.29))) 
+      :ARG1-of (c5 / cause-01 
+            :ARG0 (c2 / create-01~e.5 
+                  :ARG0 (r2 / road :wiki "Virginia_State_Route_288" 
+                        :name (r / name :op1 "Route"~e.1 :op2 288~e.2)) 
+                  :ARG1 (c3 / construct-01~e.12 
+                        :ARG1 (r3 / road~e.10) 
+                        :ARG1-of (c4 / cost-01 
+                              :ARG2 (m / monetary-quantity :quant 13000000~e.8,9 
+                                    :unit (d / dollar~e.7))) 
+                        :location (e2 / exit~e.30 :quant 1~e.16 
+                              :mod (t2 / this~e.15) 
+                              :mod (j / just~e.14))) 
+                  :time (a2 / already~e.4))))
+
+# ::id wb.eng_0003.21 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Here 's another prodiction :
+# ::alignments 2-1.2
+(t / thing 
+      :ARG1-of (p / predict-01) 
+      :mod (a / another~e.2))
+
+# ::id wb.eng_0003.22 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok After a few more years of scattered subdivision development and approval of mega @-@ commercial projects at major 288 intersections , the need for new road improvements will soar .
+# ::alignments 0-1.2 2-1.2.1.3 3-1.2.1.3.2 4-1.2.1.3.1.2 5-1.2.1.r 6-1.2.1.1.2 7-1.2.1.1.1 8-1.2.1.1 9-1.2.1 10-1.2.1.2 11-1.2.1.2.1.r 12-1.2.1.2.1.1.1 14-1.2.1.2.1.1 15-1.2.1.2.1 16-1.2.1.2.1.2.r 17-1.2.1.2.1.2.2.1 18-1.2.1.2.1.2.1.2.1 19-1.2.1.2.1.2 22-1.1 23-1.1.1.r 24-1.1.1.2 25-1.1.1.1 25-1.2.1.2.1.2.2 26-1.1.1 28-1
+(s / soar-01~e.28 
+      :ARG1 (n / need-01~e.22 
+            :ARG1~e.23 (i / improve-01~e.26 
+                  :ARG1 (r / road~e.25) 
+                  :mod (n2 / new~e.24))) 
+      :time (a / after~e.0 
+            :op1~e.5 (a2 / and~e.9 
+                  :op1 (d / develop-02~e.8 
+                        :ARG1 (s2 / subdivision~e.7) 
+                        :ARG1-of (s3 / scatter-01~e.6)) 
+                  :op2 (a3 / approve-01~e.10 
+                        :ARG1~e.11 (p / project~e.15 
+                              :mod (c / commerce~e.14 
+                                    :mod (m2 / mega~e.12)) 
+                              :location~e.16 (i2 / intersect-01~e.19 
+                                    :ARG0 (r2 / road :wiki "Virginia_State_Route_288" 
+                                          :name (x / name :op1 288~e.18)) 
+                                    :ARG1 (r3 / road~e.25 
+                                          :ARG1-of (m3 / major-02~e.17))))) 
+                  :duration (f3 / few~e.2 
+                        :op1 (t / temporal-quantity :quant 1 
+                              :unit (y / year~e.4)) 
+                        :mod (m / more~e.3)))))
+
+# ::id wb.eng_0003.23 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Before the end of the decade , we may well see the unfunded liability zoom well past the original $ 400 million it took to build the original highway .
+# ::alignments 0-1.1.3 2-1.1.3.1 3-1.1.3.1.1.r 5-1.1.3.1.1 7-1.1.1 8-1 9-1.2 10-1.1 12-1.1.2.1.1.1 13-1.1.2.1 14-1.1.2 15-1.1.2.2.2 16-1.1.2.2 18-1.1.2.2.1.4 19-1.1.2.2.1.2 20-1.1.2.2.1.1 21-1.1.2.2.1.1 23-1.1.2.2.1.3 25-1.1.2.2.1.3.1 27-1.1.2.2.1.3.1.1.1 28-1.1.2.2.1.3.1.1
+(p / possible-01~e.8 
+      :ARG1 (s / see-01~e.10 
+            :ARG0 (w / we~e.7) 
+            :ARG1 (z / zoom-01~e.14 
+                  :ARG1 (l / liability~e.13 
+                        :ARG1-of (f / fund-01 :polarity -~e.12)) 
+                  :ARG4 (p2 / past~e.16 
+                        :op1 (m / monetary-quantity :quant 400000000~e.20,21 
+                              :unit (d / dollar~e.19) 
+                              :ARG1-of (t / take-10~e.23 
+                                    :ARG0 (b2 / build-01~e.25 
+                                          :ARG1 (h / highway~e.28 
+                                                :mod (o / original~e.27)))) 
+                              :mod (o2 / original~e.18)) 
+                        :mod (w2 / well~e.15))) 
+            :time (b / before~e.0 
+                  :op1 (e / end-01~e.2 
+                        :ARG1~e.3 (d2 / decade~e.5)))) 
+      :degree (w3 / well~e.9))
+
+# ::id wb.eng_0003.24 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok To the brainiacs who thought Route 288 was such a great idea :
+# ::alignments 2-1.2 4-1.2.1 5-1.2.1.1.2.2.1 6-1.2.1.1.2.2.2 7-1.2.1.1.2.r 8-1.2.1.1.1.1 10-1.2.1.1.1 11-1.2.1.1
+(s / say-01 
+      :ARG0 i 
+      :ARG2 (b / brainiac~e.2 
+            :ARG0-of (t / think-01~e.4 
+                  :ARG1 (i / idea~e.11 
+                        :mod (g / great~e.10 
+                              :mod (s2 / such~e.8)) 
+                        :domain~e.7 (r2 / road :wiki "Virginia_State_Route_288" 
+                              :name (r / name :op1 "Route"~e.5 :op2 288~e.6))))))
+
+# ::id wb.eng_0003.25 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Thanks for nothing .
+# ::alignments 0-1 0-1.1 0-1.1.r 0-1.2 0-1.2.r 1-1.3.r 2-1.3
+(t / thank-01~e.0 
+      :ARG0~e.0 (i / i~e.0) 
+      :ARG1~e.0 (y / you~e.0) 
+      :ARG2~e.1 (n / nothing~e.2))
+
+# ::id wb.eng_0003.26 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I think we could have spent the $ 400 million better elsewhere .
+# ::alignments 0-1.1 1-1 2-1.2.1.1 3-1.2 5-1.2.1 7-1.2.1.3.2 8-1.2.1.3.1 9-1.2.1.3.1 10-1.2.1.4 10-1.2.1.4.1 10-1.2.1.4.1.r 11-1.2.1.2
+(t / think-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (p / possible-01~e.3 
+            :ARG1 (s / spend-01~e.5 
+                  :ARG0 (w / we~e.2) 
+                  :ARG1 (e / elsewhere~e.11) 
+                  :ARG3 (m / monetary-quantity :quant 400000000~e.8,9 
+                        :unit (d / dollar~e.7)) 
+                  :manner (g / good~e.10 
+                        :degree~e.10 (m2 / more~e.10)))))
+
+# ::id wb.eng_0003.27 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I do n't think you can blame 288 for creating those people .
+# ::alignments 0-1.1 2-1.2.1 2-1.2.1.r 3-1 4-1.2.2.1 4-1.2.3 6-1.2.2 7-1.2.2.2.2.1 8-1.2.2.3.r 9-1.2.2.3 10-1.2.2.3.1.1 11-1.2.2.3.1
+(t / think-01~e.3 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (r / recommend-01 :polarity~e.2 -~e.2 
+            :ARG1 (b / blame-01~e.6 
+                  :ARG0 (y / you~e.4) 
+                  :ARG1 (r2 / road :wiki "Virginia_State_Route_288" 
+                        :name (x / name :op1 288~e.7)) 
+                  :ARG2~e.8 (c / create-01~e.9 
+                        :ARG1 (p / person~e.11 
+                              :mod (t2 / that~e.10)))) 
+            :ARG2 (y2 / you~e.4)))
+
+# ::id wb.eng_0003.28 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok If there enough of them to create new traffic congestion in new places , then what is the alternative ?
+# ::alignments 0-1.2.r 2-1.2 3-1.2.1.r 4-1.2.1 6-1.2.2 7-1.2.2.1.4 8-1.2.2.1.2 9-1.2.2.1 11-1.2.2.1.3.1 11-1.2.2.1.4 12-1.2.2.1.3 15-1.1 16-1.1.r 18-1
+(a / alternative~e.18 
+      :domain~e.16 (a2 / amr-unknown~e.15) 
+      :condition~e.0 (e / enough~e.2 
+            :quant-of~e.3 (t3 / they~e.4) 
+            :ARG0-of (c / create-01~e.6 
+                  :ARG1 (c2 / congest-01~e.9 
+                        :ARG0 t3 
+                        :ARG2 (t2 / traffic~e.8) 
+                        :location (p / place~e.12 
+                              :mod (n2 / new~e.11)) 
+                        :mod (n / new~e.7,11)))))
+
+# ::id wb.eng_0003.29 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Additional traffic congestion in old places ?
+# ::alignments 0-1.4 1-1.2 2-1 3-1.3.r 4-1.3.1 5-1.3 6-1.1 6-1.1.r
+(c / congest-01~e.2 :mode~e.6 interrogative~e.6 
+      :ARG2 (t / traffic~e.1) 
+      :location~e.3 (p / place~e.5 
+            :mod (o / old~e.4)) 
+      :mod (a2 / additional~e.0))
+
+# ::id wb.eng_0003.30 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Now you understand how people like TMT in Fairfax feel .
+# ::alignments 0-1.3 1-1.1 2-1 4-1.2.1.1 5-1.2.1.1.1.r 6-1.2.1.1.1.2.1 8-1.2.1.1.1.3.2.1 9-1.2 9-1.2.1 9-1.2.1.r
+(u / understand-01~e.2 
+      :ARG0 (y / you~e.1) 
+      :ARG1 (t2 / thing~e.9 
+            :ARG1-of~e.9 (f2 / feel-01~e.9 
+                  :ARG0 (p2 / person~e.4 
+                        :example~e.5 (p / person :wiki - 
+                              :name (t / name :op1 "TMT"~e.6) 
+                              :location (c / city :wiki "Fairfax,_Virginia" 
+                                    :name (f / name :op1 "Fairfax"~e.8)))))) 
+      :time (n / now~e.0))
+
+# ::id wb.eng_0003.31 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I 'd usually take the pro @-@ road position -
+# ::alignments 0-1.1 2-1.3 3-1 5-1.2.2 7-1.2.2.1 8-1.2
+(t / take-01~e.3 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (p / position-02~e.8 
+            :ARG0 i 
+            :ARG2 (f / favor-01~e.5 
+                  :ARG1 (r / road~e.7))) 
+      :mod (u / usual~e.2))
+
+# ::id wb.eng_0003.32 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok but with the glaring needs in other parts of the state , 288 was definitely excess ...
+# ::alignments 0-1 1-1.1.3.r 3-1.1.3.1 4-1.1.3 5-1.1.3.2.r 6-1.1.3.2.2 7-1.1.3.2.1.r 10-1.1.3.2.1 12-1.1.2.2.1 13-1.1.2.r 14-1.1.1 15-1.1
+(c / contrast-01~e.0 
+      :ARG2 (e / excess~e.15 
+            :mod (d / definite~e.14) 
+            :domain~e.13 (r / road :wiki "Virginia_State_Route_288" 
+                  :name (x / name :op1 288~e.12)) 
+            :prep-with~e.1 (n / need-01~e.4 
+                  :mod (g / glaring~e.3) 
+                  :location~e.5 (t / thing 
+                        :part-of~e.7 (s / state~e.10) 
+                        :mod (o / other~e.6)))))
+
+# ::id wb.eng_0003.33 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok You have a city , Richmond , that has virtually no traffic .
+# ::alignments 1-1 3-1.1 5-1.1.2.1 8-1 8-1.3 8-1.3.r 9-1.3.2 10-1.3.1 11-1.2
+(h / have-03~e.1,8 
+      :ARG0 (c / city~e.3 :wiki "Richmond,_Virginia" 
+            :name (r / name :op1 "Richmond"~e.5)) 
+      :ARG1 (t / traffic~e.11) 
+      :ARG1-of~e.8 (h2 / have-polarity-91~e.8 :ARG2 -~e.10 
+            :degree (v / virtual~e.9)))
+
+# ::id wb.eng_0003.34 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok The rush hour is 30 minutes long ...
+# ::alignments 1-1.1.1 2-1.1 4-1.2.1 5-1.2.2 6-1
+(l / last-01~e.6 
+      :ARG1 (h / hour~e.2 
+            :time-of (r / rush-01~e.1)) 
+      :ARG2 (t / temporal-quantity :quant 30~e.4 
+            :unit (m / minute~e.5)))
+
+# ::id wb.eng_0003.35 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok And you give them a beltway through a largely rural area .
+# ::alignments 0-1 1-1.1.1 2-1.1 3-1.1.3 5-1.1.2 6-1.1.2.1.r 8-1.1.2.1.1.1 9-1.1.2.1.1 10-1.1.2.1
+(a / and~e.0 
+      :op2 (g / give-01~e.2 
+            :ARG0 (y / you~e.1) 
+            :ARG1 (b / beltway~e.5 
+                  :path~e.6 (a2 / area~e.10 
+                        :mod (r / rural~e.9 
+                              :degree (l / large~e.8)))) 
+            :ARG2 (t / they~e.3)))
+
+# ::id wb.eng_0003.36 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok A road to no where ...
+# ::alignments 1-1 2-1.1.r 3-1.1 4-1.1
+(r / road~e.1 
+      :destination~e.2 (n / nowhere~e.3,4))
+
+# ::id wb.eng_0003.37 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Just think if this money had been spent on another potomac crossing or road improvements that are desperately needed in NOVA ?
+# ::alignments 0-1.4 1-1 3-1.3.1.2.1 4-1.3.1.2 7-1.3.1 8-1.3.1.1.r 9-1.3.1.1.1.2 10-1.3.1.1.1.1.1.2.1 11-1.3.1.1.1.1 12-1.3.1.1 13-1.3.1.1.2.1 14-1.3.1.1.2 17-1.3.1.1.2.2.1 17-1.3.1.1.2.2.1.r 18-1.3.1.1.2.2 19-1.3.1.1.2.2.2.r 20-1.3.1.1.2.2.2.2.1 21-1.1.r
+(t / think-01~e.1 :mode~e.21 imperative 
+      :ARG0 (y / you) 
+      :ARG1 (p2 / possible-01 
+            :ARG1 (s / spend-01~e.7 
+                  :ARG1~e.8 (o / or~e.12 
+                        :op1 (f2 / facility 
+                              :location-of (c / cross-02~e.11 
+                                    :ARG1 (r / river :wiki "Potomac_River" 
+                                          :name (n2 / name :op1 "Potomac"~e.10))) 
+                              :mod (a / another~e.9)) 
+                        :op2 (i / improve-01~e.14 
+                              :ARG1 (r2 / road~e.13) 
+                              :ARG1-of (n3 / need-01~e.18 
+                                    :manner~e.17 (d / desperate~e.17) 
+                                    :location~e.19 (c2 / country-region :wiki "Northern_Virginia" 
+                                          :name (n / name :op1 "NOVA"~e.20))))) 
+                  :ARG3 (m / money~e.4 
+                        :mod (t2 / this~e.3)))) 
+      :mod (j / just~e.0))
+
+# ::id wb.eng_0003.38 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Virginia Centrist , To add insult to injury , the rest of the state helped pay for 288 in last year 's budget deal -- wiped the slate clean of debt .
+# ::alignments 0-1.3.2.1 1-1.3.2.2 3-1.2 4-1.2.1.3 5-1.2.1.3.1 6-1.2.1.3.2.r 7-1.2.1.3.2 10-1.2.1.1 11-1.2.1.1.1.r 13-1.2.1.1.1 14-1.2.1 15-1.2.1.2 16-1.2.1.2.2.r 17-1.2.1.2.2.2.1 18-1.2.1.2.3.r 19-1.2.1.2.3.2.1 20-1.2.1.2.3.2 21-1.2.1.2.3.2.r 22-1.2.1.2.3.1 23-1.2.1.2.3 25-1.2.2 29-1.2.2.2.r 30-1.2.2.2
+(s2 / say-01 
+      :ARG0 i 
+      :ARG1 (c / cause-01~e.3 
+            :ARG0 (h / help-01~e.14 
+                  :ARG0 (r / rest~e.10 
+                        :part-of~e.11 (s / state~e.13)) 
+                  :ARG1 (p2 / pay-01~e.15 
+                        :ARG0 r 
+                        :ARG3~e.16 (r2 / road :wiki "Virginia_State_Route_288" 
+                              :name (x / name :op1 288~e.17)) 
+                        :time~e.18 (d / deal-01~e.23 
+                              :ARG2 (b / budget~e.22) 
+                              :time~e.21 (y / year~e.20 
+                                    :mod (l / last~e.19)))) 
+                  :ARG0-of (a / add-02~e.4 
+                        :ARG1 (i / insult-01~e.5) 
+                        :ARG2~e.6 (i2 / injure-01~e.7))) 
+            :ARG1 (w / wipe-out-02~e.25 
+                  :ARG0 p2 
+                  :ARG1~e.29 (d2 / debt~e.30))) 
+      :ARG2 (p / person :wiki - 
+            :name (v / name :op1 "Virginia"~e.0 :op2 "Centrist"~e.1)))
+
+# ::id wb.eng_0003.39 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok It was very nice of y'all to oblige us .
+# ::alignments 2-1.2 3-1 4-1.1.r 5-1.1.1 7-1.1 8-1.1.2
+(n / nice-01~e.3 
+      :ARG1~e.4 (o / oblige-01~e.7 
+            :ARG0 (x / y'all~e.5) 
+            :ARG1 (w / we~e.8)) 
+      :degree (v / very~e.2))
+
+# ::id wb.eng_0003.40 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Did n't make much sense , though .
+# ::alignments 1-1.1.1 1-1.1.1.r 2-1.1 3-1.1.2 4-1.1 6-1
+(h / have-concession-91~e.6 
+      :ARG1 (s / sense-02~e.2,4 :polarity~e.1 -~e.1 
+            :degree (m2 / much~e.3)))
+
+# ::id wb.eng_0003.41 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok It 's the same old problem .
+# ::alignments 0-1.1.1 3-1.1 4-1.2 5-1
+(p / problem~e.5 
+      :ARG1-of (s / same-01~e.3 
+            :ARG2 (i / it~e.0)) 
+      :mod (o / old~e.4))
+
+# ::id wb.eng_0003.42 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok If you get out ahead of the need you are accused of causing sprawl .
+# ::alignments 0-1.3.r 1-1.3.1 2-1.3 4-1.3.2 5-1.3.2.1.r 7-1.3.2.1 8-1.3.1 10-1 11-1.2.r 12-1.2 13-1.2.2
+(a / accuse-01~e.10 
+      :ARG1 (y / you) 
+      :ARG2~e.11 (c / cause-01~e.12 
+            :ARG0 y 
+            :ARG1 (s / sprawl-01~e.13)) 
+      :condition~e.0 (g / get-05~e.2 
+            :ARG1 y~e.1,8 
+            :ARG2 (a2 / ahead~e.4 
+                  :op1~e.5 (n2 / need-01~e.7))))
+
+# ::id wb.eng_0003.43 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok If you build where the need is already acute , then the claim is you can n't pave your way out of congestion .
+# ::alignments 0-1.2.r 1-1.2.1 2-1.2 3-1.2.2.1.r 3-1.2.2.r 5-1.2.2.1 7-1.2.2.1.1.1 8-1.2.2.1.1 12-1 14-1.1.2.1 15-1.1 16-1.1.1 16-1.1.1.r 17-1.1.2 18-1.1.2.2.1 18-1.1.2.2.1.r 19-1.1.2.2 20-1.1.2.3 21-1.1.2.3.1.r 22-1.1.2.3.1
+(c / claim-01~e.12 
+      :ARG1 (p / possible-01~e.15 :polarity~e.16 -~e.16 
+            :ARG1 (p2 / pave-02~e.17 
+                  :ARG0 (y / you~e.14) 
+                  :ARG1 (w / way~e.19 
+                        :poss~e.18 y~e.18) 
+                  :ARG2 (o / out-06~e.20 
+                        :ARG2~e.21 (c2 / congest-01~e.22)))) 
+      :condition~e.0 (b / build-01~e.2 
+            :ARG0 y~e.1 
+            :location~e.3 (p3 / place 
+                  :location-of~e.3 (n / need-01~e.5 
+                        :mod (a / acute~e.8 
+                              :time (a2 / already~e.7))))))
+
+# ::id wb.eng_0003.44 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Anonymous -
+# ::alignments 0-1.2.1
+(p / person :wiki - 
+      :name (a / name :op1 "Anonymous"~e.0))
+
+# ::id wb.eng_0003.45 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok That 's a fair point .
+# ::alignments 0-1.1 1-1.1.r 3-1.2 4-1
+(p / point~e.4 
+      :domain~e.1 (t / that~e.0) 
+      :mod (f / fair~e.3))
+
+# ::id wb.eng_0003.46 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok 5 @:@ 26 makes a good point .
+# ::alignments 0-1.1.2.1 2-1.1.2.1 3-1 5-1.2.1 6-1.2
+(m / make-01~e.3 
+      :ARG0 (p3 / person :wiki - 
+            :name (n / name :op1 "5:26"~e.0,2)) 
+      :ARG1 (p2 / point~e.6 
+            :mod (g / good~e.5)))
+
+# ::id wb.eng_0003.47 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok However , this situation hammers home the validity of the state auditor 's report finding that the CTB and VDOT fail to fund transportation projects based on a comprehensive state transportation plan , but rather , based on whoever does the best job of lobbying .
+# ::alignments 0-1 2-1.1.1.1 3-1.1.1 4-1.1 5-1.1.3 7-1.1.2 8-1.1.2.1.r 10-1.1.2.1.1.1.1.1 11-1.1.2.1.1.1.1.2 12-1.1.2.1.1.1.1 13-1.1.2.1 13-1.1.2.1.1 13-1.1.2.1.1.r 14-1.1.2.1.2 15-1.1.2.1.2.1.r 17-1.1.2.1.2.1.1.1.2.1 18-1.1.2.1.2.1.1 19-1.1.2.1.2.1.1.2.2.1 22-1.1.2.1.2.1 23-1.1.2.1.2.1.2.1 24-1.1.2.1.2.1.2 25-1.1.2.1.2.1.3 25-1.1.2.1.2.1.3.2.1 28-1.1.2.1.2.1.3.2.1.2.2 29-1.1.2.1.2.1.3.2.1.2.1.1 30-1.1.2.1.2.1.3.2.1.2.1 31-1.1.2.1.2.1.3.2.1.2 33-1 36-1.1.2.1.2.1.3.2.1 41-1.1.2.1.2.1.3.1.1.1 41-1.1.2.1.2.1.3.1.1.1.1 41-1.1.2.1.2.1.3.1.1.1.1.r 44-1.1.2.1.2.1.3.1.1
+(c3 / contrast-01~e.0,33 
+      :ARG2 (h / hammer-02~e.4 
+            :ARG0 (s / situation~e.3 
+                  :mod (t / this~e.2)) 
+            :ARG1 (v2 / valid-02~e.7 
+                  :ARG1~e.8 (t2 / thing~e.13 
+                        :ARG1-of~e.13 (r / report-01~e.13 
+                              :ARG0 (p / person 
+                                    :ARG0-of (h3 / have-org-role-91~e.12 
+                                          :ARG1 (s4 / state~e.10) 
+                                          :ARG3 (a / audit-01~e.11 
+                                                :ARG0-of p)))) 
+                        :ARG0-of (f / find-02~e.14 
+                              :ARG1~e.15 (f4 / fund-01~e.22 
+                                    :ARG0 (a2 / and~e.18 
+                                          :op1 (g / government-organization :wiki "Commonwealth_Transportation_Board" 
+                                                :name (c / name :op1 "CTB"~e.17)) 
+                                          :op2 (g2 / government-organization :wiki "Virginia_Department_of_Transportation" 
+                                                :name (v / name :op1 "VDOT"~e.19))) 
+                                    :ARG1 (p2 / project~e.24 
+                                          :mod (t3 / transport-01~e.23)) 
+                                    :ARG1-of (b4 / base-02~e.25 
+                                          :ARG2 (p4 / person 
+                                                :ARG0-of (l / lobby-01~e.44 
+                                                      :manner (g3 / good~e.41 
+                                                            :degree~e.41 (m / most~e.41)))) 
+                                          :ARG1-of (i / instead-of-91 
+                                                :ARG2 (b2 / base-02~e.25,36 
+                                                      :ARG1 f4 
+                                                      :ARG2 (p3 / plan-01~e.31 
+                                                            :ARG1 (t5 / transport-01~e.30 
+                                                                  :ARG4 (s3 / state~e.29)) 
+                                                            :manner (c2 / comprehensive~e.28))))))))) 
+            :destination (h2 / home~e.5)))
+
+# ::id wb.eng_0003.48 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I submit that this is a disgraceful situation that should not be tolerated .
+# ::alignments 0-1.1 1-1 2-1.2.r 3-1.2.1 4-1.2.1.r 6-1.2.3 7-1.2 9-1.2.2.2 10-1.2.2.1 10-1.2.2.1.r 12-1.2.2
+(s / submit-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1~e.2 (s2 / situation~e.7 
+            :domain~e.4 (t2 / this~e.3) 
+            :ARG1-of (t / tolerate-01~e.12 :polarity~e.10 -~e.10 
+                  :ARG1-of (r / recommend-01~e.9)) 
+            :ARG0-of (d2 / disgrace-01~e.6)))
+
+# ::id wb.eng_0003.49 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Moreover , Senator Chichester and his toadies would make this worse by pouring more money into this flawed institution .
+# ::alignments 2-1.1.1.1.3 2-1.1.1.1.3.1.2.1 3-1.1.1.1.2.1 4-1.1.1 5-1.1.1.2.1 5-1.1.1.2.1.r 6-1.1.1.2 8-1.1.4.1 9-1.1.4.1.1 10-1.1.4.1 12-1.1 13-1.1.2.1 14-1.1.2 15-1.1.3.r 16-1.1.3.1 17-1.1.3.2 18-1.1.3
+(a / and 
+      :op2 (p2 / pour-01~e.12 
+            :ARG0 (a2 / and~e.4 
+                  :op1 (p / person :wiki "John_Chichester" 
+                        :name (n / name :op1 "Chichester"~e.3) 
+                        :ARG0-of (h / have-org-role-91~e.2 
+                              :ARG1 (g / government-organization :wiki "Senate_of_Virginia" 
+                                    :name (n2 / name :op1 "Senate"~e.2)))) 
+                  :op2 (t / toady~e.6 
+                        :poss~e.5 p~e.5)) 
+            :ARG1 (m2 / money~e.14 
+                  :mod (m3 / more~e.13)) 
+            :ARG3~e.15 (i / institution~e.18 
+                  :mod (t3 / this~e.16) 
+                  :ARG1-of (f / flaw-01~e.17)) 
+            :ARG0-of (c / cause-01 
+                  :ARG1 (w / worsen-01~e.8,10 
+                        :ARG1 (t4 / this~e.9)))))
+
+# ::id wb.eng_0003.50 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok What is the purpose of transportation - related expenditures ?
+# ::alignments 0-1.1 0-1.2 3-1 5-1.1.1.1 8-1.1 8-1.1.1 8-1.1.1.r
+(h / have-purpose-91~e.3 
+      :ARG1 (t / thing~e.0,8 
+            :ARG1-of~e.8 (e / expend-01~e.8 
+                  :ARG2 (t2 / transport-01~e.5))) 
+      :ARG2 (a / amr-unknown~e.0))
+
+# ::id wb.eng_0003.51 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok In Virginia , it 's to benefit private business plans and not to serve the public interest .
+# ::alignments 1-1.3.2.1 3-1.1.1 4-1.1 6-1.1.2 7-1.1.2.1.1.1 8-1.1.2.1.1 9-1.1.2.1 10-1 11-1.2.1 11-1.2.1.r 13-1.2.3 15-1.2.3.1.1 16-1.2.3.1
+(a / and~e.10 
+      :op1 (h / have-purpose-91~e.4 
+            :ARG1 (i / it~e.3) 
+            :ARG2 (b / benefit-01~e.6 
+                  :ARG1 (p / plan~e.9 
+                        :mod (b2 / business~e.8 
+                              :ARG1-of (p2 / private-03~e.7))))) 
+      :op2 (h2 / have-purpose-91 :polarity~e.11 -~e.11 
+            :ARG1 i 
+            :ARG2 (s2 / serve-01~e.13 
+                  :ARG1 (i2 / interest~e.16 
+                        :poss (p3 / public~e.15)))) 
+      :location (s / state :wiki "Virginia" 
+            :name (v / name :op1 "Virginia"~e.1)))
+
+# ::id wb.eng_0003.52 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok You all are dead wrong .
+# ::alignments 0-1.1 1-1.1 3-1.2 4-1
+(w / wrong-04~e.4 
+      :ARG1 (y / y'all~e.0,1) 
+      :degree (d / dead~e.3))
+
+# ::id wb.eng_0003.53 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok No less than Walter Stoch stated that 288 money was intended to be paid from economic development money .
+# ::alignments 0-1.1.3.1 0-1.1.3.1.r 1-1.1.3 3-1.1.2.1 4-1.1.2.2 5-1 6-1.2.r 7-1.2.1.2.2.1 8-1.2.1.1 10-1.2 13-1.2.1 15-1.2.1.1.1.1 16-1.2.1.1.1 17-1.2.1.1
+(s / state-01~e.5 
+      :ARG0 (p / person :wiki "Walter_Stosch" 
+            :name (w / name :op1 "Walter"~e.3 :op2 "Stoch"~e.4) 
+            :mod (l / less~e.1 :polarity~e.0 -~e.0)) 
+      :ARG1~e.6 (i / intend-01~e.10 
+            :ARG1 (p2 / pay-01~e.13 
+                  :ARG1 (m2 / money~e.8,17 
+                        :purpose (d / develop-02~e.16 
+                              :ARG1 (e / economy~e.15))) 
+                  :ARG3 (r / road :wiki "Virginia_State_Route_288" 
+                        :name (x / name :op1 288~e.7)))))
+
+# ::id wb.eng_0003.54 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Come on folks !!
+# ::alignments 0-1 1-1 2-1.2
+(c / come-on-25~e.0,1 :mode imperative 
+      :ARG1 (f / folk~e.2))
+
+# ::id wb.eng_0003.55 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok TMT : I do n't understand your point .
+# ::alignments 0-1.3.2.1 2-1.1 4-1.2.1 4-1.2.1.r 5-1.2 6-1.2.3.1 6-1.2.3.1.r 7-1.2.3
+(s / say-01 
+      :ARG0 (i / i~e.2) 
+      :ARG1 (u / understand-01~e.5 :polarity~e.4 -~e.4 
+            :ARG0 i 
+            :ARG1 (p2 / point~e.7 
+                  :poss~e.6 p~e.6)) 
+      :ARG2 (p / person :wiki - 
+            :name (t / name :op1 "TMT"~e.0)))
+
+# ::id wb.eng_0003.56 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok when was the last time you were stuck in traffic that you were n't on your way to or from some sort of business ?
+# ::alignments 0-1.3 0-1.3.2.r 0-1.3.r 3-1.3.1 4-1.3.r 5-1.1 7-1 8-1.2.r 9-1.2 11-1.1 12-1.3.2.2 13-1.3.2.1 13-1.3.2.1.r 15-1.1 18-1.3.2 19-1.3.2.3 20-1.3.2.2.2.1.1 21-1.3.2.2.2.1 22-1.3.2.2.2.1.r 23-1.3.2.2.2
+(s / stick-01~e.7 
+      :ARG1 (y / you~e.5,11,15) 
+      :ARG2~e.8 (t / traffic~e.9) 
+      :time~e.0,4 (a / amr-unknown~e.0 
+            :mod (l2 / last~e.3) 
+            :time-of~e.0 (o / or~e.18 :polarity~e.13 -~e.13 
+                  :op1 (b2 / be-destined-for-91~e.12 
+                        :ARG1 y 
+                        :ARG2 (b / business~e.23 
+                              :mod~e.22 (s2 / sort~e.21 
+                                    :mod (s3 / some~e.20)))) 
+                  :op2 (b3 / be-from-91~e.19 
+                        :ARG1 y 
+                        :ARG2 b))))
+
+# ::id wb.eng_0003.57 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok It seems to me that the whole point of roads is to facilitate the public interest in getting to and from private businesses .
+# ::alignments 1-1 2-1.2.r 3-1.2 6-1.1.3 7-1.1 9-1.1.1 12-1.1.2 14-1.1.2.2.1 15-1.1.2.2 16-1.1.2.2.2.r 17-1.1.2.2.2.1 17-1.1.2.2.2.2 19-1.1.2.2.2 20-1.1.2.2.2.1.2.r 20-1.1.2.2.2.2.2.r 21-1.1.2.2.2.1.2.1 22-1.1.2.2.2.1.2
+(s / seem-01~e.1 
+      :ARG1 (h / have-purpose-91~e.7 
+            :ARG1 (r / road~e.9) 
+            :ARG2 (f / facilitate-01~e.12 
+                  :ARG0 r 
+                  :ARG1 (i3 / interest-01~e.15 
+                        :ARG1 (p / public~e.14) 
+                        :ARG2~e.16 (a / and~e.19 
+                              :op1 (g / get-05~e.17 
+                                    :ARG0 p 
+                                    :ARG2~e.20 (b / business~e.22 
+                                          :ARG1-of (p2 / private-03~e.21))) 
+                              :op2 (g2 / get-05~e.17 
+                                    :ARG0 p 
+                                    :source~e.20 b)))) 
+            :mod (w / whole~e.6)) 
+      :ARG2~e.2 (i / i~e.3))
+
+# ::id wb.eng_0003.58 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Then , of course there is the sunday drive , the trip to grandma 's , and the soccer games , but still , the overwhelming need is to support business .
+# ::alignments 2-1.3.4 3-1.3.4 7-1.3.1.1.1 8-1.3.1 11-1.3.2 14-1.3.2.1.1.1 16-1.3 18-1.3.3.1 19-1.3.3 21-1.3.r 25-1.2 26-1 29-1.1 30-1.1.1
+(n / need-01~e.26 
+      :ARG1 (s3 / support-01~e.29 
+            :ARG1 (b / business~e.30)) 
+      :ARG0-of (o / overwhelm-01~e.25) 
+      :concession~e.21 (a / and~e.16 
+            :op1 (d / drive-01~e.8 
+                  :time (d2 / date-entity 
+                        :weekday (s / sunday~e.7))) 
+            :op2 (t / trip-03~e.11 
+                  :ARG1 (l / location 
+                        :poss (p / person 
+                              :ARG0-of (h / have-rel-role-91~e.14 
+                                    :ARG2 (g / grandmother))))) 
+            :op3 (g2 / game~e.19 
+                  :mod (s2 / soccer~e.18)) 
+            :mod (o2 / of-course~e.2,3)))
+
+# ::id wb.eng_0003.59 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Since our road expenditures nowhere near match the increase in business or state domestic product , it is no wonder we suffer congestion problems .
+# ::alignments 0-1.3 1-1.3.1.2.1.1 1-1.3.1.2.1.1.r 2-1.3.1.2.1.2 3-1.3.1.2 3-1.3.1.2.1 3-1.3.1.2.1.r 4-1.3.1.1 4-1.3.1.1.r 6-1.3.1 8-1.3.1.3 8-1.3.1.3.1 8-1.3.1.3.1.r 9-1.3.1.3.1.1.r 10-1.3.1.3.1.1.1 11-1.3.1.3.1.1 12-1.3.1.3.1.1.2.2 13-1.3.1.3.1.1.2.1 14-1.3.1.3.1.1.2 18-1.1 18-1.1.r 19-1 20-1.2.1 21-1.2 22-1.2.2.1 23-1.2.2
+(w2 / wonder-02~e.19 :polarity~e.18 -~e.18 
+      :ARG1 (s / suffer-01~e.21 
+            :ARG0 (w / we~e.20) 
+            :ARG1 (p / problem~e.23 
+                  :topic (c / congest-01~e.22))) 
+      :ARG1-of (c2 / cause-01~e.0 
+            :ARG0 (m / match-01~e.6 :polarity~e.4 -~e.4 
+                  :ARG1 (t / thing~e.3 
+                        :ARG1-of~e.3 (e / expend-01~e.3 
+                              :ARG0~e.1 w~e.1 
+                              :ARG2 (r / road~e.2))) 
+                  :ARG2 (t2 / thing~e.8 
+                        :ARG2-of~e.8 (i / increase-01~e.8 
+                              :ARG1~e.9 (o2 / or~e.11 
+                                    :op1 (b2 / business~e.10) 
+                                    :op2 (p2 / product~e.14 
+                                          :mod (d / domestic~e.13) 
+                                          :mod (s2 / state~e.12))))))))
+
+# ::id wb.eng_0003.60 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok If we recognize that roads primaarily benefit businesses then we should do two things :
+# ::alignments 0-1.2.r 1-1.2.1 2-1.2 3-1.2.2.r 4-1.2.2.1 5-1.2.2.3 6-1.2.2 7-1.2.2.2 9-1.2.1 10-1 11-1.1 12-1.1.2.1 13-1.1.2
+(r2 / recommend-01~e.10 
+      :ARG1 (d / do-02~e.11 
+            :ARG0 w 
+            :ARG1 (t / thing~e.13 :quant 2~e.12)) 
+      :condition~e.0 (r / recognize-02~e.2 
+            :ARG0 (w / we~e.1,9) 
+            :ARG1~e.3 (b / benefit-01~e.6 
+                  :ARG0 (r3 / road~e.4) 
+                  :ARG1 (b2 / business~e.7) 
+                  :mod (p / primary~e.5))))
+
+# ::id wb.eng_0003.61 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok let business pay for more of our transportation bill , ( which they will pass to us , of course ) and incentivize them to locate where they put the least stress on the system , even if that means more overall travel .
+# ::alignments 0-1.1.1 0-1.1.1.r 0-1.2.1 0-1.2.1.r 1-1.1.2 2-1.1 3-1.1.4.r 4-1.1.4.2 6-1.1.4.1.1 6-1.1.4.1.1.r 7-1.1.4.1.2 8-1.1.4 8-1.1.4.1 8-1.1.4.1.r 14-1.1.3.1 15-1.1.3.1.2.r 16-1.1.3.1.2 18-1.1.3.1.3 19-1.1.3.1.3 21-1 22-1.2 25-1.2.4 25-1.2.4.3.r 26-1.2.4.3.r 27-1.2.4.3.1 30-1.2.4.3.3 31-1.2.4.3 32-1.2.4.3.2.r 34-1.2.4.3.2 36-1.2.5 37-1.2.5 39-1.2.5.1 40-1.2.5.1.2.1 41-1.2.5.1.2.2 42-1.2.5.1.2
+(a / and~e.21 
+      :op1 (p / pay-01~e.2 :mode~e.0 imperative~e.0 
+            :ARG0 (b / business~e.1) 
+            :ARG1 (t2 / thing 
+                  :ARG1-of (p3 / pass-05~e.14 
+                        :ARG0 b 
+                        :ARG2~e.15 w~e.16 
+                        :mod (o2 / of-course~e.18,19))) 
+            :ARG3~e.3 (t4 / thing~e.8 
+                  :ARG1-of~e.8 (b2 / bill-01~e.8 
+                        :ARG2~e.6 (w / we~e.6) 
+                        :ARG3 (t / transport-01~e.7)) 
+                  :mod (m / more~e.4))) 
+      :op2 (i / incentivize-01~e.22 :mode~e.0 imperative~e.0 
+            :ARG0 w 
+            :ARG1 b 
+            :ARG2 (l2 / locate-01~e.25 
+                  :ARG0 b 
+                  :ARG1 b 
+                  :location~e.25,26 (s3 / stress-02~e.31 
+                        :ARG0 b~e.27 
+                        :ARG1~e.32 (s2 / system~e.34) 
+                        :degree (l3 / least~e.30))) 
+            :concession (e / even-if~e.36,37 
+                  :op1 (m2 / mean-01~e.39 
+                        :ARG1 l2 
+                        :ARG2 (t3 / travel-01~e.42 
+                              :mod (m3 / more~e.40) 
+                              :mod (o / overall~e.41))))))
+
+# ::id wb.eng_0003.62 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Why is it so hard to understand ?
+# ::alignments 0-1.2 0-1.2.1 0-1.2.1.r 2-1.1.1 3-1.2 3-1.3 4-1 5-1.1 6-1.1
+(h / hard-02~e.4 
+      :ARG1 (u / understand-01~e.5,6 
+            :ARG1 (i / it~e.2)) 
+      :ARG1-of (c / cause-01~e.0,3 
+            :ARG0~e.0 (a / amr-unknown~e.0)) 
+      :degree (s / so~e.3))
+
+# ::id wb.eng_0003.63 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok The solution is functional human settlement patterns and a balance between transport system capacity and land use generated travel deman .
+# ::alignments 1-1 3-1.1.1.2 4-1.1.1.1.1 5-1.1.1.1 6-1.1.1 7-1.1 9-1.1.2 11-1.1.2.1.1.1 12-1.1.2.1.1 13-1.1.2.1 15-1.1.2.2.2.1.1 16-1.1.2.2.2.1 17-1.1.2.2.2 18-1.1.2.2.1
+(s4 / solve-01~e.1 
+      :ARG2 (a / and~e.7 
+            :op1 (p / pattern~e.6 
+                  :mod (s2 / settle-03~e.5 
+                        :ARG1 (h / human~e.4)) 
+                  :ARG1-of (f2 / function-01~e.3)) 
+            :op2 (b / balance-01~e.9 
+                  :ARG1 (c / capacity~e.13 
+                        :poss (s3 / system~e.12 
+                              :purpose (t / transport-01~e.11))) 
+                  :ARG2 (d / demand-01 
+                        :ARG1 (t2 / travel-01~e.18) 
+                        :ARG1-of (g / generate-01~e.17 
+                              :ARG0 (u / use-01~e.16 
+                                    :ARG1 (l / land~e.15)))))))
+
+# ::id wb.eng_0003.64 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok All else is spin .
+# ::alignments 0-1.1 1-1.1.1 3-1
+(s / spin-03~e.3 
+      :ARG1 (a / all~e.0 
+            :mod (e / else~e.1)))
+
+# ::id wb.eng_0003.65 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok EMR
+# ::alignments 0-1.2.1
+(p / person :wiki - 
+      :name (n / name :op1 "EMR"~e.0))
+
+# ::id wb.eng_0003.66 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok TMT said `` In Virginia , it 's to benefit private business plans and not to serve the public interest . ''
+# ::alignments 0-1.1.2.1 1-1 3-1.2.r 4-1.2.3.2.1 6-1.2.1.1 7-1.2.1 9-1.2.1.2 10-1.2.1.2.1.1.1 11-1.2.1.2.1.1 12-1.2.1.2.1 13-1.2 14-1.2.2.1 14-1.2.2.1.r 16-1.2.2.3 18-1.2.2.3.1.1 19-1.2.2.3.1
+(s2 / say-01~e.1 
+      :ARG0 (p2 / person :wiki - 
+            :name (n / name :op1 "TMT"~e.0)) 
+      :ARG1~e.3 (a / and~e.13 
+            :op1 (h / have-purpose-91~e.7 
+                  :ARG1 (i / it~e.6) 
+                  :ARG2 (b / benefit-01~e.9 
+                        :ARG1 (p3 / plan~e.12 
+                              :mod (b2 / business~e.11 
+                                    :ARG1-of (p4 / private-03~e.10))))) 
+            :op2 (h2 / have-purpose-91 :polarity~e.14 -~e.14 
+                  :ARG1 i 
+                  :ARG2 (s / serve-01~e.16 
+                        :ARG1 (i2 / interest~e.19 
+                              :poss (p / public~e.18)))) 
+            :location (s3 / state :wiki "Virginia" 
+                  :name (n2 / name :op1 "Virginia"~e.4))))
+
+# ::id wb.eng_0003.67 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I do n't see the point of this statement because it appears to demonize private business plans and put the public interest above all else .
+# ::alignments 0-1.2 2-1.1 2-1.1.r 3-1 5-1.3 6-1.3.1.r 7-1.3.1.2 8-1.3.1 8-1.3.1.1 8-1.3.1.1.r 9-1.4 11-1.4.1 12-1.4.1.1.r 13-1.4.1.1.1 14-1.4.1.1.1.2.1.1 15-1.4.1.1.1.2.1 16-1.4.1.1.1.2 17-1.4.1.1 18-1.4.1.1.2 20-1.4.1.1.2.2.1 21-1.4.1.1.2.2 22-1.4.1.1.2.3 23-1.4.1.1.2.3.1 24-1.4.1.1.2.3.1.1
+(s / see-01~e.3 :polarity~e.2 -~e.2 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (p / point~e.5 
+            :poss~e.6 (t / thing~e.8 
+                  :ARG1-of~e.8 (s2 / state-01~e.8) 
+                  :mod (t2 / this~e.7))) 
+      :ARG1-of (c / cause-01~e.9 
+            :ARG0 (a / appear-02~e.11 
+                  :ARG1~e.12 (a2 / and~e.17 
+                        :op1 (d / demonize-01~e.13 
+                              :ARG0 t 
+                              :ARG1 (p2 / plan~e.16 
+                                    :mod (b / business~e.15 
+                                          :ARG1-of (p3 / private-03~e.14)))) 
+                        :op2 (p4 / put-01~e.18 
+                              :ARG0 t 
+                              :ARG1 (i2 / interest~e.21 
+                                    :poss (p5 / public~e.20)) 
+                              :ARG2 (a3 / above~e.22 
+                                    :op1 (a4 / all~e.23 
+                                          :mod (e2 / else~e.24))))))))
+
+# ::id wb.eng_0003.68 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I think they are so tightly intertwined that they are virtually one and the same .
+# ::alignments 0-1.1 1-1 2-1.2.1 4-1.2.2 5-1.2.3 6-1.2 7-1.2.2.1.r 8-1.2.2.1.1 10-1.2.2.1.2 14-1.2.2.1
+(t / think-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (i2 / intertwine-01~e.6 
+            :ARG1 (t2 / they~e.2) 
+            :ARG0-of (c / cause-01~e.4 
+                  :ARG1~e.7 (s / same-01~e.14 
+                        :ARG1 t2~e.8 
+                        :mod (v / virtual~e.10))) 
+            :ARG0-of (t3 / tight-05~e.5)))
+
+# ::id wb.eng_0003.69 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Obviously there are local problems because this cookie dough is lumpy ,
+# ::alignments 0-1 3-1.1.1 4-1.1 5-1.2 6-1.2.1.1.2 7-1.2.1.1.1 8-1.2.1.1 9-1.2.1.1.r 10-1.2.1
+(o / obvious-01~e.0 
+      :ARG1 (p / problem~e.4 
+            :ARG1-of (l / local-02~e.3)) 
+      :ARG1-of (c / cause-01~e.5 
+            :ARG0 (l2 / lumpy~e.10 
+                  :domain~e.9 (d / dough~e.8 
+                        :mod (c2 / cookie~e.7) 
+                        :mod (t / this~e.6)))))
+
+# ::id wb.eng_0003.70 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok but in the aggregate if we demonize business long enough we will eventually find out we all work for the Devil .
+# ::alignments 0-1 1-1.1.4.r 3-1.1.4 4-1.1.5.r 5-1.1.5.1 6-1.1.5 7-1.1.5.2 8-1.1.5.3 9-1.1.5.3.1 10-1.1.5.1 12-1.1.3 13-1.1 15-1.1.2.1 16-1.1.2.1.1 17-1.1.2 18-1.1.2.2.r 20-1.1.2.2
+(c / contrast-01~e.0 
+      :ARG2 (f / find-01~e.13 
+            :ARG0 (w / we) 
+            :ARG1 (w2 / work-01~e.17 
+                  :ARG0 (w3 / we~e.15 
+                        :mod (a / all~e.16)) 
+                  :ARG2~e.18 (d / devil~e.20)) 
+            :time (e / eventual~e.12) 
+            :prep-in~e.1 (a2 / aggregate~e.3) 
+            :condition~e.4 (d3 / demonize-01~e.6 
+                  :ARG0 w~e.5,10 
+                  :ARG1 (b / business~e.7) 
+                  :ARG1-of (l / long-03~e.8 
+                        :degree (e2 / enough~e.9)))))
+
+# ::id wb.eng_0003.71 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I do n't see there is any point in claiming as `` a solution '' a balance that is dynamic and ever changing in nature .
+# ::alignments 0-1.2 2-1.1 2-1.1.r 3-1 7-1.3 9-1.3.1 10-1.3.1.1.1.1.2.1.r 13-1.3.1.1 16-1.3.1.1.1 19-1.3.1.1.1.1.1 21-1.3.1.1.1.1.2.1 22-1.3.1.1.1.1.2 24-1.3.1.1.1.1
+(s3 / see-01~e.3 :polarity~e.2 -~e.2 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (h / have-purpose-91~e.7 
+            :ARG1 (c / claim-01~e.9 
+                  :ARG1 (s / solve-01~e.13 
+                        :ARG2 (b / balance~e.16 
+                              :poss-of (n / nature~e.24 
+                                    :mod (d / dynamic~e.19) 
+                                    :ARG1-of (c2 / change-01~e.22 
+                                          :time~e.10 (e / ever~e.21))))))))
+
+# ::id wb.eng_0003.72 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Even you see rail to Dulles as a positive because Dulles is a job center that promotes bi @-@ directional demand on the rail .
+# ::alignments 0-1.1.1 1-1.1 2-1 3-1.2 4-1.2.1.r 5-1.2.1.2.1 6-1.3.r 8-1.3 9-1.4 10-1.4.1.2 11-1.4.1.2.r 13-1.4.1.1 14-1.4.1 16-1.4.1.3 17-1.4.1.3.1.2 19-1.4.1.3.1.2 20-1.4.1.3.1 21-1.4.1.3.1.1.r 23-1.4.1.3.1.1
+(s / see-01~e.2 
+      :ARG0 (y / you~e.1 
+            :mod (e / even~e.0)) 
+      :ARG1 (r / rail~e.3 
+            :destination~e.4 (a / airport :wiki "Washington_Dulles_International_Airport" 
+                  :name (d / name :op1 "Dulles"~e.5))) 
+      :ARG2~e.6 (p / positive~e.8) 
+      :ARG1-of (c / cause-01~e.9 
+            :ARG0 (c2 / center~e.14 
+                  :mod (j / job~e.13) 
+                  :domain~e.11 a~e.10 
+                  :ARG0-of (p2 / promote-02~e.16 
+                        :ARG1 (d2 / demand-01~e.20 
+                              :ARG1~e.21 (r2 / rail~e.23) 
+                              :mod (b / bi-directional~e.17,19))))))
+
+# ::id wb.eng_0003.73 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I agree .
+# ::alignments 0-1.1 1-1
+(a / agree-01~e.1 
+      :ARG0 (i / i~e.0))
+
+# ::id wb.eng_0003.74 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok In fact that may be sufficient reason to build it , all by itself .
+# ::alignments 0-1.2 1-1.2 2-1.1.1.2 3-1 4-1.1.1.2.r 5-1.1 6-1.1.1 8-1.1.1.1 9-1.1.1.1.1 11-1.1.2.1 12-1.1.2 13-1.1.2
+(p / possible-01~e.3 
+      :ARG1 (s / suffice-01~e.5 
+            :ARG0 (r / reason~e.6 
+                  :mod (b / build-01~e.8 
+                        :ARG1 (i / it~e.9)) 
+                  :domain~e.4 (t2 / that~e.2)) 
+            :mod (b2 / by-oneself~e.12,13 
+                  :degree (a / all~e.11))) 
+      :mod (i2 / in-fact~e.0,1))
+
+# ::id wb.eng_0003.75 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok All I 'm saying is that the exact same logic should apply to roads :
+# ::alignments 0-1.3 1-1.1 3-1 5-1.2.r 7-1.2.1.1.1.1 8-1.2.1.1.1 9-1.2.1.1 10-1.2 11-1.2.1 12-1.2.1.2.r 13-1.2.1.2
+(s / say-01~e.3 
+      :ARG0 (i / i~e.1) 
+      :ARG1~e.5 (r / recommend-01~e.10 
+            :ARG1 (a / apply-02~e.11 
+                  :ARG1 (l / logic~e.9 
+                        :ARG1-of (s2 / same-01~e.8 
+                              :mod (e / exact~e.7))) 
+                  :ARG2~e.12 (r2 / road~e.13))) 
+      :mod (a2 / all~e.0))
+
+# ::id wb.eng_0003.76 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok they should have destinations at both ends in order that we get maximum use out of our investment :
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2 4-1.1.2.1.r 5-1.1.2.1.1 6-1.1.2.1 7-1.2.r 8-1.2.r 9-1.2.r 10-1.2.1 12-1.2.3 13-1.2 13-1.2.r 15-1.2.2.r 16-1.2.2.1.1 16-1.2.2.1.1.r 17-1.2.2 17-1.2.2.1 17-1.2.2.1.r
+(r / recommend-01~e.1 
+      :ARG1 (h / have-03~e.2 
+            :ARG0 (t / they~e.0) 
+            :ARG1 (d / destination~e.3 
+                  :location~e.4 (e / end~e.6 
+                        :mod (b / both~e.5)))) 
+      :purpose~e.7,8,9,13 (u / use-01~e.13 
+            :ARG0 (w / we~e.10) 
+            :ARG1~e.15 (t2 / thing~e.17 
+                  :ARG2-of~e.17 (i / invest-01~e.17 
+                        :ARG0~e.16 w~e.16)) 
+            :degree (m / maximum~e.12)))
+
+# ::id wb.eng_0003.77 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok we need more places in order to get closer to the balance you say we need .
+# ::alignments 0-1.1 1-1 2-1.2.1 2-1.3.2.3 3-1.2 4-1.3.r 5-1.3.r 6-1.3.r 7-1.3 8-1.3.2 8-1.3.2.3 8-1.3.2.3.r 9-1.3.2.2.r 11-1.3.2.2 12-1.3.2.2.1.2.1 13-1.3.2.2.1.2 14-1.3.2.2.1.1 15-1.3.2.2.1
+(n / need-01~e.1 
+      :ARG0 (w / we~e.0) 
+      :ARG1 (p / place~e.3 
+            :mod (m / more~e.2)) 
+      :purpose~e.4,5,6 (g / get-03~e.7 
+            :ARG1 w 
+            :ARG2 (c / close-10~e.8 
+                  :ARG1 w 
+                  :ARG2~e.9 (b / balance~e.11 
+                        :ARG1-of (n2 / need-01~e.15 
+                              :ARG0 w~e.14 
+                              :ARG1-of (s / say-01~e.13 
+                                    :ARG0 (y / you~e.12)))) 
+                  :degree~e.8 (m2 / more~e.2,8))))
+
+# ::id wb.eng_0003.78 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Reality check here -
+# ::alignments 0-1.1 1-1 2-1.2
+(c / check-01~e.1 
+      :ARG2 (r / reality~e.0) 
+      :location (h / here~e.2))
+
+# ::id wb.eng_0003.79 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I drive past Watkins Landing every morning and evening .
+# ::alignments 0-1.1 1-1 2-1.2 3-1.2.1.2.1 4-1.2.1.2.2 6-1.3.1.1.1 7-1.3.1 8-1.3.1.2.1
+(d / drive-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :path (p / past~e.2 
+            :op1 (f / facility :wiki - 
+                  :name (w / name :op1 "Watkins"~e.3 :op2 "Landing"~e.4))) 
+      :frequency (r / rate-entity-91 
+            :ARG4 (a / and~e.7 
+                  :op1 (d2 / date-entity 
+                        :dayperiod (m / morning~e.6)) 
+                  :op2 (d3 / date-entity 
+                        :dayperiod (e / evening~e.8)))))
+
+# ::id wb.eng_0003.80 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I commute back and forth to work on the Huguenot Trail .
+# ::alignments 0-1.1 1-1 2-1.3.1 3-1.3 4-1.3.2 5-1.2.r 6-1.2 7-1.4.r 9-1.4.2.1 10-1.4.2.2
+(c / commute-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG2~e.5 (w / work~e.6) 
+      :direction (a / and~e.3 
+            :op1 (b / back~e.2) 
+            :op2 (f2 / forth~e.4)) 
+      :path~e.7 (r / road :wiki - 
+            :name (h / name :op1 "Huguenot"~e.9 :op2 "Trail"~e.10)))
+
+# ::id wb.eng_0003.81 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I 've never seen anything remotely resembling a `` flood '' of traffic .
+# ::alignments 0-1.2 2-1.1 2-1.1.r 2-1.4 3-1 4-1.3 5-1.3.1.2 6-1.3.1 9-1.3.1.1 11-1.3.1.1.1.r 12-1.3.1.1.1
+(s / see-01~e.3 :polarity~e.2 -~e.2 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (a / anything~e.4 
+            :ARG1-of (r / resemble-01~e.6 
+                  :ARG2 (f / flood-01~e.9 
+                        :ARG2~e.11 (t2 / traffic~e.12)) 
+                  :degree (r2 / remote~e.5))) 
+      :time (e / ever~e.2))
+
+# ::id wb.eng_0003.82 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok It 's a 55 mph zone - 75 to 100 cars in `` a morning '' - over how much time ?
+# ::alignments 0-1.1 3-1.2.1 4-1.2.2 5-1 7-1.3.1.1.1 9-1.3.1.1.2 10-1.3 14-1.3.1.2 18-1.3.1.2.1 19-1.3.1.2.1
+(z / zone-01~e.5 
+      :ARG1 (i / it~e.0) 
+      :ARG2 (s / speed-quantity :quant 55~e.3 
+            :unit (m / mph~e.4)) 
+      :location-of (c / car~e.10 
+            :frequency (r / rate-entity-91 
+                  :ARG1 (b / between :op1 75~e.7 :op2 100~e.9) 
+                  :ARG2 (m2 / morning~e.14 
+                        :duration (a3 / amr-unknown~e.18,19)))))
+
+# ::id wb.eng_0003.83 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok The Huguenot Trail road widening was already planned , due to the heavy demands of development on the Chesterfield side , the new schools , and a whole bunch of existing developments that were zoned years ago and at that time funneled through Robious Road .
+# ::alignments 1-1.1.1.2.1 2-1.1.1.2.2 3-1.1.1 4-1.1 6-1.2 7-1 9-1.3 10-1.3 12-1.3.1.1.2 13-1.3.1.1 14-1.3.1.1.1.r 15-1.3.1.1.1 16-1.3.1.1.1.1.r 18-1.3.1.1.1.1.1.2.1 19-1.3.1.1.1.1 22-1.3.1.2.1 23-1.3.1.2 25-1.3.1 27-1.3.1.3.2.1 28-1.3.1.3.2 29-1.3.1.3.2.r 30-1.3.1.3.3 31-1.3.1.3 31-1.3.1.3.1 31-1.3.1.3.1.r 34-1.3.1.3.4 35-1.3.1.3.4.1.2 35-1.3.1.3.4.1.2.1 35-1.3.1.3.4.1.2.1.1 35-1.3.1.3.4.1.2.1.1.r 35-1.3.1.3.4.1.2.1.2 35-1.3.1.3.4.1.2.1.2.r 35-1.3.1.3.4.1.2.1.r 36-1.3.1.3.4.1 36-1.3.1.3.4.1.1 36-1.3.1.3.4.1.1.r 40-1.3.1.3.4.1.2.1 40-1.3.1.3.4.1.r 40-1.3.1.3.5.2.r 41-1.3.1.3.5 42-1.3.1.3.5.1.r 43-1.3.1.3.5.1.2.1 44-1.3.1.3.5.1.2.2
+(p / plan-01~e.7 
+      :ARG1 (w / widen-01~e.4 
+            :ARG1 (r2 / road~e.3 :wiki - 
+                  :name (h / name :op1 "Huguenot"~e.1 :op2 "Trail"~e.2))) 
+      :time (a / already~e.6) 
+      :ARG1-of (c2 / cause-01~e.9,10 
+            :ARG0 (a2 / and~e.25 
+                  :op1 (d / demand-01~e.13 
+                        :ARG0~e.14 (d2 / develop-02~e.15 
+                              :location~e.16 (s / side~e.19 
+                                    :mod (c / county :wiki "Chesterfield_County,_Virginia" 
+                                          :name (n / name :op1 "Chesterfield"~e.18)))) 
+                        :degree (h2 / heavy~e.12)) 
+                  :op2 (s2 / school~e.23 
+                        :mod (n2 / new~e.22)) 
+                  :op3 (t / thing~e.31 
+                        :ARG1-of~e.31 (d3 / develop-02~e.31) 
+                        :quant~e.29 (b / bunch~e.28 
+                              :mod (w2 / whole~e.27)) 
+                        :ARG1-of (e / exist-01~e.30) 
+                        :ARG1-of (z / zone-01~e.34 
+                              :time~e.40 (b2 / before~e.36 
+                                    :op1~e.36 (n4 / now~e.36) 
+                                    :quant (m / multiple~e.35 
+                                          :op1~e.35 (t3 / temporal-quantity~e.35,40 :quant~e.35 1~e.35 
+                                                :unit~e.35 (y / year~e.35))))) 
+                        :ARG1-of (f / funnel-01~e.41 
+                              :path~e.42 (r3 / road :wiki - 
+                                    :name (n3 / name :op1 "Robious"~e.43 :op2 "Road"~e.44)) 
+                              :time~e.40 b2)))))
+
+# ::id wb.eng_0003.84 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok 288 , for those of us that actually use it , is wonderful - instead of Powhatan and Western Chesterfield being bottlenecked by lack of roads ,
+# ::alignments 0-1.1.2.1 4-1.3 5-1.2 7-1.2.1.2 8-1.2.1 9-1.2.1.1 12-1 14-1.3 15-1.3 16-1.3.1.2.1.2.1 17-1.3.1.2 18-1.3.1.2.2 19-1.3.1.2.2.1.2.1 21-1.3.1 22-1.3.1.1.r 23-1.3.1.1 24-1.3 24-1.3.1.1.2.r 25-1.3.1.1.2
+(w2 / wonderful-03~e.12 
+      :ARG1 (r / road :wiki "Virginia_State_Route_288" 
+            :name (x / name :op1 288~e.0)) 
+      :ARG2 (w3 / we~e.5 
+            :ARG0-of (u / use-01~e.8 
+                  :ARG1 r~e.9 
+                  :mod (a2 / actual~e.7))) 
+      :ARG1-of (i / instead-of-91~e.4,14,15,24 
+            :ARG2 (b / bottleneck-01~e.21 
+                  :ARG0~e.22 (l / lack-01~e.23 
+                        :ARG0 a 
+                        :ARG1~e.24 (r2 / road~e.25)) 
+                  :ARG1 (a / and~e.17 
+                        :op1 (c / county :wiki "Powhatan_County,_Virginia" 
+                              :name (p / name :op1 "Powhatan"~e.16)) 
+                        :op2 (w4 / west~e.18 
+                              :part-of (c2 / county :wiki "Chesterfield_County,_Virginia" 
+                                    :name (w / name :op1 "Chesterfield"~e.19)))))))
+
+# ::id wb.eng_0003.85 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok we can actually get some commercial development and have the ability to work closer to where we live .
+# ::alignments 0-1.1.1.1 1-1.1 1-1.2 5-1.1.1.2 6-1.1.1 7-1 12-1.2.1 13-1.2.1.2 13-1.2.1.2.2 13-1.2.1.2.2.r 15-1.2.1.2.r 16-1.2.1.2.1.1 17-1.2.1.2.1
+(a / and~e.7 
+      :op1 (p / possible-01~e.1 
+            :ARG1 (d / develop-02~e.6 
+                  :ARG3 (w2 / we~e.0) 
+                  :mod (c / commerce~e.5))) 
+      :op2 (p2 / possible-01~e.1 
+            :ARG1 (w / work-01~e.12 
+                  :ARG0 w2 
+                  :location~e.15 (c2 / close-10~e.13 
+                        :ARG2 (l / live-01~e.17 
+                              :ARG0 w2~e.16) 
+                        :degree~e.13 (m / more~e.13)))))
+
+# ::id wb.eng_0003.86 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok You may think that 's not rational land use .
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2.3 4-1.1.2.3.r 5-1.1.2.2.1 5-1.1.2.2.1.r 6-1.1.2.2 7-1.1.2.1 8-1.1.2
+(p / possible-01~e.1 
+      :ARG1 (x4 / think-01~e.2 
+            :ARG0 (x5 / you~e.0) 
+            :ARG1 (u / use-01~e.8 
+                  :ARG1 (l / land~e.7) 
+                  :manner (r / rational~e.6 :polarity~e.5 -~e.5) 
+                  :domain~e.4 (t / that~e.3))))
+
+# ::id wb.eng_0003.87 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I have no desire to live in any city ,
+# ::alignments 0-1.2 1-1 2-1.1 2-1.1.r 3-1 5-1.3 6-1.3.2.r 7-1.3.2.1 8-1.3.2
+(d / desire-01~e.1,3 :polarity~e.2 -~e.2 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (l / live-01~e.5 
+            :ARG0 i 
+            :location~e.6 (c / city~e.8 
+                  :mod (a / any~e.7))))
+
+# ::id wb.eng_0003.88 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I will not work in a downtown area ,
+# ::alignments 0-1.2.1 3-1.2 4-1.2.2.r 6-1.2.2.1 7-1.2.2
+(r / refuse-01 
+      :ARG0 i 
+      :ARG1 (w / work-01~e.3 
+            :ARG0 (i / i~e.0) 
+            :location~e.4 (a / area~e.7 
+                  :mod (d / downtown~e.6))))
+
+# ::id wb.eng_0003.89 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok I will not use mass transit , which is not safe for female commuters that work long and irregular hours ,
+# ::alignments 0-1.2.1 2-1.2.2.2.1.r 3-1.2 4-1.2.2.1 5-1.2.2 9-1.2.2.2.1 9-1.2.2.2.1.r 10-1.2.2.2 11-1.2.2.2.2.r 12-1.2.2.2.2 13-1.2.2.2.2.1 15-1.2.2.2.2.2 16-1.2.2.2.2.2.2 18-1.2.2.2.2.2.1.1 18-1.2.2.2.2.2.1.1.1 18-1.2.2.2.2.2.1.1.1.r 19-1.2.2.2.2.2.1
+(r2 / refuse-01 
+      :ARG0 i 
+      :ARG1 (u / use-01~e.3 
+            :ARG0 (i / i~e.0) 
+            :ARG1 (t / transit~e.5 
+                  :mod (m / mass~e.4) 
+                  :ARG0-of (s / safe-01~e.10 :polarity~e.2,9 -~e.9 
+                        :ARG1~e.11 (f / female~e.12 
+                              :ARG0-of (c / commute-01~e.13) 
+                              :ARG0-of (w / work-01~e.15 
+                                    :time (h / hour~e.19 
+                                          :ARG2-of (r / regular-02~e.18 :polarity~e.18 -~e.18 
+                                                :ARG1 w)) 
+                                    :ARG1-of (l / long-03~e.16)))))))
+
+# ::id wb.eng_0003.90 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok and I happen to LIKE large lot development .
+# ::alignments 0-1 1-1.1.1.1 2-1.1 4-1.1.1 5-1.1.1.2.1.1 6-1.1.1.2.1 7-1.1.1.2
+(a / and~e.0 
+      :op2 (h / happen-02~e.2 
+            :ARG1 (l / like-01~e.4 
+                  :ARG0 (i / i~e.1) 
+                  :ARG1 (d / develop-02~e.7 
+                        :ARG1 (l2 / lot~e.6 
+                              :mod (l3 / large~e.5))))))
+
+# ::id wb.eng_0003.91 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok How exactly I 'm supposed to keep horses on a 1 @/@ 4 acre lot is beyond me .
+# ::alignments 0-1.3.1.r 1-1.3.2 2-1.3.1.1 2-1.3.1.3.1.1 4-1.3.1.4 6-1.3.1 7-1.3.1.2 8-1.3.1.3.r 10-1.3.1.3.1.1 12-1.3.1.3.1.1 13-1.3.1.3.1.2 14-1.3.1.3 17-1.3.1.1
+(u / understand-01 :polarity - 
+      :ARG0 i 
+      :ARG1 (t / thing 
+            :manner-of~e.0 (k / keep-01~e.6 
+                  :ARG0 (i / i~e.2,17) 
+                  :ARG1 (h / horse~e.7) 
+                  :location~e.8 (l / lot~e.14 
+                        :mod (a / area-quantity :quant "1/4"~e.2,10,12 
+                              :unit (a2 / acre~e.13))) 
+                  :ARG2-of (s / suppose-02~e.4 
+                        :ARG1 i)) 
+            :mod (e / exact~e.1)))
+
+# ::id wb.eng_0003.92 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Gas could go to $ 10 a gallon
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2.r 4-1.1.2.2 5-1.1.2.1 6-1.1.1.1.1 7-1.1.1.1.2
+(p / possible-01~e.1 
+      :ARG1 (g / go-07~e.2 
+            :ARG1 (g4 / gas~e.0 
+                  :quant (v2 / volume-quantity :quant 1~e.6 
+                        :unit (g5 / gallon~e.7))) 
+            :ARG3~e.3 (m2 / monetary-quantity :quant 10~e.5 
+                  :unit (d2 / dollar~e.4))))
+
+# ::id wb.eng_0003.93 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok and I 'd still pay to live in the country .
+# ::alignments 0-1 1-1.1.1 3-1.1.3 4-1.1 6-1.1.2 7-1.1.2.2.r 9-1.1.2.2
+(a / and~e.0 
+      :op2 (p / pay-01~e.4 
+            :ARG0 (i / i~e.1) 
+            :ARG3 (l / live-01~e.6 
+                  :ARG0 i 
+                  :location~e.7 (c / country~e.9)) 
+            :mod (s / still~e.3)))
+
+# ::id wb.eng_0003.94 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Many people have legitimate preferences - horses , hunting , gardening , certain types of small business - that makes them NOT want to live in an urban core .
+# ::alignments 0-1.1.1 1-1.1 3-1.3 4-1 6-1.2.1 8-1.2.2 10-1.2.3 12-1.2.4.2.1 13-1.2.4.2 14-1.2.4.2.r 15-1.2.4.1 16-1.2.4 19-1.4 20-1.4.1.2 21-1.4.1.1 21-1.4.1.1.r 22-1.4.1 24-1.4.1.3 25-1.4.1.3.2.r 27-1.4.1.3.2.1 28-1.4.1.3.2
+(p / prefer-01~e.4 
+      :ARG0 (p2 / person~e.1 
+            :quant (m / many~e.0)) 
+      :ARG1 (a / and 
+            :op1 (h / horse~e.6) 
+            :op2 (h2 / hunt-01~e.8) 
+            :op3 (g / garden-01~e.10) 
+            :op4 (b / business~e.16 
+                  :mod (s / small~e.15) 
+                  :mod~e.14 (t / type~e.13 
+                        :mod (c / certain~e.12)))) 
+      :ARG1-of (l / legitimate-02~e.3) 
+      :ARG0-of (m2 / make-02~e.19 
+            :ARG1 (w / want-01~e.22 :polarity~e.21 -~e.21 
+                  :ARG0 p2~e.20 
+                  :ARG1 (l2 / live-01~e.24 
+                        :ARG0 p2 
+                        :location~e.25 (c3 / core~e.28 
+                              :mod (u / urban~e.27))))))
+
+# ::id wb.eng_0003.95 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok This infatuation with city living truly baffles me .
+# ::alignments 0-1.1.2 1-1.1 2-1.1.1.r 3-1.1.1.1 4-1.1.1 5-1.3 6-1 7-1.2
+(b / baffle-01~e.6 
+      :ARG0 (i / infatuation~e.1 
+            :topic~e.2 (l / live-01~e.4 
+                  :location (c / city~e.3)) 
+            :mod (t / this~e.0)) 
+      :ARG1 (i2 / i~e.7) 
+      :mod (t2 / true~e.5))
+
+# ::id wb.eng_0003.96 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Anonymous 6 @:@ 37 , You have every right to live in the country if that 's where you wish to live .
+# ::alignments 0-1.2.2.1 1-1.2.2.2 3-1.2.2.2 5-1.1.1 7-1.1.3 8-1.1 10-1.1.4.2 11-1.1.4.2 12-1.1.4.2 13-1.1.4.2 14-1.1.4.r 17-1.1.4.2 19-1.1.4 21-1.1.4.2
+(s / say-01 
+      :ARG1 (r / right-05~e.8 
+            :ARG1 p~e.5 
+            :ARG2 (l / live-01 
+                  :ARG0 p 
+                  :location (c / country)) 
+            :mod (e2 / every~e.7) 
+            :condition~e.14 (w / wish-01~e.19 
+                  :ARG0 p 
+                  :ARG1 l~e.10,11,12,13,17,21)) 
+      :ARG2 (p / person :wiki - 
+            :name (n / name :op1 "Anonymous"~e.0 :op2 "6:37"~e.1,3)))
+
+# ::id wb.eng_0003.97 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok But you do n't have a right to have the rest of the state to underwrite construction of a $ 400 million highway to make it easier to shop and get to work .
+# ::alignments 0-1 1-1.1.2 2-1.1.3.2.2.1.2.1 3-1.1.1 3-1.1.1.r 6-1.1 10-1.1.3.1 11-1.1.3.1.1.r 13-1.1.3.1.1 15-1.1.3 16-1.1.3.2 17-1.1.3.2.1.r 19-1.1.3.2.1.1.1.2 20-1.1.3.2.1.1.1.1 21-1.1.3.2.1.1.1.1 22-1.1.3.2.1 26-1.1.3.2.2 26-1.1.3.2.2.2 26-1.1.3.2.2.2.r 28-1.1.3.2.2.1.1 29-1.1.3.2.2.1 30-1.1.3.2.2.1.2 32-1.1.3.2.2.1.2.1
+(c2 / contrast-01~e.0 
+      :ARG2 (r / right-05~e.6 :polarity~e.3 -~e.3 
+            :ARG1 (y / you~e.1) 
+            :ARG2 (u / underwrite-01~e.15 
+                  :ARG0 (r2 / rest~e.10 
+                        :part-of~e.11 (s / state~e.13)) 
+                  :ARG1 (c / construct-01~e.16 
+                        :ARG1~e.17 (h / highway~e.22 
+                              :ARG1-of (c3 / cost-01 
+                                    :ARG2 (m / monetary-quantity :quant 400000000~e.20,21 
+                                          :unit (d / dollar~e.19)))) 
+                        :purpose (e / easy-05~e.26 
+                              :ARG1 (a / and~e.29 
+                                    :op1 (s2 / shop-01~e.28) 
+                                    :op2 (g / get-05~e.30 
+                                          :ARG2 (w / work-01~e.2,32))) 
+                              :degree~e.26 (m2 / more~e.26))))))
+
+# ::id wb.eng_0003.98 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok What 's consistently overlooked in the debate ovre 288 is what else that $ 400 million could have been spent on .
+# ::alignments 0-1.1 1-1.3 2-1.2 2-1.2.r 3-1 4-1.3.r 6-1.3 8-1.3.1.2.1 10-1.1 11-1.1.1 13-1.1.2.1.2 14-1.1.2.1.1 15-1.1.2.1.1 16-1.1.2.2 19-1.1.2
+(o / overlook-01~e.3 
+      :ARG1 (t / thing~e.0,10 
+            :mod (e / else~e.11) 
+            :ARG1-of (s2 / spend-01~e.19 
+                  :ARG3 (m2 / monetary-quantity :quant 400000000~e.14,15 
+                        :unit (d2 / dollar~e.13)) 
+                  :ARG1-of (p / possible-01~e.16))) 
+      :manner~e.2 (c / consistent~e.2) 
+      :prep-in~e.4 (d3 / debate-01~e.1,6 
+            :ARG1 (r / road :wiki "Virginia_State_Route_288" 
+                  :name (n / name :op1 288~e.8))))
+
+# ::id wb.eng_0003.99 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok How much traffic congestion could have been alleviated had the money been applied to other pressing road projects or , god forbid , even non @-@ road projects .
+# ::alignments 0-1.1.1.2.r 1-1.1.1.2 1-1.1.1.2.r 2-1.1.1.1 3-1.1.1 4-1 7-1.1 10-1.2.1 12-1.2 13-1.2.2.r 14-1.2.2.1.3 15-1.2.2.1.2 16-1.2.2.1.1 17-1.2.2.1 17-1.2.2.2 18-1.2.2 20-1.2.2.2.3.2 21-1.2.2.2.3 23-1.2.2.2.2 24-1.2.2.2.1.1 24-1.2.2.2.1.1.r 26-1.2.2.2.1 27-1.2.2.2
+(p / possible-01~e.4 
+      :ARG1 (a / alleviate-01~e.7 
+            :ARG1 (c / congest-01~e.3 
+                  :ARG2 (t / traffic~e.2) 
+                  :quant~e.0,1 (m2 / much~e.1))) 
+      :condition (a3 / apply-02~e.12 
+            :ARG1 (m / money~e.10) 
+            :ARG2~e.13 (o / or~e.18 
+                  :op1 (p2 / project~e.17 
+                        :mod (r / road~e.16) 
+                        :ARG2-of (p3 / press-01~e.15) 
+                        :mod (o2 / other~e.14)) 
+                  :op2 (p4 / project~e.17,27 
+                        :mod (r2 / road~e.26 :polarity~e.24 -~e.24) 
+                        :mod (e / even~e.23) 
+                        :ARG1-of (f / forbid-01~e.21 :mode imperative 
+                              :ARG0 (g / god~e.20))))))
+
+# ::id wb.eng_0003.100 ::amr-annotator ISI-AMR-01 ::preferred
+# ::tok Ray Hyde - My comments were directed at investors who lobby to place roads near where they own property and the incompetent system that funds these requests without regard to their link or lack thereof to a master transportation plan .
+# ::alignments 0-1.3.2.1 1-1.3.2.2 3-1.2.1.1.1 3-1.2.1.1.1.r 4-1.2.1 4-1.2.1.1 4-1.2.1.1.r 6-1.2 7-1.2.2.r 8-1.2.2.1 8-1.2.2.1.1 8-1.2.2.1.1.r 10-1.2.2.1.2 12-1.2.2.1.2.1 13-1.2.2.1.2.1.1 14-1.2.2.1.2.1.2 17-1.2.2.1.2.1.2.2 18-1.2.2.1.2.1.2.2.2 19-1.2.2 21-1.2.2.2.1 21-1.2.2.2.1.1 21-1.2.2.2.1.1.r 22-1.2.2.2 24-1.2.2.2.2 25-1.2.2.2.2.1.2 26-1.2.2.2.2.1 26-1.2.2.2.2.1.1 26-1.2.2.2.2.1.1.r 27-1.2.2.2.2.2.1 27-1.2.2.2.2.2.1.r 28-1.2.2.2.2.2 29-1.2.2.2.2.2.2.r 30-1.2.2.2.2.2.2.1.1 30-1.2.2.2.2.2.2.1.1.r 31-1.2.2.2.2.2.2.1 32-1.2.2.2.2.2.2 33-1.2.2.2.2.2.2.2 35-1.2.2.2.2.2.2.2.1.r 37-1.2.2.2.2.2.2.2.1 38-1.2.2.2.2.2.2.2.1 39-1.2.2.2.2.2.2.2.1
+(s2 / say-01 
+      :ARG0 i2 
+      :ARG1 (d / direct-01~e.6 
+            :ARG1 (t3 / thing~e.4 
+                  :ARG1-of~e.4 (c / comment-01~e.4 
+                        :ARG0~e.3 (i2 / i~e.3))) 
+            :ARG2~e.7 (a / and~e.19 
+                  :op1 (p2 / person~e.8 
+                        :ARG0-of~e.8 (i / invest-01~e.8) 
+                        :ARG0-of (l / lobby-01~e.10 
+                              :ARG1 (p3 / place-01~e.12 
+                                    :ARG1 (r / road~e.13) 
+                                    :ARG2 (n2 / near-02~e.14 
+                                          :ARG1 r 
+                                          :ARG2 (o / own-01~e.17 
+                                                :ARG0 p2 
+                                                :ARG1 (p4 / property~e.18)))))) 
+                  :op2 (s / system~e.22 
+                        :ARG1-of (c2 / competent-01~e.21 :polarity~e.21 -~e.21) 
+                        :ARG0-of (f / fund-01~e.24 
+                              :ARG1 (t5 / thing~e.26 
+                                    :ARG1-of~e.26 (r2 / request-01~e.26) 
+                                    :mod (t / this~e.25)) 
+                              :manner (r3 / regard-01~e.28 :polarity~e.27 -~e.27 
+                                    :ARG1~e.29 (o2 / or~e.32 
+                                          :op1 (l2 / link-01~e.31 
+                                                :ARG1~e.30 t5~e.30 
+                                                :ARG2 (p5 / plan-01 
+                                                      :ARG1 (t2 / transport-01) 
+                                                      :mod (m / master))) 
+                                          :op2 (l3 / lack-01~e.33 
+                                                :ARG1~e.35 l2~e.37,38,39))))))) 
+      :ARG2 (p / person :wiki - 
+            :name (n / name :op1 "Ray"~e.0 :op2 "Hyde"~e.1)))

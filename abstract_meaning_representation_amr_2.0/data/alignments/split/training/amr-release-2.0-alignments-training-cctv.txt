@@ -1,0 +1,3136 @@
+# AMR-English alignment release (generated on Sun Mar 6, 2016 at 21:21:49)
+
+# ::id bc.cctv_0000.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In the summer of 2005 , a picture that people have long been looking forward to started emerging with frequency in various major Hong Kong media .
+# ::alignments 2-1.3.2 4-1.3.1 7-1.1 9-1.1.1.1 11-1.1.1.2 13-1.1.1 14-1.1.1 16-1 17-1.2 18-1.2.1.r 19-1.2.1 20-1.2.2.r 21-1.2.2.1 22-1.2.2.2 23-1.2.2.3.2.1 24-1.2.2.3.2.2 25-1.2.2
+(s / start-01~e.16 
+      :ARG0 (p / picture~e.7 
+            :ARG1-of (l / look-forward-03~e.13,14 
+                  :ARG0 (p2 / person~e.9) 
+                  :ARG1-of (l2 / long-03~e.11))) 
+      :ARG1 (e / emerge-01~e.17 
+            :ARG1-of~e.18 (f / frequent-02~e.19) 
+            :location~e.20 (m / media~e.25 
+                  :mod (v / various~e.21) 
+                  :ARG1-of (m2 / major-02~e.22) 
+                  :location (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.23 :op2 "Kong"~e.24)))) 
+      :time (d / date-entity :year 2005~e.4 
+            :season (s2 / summer~e.2)))
+
+# ::id bc.cctv_0000.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok With their unique charm , these well - known cartoon images once again caused Hong Kong to be a focus of worldwide attention .
+# ::alignments 0-1.3.r 1-1.3.1 1-1.3.1.r 2-1.3.2 3-1.3 5-1.1.1 6-1.1.2.1 8-1.1.2 9-1.1.3 10-1.1 11-1.4.1 12-1.4 13-1 14-1.2.2.2.1 15-1.2.2.2.2 19-1.2 20-1.2.1.r 21-1.2.1.2 22-1.2.1
+(c3 / cause-01~e.13 
+      :ARG0 (i / image~e.10 
+            :mod (t / this~e.5) 
+            :ARG1-of (k / know-02~e.8 
+                  :degree (w / well~e.6)) 
+            :mod (c4 / cartoon~e.9)) 
+      :ARG1 (f / focus-01~e.19 
+            :ARG0~e.20 (a2 / attend-02~e.22 
+                  :ARG1 c 
+                  :mod (w2 / worldwide~e.21)) 
+            :ARG1 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.14 :op2 "Kong"~e.15))) 
+      :prep-with~e.0 (c6 / charm-01~e.3 
+            :ARG0~e.1 i~e.1 
+            :mod (u / unique~e.2)) 
+      :mod (a / again~e.12 
+            :mod (o / once~e.11)))
+
+# ::id bc.cctv_0000.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The world 's fifth Disney park will soon open to the public here .
+# ::alignments 1-1.1.3 2-1.1.3.r 3-1.1.4 3-1.1.4.1 3-1.1.4.1.r 4-1.1.2.1 5-1.1 7-1.3 8-1 9-1.2.r 11-1.2 12-1.2.1
+(o2 / open-01~e.8 
+      :ARG1 (p / park~e.5 :wiki "Hong_Kong_Disneyland" 
+            :name (n / name :op1 "Disney"~e.4) 
+            :poss~e.2 (w / world~e.1) 
+            :ord (o / ordinal-entity~e.3 :value~e.3 5~e.3)) 
+      :ARG3~e.9 (p2 / public~e.11 
+            :location (h / here~e.12)) 
+      :time (s / soon~e.7))
+
+# ::id bc.cctv_0000.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The most important thing about Disney is that it is a global brand .
+# ::alignments 1-1.1 2-1 5-1.2.2.2.1 6-1.2.r 9-1.2.2.r 9-1.2.r 11-1.2.1 12-1.2
+(i2 / important~e.2 
+      :degree (m2 / most~e.1) 
+      :domain~e.6,9 (b / brand~e.12 
+            :mod (g2 / globe~e.11) 
+            :domain~e.9 (c2 / company :wiki "The_Walt_Disney_Company" 
+                  :name (n2 / name :op1 "Disney"~e.5))))
+
+# ::id bc.cctv_0000.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Well , for several years , although it was still under construction and , er , not yet open , it can be said that many people have viewed Hong Kong with new respect .
+# ::alignments 0-1.3 3-1.1.2 4-1.1.2.1.2 6-1 7-1.2.1.1 9-1.2.1.2 11-1.2.1 12-1.2 14-1.2.2.4 14-1.2.2.4.1 14-1.2.2.4.1.r 14-1.3.1 16-1.2.2.1 16-1.2.2.1.r 17-1.2.2.3 18-1.2.2 20-1.2.2.2 21-1.1 23-1.1.1 24-1.1.1.1.r 25-1.1.1.1.1.1 26-1.1.1.1.1 28-1.1.1.1 29-1.1.1.1.2.2.1 30-1.1.1.1.2.2.2 31-1.1.1.1.3.r 32-1.1.1.1.3.3 33-1.1.1.1.3
+(h / have-concession-91~e.6 
+      :ARG1 (p / possible-01~e.21 
+            :ARG1 (s / say-01~e.23 
+                  :ARG1~e.24 (v / view-02~e.28 
+                        :ARG0 (p2 / person~e.26 
+                              :quant (m / many~e.25)) 
+                        :ARG1 (c / city :wiki "Hong_Kong" 
+                              :name (n / name :op1 "Hong"~e.29 :op2 "Kong"~e.30)) 
+                        :ARG2~e.31 (r / respect-01~e.33 
+                              :ARG0 p2 
+                              :ARG1 c 
+                              :ARG1-of (n2 / new-01~e.32)))) 
+            :duration (s3 / several~e.3 
+                  :op1 (t / temporal-quantity :quant 1 
+                        :unit (y / year~e.4)))) 
+      :ARG2 (a / and~e.12 
+            :op1 (c4 / construct-01~e.11 
+                  :ARG1 (i / it~e.7) 
+                  :mod (s2 / still~e.9)) 
+            :op2 (o / open-09~e.18 :polarity~e.16 -~e.16 
+                  :ARG1 i~e.20 
+                  :time (y2 / yet~e.17) 
+                  :mod (e / er~e.14 :mode~e.14 expressive~e.14))) 
+      :mod (w / well~e.0 :mode expressive~e.14))
+
+# ::id bc.cctv_0000.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Then welcome to the official writing ceremony of Hong Kong Disneyland .
+# ::alignments 0-1.2 1-1 2-1.1.r 4-1.1.2 5-1.1.1 6-1.1 7-1.1.3.r 8-1.1.3.2.1 9-1.1.3.2.2 10-1.1.3.2.3
+(w / welcome-01~e.1 
+      :ARG2~e.2 (c / ceremony~e.6 
+            :mod (w2 / write-01~e.5) 
+            :mod (o / official~e.4) 
+            :beneficiary~e.7 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Hong"~e.8 :op2 "Kong"~e.9 :op3 "Disneyland"~e.10))) 
+      :mod (t / then~e.0))
+
+# ::id bc.cctv_0000.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The construction of Hong Kong Disneyland began two years ago , in 2003 .
+# ::alignments 1-1.1 2-1.1.1.r 3-1.1.1.2.1 4-1.1.1.2.2 5-1.1.1.2.3 6-1 7-1.2.2.1 8-1.2.2.2 9-1.2 9-1.2.1 9-1.2.1.r 11-1.3.r 12-1.3.1
+(b / begin-01~e.6 
+      :ARG1 (c / construct-01~e.1 
+            :ARG1~e.2 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Hong"~e.3 :op2 "Kong"~e.4 :op3 "Disneyland"~e.5))) 
+      :time (b2 / before~e.9 
+            :op1~e.9 (n2 / now~e.9) 
+            :quant (t2 / temporal-quantity :quant 2~e.7 
+                  :unit (y / year~e.8))) 
+      :time~e.11 (d2 / date-entity :year 2003~e.12))
+
+# ::id bc.cctv_0000.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In January of that year , the Hong Kong government turned over to Disney Corporation 200 hectares of land at the foot of Lantau Island that was obtained following the largest land reclamation project in recent years .
+# ::alignments 1-1.4.1 1-1.4.1.r 3-1.4.2.1 4-1.4.2 7-1.1.1.1.2.1 8-1.1.1.1.2.2 9-1.1 9-1.1.1 9-1.1.1.r 10-1 11-1 12-1.3.r 13-1.3.2.1 14-1.3.2.2 15-1.2.1.1 16-1.2.1.2 17-1.2.1.r 18-1.2 19-1.2.2.r 21-1.2.2 22-1.2.2.1.r 23-1.2.2.1.2.1 24-1.2.2.1.2.2 25-1.4.2.1 27-1.2.3 28-1.2.3.1 30-1.2.3.1.1.2 30-1.2.3.1.1.2.1 30-1.2.3.1.1.2.1.r 31-1.2.3.1.1.1.1 33-1.2.3.1.1 34-1.2.3.1.1.2.2.r 35-1.2.3.1.1.2.2.1 36-1.2.3.1.1.2.2
+(t / turn-over-12~e.10,11 
+      :ARG0 (g / government-organization~e.9 
+            :ARG0-of~e.9 (g2 / govern-01~e.9 
+                  :ARG1 (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.7 :op2 "Kong"~e.8)))) 
+      :ARG1 (l3 / land~e.18 
+            :quant~e.17 (a / area-quantity :quant 200~e.15 
+                  :unit (h3 / hectare~e.16)) 
+            :location~e.19 (f / foot~e.21 
+                  :part-of~e.22 (i / island :wiki "Lantau_Island" 
+                        :name (n3 / name :op1 "Lantau"~e.23 :op2 "Island"~e.24))) 
+            :ARG1-of (o2 / obtain-01~e.27 
+                  :ARG1-of (f2 / follow-01~e.28 
+                        :ARG2 (p / project~e.33 
+                              :purpose (r / reclaim-01 
+                                    :ARG1 (l4 / land~e.31)) 
+                              :mod (l5 / large~e.30 
+                                    :degree~e.30 (m / most~e.30) 
+                                    :time~e.34 (y / year~e.36 
+                                          :mod (r2 / recent~e.35))))))) 
+      :ARG2~e.12 (c4 / company :wiki "The_Walt_Disney_Company" 
+            :name (n2 / name :op1 "Disney"~e.13 :op2 "Corporation"~e.14)) 
+      :time (d / date-entity :month~e.1 1~e.1 
+            :mod (y2 / year~e.4 
+                  :mod (t3 / that~e.3,25))))
+
+# ::id bc.cctv_0000.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok One .
+# ::alignments 0-1
+(o / one~e.0)
+
+# ::id bc.cctv_0000.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Since then , this area has become a prohibited zone in Hong Kong .
+# ::alignments 0-1.3 1-1.3.1 3-1.1.1 4-1.1 6-1 8-1.2.1 9-1.2 10-1.2.2.r 11-1.2.2.2.1 12-1.2.2.2.2
+(b / become-01~e.6 
+      :ARG1 (a / area~e.4 
+            :mod (t / this~e.3)) 
+      :ARG2 (z / zone~e.9 
+            :ARG1-of (p / prohibit-01~e.8) 
+            :part-of~e.10 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.11 :op2 "Kong"~e.12))) 
+      :time (s / since~e.0 
+            :op1 (t2 / then~e.1)))
+
+# ::id bc.cctv_0000.11 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok As its neighbor on Lantau Island , Hong Kong International Airport had to change its flight routes to make this area a no - fly zone .
+# ::alignments 1-1.3.1.2 2-1.3.1 3-1.3.1.3.r 4-1.3.1.3.2.1 5-1.3.1.3.2.2 7-1.1.2.1 8-1.1.2.2 9-1.1.2.3 10-1.1.2.4 11-1 12-1 12-1.3 12-1.3.r 13-1.2 14-1.3.1.2 15-1.2.2.1 16-1.2.2 18-1.2 18-1.2.3 18-1.2.3.r 19-1.2.3.2.2.1 20-1.2.3.2.2 22-1.2.3.2.1.1 22-1.2.3.2.1.1.r 24-1.2.3.2.1 25-1.2.3.2
+(o2 / obligate-01~e.11,12 
+      :ARG1 (a / airport :wiki "Hong_Kong_International_Airport" 
+            :name (n / name :op1 "Hong"~e.7 :op2 "Kong"~e.8 :op3 "International"~e.9 :op4 "Airport"~e.10)) 
+      :ARG2 (c / change-01~e.13,18 
+            :ARG0 a 
+            :ARG1 (r / route~e.16 
+                  :path-of (f / fly-01~e.15) 
+                  :poss a) 
+            :purpose~e.18 (m / make-02~e.18 
+                  :ARG0 a 
+                  :ARG1 (z / zone~e.25 
+                        :location-of (f2 / fly-01~e.24 :polarity~e.22 -~e.22) 
+                        :domain (a2 / area~e.20 
+                              :mod (t / this~e.19))))) 
+      :ARG1-of~e.12 (c2 / cause-01~e.12 
+            :ARG0 (n2 / neighbor-01~e.2 
+                  :ARG1 a 
+                  :ARG2 (i2 / it~e.1,14) 
+                  :location~e.3 (i / island :wiki "Lantau_Island" 
+                        :name (n3 / name :op1 "Lantau"~e.4 :op2 "Island"~e.5)))))
+
+# ::id bc.cctv_0000.12 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Mickey Mouse 's new home , settling on Chinese land for the first time , has captured worldwide attention .
+# ::alignments 0-1.1.1.2.1 1-1.1.1.2.2 2-1.1.1.r 3-1.1.2 4-1.1 6-1.1.3 7-1.1.3.1.r 8-1.1.3.1.1.2.1 9-1.1.3.1 10-1.1.3.2.r 12-1.1.3.2 12-1.1.3.2.1 12-1.1.3.2.1.r 16-1 17-1.2.2 18-1.2
+(c3 / capture-01~e.16 
+      :ARG0 (h / home~e.4 
+            :poss~e.2 (p / person :wiki "Mickey_Mouse" 
+                  :name (n2 / name :op1 "Mickey"~e.0 :op2 "Mouse"~e.1)) 
+            :ARG1-of (n / new-01~e.3) 
+            :ARG1-of (s / settle-03~e.6 
+                  :ARG4~e.7 (l / land~e.9 
+                        :mod (c4 / country :wiki "China" 
+                              :name (n3 / name :op1 "China"~e.8))) 
+                  :ord~e.10 (o / ordinal-entity~e.12 :value~e.12 1~e.12))) 
+      :ARG1 (a / attend-02~e.18 
+            :ARG1 h 
+            :mod (w / worldwide~e.17)))
+
+# ::id bc.cctv_0000.13 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There 's only one month left before the opening of Hong Kong Disneyland on September 12 .
+# ::alignments 2-1.1.3 3-1.1.1 4-1.1 4-1.1.2 4-1.1.2.r 5-1 6-1.2 8-1.2.1 9-1.2.1.1.r 10-1.2.1.1.2.1 11-1.2.1.1.2.2 12-1.2.1.1.2.3 13-1.2.1.2.r 14-1.2.1.2.1 14-1.2.1.2.1.r 15-1.2.1.2.2
+(l / leave-17~e.5 
+      :ARG1 (t / temporal-quantity~e.4 :quant 1~e.3 
+            :unit~e.4 (m / month~e.4) 
+            :mod (o2 / only~e.2)) 
+      :time (b4 / before~e.6 
+            :op1 (o / open-01~e.8 
+                  :ARG1~e.9 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                        :name (n / name :op1 "Hong"~e.10 :op2 "Kong"~e.11 :op3 "Disneyland"~e.12)) 
+                  :time~e.13 (d2 / date-entity :month~e.14 9~e.14 :day 12~e.15))))
+
+# ::id bc.cctv_0000.14 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The subway to Disney has already been constructed .
+# ::alignments 1-1.1 2-1.1.1.r 3-1.1.1.2.1 5-1.2 7-1
+(c / construct-01~e.7 
+      :ARG1 (s / subway~e.1 
+            :destination~e.2 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Disney"~e.3))) 
+      :time (a2 / already~e.5))
+
+# ::id bc.cctv_0000.15 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok At subway stations , passengers will frequently press the station for Disney on ticket machines , trying to purchase tickets to enjoy the park when it first opens .
+# ::alignments 1-1.5.1 2-1.5 4-1.1 6-1.3 7-1 9-1.2 9-1.5 10-1.2.1.r 11-1.2.1.2.1 12-1.6.r 13-1.6.1 14-1.6 16-1.4 18-1.4.2 19-1.4.2.2 21-1.4.2.3 23-1.4.2.3.2 24-1.4.2.3.3.r 25-1.4.2.3.3.1 26-1.4.2.3.3.2 26-1.4.2.3.3.2.1 26-1.4.2.3.3.2.1.r 27-1.4.2.3.3
+(p / press-01~e.7 
+      :ARG0 (p2 / passenger~e.4) 
+      :ARG1 (s / station~e.9 
+            :mod~e.10 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Disney"~e.11))) 
+      :ARG1-of (f / frequent-02~e.6) 
+      :purpose (t2 / try-01~e.16 
+            :ARG0 p2 
+            :ARG1 (p3 / purchase-01~e.18 
+                  :ARG0 p2 
+                  :ARG1 (t3 / ticket~e.19) 
+                  :purpose (e / enjoy-01~e.21 
+                        :ARG0 p2 
+                        :ARG1 a~e.23 
+                        :time~e.24 (o / open-01~e.27 
+                              :ARG1 a~e.25 
+                              :ord (o2 / ordinal-entity~e.26 :value~e.26 1~e.26))))) 
+      :location (s2 / station~e.2,9 
+            :mod (s3 / subway~e.1)) 
+      :prep-on~e.12 (m / machine~e.14 
+            :mod (t / ticket~e.13)))
+
+# ::id bc.cctv_0000.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Meanwhile , the Disney subway station is scheduled to open on the same day as the park .
+# ::alignments 0-1.3 3-1.1.1.2.2.1 4-1.1.1.1 5-1.1.1 7-1 9-1.1 9-1.2.1 13-1.2 14-1.2.1.r 14-1.3.r 16-1.1.1.2
+(s / schedule-01~e.7 
+      :ARG1 (o / open-01~e.9 
+            :ARG1 (s2 / station~e.5 
+                  :mod (s3 / subway~e.4) 
+                  :mod (a / amusement-park~e.16 :wiki "Hong_Kong_Disneyland" 
+                        :name (n2 / name :op1 "Disney"~e.3)))) 
+      :ARG3 (d2 / day~e.13 
+            :time-of~e.14 (o2 / open-01~e.9 
+                  :ARG1 a)) 
+      :time~e.14 (m / meanwhile~e.0))
+
+# ::id bc.cctv_0000.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For two years , Disney has constantly maintained its mystery .
+# ::alignments 1-1.3.1 2-1.3.2 4-1.1.2.1 6-1.4 6-1.4.r 7-1 8-1.2.1 8-1.2.1.r 9-1.2
+(m / maintain-01~e.7 
+      :ARG0 (c / company :wiki "The_Walt_Disney_Company" 
+            :name (n / name :op1 "Disney"~e.4)) 
+      :ARG1 (m2 / mystery~e.9 
+            :poss~e.8 c~e.8) 
+      :duration (t2 / temporal-quantity :quant 2~e.1 
+            :unit (y2 / year~e.2)) 
+      :manner~e.6 (c2 / constant~e.6))
+
+# ::id bc.cctv_0000.18 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok No media have been allowed to enter for photos .
+# ::alignments 0-1.1 0-1.1.r 1-1.2.1 4-1 6-1.2 7-1.2.2.r 8-1.2.2
+(a / allow-01~e.4 :polarity~e.0 -~e.0 
+      :ARG1 (e / enter-01~e.6 
+            :ARG0 (m / media~e.1) 
+            :purpose~e.7 (p / photograph-01~e.8)))
+
+# ::id bc.cctv_0000.19 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok We took a taxi along the path of the highway that heads toward Disney , trying to experience this mysterious park from close by .
+# ::alignments 0-1.1 1-1 3-1.2 4-1.4 6-1.4.1 7-1.4.1.1.r 9-1.4.1.1 11-1.4.1.1.1 13-1.4.1.1.1.1 15-1.3 17-1.3.2 18-1.3.2.3.1 19-1.3.2.3.1 20-1.3.2.3.1 22-1.3.2.3
+(t / take-01~e.1 
+      :ARG0 (w / we~e.0) 
+      :ARG1 (t2 / taxi~e.3) 
+      :purpose (t4 / try-01~e.15 
+            :ARG0 w 
+            :ARG1 (e / experience-01~e.17 
+                  :ARG0 w 
+                  :ARG1 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                        :name (n / name :op1 "Disney") 
+                        :mod (m / mysterious) 
+                        :mod (t3 / this)) 
+                  :location (c / close-10~e.22 
+                        :ARG2 a~e.18,19,20))) 
+      :path (a2 / along~e.4 
+            :op1 (p2 / path~e.6 
+                  :mod~e.7 (h / highway~e.9 
+                        :ARG0-of (h2 / head-02~e.11 
+                              :ARG1 a~e.13)))))
+
+# ::id bc.cctv_0000.20 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , before any of the Disney symbols were in sight , the car was stopped by a security guard at the intersection of the road towards Disney .
+# ::alignments 0-1 2-1.1.3 6-1.1.3.1.1.1.1 7-1.1.3.1.1 7-1.1.3.1.1.1 7-1.1.3.1.1.1.r 13-1.1.2 15-1.1 16-1.1.1.r 18-1.1.1.1 19-1.1.1 20-1.1.4.r 22-1.1.4 23-1.1.4.1.r 25-1.1.4.1 26-1.1.4.1.1.r 27-1.1.4.1.1.2.1
+(h / have-concession-91~e.0 
+      :ARG2 (s / stop-01~e.15 
+            :ARG0~e.16 (g2 / guard~e.19 
+                  :mod (s5 / security~e.18)) 
+            :ARG1 (c2 / car~e.13) 
+            :time (b / before~e.2 
+                  :op1 (s3 / see-01 
+                        :ARG1 (t / thing~e.7 
+                              :ARG1-of~e.7 (s4 / symbolize-01~e.7 
+                                    :ARG2 a~e.6)))) 
+            :location~e.20 (i / intersect-01~e.22 
+                  :ARG1~e.23 (r / road~e.25 
+                        :direction~e.26 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                              :name (n2 / name :op1 "Disney"~e.27))))))
+
+# ::id bc.cctv_0000.21 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok On our way back , the taxi driver gave us an explanation after understanding our intentions .
+# ::alignments 1-1.4.2 1-1.4.2.r 2-1.4 3-1.4.1 6-1.1.1.1 7-1.1 7-1.1.1 7-1.1.1.r 9-1.2 11-1 12-1.3 13-1.3.1 14-1.3.1.2.1.1 14-1.3.1.2.1.1.r 15-1.3.1.2 15-1.3.1.2.1 15-1.3.1.2.1.r
+(e2 / explain-01~e.11 
+      :ARG0 (p2 / person~e.7 
+            :ARG0-of~e.7 (d2 / drive-01~e.7 
+                  :ARG1 (t2 / taxi~e.6))) 
+      :ARG2 (w3 / we~e.9) 
+      :time (a2 / after~e.12 
+            :op1 (u2 / understand-01~e.13 
+                  :ARG0 p2 
+                  :ARG1 (t / thing~e.15 
+                        :ARG1-of~e.15 (i2 / intend-01~e.15 
+                              :ARG0~e.14 w3~e.14)))) 
+      :time (w4 / way~e.2 
+            :direction (b2 / back~e.3) 
+            :poss~e.1 w3~e.1))
+
+# ::id bc.cctv_0000.22 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Er , according to what the security guard said , for the time before everything is officially opened , opened , all , no cars can enter unless they have special permission .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 2-1 3-1 6-1.1.1.1 7-1.1 7-1.1.1 7-1.1.1.r 8-1 10-1.2.r 12-1.2.3.r 13-1.2.3 14-1.2.3.1.1 16-1.2.3.1.2 16-1.2.3.1.2.r 17-1.2.3.1 19-1.2.3.1 21-1.2.3.1.1.1 23-1.2.1 23-1.2.1.r 24-1.2.2.1 25-1.2 26-1.2.2 27-1.2.1 27-1.2.1.r 27-1.2.4.1 27-1.2.4.1.r 27-1.2.4.r 29-1.2.4 30-1.2.4.3.2 31-1.2.4.3
+(s / say-01~e.2,3,8 
+      :ARG0 (p / person~e.7 
+            :ARG0-of~e.7 (g / guard-01~e.7 
+                  :ARG1 (s2 / security~e.6))) 
+      :ARG1~e.10 (p2 / possible-01~e.25 :polarity~e.23,27 -~e.23,27 
+            :ARG1 (e2 / enter-01~e.26 
+                  :ARG0 (c / car~e.24)) 
+            :time~e.12 (b / before~e.13 
+                  :op1 (o / open-01~e.17,19 
+                        :ARG1 (e / everything~e.14 
+                              :mod (a / all~e.21)) 
+                        :manner~e.16 (o2 / official~e.16))) 
+            :condition~e.27 (h / have-03~e.29 :polarity~e.27 -~e.27 
+                  :ARG0 c 
+                  :ARG1 (p3 / permit-01~e.31 
+                        :ARG1 e2 
+                        :ARG1-of (s3 / special-02~e.30)))) 
+      :mod (e3 / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.23 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok No one can enter otherwise .
+# ::alignments 0-1.1.1 1-1.1.1 2-1 3-1.1 4-1.1.2
+(p / possible-01~e.2 
+      :ARG1 (e / enter-01~e.3 
+            :ARG0 (n / no-one~e.0,1) 
+            :mod (o / otherwise~e.4)))
+
+# ::id bc.cctv_0000.24 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Video recording is especially forbidden .
+# ::alignments 0-1.1.1 1-1.1 3-1.2 4-1
+(f / forbid-01~e.4 
+      :ARG1 (r / record-01~e.1 
+            :ARG1 (v / video~e.0)) 
+      :mod (e / especially~e.3))
+
+# ::id bc.cctv_0000.25 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , everything is top secret .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 2-1.1 3-1.1.r 4-1.2 5-1
+(s / secret~e.5 
+      :domain~e.3 (e / everything~e.2) 
+      :degree (t / top~e.4) 
+      :mod (a / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.26 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If pictures are taken without permission , %pw that is to say , it will at all times be pursued by legal action , a big hassle .
+# ::alignments 0-1 1-1.2.1 3-1.2 4-1.2.2.1 4-1.2.2.1.r 5-1.2.2 16-1.1.2.1 17-1.1.2 17-1.1.2.r 19-1.1 20-1.1.1.r 21-1.1.1.1 22-1.1.1 25-1.1.3.1 26-1.1.3
+(h2 / have-condition-91~e.0 
+      :ARG1 (p3 / pursue-01~e.19 
+            :ARG0~e.20 (a / act-02~e.22 
+                  :ARG1-of (l / legal-02~e.21)) 
+            :time~e.17 (t3 / time~e.17 
+                  :mod (a2 / all~e.16)) 
+            :ARG0-of (h / hassle-02~e.26 
+                  :mod (b / big~e.25))) 
+      :ARG2 (t / take-01~e.3 
+            :ARG1 (p / picture~e.1) 
+            :ARG1-of (p2 / permit-01~e.5 :polarity~e.4 -~e.4) 
+            :ARG1-of (m / mean-01 
+                  :ARG2 p3)))
+
+# ::id bc.cctv_0000.27 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Although Disney Corporation chose Hong Kong as the venue for the Chinese Disney park , what they are actually most excited about is the mainland China tourist market .
+# ::alignments 0-1 1-1.2.1.2.1 2-1.2.1.2.2 3-1.2 4-1.2.2.2.1 5-1.2.2.2.2 6-1.2.3.r 8-1.2.3 9-1.2.3.1.r 11-1.2.3.1.3.2.1 12-1.2.3.1.2.1 13-1.2.3.1 16-1.1.2 18-1.1.4 19-1.1.3 20-1.1 24-1.1.1.2 25-1.1.1.2.1 26-1.1.1.1 26-1.1.1.1.1 26-1.1.1.1.1.r 27-1.1.1
+(h / have-concession-91~e.0 
+      :ARG1 (e / excite-01~e.20 
+            :ARG0 (m / market~e.27 
+                  :mod (p / person~e.26 
+                        :ARG0-of~e.26 (t / tour-01~e.26)) 
+                  :location (m2 / mainland~e.24 
+                        :op1 c9~e.25)) 
+            :ARG1 c7~e.16 
+            :degree (m3 / most~e.19) 
+            :ARG1-of (a2 / actual-02~e.18)) 
+      :ARG2 (c6 / choose-01~e.3 
+            :ARG0 (c7 / company :wiki "The_Walt_Disney_Company" 
+                  :name (n / name :op1 "Disney"~e.1 :op2 "Corporation"~e.2)) 
+            :ARG1 (c / city :wiki "Hong_Kong" 
+                  :name (n2 / name :op1 "Hong"~e.4 :op2 "Kong"~e.5)) 
+            :ARG4~e.6 (v / venue~e.8 
+                  :location-of~e.9 (a / amusement-park~e.13 :wiki "Hong_Kong_Disneyland" 
+                        :name (n3 / name :op1 "Disney"~e.12) 
+                        :mod (c9 / country :wiki "China" 
+                              :name (n4 / name :op1 "China"~e.11))))))
+
+# ::id bc.cctv_0000.28 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Since the implementation of the Individual Visit Scheme between Hong Kong and the mainland , more and more mainland tourists are coming to visit Hong Kong .
+# ::alignments 0-1.3 2-1.3.1 3-1.3.1.1.r 5-1.3.1.1.2.1 6-1.3.1.1.2.2 7-1.3.1.1.2.3 8-1.3.1.1.3 9-1.3.1.1.3.1 10-1.3.1.1.3.1 11-1.3.1.1.3 13-1.1.1 15-1.1.2 17-1.1.2 18-1.1.1 19-1.1 19-1.1.3 19-1.1.3.r 21-1 22-1.2.r 23-1.2 24-1.2.2.2.1 25-1.2.2.2.2
+(c3 / come-01~e.21 
+      :ARG1 (p / person~e.19 
+            :source (m / mainland~e.13,18) 
+            :quant (m3 / more-and-more~e.15,17) 
+            :ARG0-of~e.19 (t / tour-01~e.19)) 
+      :ARG4~e.22 (v / visit-01~e.23 
+            :ARG0 p 
+            :ARG1 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.24 :op2 "Kong"~e.25))) 
+      :time (s / since~e.0 
+            :op1 (i2 / implement-01~e.2 
+                  :ARG1~e.3 (l / law :wiki "Individual_Visit_Scheme" 
+                        :name (n2 / name :op1 "Individual"~e.5 :op2 "Visit"~e.6 :op3 "Scheme"~e.7) 
+                        :beneficiary (b / between~e.8,11 
+                              :op1 c~e.9,10 
+                              :op2 m)))))
+
+# ::id bc.cctv_0000.29 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok From the beginning up till now , more than seven million individual tourists have , have come to Hong Kong .
+# ::alignments 0-1.3.1.r 2-1.3.1 5-1.3.2 7-1.1.1 8-1.1.1 9-1.1.1.1 10-1.1.1.1 11-1.1.2 12-1.1 12-1.1.3 12-1.1.3.r 16-1 17-1.2.r 18-1.2.2.1 19-1.2.2.2
+(c3 / come-01~e.16 
+      :ARG1 (p / person~e.12 
+            :quant (m / more-than~e.7,8 :op1 7000000~e.9,10) 
+            :mod (i / individual~e.11) 
+            :ARG0-of~e.12 (t / tour-01~e.12)) 
+      :ARG4~e.17 (c / city :wiki "Hong_Kong" 
+            :name (n2 / name :op1 "Hong"~e.18 :op2 "Kong"~e.19)) 
+      :time (d / date-interval 
+            :op1~e.0 (b / begin-01~e.2) 
+            :op2 (n / now~e.5)))
+
+# ::id bc.cctv_0000.30 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Well , we now , er , believe more will be coming .
+# ::alignments 0-1.5 2-1.1 3-1.3 5-1.4 5-1.4.1 5-1.4.1.r 7-1 8-1.2.1 11-1.2
+(b / believe-01~e.7 
+      :ARG0 (w / we~e.2) 
+      :ARG1 (c / come-01~e.11 
+            :ARG1 (m / more~e.8)) 
+      :time (n / now~e.3) 
+      :mod (e / er~e.5 :mode~e.5 expressive~e.5) 
+      :mod (w2 / well~e.0))
+
+# ::id bc.cctv_0000.31 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok At this point , it has been about two years .
+# ::alignments 1-1.2.1 2-1.2 7-1.1 8-1.1.1.1 9-1.1.1.2
+(l / last-01 
+      :ARG2 (a / about~e.7 
+            :op1 (t3 / temporal-quantity :quant 2~e.8 
+                  :unit (y / year~e.9))) 
+      :time (p2 / point~e.2 
+            :mod (t / this~e.1)))
+
+# ::id bc.cctv_0000.32 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Also , the current number of 34 cities will be increased .
+# ::alignments 0-1.3 3-1.2.2 4-1.2 6-1.1 7-1.2.1 10-1
+(i / increase-01~e.10 :ARG3 34~e.6 
+      :ARG1 (n / number~e.4 
+            :quant-of (c / city~e.7) 
+            :time (c2 / current~e.3)) 
+      :mod (a / also~e.0))
+
+# ::id bc.cctv_0000.33 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong was developed from a fishing harbor one hundred years ago to become today 's international metropolis .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 3-1 4-1.2.r 6-1.2.1 7-1.2 8-1.2.2.2.1 9-1.2.2.2.1 10-1.2.2.2.2 11-1.2.2 11-1.2.2.1 11-1.2.2.1.r 13-1.1 13-1.1.3 13-1.1.3.r 14-1.1.3.1.2 15-1.1.3.1.2.r 16-1.1.3.1.1 17-1.1.3.1
+(d / develop-02~e.3 
+      :ARG1 (c / city~e.13 :wiki "Hong_Kong" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1) 
+            :ARG1-of~e.13 (b / become-01~e.13 
+                  :ARG2 (m / metropolis~e.17 
+                        :mod (i / international~e.16) 
+                        :time~e.15 (t2 / today~e.14)))) 
+      :ARG2~e.4 (h3 / harbor~e.7 
+            :mod (f / fish-01~e.6) 
+            :time (b2 / before~e.11 
+                  :op1~e.11 (n2 / now~e.11) 
+                  :quant (t / temporal-quantity :quant 100~e.8,9 
+                        :unit (y / year~e.10)))))
+
+# ::id bc.cctv_0000.34 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Here , eastern and western cultures have gathered , and the new and the old coexist .
+# ::alignments 0-1.3 2-1.1.1.1.1.2.1 3-1.1.1 4-1.1.1.2.1.2.1 5-1.1.1.1 5-1.1.1.2 7-1.1 9-1 11-1.2.1 14-1.2.2 15-1.2
+(a / and~e.9 
+      :op1 (g / gather-01~e.7 
+            :ARG1 (a3 / and~e.3 
+                  :op1 (c / culture~e.5 
+                        :mod (w2 / world-region :wiki "Eastern_world" 
+                              :name (n2 / name :op1 "East"~e.2))) 
+                  :op2 (c3 / culture~e.5 
+                        :mod (w / world-region :wiki "Western_world" 
+                              :name (n3 / name :op1 "West"~e.4))))) 
+      :op2 (c2 / coexist-01~e.15 
+            :ARG1 (n / new-01~e.11) 
+            :ARG2 (o / old~e.14)) 
+      :location (h / here~e.0))
+
+# ::id bc.cctv_0000.35 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok When in Hong Kong , you can wander among skyscrapers , heartily enjoy shopping sprees in well - known stores and malls for goods from various countries , and taste delicious snacks from all over the world at tea shops or at street stands in Mong Kok .
+# ::alignments 0-1.2.r 2-1.2.2.2.1 3-1.2.2.2.2 5-1.1.1.1 6-1 7-1.1.1 8-1.1.1.2 9-1.1.1.2.1 11-1.1.2.3 11-1.1.2.3.r 12-1.1.2 13-1.1.2.2.1 14-1.1.2.2 16-1.1.2.2.1.2 16-1.1.2.2.1.3.3.1 18-1.1.2.2.1.3.3 19-1.1.2.2.1.3.1 20-1.1.2.2.1.3 21-1.1.2.2.1.3.2 23-1.1.2.2.1.2 24-1.1.2.2.1.2.1.r 25-1.1.2.2.1.2.1.1 26-1.1.2.2.1.2.1 28-1.1 29-1.1.3 30-1.1.3.2.3 31-1.1.3.2 32-1.1.3.2.1.r 33-1.1.3.2.1 34-1.1.3.2.1 36-1.1.3.2.1.1 37-1.2 38-1.1.3.2.2.1.1 39-1.1.3.2.2.1 40-1.1.3.2.2 41-1.2 42-1.1.3.2.2.2.1 43-1.1.3.2.2.2 44-1.1.3.2.2.r 45-1.1.3.2.2.3.2.1 46-1.1.3.2.2.3.2.2
+(p / possible-01~e.6 
+      :ARG1 (a / and~e.28 
+            :op1 (w / wander-01~e.7 
+                  :ARG0 (y / you~e.5) 
+                  :ARG1 (a2 / among~e.8 
+                        :op1 (s / skyscraper~e.9))) 
+            :op2 (e / enjoy-01~e.12 
+                  :ARG0 y 
+                  :ARG1 (s2 / spree~e.14 
+                        :mod (s3 / shop-01~e.13 
+                              :ARG0 y 
+                              :ARG1 (g / good~e.16,23 
+                                    :source~e.24 (c3 / country~e.26 
+                                          :mod (v / various~e.25))) 
+                              :ARG2 (a3 / and~e.20 
+                                    :op1 (s4 / store~e.19) 
+                                    :op2 (m2 / mall~e.21) 
+                                    :ARG1-of (k / know-02~e.18 
+                                          :degree (w2 / well~e.16))))) 
+                  :manner~e.11 (h3 / hearty~e.11)) 
+            :op3 (t / taste-01~e.29 
+                  :ARG0 y 
+                  :ARG1 (s5 / snack~e.31 
+                        :source~e.32 (a4 / all-over~e.33,34 
+                              :op1 (w4 / world~e.36)) 
+                        :location~e.44 (o / or~e.40 
+                              :op1 (s6 / shop~e.39 
+                                    :mod (t2 / tea~e.38)) 
+                              :op2 (s7 / stand~e.43 
+                                    :location (s8 / street~e.42)) 
+                              :location (c2 / city-district :wiki "Mong_Kok" 
+                                    :name (n2 / name :op1 "Mong"~e.45 :op2 "Kok"~e.46))) 
+                        :mod (d / delicious~e.30)))) 
+      :time~e.0 (b / be-located-at-91~e.37,41 
+            :ARG1 y 
+            :ARG2 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.2 :op2 "Kong"~e.3))))
+
+# ::id bc.cctv_0000.36 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You can go to burn incense and make a vow at the Repulse Bay , where all deities gather .
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2.r 4-1.1.2.1 5-1.1.2.1.2 6-1.1.2 7-1.1.2.2 9-1.1.2.2 10-1.1.2.2.2.r 12-1.1.2.2.2.2.1 13-1.1.2.2.2.2.2 15-1.1.2.2.2.3.r 16-1.1.2.2.2.3.1.1 17-1.1.2.2.2.3.1 18-1.1.2.2.2.3
+(p / possible-01~e.1 
+      :ARG1 (g / go-01~e.2 
+            :ARG1 (y / you~e.0) 
+            :purpose~e.3 (a / and~e.6 
+                  :op1 (b / burn-01~e.4 
+                        :ARG0 y 
+                        :ARG1 (i / incense~e.5)) 
+                  :op2 (v / vow-01~e.7,9 
+                        :ARG0 y 
+                        :location~e.10 (b2 / bay :wiki "Repulse_Bay" 
+                              :name (n / name :op1 "Repulse"~e.12 :op2 "Bay"~e.13) 
+                              :location-of~e.15 (g2 / gather-03~e.18 
+                                    :ARG0 (d / deity~e.17 
+                                          :mod (a2 / all~e.16))))))))
+
+# ::id bc.cctv_0000.37 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You can enjoy the most charming sun - filled sandy beaches in Hong Kong .
+# ::alignments 0-1.1.1 1-1 2-1.1 4-1.1.2.2.1 5-1.1.2.2 6-1.1.2.1.1 8-1.1.2.1 10-1.1.2 11-1.2.r 12-1.2.2.1 13-1.2.2.2
+(p / possible-01~e.1 
+      :ARG1 (e / enjoy-01~e.2 
+            :ARG0 (y / you~e.0) 
+            :ARG1 (b / beach~e.10 
+                  :ARG1-of (f / fill-01~e.8 
+                        :ARG2 (s / sun~e.6)) 
+                  :ARG0-of (c3 / charm-01~e.5 
+                        :degree (m / most~e.4)) 
+                  :mod (s2 / sand))) 
+      :location~e.11 (c / city :wiki "Hong_Kong" 
+            :name (n / name :op1 "Hong"~e.12 :op2 "Kong"~e.13)))
+
+# ::id bc.cctv_0000.38 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You can ascend Victoria Peak to get a panoramic view of Victoria Harbor 's beautiful scenery .
+# ::alignments 0-1.1.1 1-1 2-1.1 3-1.1.2.2.1 4-1.1.2.2.2 6-1.1.3 8-1.1.3.2.2 9-1.1.3.2 10-1.1.3.2.1.r 11-1.1.3.2.1.2.2.1 12-1.1.3.2.1.2.2.2 14-1.1.3.2.1.1 15-1.1.3.2.1
+(p / possible-01~e.1 
+      :ARG1 (a / ascend-01~e.2 
+            :ARG0 (y / you~e.0) 
+            :ARG1 (m / mountain :wiki "Victoria_Peak" 
+                  :name (n / name :op1 "Victoria"~e.3 :op2 "Peak"~e.4)) 
+            :purpose (g / get-01~e.6 
+                  :ARG0 y 
+                  :ARG1 (v3 / view-01~e.9 
+                        :ARG1~e.10 (s / scenery~e.15 
+                              :ARG1-of (b / beautiful-02~e.14) 
+                              :poss (h / harbor :wiki "Victoria_Harbour" 
+                                    :name (n2 / name :op1 "Victoria"~e.11 :op2 "Harbor"~e.12))) 
+                        :mod (p2 / panoramic~e.8)))))
+
+# ::id bc.cctv_0000.39 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Or hop onto a trolley with over a century of history , and feel the city 's blend of the old and the modern in slow motion .
+# ::alignments 0-1 1-1.1.1 4-1.1.1.1 5-1.1.1.1.1.r 6-1.1.1.1.1.1 7-1.1.1.1.1.1.1.1 8-1.1.1.1.1.1.1.2 10-1.1.1.1.1 12-1.1 13-1.1.2 15-1.1.2.1.3 16-1.1.2.1.3.r 17-1.1.2.1 18-1.1.2.1.1.r 20-1.1.2.1.1 23-1.1.2.1.2 24-1.1.2.2.r 25-1.1.2.2.1 26-1.1.2.2
+(o2 / or~e.0 
+      :op2 (a / and~e.12 
+            :op1 (h / hop-02~e.1 
+                  :ARG1 (t / trolley~e.4 
+                        :mod~e.5 (h2 / history~e.10 
+                              :duration (o3 / over~e.6 
+                                    :op1 (t2 / temporal-quantity :quant 1~e.7 
+                                          :unit (c / century~e.8)))))) 
+            :op2 (f / feel-01~e.13 
+                  :ARG1 (b / blend-01~e.17 
+                        :ARG1~e.18 (o4 / old~e.20) 
+                        :ARG2 (m / modern-02~e.23) 
+                        :location~e.16 (c3 / city~e.15)) 
+                  :manner~e.24 (m2 / motion~e.26 
+                        :ARG1-of (s / slow-01~e.25)))))
+
+# ::id bc.cctv_0000.40 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok After dark , cruise Victoria Harbor at night to enjoy the enchanting evening view .
+# ::alignments 0-1.5 3-1 4-1.3.2.1 5-1.3.2.2 7-1.3.3.1 9-1.4 11-1.4.2.2 12-1.4.2.1.1 13-1.4.2
+(c / cruise-01~e.3 :mode imperative 
+      :ARG0 (y / you) 
+      :location (h / harbor :wiki "Victoria_Harbour" 
+            :name (n / name :op1 "Victoria"~e.4 :op2 "Harbor"~e.5) 
+            :time (d3 / date-entity 
+                  :dayperiod (n2 / night~e.7))) 
+      :purpose (e / enjoy-01~e.9 
+            :ARG0 y 
+            :ARG1 (v2 / view-01~e.13 
+                  :time (d2 / date-entity 
+                        :dayperiod (e2 / evening~e.12)) 
+                  :ARG0-of (e3 / enchant-01~e.11))) 
+      :time (a / after~e.0 
+            :op1 (d / darken-01)))
+
+# ::id bc.cctv_0000.41 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Every corner of Hong Kong is filled with fun .
+# ::alignments 0-1.1.1 1-1.1 2-1.1.2.r 3-1.1.2.2.1 4-1.1.2.2.2 6-1 7-1.2.r 8-1.2
+(f / fill-01~e.6 
+      :ARG1 (c4 / corner~e.1 
+            :mod (e / every~e.0) 
+            :part-of~e.2 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.3 :op2 "Kong"~e.4))) 
+      :ARG2~e.7 (f2 / fun-01~e.8))
+
+# ::id bc.cctv_0000.42 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Meanwhile , as various new items are constantly being added , what other kinds of pleasant surprises will the Hong Kong tourism industry bring us ?
+# ::alignments 0-1.4 2-1.4.1.r 2-1.4.r 3-1.4.1.1.1 4-1.4.1.1.2 5-1.4.1.1 7-1.4.1.2 7-1.4.1.2.r 9-1.4.1 11-1.2 11-1.2.1.1 12-1.2.4 13-1.2.1 14-1.2.3.r 15-1.2.3 16-1.2.2 19-1.1.2.2.1 20-1.1.2.2.2 21-1.1.1 22-1.1 23-1 24-1.3
+(b / bring-01~e.23 
+      :ARG0 (i / industry~e.22 
+            :mod (t3 / tourism~e.21) 
+            :mod (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.19 :op2 "Kong"~e.20))) 
+      :ARG1 (t2 / thing~e.11 
+            :mod (k / kind~e.13 
+                  :mod (a / amr-unknown~e.11)) 
+            :ARG2-of (s / surprise-01~e.16 
+                  :ARG1 w) 
+            :ARG1-of~e.14 (p / pleasant-02~e.15) 
+            :mod (o / other~e.12)) 
+      :ARG2 (w / we~e.24) 
+      :time~e.2 (m / meanwhile~e.0 
+            :time-of~e.2 (a2 / add-02~e.9 
+                  :ARG1 (i2 / item~e.5 
+                        :mod (v / various~e.3) 
+                        :ARG1-of (n2 / new-01~e.4)) 
+                  :manner~e.7 (c4 / constant~e.7))))
+
+# ::id bc.cctv_0000.43 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Over the past 28 years , the Ocean Park has basically been a must - see destination for tourists coming to Hong Kong .
+# ::alignments 2-1.4 2-1.4.1 2-1.4.1.r 3-1.4.2.1 4-1.4.2.2 7-1.1.2.1 8-1.1.2.2 9-1.2.2 10-1.3 11-1.1.r 13-1.2.2 15-1.2 16-1 17-1.2.1.r 18-1.2.1 18-1.2.1.2 18-1.2.1.2.r 19-1.2.1.1 20-1.2.1.1.1.r 21-1.2.1.1.1.2.1 22-1.2.1.1.1.2.2
+(d / destination~e.16 
+      :domain~e.11 (a / amusement-park :wiki "Ocean_Park_Hong_Kong" 
+            :name (n2 / name :op1 "Ocean"~e.7 :op2 "Park"~e.8)) 
+      :ARG1-of (s / see-01~e.15 
+            :ARG0~e.17 (p2 / person~e.18 
+                  :ARG1-of (c3 / come-01~e.19 
+                        :ARG4~e.20 (c / city :wiki "Hong_Kong" 
+                              :name (n / name :op1 "Hong"~e.21 :op2 "Kong"~e.22))) 
+                  :ARG0-of~e.18 (t / tour-01~e.18)) 
+            :ARG2-of (o2 / obligate-01~e.9,13)) 
+      :mod (b / basic~e.10) 
+      :time (b2 / before~e.2 
+            :op1~e.2 (n3 / now~e.2) 
+            :duration (t2 / temporal-quantity :quant 28~e.3 
+                  :unit (y / year~e.4))))
+
+# ::id bc.cctv_0000.44 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Watch spectacular performances by dolphins and sea lions at the Ocean Theater , and experience passionate screaming and accelerating heart - beat adventures on amusement rides .
+# ::alignments 0-1.1 1-1.1.1.3 2-1.1.1 3-1.1.1.1.r 4-1.1.1.1.1 5-1.1.1.1 6-1.1.1.1.2 7-1.1.1.1.2 8-1.1.1.2.r 10-1.1.1.2.2.1 11-1.1.1.2.2.2 13-1 14-1.2 15-1.2.1.1.1 16-1.2.1.1 17-1.2.1 18-1.2.1.2.2 19-1.2.1.2.2.1.1 21-1.2.1.2.2.1 22-1.2.1.2 23-1.2.1.2.1.r 24-1.2.1.2.1.1 25-1.2.1.2.1
+(a / and~e.13 
+      :op1 (w / watch-01~e.0 
+            :ARG1 (p / perform-01~e.2 
+                  :ARG0~e.3 (a2 / and~e.5 
+                        :op1 (d / dolphin~e.4) 
+                        :op2 (s / sea-lion~e.6,7)) 
+                  :location~e.8 (t / theater :wiki - 
+                        :name (n / name :op1 "Ocean"~e.10 :op2 "Theater"~e.11)) 
+                  :mod (s3 / spectacular~e.1))) 
+      :op2 (e / experience-01~e.14 
+            :ARG1 (a3 / and~e.17 
+                  :op1 (s2 / scream-01~e.16 
+                        :mod (p2 / passionate~e.15)) 
+                  :op2 (a5 / adventure~e.22 
+                        :location~e.23 (r / ride-01~e.25 
+                              :ARG0-of (a6 / amuse-01~e.24)) 
+                        :ARG0-of (a4 / accelerate-01~e.18 
+                              :ARG1 (b / beat-01~e.21 
+                                    :ARG0 (h / heart~e.19)))))))
+
+# ::id bc.cctv_0000.45 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Or ride the giant Ferris wheel to get a bird 's eye view from high above of the magnificent panorama of Hong Kong Island and the South China Sea .
+# ::alignments 0-1 1-1.1 3-1.1.3.3 4-1.1.3.2.1 5-1.1.3 9-1.1.4.3.1 10-1.1.4.3.1.r 11-1.1.4.3 12-1.1.4 13-1.1.4.4.r 14-1.1.4.4.1 15-1.1.4.4 16-1.1.4.2.r 18-1.1.4.2.1 19-1.1.4.2 20-1.1.4.2.2.r 21-1.1.4.2.2.2.1 22-1.1.4.2.2.2.2 23-1.1.4.2.2.2.3 26-1.1.4.2.3.2.1 27-1.1.4.2.3.2.2 28-1.1.4.2.3.2.3
+(o / or~e.0 
+      :op2 (r / ride-01~e.1 :mode imperative 
+            :ARG0 (y / you) 
+            :ARG1 (w / wheel~e.5 :wiki "Ferris_wheel" 
+                  :name (n / name :op1 "Ferris"~e.4) 
+                  :mod (g / giant~e.3)) 
+            :purpose (v / view-01~e.12 
+                  :ARG0 y 
+                  :ARG1~e.16 (p / panorama~e.19 
+                        :mod (m / magnificent~e.18) 
+                        :mod~e.20 (i / island :wiki "Hong_Kong_Island" 
+                              :name (n2 / name :op1 "Hong"~e.21 :op2 "Kong"~e.22 :op3 "Island"~e.23)) 
+                        :mod (s2 / sea :wiki "South_China_Sea" 
+                              :name (n3 / name :op1 "South"~e.26 :op2 "China"~e.27 :op3 "Sea"~e.28))) 
+                  :mod (e / eye~e.11 
+                        :part-of~e.10 (b / bird~e.9)) 
+                  :prep-from~e.13 (a / above~e.15 
+                        :ARG1-of (h / high-02~e.14)))))
+
+# ::id bc.cctv_0000.46 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok These items , which were the pride of the Ocean Park , have made this place the most popular tourist attraction in Hong Kong for some time .
+# ::alignments 0-1.1.1 1-1.1 6-1.1.2 7-1.1.2.1.r 9-1.1.2.1.2.1 10-1.1.2.1.2.2 13-1 14-1.1.1 17-1.2.3.2 18-1.2.3 19-1.2.2 19-1.2.2.1 19-1.2.2.1.r 20-1.2 21-1.2.3.3.r 22-1.2.3.3.2.1 23-1.2.3.3.2.2 24-1.3.r 25-1.3.1 26-1.3
+(m / make-02~e.13 
+      :ARG0 (i / item~e.1 
+            :mod (t / this~e.0,14) 
+            :ARG2-of (p / pride-01~e.6 
+                  :ARG0~e.7 (a / amusement-park :wiki "Ocean_Park_Hong_Kong" 
+                        :name (n / name :op1 "Ocean"~e.9 :op2 "Park"~e.10)))) 
+      :ARG1 (a2 / attract-01~e.20 
+            :ARG0 a 
+            :ARG1 (p2 / person~e.19 
+                  :ARG0-of~e.19 (t2 / tour-01~e.19)) 
+            :ARG1-of (p3 / popular-02~e.18 
+                  :ARG2 p2 
+                  :degree (m2 / most~e.17) 
+                  :compared-to~e.21 (c / city :wiki "Hong_Kong" 
+                        :name (n2 / name :op1 "Hong"~e.22 :op2 "Kong"~e.23)))) 
+      :duration~e.24 (t3 / time~e.26 
+            :quant (s / some~e.25)))
+
+# ::id bc.cctv_0000.47 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , since Disney entered Hong Kong , the Ocean Park , sharing the same city as Disney , has felt the pressure of competition .
+# ::alignments 0-1 2-1.1.3 2-1.1.4 3-1.1.3.1.1.2.1 4-1.1.3.1 5-1.1.3.1.2.2.1 6-1.1.3.1.2.2.2 9-1.1.1.2.1 10-1.1.1.2.2 12-1.1.4.1 14-1.1.4.1.1.1 15-1.1.4.1.1 16-1.1.3.r 17-1.1.3.1.1.2.1 19-1.1 20-1.1 22-1.1.2 23-1.1.2.1.r 24-1.1.2.1
+(h / have-concession-91~e.0 
+      :ARG1 (f / feel-01~e.19,20 
+            :ARG0 (a / amusement-park :wiki "Ocean_Park_Hong_Kong" 
+                  :name (n / name :op1 "Ocean"~e.9 :op2 "Park"~e.10)) 
+            :ARG1 (p / pressure-01~e.22 
+                  :ARG0~e.23 (c3 / compete-02~e.24 
+                        :ARG0 a) 
+                  :ARG1 a) 
+            :time~e.16 (s / since~e.2 
+                  :op1 (e / enter-01~e.4 
+                        :ARG0 (c5 / company :wiki "The_Walt_Disney_Company" 
+                              :name (n2 / name :op1 "Disney"~e.3,17)) 
+                        :ARG1 (c2 / city :wiki "Hong_Kong" 
+                              :name (n3 / name :op1 "Hong"~e.5 :op2 "Kong"~e.6)))) 
+            :ARG1-of (c / cause-01~e.2 
+                  :ARG0 (s2 / share-01~e.12 
+                        :ARG1 (c7 / city~e.15 
+                              :ARG1-of (s3 / same-01~e.14 
+                                    :ARG2 c5)) 
+                        :ARG2 c5))))
+
+# ::id bc.cctv_0000.48 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok To improve the park 's brand , they are planning to invest 5.5 billion in a renovation project starting in 2006 .
+# ::alignments 1-1.2.4 3-1.2.4.2.1 4-1.2.4.2.1.r 5-1.2.4.2 7-1.1 9-1 11-1.2 12-1.2.2.1 13-1.2.2.1 14-1.2.3.r 16-1.2.3.1 17-1.2.3 18-1.2.3.2 19-1.2.3.2.1.r 20-1.2.3.2.1.1
+(p / plan-01~e.9 
+      :ARG0 (t / they~e.7) 
+      :ARG1 (i / invest-01~e.11 
+            :ARG0 t 
+            :ARG1 (m / monetary-quantity :quant 5500000000~e.12,13) 
+            :ARG2~e.14 (p2 / project~e.17 
+                  :purpose (r / renovate-01~e.16 
+                        :ARG1 p3) 
+                  :ARG1-of (s / start-01~e.18 
+                        :time~e.19 (d2 / date-entity :year 2006~e.20))) 
+            :purpose (i2 / improve-01~e.1 
+                  :ARG0 t 
+                  :ARG1 (b / brand~e.5 
+                        :poss~e.4 (p3 / park~e.3)))))
+
+# ::id bc.cctv_0000.49 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It seems that for the future , we have a scheme , a major renovation plan .
+# ::alignments 1-1 3-1.1.r 5-1.1.2.2 7-1.1.1 8-1.1 10-1.1.2 13-1.1.2.1.2 14-1.1.2.1.1 15-1.1.2.1
+(s2 / seem-01~e.1 
+      :ARG1~e.3 (h / have-03~e.8 
+            :ARG0 (w / we~e.7) 
+            :ARG1 (s / scheme~e.10 
+                  :mod (p / plan-01~e.15 
+                        :ARG1 (r / renovate-01~e.14) 
+                        :ARG1-of (m / major-02~e.13)) 
+                  :purpose (f / future~e.5))))
+
+# ::id bc.cctv_0000.50 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok That is , the entire park will be divided into seven sections for renovation .
+# ::alignments 4-1.1.1.1 5-1.1.1 8-1.1 9-1.1.2.r 10-1.1.2.1 11-1.1.2 12-1.1.3.r 13-1.1.3
+(m / mean-01 
+      :ARG2 (d / divide-02~e.8 
+            :ARG1 (p / park~e.5 
+                  :mod (e / entire~e.4)) 
+            :ARG2~e.9 (s / section~e.11 :quant 7~e.10) 
+            :purpose~e.12 (r / renovate-01~e.13 
+                  :ARG1 p)))
+
+# ::id bc.cctv_0000.51 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , additional , newer , ah , attractions will be available for tourists .
+# ::alignments 0-1.2.3 0-1.2.3.1 0-1.2.3.1.r 4-1.2 4-1.2.1 4-1.2.1.1 4-1.2.1.1.r 4-1.2.1.r 6-1.2.3 6-1.2.3.1 6-1.2.3.1.r 6-1.3 6-1.3.1 6-1.3.1.r 8-1.2.4 11-1 12-1.1.r 13-1.1 13-1.1.1 13-1.1.1.r
+(a2 / available-02~e.11 
+      :ARG1~e.12 (p / person~e.13 
+            :ARG0-of~e.13 (t / tour-01~e.13)) 
+      :ARG2 (t2 / thing~e.4 
+            :ARG1-of~e.4 (n / new-01~e.4 
+                  :degree~e.4 (m / more~e.4)) 
+            :ARG1-of (a4 / add-02) 
+            :mod (a5 / ah~e.0,6 :mode~e.0,6 expressive~e.0,6) 
+            :ARG0-of (a / attract-01~e.8 
+                  :ARG1 p)) 
+      :mod (a3 / ah~e.6 :mode~e.6 expressive~e.6))
+
+# ::id bc.cctv_0000.52 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It seems that those attractions like the North Pole and the Marine Life Center will also be renovated after several years .
+# ::alignments 1-1 4-1.1.1 4-1.1.1.2 4-1.1.1.2.r 5-1.1.1.1.r 7-1.1.1.1.1.2.1 8-1.1.1.1.1.2.2 9-1.1.1.1 11-1.1.1.1.2.2.1 12-1.1.1.1.2.2.2 13-1.1.1.1.2.2.3 15-1.1.3 17-1.1 18-1.1.2 19-1.1.2.1 20-1.1.2.1.1.2
+(s / seem-01~e.1 
+      :ARG1 (r / renovate-01~e.17 
+            :ARG1 (t2 / thing~e.4 
+                  :example~e.5 (a2 / and~e.9 
+                        :op1 (w / world-region :wiki "North_Pole" 
+                              :name (n2 / name :op1 "North"~e.7 :op2 "Pole"~e.8)) 
+                        :op2 (f2 / facility :wiki - 
+                              :name (n3 / name :op1 "Marine"~e.11 :op2 "Life"~e.12 :op3 "Center"~e.13))) 
+                  :ARG0-of~e.4 (a / attract-01~e.4)) 
+            :time (a3 / after~e.18 
+                  :op1 (s3 / several~e.19 
+                        :op1 (t / temporal-quantity :quant 1 
+                              :unit (y / year~e.20)))) 
+            :mod (a4 / also~e.15)))
+
+# ::id bc.cctv_0000.53 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Are they going to be different from what they are now ?
+# ::alignments 1-1.3 5-1 8-1.2 8-1.3 10-1.3.1 11-1.1 11-1.1.r
+(d / differ-02~e.5 :mode~e.11 interrogative~e.11 
+      :ARG1 (t / they~e.8) 
+      :ARG2 (t2 / they~e.1,8 
+            :time (n / now~e.10)))
+
+# ::id bc.cctv_0000.54 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok They will be , in ten years .
+# ::alignments 0-1.1 5-1.2.2.1 6-1.2.2.2
+(d / differ-02 
+      :ARG1 (t / they~e.0) 
+      :time (a / after 
+            :op1 (n / now) 
+            :quant (t2 / temporal-quantity :quant 10~e.5 
+                  :unit (y / year~e.6))))
+
+# ::id bc.cctv_0000.55 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , there will be more animals , and more animal species , different from what there is now .
+# ::alignments 0-1.5 0-1.5.1 0-1.5.1.r 5-1.3 6-1.1 8-1 9-1.3 10-1.2.1 11-1.2 13-1.4 18-1.4.1
+(a / and~e.8 
+      :op1 (a2 / animal~e.6) 
+      :op2 (s / species~e.11 
+            :mod a2~e.10) 
+      :quant (m2 / more~e.5,9) 
+      :ARG1-of (d / differ-02~e.13 
+            :ARG2 (n2 / now~e.18)) 
+      :mod (a3 / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.56 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It looks like we will also bring in whales .
+# ::alignments 1-1 2-1.1.r 3-1.1.1 5-1.1.3 6-1.1 7-1.1.2.r 8-1.1.2
+(l / look-02~e.1 
+      :ARG1~e.2 (b / bring-01~e.6 
+            :ARG0 (w / we~e.3) 
+            :ARG1~e.7 (w2 / whale~e.8) 
+            :mod (a / also~e.5)))
+
+# ::id bc.cctv_0000.57 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Er , we will implement this plan as soon as it is approved by the government .
+# ::alignments 2-1.1 4-1 5-1.2.2 6-1.2 6-1.2.1 6-1.2.1.r 7-1.3 7-1.3.r 8-1.3 9-1.3 9-1.3.r 10-1.3.1.2 12-1.3.1 13-1.3.1.1.r 15-1.3.1.1 15-1.3.1.1.1 15-1.3.1.1.1.r
+(i / implement-01~e.4 
+      :ARG0 (w / we~e.2) 
+      :ARG1 (t / thing~e.6 
+            :ARG1-of~e.6 (p / plan-01~e.6) 
+            :mod (t2 / this~e.5)) 
+      :time~e.7,9 (a / as-soon-as~e.7,8,9 
+            :op1 (a2 / approve-01~e.12 
+                  :ARG0~e.13 (g / government-organization~e.15 
+                        :ARG0-of~e.15 (g2 / govern-01~e.15)) 
+                  :ARG1 t~e.10)))
+
+# ::id bc.cctv_0000.58 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Groundbreaking is expected to start next year .
+# ::alignments 2-1 4-1.1 5-1.1.2.1 6-1.1.2
+(e / expect-01~e.2 
+      :ARG1 (s / start-01~e.4 
+            :ARG1 (b / break-01 
+                  :ARG1 (g / ground)) 
+            :time (y / year~e.6 
+                  :mod (n / next~e.5))))
+
+# ::id bc.cctv_0000.59 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yes .
+# ::alignments 0-1
+(y / yes~e.0)
+
+# ::id bc.cctv_0000.60 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The area of Hong Kong is only one thousand - plus square kilometers .
+# ::alignments 1-1.1 1-1.2.1 3-1.1.1.2.1 4-1.1.1.2.2 5-1.1.1.r 6-1.2.2 7-1.2.1.1 8-1.2.1.1 10-1.2 11-1.2.1.2 12-1.2.1.2
+(h / have-quant-91 
+      :ARG1 (a / area~e.1 
+            :domain~e.5 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.3 :op2 "Kong"~e.4))) 
+      :ARG2 (m2 / more-than~e.10 
+            :op1 (a2 / area-quantity~e.1 :quant 1000~e.7,8 
+                  :unit (s / square-kilometer~e.11,12)) 
+            :mod (o / only~e.6)))
+
+# ::id bc.cctv_0000.61 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The population is dense .
+# ::alignments 1-1.1 2-1.1.r 3-1
+(d / dense~e.3 
+      :domain~e.2 (p / population~e.1))
+
+# ::id bc.cctv_0000.62 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Natural resources are relatively scarce .
+# ::alignments 0-1.1.1.1 1-1.1.1 3-1.1 4-1
+(s / scarce~e.4 
+      :ARG2-of (r / relative-05~e.3 
+            :ARG1 (r2 / resource~e.1 
+                  :ARG1-of (n / natural-03~e.0))))
+
+# ::id bc.cctv_0000.63 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , the clever Hong Kong people will utilize all resources they have created for developing the Hong Kong tourism industry .
+# ::alignments 0-1 3-1.1.1.1 4-1.1.1.2.2.1 5-1.1.1.2.2.2 6-1.1.1 8-1.1 9-1.1.2.1 10-1.1.2 11-1.1.2.2.1 13-1.1.2.2 14-1.1.3.r 15-1.1.3 17-1.1.3.1.2 18-1.1.3.1.2 19-1.1.3.1.1 20-1.1.3.1
+(h / have-concession-91~e.0 
+      :ARG1 (u / utilize-01~e.8 
+            :ARG0 (p / person~e.6 
+                  :ARG1-of (c4 / clever-01~e.3) 
+                  :location (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.4 :op2 "Kong"~e.5))) 
+            :ARG1 (r / resource~e.10 
+                  :mod (a / all~e.9) 
+                  :ARG1-of (c6 / create-01~e.13 
+                        :ARG0 p~e.11)) 
+            :purpose~e.14 (d / develop-02~e.15 
+                  :ARG1 (i / industry~e.20 
+                        :mod (t / tourism~e.19) 
+                        :location c~e.17,18))))
+
+# ::id bc.cctv_0000.64 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Among these is the Avenue of Stars .
+# ::alignments 0-1 1-1.2 4-1.1.2.1 5-1.1.2.2 6-1.1.2.3
+(i / include-91~e.0 
+      :ARG1 (f / facility :wiki "Avenue_of_Stars,_Hong_Kong" 
+            :name (n / name :op1 "Avenue"~e.4 :op2 "of"~e.5 :op3 "Stars"~e.6)) 
+      :ARG2 (t / this~e.1))
+
+# ::id bc.cctv_0000.65 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Entering Hollywood of the East ,
+# ::alignments 0-1 1-1.1.2.1 2-1.1.2.2 3-1.1.2.3 4-1.1.2.4
+(e2 / enter-01~e.0 
+      :ARG1 (l2 / location :wiki - 
+            :name (n / name :op1 "Hollywood"~e.1 :op2 "of"~e.2 :op3 "the"~e.3 :op4 "East"~e.4)))
+
+# ::id bc.cctv_0000.66 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok here , you can come up close with the stars in your mind .
+# ::alignments 0-1.2 2-1.1.1 3-1 6-1.1 7-1.1.2.r 9-1.1.2 10-1.1.2.1.r 11-1.1.2.1.1 11-1.1.2.1.1.r 12-1.1.2.1
+(p / possible-01~e.3 
+      :ARG1 (c / close-06~e.6 
+            :ARG1 (y / you~e.2) 
+            :ARG2~e.7 (s / star~e.9 
+                  :location~e.10 (m / mind~e.12 
+                        :poss~e.11 y~e.11))) 
+      :location (h / here~e.0))
+
+# ::id bc.cctv_0000.67 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok He is my .
+# ::alignments 0-1 2-1.1 2-1.1.r
+(h / he~e.0 
+      :poss~e.2 (i / i~e.2))
+
+# ::id bc.cctv_0000.68 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok She is my Goddess , ah .
+# ::alignments 0-1.3 1-1.3.r 2-1.4 2-1.4.r 3-1.2.1 5-1.5 5-1.5.1 5-1.5.1.r
+(p / person :wiki "Goddess" 
+      :name (n / name :op1 "Goddess"~e.3) 
+      :domain~e.1 (s / she~e.0) 
+      :poss~e.2 (i / i~e.2) 
+      :mod (a / ah~e.5 :mode~e.5 expressive~e.5))
+
+# ::id bc.cctv_0000.69 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Please stay with us on New World Travel .
+# ::alignments 0-1.2 0-1.2.r 1-1 2-1.4.r 3-1.4 4-1.5.r 5-1.5.2.1 6-1.5.2.2 7-1.5.2.3
+(s / stay-01~e.1 :mode imperative :polite~e.0 +~e.0 
+      :ARG1 (y / you) 
+      :accompanier~e.2 (w / we~e.3) 
+      :medium~e.4 (b / broadcast-program :wiki - 
+            :name (n2 / name :op1 "New"~e.5 :op2 "World"~e.6 :op3 "Travel"~e.7)))
+
+# ::id bc.cctv_0000.70 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong has always worn the crown of Hollywood of the East .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 3-1.3 6-1 7-1.2.r 8-1.2.2.1 9-1.2.2.2 10-1.2.2.3 11-1.2.2.4
+(c5 / crown-01~e.6 
+      :ARG1 (c / city :wiki "Hong_Kong" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1)) 
+      :ARG2~e.7 (l2 / location :wiki - 
+            :name (n2 / name :op1 "Hollywood"~e.8 :op2 "of"~e.9 :op3 "the"~e.10 :op4 "East"~e.11)) 
+      :time (a2 / always~e.3))
+
+# ::id bc.cctv_0000.71 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Over the past 100 years of film history , Hong Kong cinema has nurtured many internationally renowned directors , actors , and screenwriters .
+# ::alignments 2-1.3.2 2-1.3.2.1 2-1.3.2.1.r 3-1.3.2.2.1 4-1.3.2.2.2 6-1.3.1 7-1.3 9-1.1.1.2.1 10-1.1.1.2.2 11-1.1 13-1 14-1.2.4 15-1.2.5.1 16-1.2.5 19-1.2.2 19-1.2.2.1 19-1.2.2.1.r 21-1.2
+(n / nurture-01~e.13 
+      :ARG0 (c3 / cinema~e.11 
+            :mod (c / city :wiki "Hong_Kong" 
+                  :name (n2 / name :op1 "Hong"~e.9 :op2 "Kong"~e.10))) 
+      :ARG1 (a / and~e.21 
+            :op1 (p / person 
+                  :ARG0-of (d / direct-01)) 
+            :op2 (p2 / person~e.19 
+                  :ARG0-of~e.19 (a2 / act-01~e.19)) 
+            :op3 (p3 / person 
+                  :ARG0-of (w / write-01 
+                        :ARG2 (s / screen-03))) 
+            :quant (m / many~e.14) 
+            :mod (r / renowned~e.16 
+                  :location (i / international~e.15))) 
+      :subevent (h3 / history~e.7 
+            :mod (f / film-01~e.6) 
+            :time (b / before~e.2 
+                  :op1~e.2 (n3 / now~e.2) 
+                  :duration (t / temporal-quantity :quant 100~e.3 
+                        :unit (y / year~e.4)))))
+
+# ::id bc.cctv_0000.72 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok They have shortened the distance between Hong Kong and the world .
+# ::alignments 0-1.1 2-1 4-1.2 6-1.2.1.2.1 7-1.2.1.2.2 10-1.2.2
+(s / shorten-04~e.2 
+      :ARG0 (t / they~e.0) 
+      :ARG1 (d / distance-01~e.4 
+            :ARG1 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.6 :op2 "Kong"~e.7)) 
+            :ARG2 (w / world~e.10)))
+
+# ::id bc.cctv_0000.73 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong movies have even become a window for the world to see Hong Kong , which have made the image of metropolitan Hong Kong more prominent internationally .
+# ::alignments 0-1.1.2 1-1.1.2 2-1.1 4-1.3 5-1 7-1.2 8-1.2.1.r 10-1.2.1.1 12-1.2.1 13-1.2.1.2 14-1.2.1.2 18-1.1.1 20-1.1.1.1.1 21-1.1.1.1.1.1.r 22-1.1.1.1.1.1.3 23-1.1.1.1.1.1.2.1 24-1.1.1.1.1.1.2.2 25-1.1.1.1.2 26-1.1.1.1 27-1.1.1.1.3
+(b / become-01~e.5 
+      :ARG1 (m / movie~e.2 
+            :ARG0-of (m2 / make-02~e.18 
+                  :ARG1 (p / prominent~e.26 
+                        :domain (i / image~e.20 
+                              :mod~e.21 (c2 / city :wiki "Hong_Kong" 
+                                    :name (n2 / name :op1 "Hong"~e.23 :op2 "Kong"~e.24) 
+                                    :mod (m3 / metropolitan~e.22))) 
+                        :degree (m4 / more~e.25) 
+                        :location (i2 / international~e.27))) 
+            :mod c2~e.0,1) 
+      :ARG2 (w / window~e.7 
+            :path-of~e.8 (s / see-01~e.12 
+                  :ARG0 (w2 / world~e.10) 
+                  :ARG1 c2~e.13,14)) 
+      :mod (e / even~e.4))
+
+# ::id bc.cctv_0000.74 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For this reason , in 2004 , on the Waterfront Promenade originally constructed for viewing only the scenery of Hong Kong Island and Victoria Harbor , the Hong Kong Tourism Board also constructed the Avenue of Stars , memorializing Hong Kong 's 100 - year film history .
+# ::alignments 1-1.1 2-1 4-1.2.r 5-1.2.4.1 8-1.2.2.2.3 9-1.2.5.2.1 10-1.2.5.2.2 11-1.2.5.3.1 12-1.2.5.3 13-1.2.5.3.2.r 14-1.2.5.3.2 15-1.2.5.3.2.1.3 16-1.2.2.2.3 17-1.2.5.3.2.1 18-1.2.5.3.2.1.1.r 19-1.2.5.3.2.1.1.2.1 20-1.2.5.3.2.1.1.2.2 21-1.2.5.3.2.1.1.2.3 23-1.2.5.3.2.1.2.2.1 24-1.2.5.3.2.1.2.2.2 26-1.2.2.2.3 27-1.2.1.2.1 28-1.2.1.2.2 29-1.2.1.2.3 30-1.2.1.2.4 31-1.2.3 32-1.2 33-1.2.2.2.3 34-1.2.2.2.1 35-1.2.2.2.2 36-1.2.2.2.4 38-1.2.2.3 39-1.2.2.3.1.2.2.1 40-1.2.2.3.1.2.2.2 41-1.2.2.3.1.2.r 42-1.2.2.3.1.3.1 44-1.2.2.3.1.3.2 45-1.2.2.3.1.1 46-1.2.2.3.1
+(c5 / cause-01~e.2 
+      :ARG0 (t3 / this~e.1) 
+      :ARG1~e.4 (c3 / construct-01~e.32 
+            :ARG0 (g / government-organization :wiki "Hong_Kong_Tourism_Board" 
+                  :name (n / name :op1 "Hong"~e.27 :op2 "Kong"~e.28 :op3 "Tourism"~e.29 :op4 "Board"~e.30)) 
+            :ARG1 (f2 / facility :wiki "Avenue_of_Stars,_Hong_Kong" 
+                  :name (n2 / name :op1 "Avenue"~e.34 :op2 "of"~e.35 :op3 "the"~e.8,16,26,33 :op4 "Stars"~e.36) 
+                  :ARG0-of (m / memorialize-01~e.38 
+                        :ARG1 (h5 / history~e.46 
+                              :mod (f3 / film-01~e.45) 
+                              :poss~e.41 (c / city :wiki "Hong_Kong" 
+                                    :name (n3 / name :op1 "Hong"~e.39 :op2 "Kong"~e.40)) 
+                              :duration (t2 / temporal-quantity :quant 100~e.42 
+                                    :unit (y2 / year~e.44))))) 
+            :mod (a2 / also~e.31) 
+            :time (d2 / date-entity :year 2004~e.5) 
+            :location (f / facility :wiki "West_Kowloon_Waterfront_Promenade" 
+                  :name (n4 / name :op1 "Waterfront"~e.9 :op2 "Promenade"~e.10) 
+                  :ARG1-of (c6 / construct-01~e.12 
+                        :mod (o2 / original~e.11) 
+                        :purpose~e.13 (v2 / view-01~e.14 
+                              :ARG1 (s / scenery~e.17 
+                                    :mod~e.18 (i / island :wiki "Hong_Kong_Island" 
+                                          :name (n5 / name :op1 "Hong"~e.19 :op2 "Kong"~e.20 :op3 "Island"~e.21)) 
+                                    :mod (h6 / harbor :wiki "Victoria_Harbour" 
+                                          :name (n6 / name :op1 "Victoria"~e.23 :op2 "Harbor"~e.24)) 
+                                    :mod (o / only~e.15)))))))
+
+# ::id bc.cctv_0000.75 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Here , tourists can learn about Hong Kong 's film history , and can come up close with the stars in their mind .
+# ::alignments 0-1.2 2-1.1.1.1 2-1.1.1.1.1 2-1.1.1.1.1.r 3-1 4-1.1.1 5-1.1.1.2.r 6-1.1.1.2.2.2.1 7-1.1.1.2.2.2.2 8-1.1.1.2.2.r 9-1.1.1.2.1 10-1.1.1.2 12-1.1 13-1 16-1.1.2 17-1.1.2.2.r 19-1.1.2.2 20-1.1.2.2.1.r 21-1.1.2.2.1.1 21-1.1.2.2.1.1.r 22-1.1.2.2.1
+(p / possible-01~e.3,13 
+      :ARG1 (a / and~e.12 
+            :op1 (l / learn-01~e.4 
+                  :ARG0 (p2 / person~e.2 
+                        :ARG0-of~e.2 (t / tour-01~e.2)) 
+                  :ARG1~e.5 (h3 / history~e.10 
+                        :mod (f / film-01~e.9) 
+                        :poss~e.8 (c / city :wiki "Hong_Kong" 
+                              :name (n / name :op1 "Hong"~e.6 :op2 "Kong"~e.7)))) 
+            :op2 (c2 / close-06~e.16 
+                  :ARG1 p2 
+                  :ARG2~e.17 (s / star~e.19 
+                        :location~e.20 (m / mind~e.22 
+                              :poss~e.21 p2~e.21)))) 
+      :location (h4 / here~e.0))
+
+# ::id bc.cctv_0000.76 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong is a busy metropolis .
+# ::alignments 0-1.2.2.1 1-1.2.2.2 2-1.2.r 4-1.1 5-1
+(m / metropolis~e.5 
+      :ARG1-of (b / busy-02~e.4) 
+      :domain~e.2 (c / city :wiki "Hong_Kong" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1)))
+
+# ::id bc.cctv_0000.77 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Even at dusk , the city 's pulse never stops beating .
+# ::alignments 0-1.3.1 2-1.3 5-1.1.1.1 6-1.1.1.1.r 7-1.1.1 8-1.2 8-1.2.1 8-1.2.1.r 9-1 10-1.1
+(s / stop-01~e.9 
+      :ARG1 (b / beat-01~e.10 
+            :ARG1 (p / pulse~e.7 
+                  :poss~e.6 (c / city~e.5))) 
+      :time (e2 / ever~e.8 :polarity~e.8 -~e.8) 
+      :dayperiod (d / dusk~e.2 
+            :mod (e / even~e.0)))
+
+# ::id bc.cctv_0000.78 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Across from the Avenue of Stars , a special performance is staged every weekend .
+# ::alignments 0-1.3 1-1.3.1.r 2-1.3.1.2.3 3-1.3.1.2.1 4-1.3.1.2.2 5-1.3.1.2.4 8-1.1.2 9-1.1 9-1.1.1 9-1.1.1.r 11-1 12-1.2.1 13-1.2
+(s / stage-01~e.11 
+      :ARG1 (t / thing~e.9 
+            :ARG1-of~e.9 (p / perform-01~e.9) 
+            :ARG1-of (s2 / special-02~e.8)) 
+      :time (w / weekend~e.13 
+            :frequency (e2 / every~e.12)) 
+      :location (a2 / across~e.0 
+            :op1~e.1 (f / facility :wiki "Avenue_of_Stars,_Hong_Kong" 
+                  :name (n / name :op1 "Avenue"~e.3 :op2 "of"~e.4 :op3 "the"~e.2 :op4 "Stars"~e.5))))
+
+# ::id bc.cctv_0000.79 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok %pw As our Victoria Harbor is %pw very famous , and , er , our nightscape is already very beautiful , by what means could we enhance the dynamic beauty of our nightscape ?
+# ::alignments 1-1.2.2.2.r 2-1.2.1.1.3 2-1.2.1.1.3.r 3-1.2.1.1.2.1 4-1.2.1.1.2.2 7-1.2.1.2 8-1.2.1 10-1.2 14-1.1.1.2.1.1 15-1.1.1.2.1 17-1.2.2.2 18-1.2.2.3 19-1.2.2 22-1.1.1.3 24-1.1 25-1.1.1.1 26-1.1.1 28-1.1.1.2.2 29-1.1.1.2 31-1.1.1.2.1.1 32-1.1.1.2.1
+(h2 / have-condition-91 
+      :ARG1 (p / possible-01~e.24 
+            :ARG1 (e / enhance-01~e.26 
+                  :ARG0 (w / we~e.25) 
+                  :ARG1 (b / beautiful-02~e.29 
+                        :ARG1 (n / nightscape~e.15,32 
+                              :poss w~e.14,31) 
+                        :mod (d / dynamic~e.28)) 
+                  :ARG2 (a / amr-unknown~e.22))) 
+      :ARG2 (a2 / and~e.10 
+            :op1 (f / fame-01~e.8 
+                  :ARG1 (h / harbor :wiki "Victoria_Harbour" 
+                        :name (n2 / name :op1 "Victoria"~e.3 :op2 "Harbor"~e.4) 
+                        :poss~e.2 w~e.2) 
+                  :degree (v2 / very~e.7)) 
+            :op2 (b2 / beautiful-02~e.19 
+                  :ARG1 n 
+                  :time~e.1 (a3 / already~e.17) 
+                  :degree (v / very~e.18))))
+
+# ::id bc.cctv_0000.80 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So , one idea was to transform Victoria Harbor into a performance stage .
+# ::alignments 2-1.1.1 3-1.1 4-1.1.2.r 6-1.1.2 7-1.1.2.1.2.1 8-1.1.2.1.2.2 9-1.1.2.2.r 11-1.1.2.2.1 12-1.1.2.2
+(i2 / infer-01 
+      :ARG1 (i / idea~e.3 :quant 1~e.2 
+            :domain~e.4 (t / transform-01~e.6 
+                  :ARG1 (h / harbor :wiki "Victoria_Harbour" 
+                        :name (n / name :op1 "Victoria"~e.7 :op2 "Harbor"~e.8)) 
+                  :ARG2~e.9 (s / stage~e.12 
+                        :purpose (p / perform-01~e.11)))))
+
+# ::id bc.cctv_0000.81 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Er , each key building is like a performer .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 2-1.1.1.1 3-1.1.1 4-1.1 6-1 8-1.2 8-1.2.1 8-1.2.1.r
+(r / resemble-01~e.6 
+      :ARG1 (b / building~e.4 
+            :ARG1-of (k / key-02~e.3 
+                  :mod (e / each~e.2))) 
+      :ARG2 (p / person~e.8 
+            :ARG0-of~e.8 (p2 / perform-01~e.8)) 
+      :mod (e2 / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.82 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It is based on this that music and lights are arranged to reflect each other and perform a unique , er , and fascinating multi @-@ media world - class light show .
+# ::alignments 2-1.3 3-1.3.1.r 4-1.3.1 6-1.1.1 7-1.1 8-1.1.2 10-1 11-1.2.r 12-1.2.1 15-1.2 16-1.2.2 18-1.2.2.2.3 20-1.2.2.2.4.1 20-1.2.2.2.4.1.1 20-1.2.2.2.4.1.1.r 23-1.2.2.2.4 24-1.2.2.2.2.1 26-1.2.2.2.2 27-1.2.2.2.5.1 29-1.2.2.2.5 30-1.2.2.2.1 31-1.2.2.2
+(a / arrange-01~e.10 
+      :ARG1 (a2 / and~e.7 
+            :op1 (m / music~e.6) 
+            :op2 (l / light~e.8)) 
+      :ARG4~e.11 (a3 / and~e.15 
+            :op1 (r / reflect-01~e.12 
+                  :ARG1 a2 
+                  :ARG2 a2) 
+            :op2 (p / perform-01~e.16 
+                  :ARG0 a2 
+                  :ARG1 (s / show-04~e.31 
+                        :ARG1 (l2 / light~e.30) 
+                        :ARG3 (m2 / media~e.26 
+                              :mod (m3 / multi~e.24)) 
+                        :mod (u / unique~e.18) 
+                        :ARG0-of (f / fascinate-01~e.23 
+                              :mod (e / er~e.20 :mode~e.20 expressive~e.20)) 
+                        :mod (c / class~e.29 
+                              :mod (w / world~e.27))))) 
+      :ARG1-of (b / base-02~e.2 
+            :ARG2~e.3 (t / this~e.4)))
+
+# ::id bc.cctv_0000.83 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Let me now introduce to you all the well - known skyscrapers participating in this large - scale light and music show .
+# ::alignments 0-1 1-1.2.1 2-1.2.4 3-1.2 4-1.1.r 5-1.1 6-1.2.3.2 8-1.2.3.1.1 10-1.2.3.1 11-1.2.3 12-1.2.3.3 13-1.2.3.3.1.r 14-1.2.3.3.1.3 15-1.2.3.3.1.2.1 17-1.2.3.3.1.2 18-1.2.3.3.1.1.1 19-1.2.3.3.1.1 20-1.2.3.3.1.1.2 21-1.2.3.3.1
+(l3 / let-01~e.0 
+      :ARG0~e.4 (y / you~e.5) 
+      :ARG1 (i / introduce-01~e.3 
+            :ARG0 (i2 / i~e.1) 
+            :ARG1 y 
+            :ARG2 (s / skyscraper~e.11 
+                  :ARG1-of (k / know-02~e.10 
+                        :degree (w / well~e.8)) 
+                  :mod (a2 / all~e.6) 
+                  :ARG0-of (p / participate-01~e.12 
+                        :ARG1~e.13 (s2 / show-04~e.21 
+                              :ARG1 (a / and~e.19 
+                                    :op1 (l / light~e.18) 
+                                    :op2 (m / music~e.20)) 
+                              :mod (s3 / scale~e.17 
+                                    :mod (l2 / large~e.15)) 
+                              :mod (t / this~e.14)))) 
+            :time (n / now~e.2)))
+
+# ::id bc.cctv_0000.84 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The PLA Hong Kong Garrison Plaza , Bank of China Tower , at 8 @:@ 00 every Saturday night , HSBC Main Building .
+# ::alignments 1-1.1.2.1 2-1.1.2.2 3-1.1.2.3 4-1.1.2.4 5-1.1.2.5 7-1.2.2.1 8-1.2.2.2 9-1.2.2.3 10-1.2.2.4 15-1.4.1.1 16-1.4 17-1.4.1.2 18-1.4.1.3 20-1.3.2.1 21-1.3.2.2 22-1.3.2.3
+(a / and 
+      :op1 (f6 / facility :wiki - 
+            :name (n2 / name :op1 "PLA"~e.1 :op2 "Hong"~e.2 :op3 "Kong"~e.3 :op4 "Garrison"~e.4 :op5 "Plaza"~e.5)) 
+      :op2 (f5 / facility :wiki "Bank_of_China_Tower_(Hong_Kong)" 
+            :name (n3 / name :op1 "Bank"~e.7 :op2 "of"~e.8 :op3 "China"~e.9 :op4 "Tower"~e.10)) 
+      :location (f4 / facility :wiki "HSBC_Building_(Hong_Kong)" 
+            :name (n4 / name :op1 "HSBC"~e.20 :op2 "Main"~e.21 :op3 "Building"~e.22)) 
+      :frequency (r / rate-entity-91~e.16 
+            :ARG4 (d / date-entity :time "20:00"~e.15 
+                  :weekday (s / saturday~e.17) 
+                  :dayperiod (n / night~e.18))))
+
+# ::id bc.cctv_0000.85 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Their performances will be on schedule .
+# ::alignments 0-1.1.1 0-1.1.1.r 1-1.1 3-1.1.r 4-1 5-1
+(o / on-schedule~e.4,5 
+      :domain~e.3 (p / perform-01~e.1 
+            :ARG0~e.0 (t / they~e.0)))
+
+# ::id bc.cctv_0000.86 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Center of the East Central .
+# ::alignments 0-1 1-1.1.r 3-1.1.2.1 4-1.1.2.2
+(c / center~e.0 
+      :part-of~e.1 (f / facility :wiki "Admiralty,_Hong_Kong" 
+            :name (n2 / name :op1 "East"~e.3 :op2 "Central"~e.4)))
+
+# ::id bc.cctv_0000.87 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ten landmark buildings located on Hong Kong Island reveal themselves one by one , participating in the show in full splendor , presenting a world - class light extravaganza to a musical rhythm .
+# ::alignments 0-1.1.1.1 1-1.1.1.2 2-1.1.1 3-1.1.1.3.r 5-1.1.1.3.2.1 6-1.1.1.3.2.2 7-1.1.1.3.2.3 8-1.1 10-1.1.3 11-1.1.3 12-1.1.3 14-1.2 15-1.2.2.r 17-1.2.2 18-1.2.3.r 19-1.2.3.1 20-1.2.3 22-1.3 24-1.3.2.2.1 26-1.3.2.2 27-1.3.2.1 28-1.3.2 29-1.3.3.r 31-1.3.3.1 32-1.3.3
+(a / and 
+      :op1 (r / reveal-01~e.8 
+            :ARG0 (b / building~e.2 :quant 10~e.0 
+                  :mod (l2 / landmark~e.1) 
+                  :location~e.3 (i / island :wiki "Hong_Kong_Island" 
+                        :name (n / name :op1 "Hong"~e.5 :op2 "Kong"~e.6 :op3 "Island"~e.7))) 
+            :ARG1 b 
+            :manner (o / one-by-one~e.10,11,12)) 
+      :op2 (p / participate-01~e.14 
+            :ARG0 b 
+            :ARG1~e.15 (s / show-04~e.17) 
+            :manner~e.18 (s2 / splendor~e.20 
+                  :degree (f / full~e.19))) 
+      :op3 (p2 / present-01~e.22 
+            :ARG0 b 
+            :ARG1 (e / extravaganza~e.28 
+                  :mod (l / light~e.27) 
+                  :mod (c / class~e.26 
+                        :mod (w / world~e.24))) 
+            :manner~e.29 (r2 / rhythm~e.32 
+                  :mod (m / music~e.31))))
+
+# ::id bc.cctv_0000.88 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Whenever there is a major event or holiday , fireworks are also added to the light show .
+# ::alignments 0-1.3.3 0-1.3.3.r 0-1.3.r 0-1.4.r 4-1.3.1.1 5-1.3.1 6-1.3 7-1.3.2 9-1.1 11-1.4 12-1 15-1.2.1 16-1.2
+(a / add-02~e.12 
+      :ARG1 (f / firework~e.9) 
+      :ARG2 (s / show-04~e.16 
+            :ARG1 (l / light~e.15)) 
+      :time~e.0 (o / or~e.6 
+            :op1 (e / event~e.5 
+                  :ARG1-of (m / major-02~e.4)) 
+            :op2 (h / holiday~e.7) 
+            :mod~e.0 (a3 / any~e.0)) 
+      :mod~e.0 (a2 / also~e.11))
+
+# ::id bc.cctv_0000.89 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Some , er , cities have consulted with us .
+# ::alignments 0-1.1.1 2-1.1.2 2-1.1.2.1 2-1.1.2.1.r 4-1.1 6-1 7-1.2.r 8-1.2
+(c / consult-01~e.6 
+      :ARG0 (c2 / city~e.4 
+            :quant (s / some~e.0) 
+            :mod (e / er~e.2 :mode~e.2 expressive~e.2)) 
+      :ARG1~e.7 (w / we~e.8))
+
+# ::id bc.cctv_0000.90 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Uh @-@ huh .
+# ::alignments 0-1 2-1
+(u / uh-huh~e.0,2 :mode expressive)
+
+# ::id bc.cctv_0000.91 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Their area of surprise was that those private , er , buildings , that is , the business community , ah , is willing to invest in our overall project .
+# ::alignments 0-1.2.1 0-1.2.1.r 1-1.2 3-1 7-1.1.1.1 9-1.1.1.2.2 9-1.1.1.2.2.1 9-1.1.1.2.2.1.r 11-1.1.1 17-1.1.1.2.1.1 18-1.1.1.2.1 20-1.1.3 20-1.1.3.1 20-1.1.3.1.r 23-1.1 25-1.1.2 26-1.1.2.2.r 27-1.1.2.2.1 27-1.1.2.2.1.r 28-1.1.2.2.2 29-1.1.2.2
+(s / surprise-01~e.3 
+      :ARG0 (w4 / will-02~e.23 
+            :ARG0 (b / building~e.11 
+                  :ARG1-of (p / private-03~e.7) 
+                  :ARG1-of (m / mean-01 
+                        :ARG2 (c / community~e.18 
+                              :mod (b2 / business~e.17)) 
+                        :mod (e / er~e.9 :mode~e.9 expressive~e.9))) 
+            :ARG1 (i / invest-01~e.25 
+                  :ARG0 b 
+                  :ARG2~e.26 (p2 / project~e.29 
+                        :poss~e.27 (w2 / we~e.27) 
+                        :mod (o / overall~e.28))) 
+            :mod (a2 / ah~e.20 :mode~e.20 expressive~e.20)) 
+      :mod (a / area~e.1 
+            :poss~e.0 (t / they~e.0)))
+
+# ::id bc.cctv_0000.92 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yes .
+# ::alignments 0-1
+(y / yes~e.0)
+
+# ::id bc.cctv_0000.93 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The answer is that this is a reward to the entire society , not an individual building 's reward .
+# ::alignments 1-1 2-1.1.1.2.r 4-1.1.1.2 5-1.1.1.2.r 7-1.1.1 8-1.1.1.1.r 10-1.1.1.1.1 11-1.1.1.1 13-1.1.2.1 13-1.1.2.1.r 15-1.1.2.2.1 16-1.1.2.2 17-1.1.2.2.r 17-1.1.2.3.r 18-1.1.2
+(a / answer-01~e.1 
+      :ARG2 (c / contrast-01 
+            :ARG1 (r / reward-01~e.7 
+                  :ARG1~e.8 (s / society~e.11 
+                        :mod (e / entire~e.10)) 
+                  :domain~e.2,5 (t / this~e.4)) 
+            :ARG2 (r2 / reward-01~e.18 :polarity~e.13 -~e.13 
+                  :ARG1~e.17 (b / building~e.16 
+                        :mod (i / individual~e.15)) 
+                  :domain~e.17 t)))
+
+# ::id bc.cctv_0000.94 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Er , of course , after SARS , we felt that all of Hong Kong hopes to be involved , so that the Hong Kong tourism industry will recover , rebound together with other sectors .
+# ::alignments 0-1.5 0-1.5.1 0-1.5.1.r 2-1.4 3-1.4 5-1.3 6-1.3.1.2.1 8-1.1 9-1 10-1.2.r 11-1.2.1.3 13-1.2.1.2.1 14-1.2.1.2.2 15-1.2 18-1.2.2 20-1.2.2.2.r 21-1.2.2.2.r 23-1.2.2.2.1.2 24-1.2.2.2.1.2 25-1.2.2.2.1.1 26-1.2.2.2.1 28-1.2.2.2 30-1.2.2.2.1.3 31-1.2.2.2.1.3.2 32-1.2.2.2.1.3.1.r 33-1.2.2.2.1.3.1.1 34-1.2.2.2.1.3.1
+(f / feel-01~e.9 
+      :ARG0 (w / we~e.8) 
+      :ARG1~e.10 (h3 / hope-01~e.15 
+            :ARG0 (c / city :wiki "Hong_Kong" 
+                  :name (n2 / name :op1 "Hong"~e.13 :op2 "Kong"~e.14) 
+                  :mod (a2 / all~e.11)) 
+            :ARG1 (i / involve-01~e.18 
+                  :ARG1 c 
+                  :purpose~e.20,21 (r / recover-01~e.28 
+                        :ARG1 (i2 / industry~e.26 
+                              :mod (t / tourism~e.25) 
+                              :mod c~e.23,24 
+                              :ARG1-of (r2 / rebound-01~e.30 
+                                    :accompanier~e.32 (s / sector~e.34 
+                                          :mod (o / other~e.33)) 
+                                    :manner (t2 / together~e.31)))))) 
+      :time (a / after~e.5 
+            :op1 (e / event :wiki - 
+                  :name (n / name :op1 "SARS"~e.6))) 
+      :mod (o2 / of-course~e.2,3) 
+      :mod (e2 / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.95 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong Wetland Park , which is currently under construction , is also one of the designated new projects of the Hong Kong SAR government for advancing the Hong Kong tourism industry .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 2-1.1.2.3 3-1.1.2.4 7-1.1.3.1 9-1.1 9-1.1.3 9-1.1.3.r 12-1.3 16-1.2.1 17-1.2.4 18-1.2 19-1.2.2.r 21-1.2.2.1.1.2.1 22-1.2.2.1.1.2.2 23-1.2.2.1.1.2.3 24-1.2.2 24-1.2.2.1 24-1.2.2.1.r 25-1.2.3.r 26-1.2.3 28-1.2.3.1.2 29-1.2.3.1.2 30-1.2.3.1.1 31-1.2.3.1
+(i / include-91 
+      :ARG1 (p / park~e.9 :wiki "Hong_Kong_Wetland_Park" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1 :op3 "Wetland"~e.2 :op4 "Park"~e.3) 
+            :ARG1-of~e.9 (c3 / construct-01~e.9 
+                  :time (c4 / current~e.7))) 
+      :ARG2 (p2 / project~e.18 
+            :ARG1-of (d / designate-01~e.16) 
+            :poss~e.19 (g2 / government-organization~e.24 
+                  :ARG0-of~e.24 (g3 / govern-01~e.24 
+                        :ARG1 (c / city :wiki "Special_administrative_region" 
+                              :name (n2 / name :op1 "Hong"~e.21 :op2 "Kong"~e.22 :op3 "SAR"~e.23)))) 
+            :purpose~e.25 (a / advance-01~e.26 
+                  :ARG1 (i2 / industry~e.31 
+                        :mod (t / tourism~e.30) 
+                        :mod c~e.28,29)) 
+            :ARG1-of (n3 / new-01~e.17)) 
+      :mod (a2 / also~e.12))
+
+# ::id bc.cctv_0000.96 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This is a park intimately connected with nature , being built by the Hong Kong government for its people who live in a city of reinforced concrete .
+# ::alignments 0-1.1.1 3-1.1 4-1.3 5-1 6-1.2.r 7-1.2 10-1.1.2 11-1.1.2.1.r 13-1.1.2.1.1.1.2.1 14-1.1.2.1.1.1.2.2 15-1.1.2.1 15-1.1.2.1.1 15-1.1.2.1.1.r 16-1.1.2.2.r 17-1.1.2.2.1 17-1.1.2.2.1.r 18-1.1.2.2 20-1.1.2.2.2 21-1.1.2.2.2.1.r 23-1.1.2.2.2.1 24-1.1.2.2.2.1.1.r 25-1.1.2.2.2.1.1.1 26-1.1.2.2.2.1.1
+(c3 / connect-01~e.5 
+      :ARG1 (p / park~e.3 
+            :mod (t / this~e.0) 
+            :ARG1-of (b / build-01~e.10 
+                  :ARG0~e.11 (g / government-organization~e.15 
+                        :ARG0-of~e.15 (g2 / govern-01~e.15 
+                              :ARG1 (c / city :wiki "Hong_Kong" 
+                                    :name (n2 / name :op1 "Hong"~e.13 :op2 "Kong"~e.14)))) 
+                  :beneficiary~e.16 (p2 / person~e.18 
+                        :poss~e.17 c~e.17 
+                        :ARG0-of (l / live-01~e.20 
+                              :location~e.21 (c5 / city~e.23 
+                                    :consist-of~e.24 (c6 / concrete~e.26 
+                                          :ARG1-of (r / reinforce-01~e.25))))))) 
+      :ARG2~e.6 (n / nature~e.7) 
+      :ARG2-of (i / intimate-02~e.4))
+
+# ::id bc.cctv_0000.97 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong Wetland Park covers an area of 61 hectares , including a 10,000 square meter visitor 's center and a 60 hectare outdoor wildlife habitat .
+# ::alignments 0-1.2.2.1 1-1.2.2.2 2-1.2.2.3 3-1.2.2.4 4-1 6-1.1 6-1.1.3.1.1.2 6-1.1.3.1.2.3 8-1.1.1 9-1.1.2 9-1.1.3.1.2.3.2 11-1.1.3 13-1.1.3.1.1.2.1 14-1.1.3.1.1.2.2 15-1.1.3.1.1.2.2 16-1.1.3.1.1.1 16-1.1.3.1.1.1.1 16-1.1.3.1.1.1.1.r 17-1.1.3.1.1.1.r 18-1.1.3.1.1 19-1.1.3.1 21-1.1.3.1.2.3.1 22-1.1.2 23-1.1.3.1.2.2 24-1.1.3.1.2.1 25-1.1.3.1.2
+(c / cover-02~e.4 
+      :ARG1 (a2 / area-quantity~e.6 :quant 61~e.8 
+            :unit (h2 / hectare~e.9,22) 
+            :ARG2-of (i / include-01~e.11 
+                  :ARG1 (a3 / and~e.19 
+                        :op1 (c2 / center~e.18 
+                              :poss~e.17 (p2 / person~e.16 
+                                    :ARG0-of~e.16 (v / visit-01~e.16)) 
+                              :quant (a4 / area-quantity~e.6 :quant 10000~e.13 
+                                    :unit (s2 / square-meter~e.14,15))) 
+                        :op2 (h3 / habitat~e.25 
+                              :mod (w / wildlife~e.24) 
+                              :location (o / outdoor~e.23) 
+                              :quant (a5 / area-quantity~e.6 :quant 60~e.21 
+                                    :unit (h4 / hectare~e.9)))))) 
+      :ARG2 (p / park :wiki "Hong_Kong_Wetland_Park" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1 :op3 "Wetland"~e.2 :op4 "Park"~e.3)))
+
+# ::id bc.cctv_0000.98 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In the indoor exhibition hall , tourists can learn about types of wetlands in various parts of the world , and to gain knowledge about wetlands .
+# ::alignments 2-1.2.1 3-1.2.2 4-1.2 6-1.1.1.1 6-1.1.1.1.1 6-1.1.1.1.1.r 7-1 8-1.1.1 9-1.1.1.2.r 10-1.1.1.2.1 11-1.1.1.2.1.r 12-1.1.1.2 13-1.1.1.2.2.r 14-1.1.1.2.2.2 15-1.1.1.2.2 16-1.1.1.2.2.1.r 18-1.1.1.2.2.1 20-1.1 22-1.1.2 23-1.1.2.2 24-1.1.2.2.1.r 25-1.1.2.2.1
+(p / possible-01~e.7 
+      :ARG1 (a / and~e.20 
+            :op1 (l / learn-01~e.8 
+                  :ARG0 (p2 / person~e.6 
+                        :ARG0-of~e.6 (t / tour-01~e.6)) 
+                  :ARG1~e.9 (w / wetland~e.12 
+                        :mod~e.11 (t2 / type~e.10) 
+                        :location~e.13 (p3 / part~e.15 
+                              :part-of~e.16 (w2 / world~e.18) 
+                              :mod (v / various~e.14)))) 
+            :op2 (g / gain-02~e.22 
+                  :ARG0 p2 
+                  :ARG1 (k / know-01~e.23 
+                        :ARG1~e.24 w~e.25))) 
+      :location (h / hall~e.4 
+            :location (i / indoor~e.2) 
+            :location-of (e / exhibit-01~e.3)))
+
+# ::id bc.cctv_0000.99 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Outdoors , they can also personally experience wetland ecology .
+# ::alignments 0-1.2 2-1.1.1 3-1 4-1.1.4 5-1.1.3 6-1.1 7-1.1.2.1 8-1.1.2
+(p / possible-01~e.3 
+      :ARG1 (e / experience-01~e.6 
+            :ARG0 (t / they~e.2) 
+            :ARG1 (e2 / ecology~e.8 
+                  :mod (w / wetland~e.7)) 
+            :ARG1-of (p2 / personal-02~e.5) 
+            :mod (a / also~e.4)) 
+      :location (o / outdoor~e.0))
+
+# ::id bc.cctv_0000.100 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok At the highest point of Hong Kong , er , from the highest point we can see two different ecological environments .
+# ::alignments 2-1.1.3.1 2-1.1.3.1.1 2-1.1.3.1.1.r 3-1.1.3 5-1.1.3.2.2.1 6-1.1.3.2.2.2 8-1.1.3.3 8-1.1.3.3.1 8-1.1.3.3.1.r 10-1.1.3.r 12-1.1.3.1 12-1.1.3.1.1 12-1.1.3.1.1.r 13-1.1.3 14-1.1.1 15-1 16-1.1 17-1.1.2.1 18-1.1.2.3 19-1.1.2.2 20-1.1.2
+(p / possible-01~e.15 
+      :ARG1 (s / see-01~e.16 
+            :ARG0 (w / we~e.14) 
+            :ARG1 (e / environment~e.20 :quant 2~e.17 
+                  :mod (e2 / ecology~e.19) 
+                  :ARG1-of (d / differ-02~e.18)) 
+            :source~e.10 (p3 / point~e.3,13 
+                  :ARG1-of (h / high-02~e.2,12 
+                        :degree~e.2,12 (m2 / most~e.2,12)) 
+                  :part-of (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.5 :op2 "Kong"~e.6)) 
+                  :mod (e3 / er~e.8 :mode~e.8 expressive~e.8))))
+
+# ::id bc.cctv_0000.101 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ha , on that side are many tall buildings , that is , towns with lots of people living there ,
+# ::alignments 0-1.5 3-1.3.1 4-1.3 6-1.2 7-1.1 8-1 10-1.3.1 13-1.4.1 14-1.4.1.1.r 15-1.4.1.1.1.1 16-1.4.1.1.1.1.r 17-1.4.1.1.1 18-1.4.1.1
+(b / building~e.8 
+      :mod (t / tall~e.7) 
+      :quant (m / many~e.6) 
+      :location (s / side~e.4 
+            :mod (t2 / that~e.3,10)) 
+      :ARG1-of (m3 / mean-01 
+            :ARG2 (t3 / town~e.13 
+                  :location-of~e.14 (l / live-01~e.18 
+                        :ARG0 (p / person~e.17 
+                              :quant~e.16 (l2 / lot~e.15))))) 
+      :mod (h / ha~e.0 :mode expressive))
+
+# ::id bc.cctv_0000.102 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok but behind me is our Wetland Park .
+# ::alignments 0-1 1-1.1.3 2-1.1.3.1 4-1.1.4 4-1.1.4.r 5-1.1.2.1 6-1.1.2.2
+(h / have-concession-91~e.0 
+      :ARG1 (p / park :wiki "Hong_Kong_Wetland_Park" 
+            :name (n / name :op1 "Wetland"~e.5 :op2 "Park"~e.6) 
+            :location (b / behind~e.1 
+                  :op1 (i / i~e.2)) 
+            :poss~e.4 (w / we~e.4)))
+
+# ::id bc.cctv_0000.103 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ha , entirely different .
+# ::alignments 0-1.2 2-1.1
+(d / differ-01 
+      :degree (e / entire~e.2) 
+      :mod (h / ha~e.0 :mode expressive))
+
+# ::id bc.cctv_0000.104 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Quite primitive ,
+# ::alignments 0-1.1 1-1
+(p / primitive~e.1 
+      :degree (q / quite~e.0))
+
+# ::id bc.cctv_0000.105 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok er , a fresh water swamp ,
+# ::alignments 0-1.2 0-1.2.1 0-1.2.1.r 3-1.1.1 4-1.1 5-1
+(s / swamp~e.5 
+      :mod (w / water~e.4 
+            :ARG1-of (f / fresh-04~e.3)) 
+      :mod (e / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.106 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok er , the Wetland Park Exploration Center .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 3-1.2.1 4-1.2.2 5-1.2.3 6-1.2.4
+(f2 / facility :wiki - 
+      :name (n / name :op1 "Wetland"~e.3 :op2 "Park"~e.4 :op3 "Exploration"~e.5 :op4 "Center"~e.6) 
+      :mod (e / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.107 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Lastly , farthest away you can see Putian of Shenzhen .
+# ::alignments 0-1.1 0-1.1.r 2-1.2.3.1 2-1.2.3.1.1 2-1.2.3.1.1.r 3-1.2.3 4-1.2.1 5-1 6-1.2 7-1.2.2.2.1 9-1.2.2.3.2.1
+(p2 / possible-01~e.5 :li~e.0 -1~e.0 
+      :ARG1 (s2 / see-01~e.6 
+            :ARG0 (y / you~e.4) 
+            :ARG1 (c2 / city :wiki "Putian" 
+                  :name (n / name :op1 "Putian"~e.7) 
+                  :mod (c / city :wiki "Shenzhen" 
+                        :name (n2 / name :op1 "Shenzhen"~e.9))) 
+            :direction (a / away~e.3 
+                  :extent (f / far~e.2 
+                        :degree~e.2 (m / most~e.2)))))
+
+# ::id bc.cctv_0000.108 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Then , the bridge is , on the bridge is Hong Kong and outside is Shenzhen .
+# ::alignments 0-1.4 3-1.1 8-1.1 9-1.2 10-1.2.1.2.1 11-1.2.1.2.2 12-1 13-1.3.2 14-1.3 15-1.3.1.2.1
+(a / and~e.12 
+      :op1 (b / bridge~e.3,8) 
+      :op2 (b2 / be-located-at-91~e.9 
+            :ARG1 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.10 :op2 "Kong"~e.11)) 
+            :ARG2 b) 
+      :op3 (b3 / be-located-at-91~e.14 
+            :ARG1 (c4 / city :wiki "Shenzhen" 
+                  :name (n2 / name :op1 "Shenzhen"~e.15)) 
+            :ARG2 (o / outside~e.13)) 
+      :time (t / then~e.0))
+
+# ::id bc.cctv_0000.109 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You can come into intimate contact with nature in the outdoor wetland environment .
+# ::alignments 0-1.1.1 1-1 4-1.1.3 5-1.1 6-1.1.2.r 7-1.1.2 8-1.2.r 10-1.2.2 11-1.2.1 12-1.2
+(p / possible-01~e.1 
+      :ARG1 (c2 / contact-01~e.5 
+            :ARG0 (y / you~e.0) 
+            :ARG1~e.6 (n / nature~e.7) 
+            :ARG2-of (i / intimate-02~e.4 
+                  :ARG1 y)) 
+      :location~e.8 (e / environment~e.12 
+            :mod (w / wetland~e.11) 
+            :location (o / outdoor~e.10)))
+
+# ::id bc.cctv_0000.110 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Children can get to know different animals and plants , and even some crops that are rarely seen in our daily life .
+# ::alignments 0-1.1.1 1-1 2-1.1 4-1.1.2 5-1.1.2.2.1.3 6-1.1.2.2.1.1 7-1.1.2.2.1 8-1.1.2.2.1.2 10-1.1.2.2 10-1.1.2.2.1 10-1.1.2.2.1.r 11-1.1.2.2.2.2 12-1.1.2.2.2.1 13-1.1.2.2.2 16-1.1.2.2.2.3.1 17-1.1.2.2.2.3 18-1.1.2.2.2.3.1.1.r 19-1.1.2.2.2.3.1.1.1 19-1.1.2.2.2.3.1.1.1.r 20-1.1.2.2.2.3.1.1.2 20-1.1.2.2.2.3.1.1.2.1 20-1.1.2.2.2.3.1.1.2.1.1 20-1.1.2.2.2.3.1.1.2.1.1.r 20-1.1.2.2.2.3.1.1.2.1.2 20-1.1.2.2.2.3.1.1.2.1.2.r 20-1.1.2.2.2.3.1.1.2.1.r 21-1.1.2.2.2.3.1.1
+(p / possible-01~e.1 
+      :ARG1 (g / get-22~e.2 
+            :ARG0 (c / child~e.0) 
+            :ARG1 (k / know-01~e.4 
+                  :ARG0 c 
+                  :ARG1 (a / and~e.10 
+                        :op1~e.10 (a3 / and~e.7,10 
+                              :op1 (a2 / animal~e.6) 
+                              :op2 (p2 / plant~e.8) 
+                              :ARG1-of (d2 / differ-02~e.5)) 
+                        :op2 (c2 / crop~e.13 
+                              :quant (s / some~e.12) 
+                              :mod (e / even~e.11) 
+                              :ARG1-of (s2 / see-01~e.17 
+                                    :ARG1-of (r2 / rare-02~e.16 
+                                          :time~e.18 (l / life~e.21 
+                                                :poss~e.19 (w / we~e.19) 
+                                                :frequency (r / rate-entity-91~e.20 
+                                                      :ARG3~e.20 (t / temporal-quantity~e.20 :quant~e.20 1~e.20 
+                                                            :unit~e.20 (d3 / day~e.20)))))))))))
+
+# ::id bc.cctv_0000.111 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Over here are paddy fields , which is rather unique .
+# ::alignments 1-1.2 2-1 3-1.1.1 4-1.1 8-1.1.2.1 9-1.1.2
+(b / be-located-at-91~e.2 
+      :ARG1 (f / field~e.4 
+            :mod (p / paddy~e.3) 
+            :mod (u / unique~e.9 
+                  :degree (r / rather~e.8))) 
+      :ARG2 (h / here~e.1))
+
+# ::id bc.cctv_0000.112 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ha , there are aquatic plants inside .
+# ::alignments 0-1.3 3-1 4-1.1.1 5-1.1 6-1.2
+(b / be-located-at-91~e.3 
+      :ARG1 (p / plant~e.5 
+            :mod (a / aquatic~e.4)) 
+      :ARG2 (i / inside~e.6) 
+      :mod (h / ha~e.0 :mode expressive))
+
+# ::id bc.cctv_0000.113 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , the most special is rice , because %pw many Hong Kong children nowadays have never seen what rice looks like .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 3-1.2.2 4-1.2 6-1.2.1 8-1 10-1.1.1.1 11-1.1.1.2.2.1 12-1.1.1.2.2.2 13-1.1.1 14-1.1.1.3 16-1.1.3 16-1.1.3.1 16-1.1.3.1.r 17-1.1 18-1.1.2 19-1.1.2.1.1 20-1.1.2.1
+(c3 / cause-01~e.8 
+      :ARG0 (s2 / see-01~e.17 
+            :ARG0 (c4 / child~e.13 
+                  :quant (m2 / many~e.10) 
+                  :location (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.11 :op2 "Kong"~e.12)) 
+                  :time (n2 / nowadays~e.14)) 
+            :ARG1 (t / thing~e.18 
+                  :ARG1-of (l / look-02~e.20 
+                        :ARG0 r~e.19)) 
+            :time (e / ever~e.16 :polarity~e.16 -~e.16)) 
+      :ARG1 (s / special-02~e.4 
+            :ARG1 (r / rice~e.6) 
+            :degree (m / most~e.3)) 
+      :mod (a / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.114 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Look over there .
+# ::alignments 0-1 2-1.3
+(l / look-01~e.0 :mode imperative 
+      :ARG0 (y / you) 
+      :ARG1 (t / there~e.2))
+
+# ::id bc.cctv_0000.115 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok They are going to be ripe soon .
+# ::alignments 0-1.1 5-1 6-1.2
+(r / ripe-02~e.5 
+      :ARG1 (t / they~e.0) 
+      :time (s / soon~e.6))
+
+# ::id bc.cctv_0000.116 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The long one over there .
+# ::alignments 1-1.1 2-1 4-1.2
+(o / one~e.2 
+      :ARG1-of (l / long-03~e.1) 
+      :location (t / there~e.4))
+
+# ::id bc.cctv_0000.117 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Oh .
+# ::alignments 0-1 0-1.1 0-1.1.r
+(o / oh~e.0 :mode~e.0 expressive~e.0)
+
+# ::id bc.cctv_0000.118 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yes .
+# ::alignments 0-1
+(y / yes~e.0)
+
+# ::id bc.cctv_0000.119 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok With , with ears , ah .
+# ::alignments 3-1.1 5-1.2 5-1.2.1 5-1.2.1.r
+(h / have-03 
+      :ARG1 (e / ear~e.3) 
+      :mod (a / ah~e.5 :mode~e.5 expressive~e.5))
+
+# ::id bc.cctv_0000.120 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Where ?
+# ::alignments 0-1.1
+(b / be-located-at-91 
+      :ARG2 (a / amr-unknown~e.0))
+
+# ::id bc.cctv_0000.121 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , here .
+# ::alignments 0-1.1 0-1.1.1 0-1.1.1.r 2-1
+(h / here~e.2 
+      :mod (a / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.122 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Perhaps there will be an introduction so that children will know the names of the crops when they see them .
+# ::alignments 0-1 5-1.1 6-1.1.1.r 7-1.1.1.r 8-1.1.1.1 10-1.1.1 12-1.1.1.2 12-1.1.1.2.1 12-1.1.1.2.1.r 13-1.1.1.2.1.1.r 15-1.1.1.2.1.1 16-1.1.1.3.r 18-1.1.1.3
+(p2 / possible-01~e.0 
+      :ARG1 (i2 / introduce-01~e.5 
+            :purpose~e.6,7 (k / know-04~e.10 
+                  :ARG0 (c / child~e.8) 
+                  :ARG1 (t / thing~e.12 
+                        :ARG2-of~e.12 (n / name-01~e.12 
+                              :ARG1~e.13 (c2 / crop~e.15))) 
+                  :time~e.16 (s / see-01~e.18 
+                        :ARG0 c 
+                        :ARG1 c2))))
+
+# ::id bc.cctv_0000.123 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Let , let them get some understanding .
+# ::alignments 0-1 2-1 3-1.1.1 4-1.1 5-1.1.2.1 6-1.1.2
+(l / let-01~e.0,2 
+      :ARG1 (g / get-01~e.4 
+            :ARG0 (t / they~e.3) 
+            :ARG1 (u / understand-01~e.6 
+                  :quant (s / some~e.5))))
+
+# ::id bc.cctv_0000.124 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Mai Po Marshes adjacent to Wetland Park is a major wildlife habitat within Asia .
+# ::alignments 0-1.3.2.1 1-1.3.2.2 2-1.3.2.3 5-1.3.3.1.2.1 6-1.3.3.1.2.2 7-1.3.r 9-1.1 10-1.2 11-1 13-1.4.2.1
+(h / habitat~e.11 
+      :ARG1-of (m / major-02~e.9) 
+      :mod (w2 / wildlife~e.10) 
+      :domain~e.7 (l3 / location :wiki "Mai_Po_Marshes" 
+            :name (n / name :op1 "Mai"~e.0 :op2 "Po"~e.1 :op3 "Marshes"~e.2) 
+            :ARG1-of (b / border-01 
+                  :ARG2 (p / park :wiki "Hong_Kong_Wetland_Park" 
+                        :name (n2 / name :op1 "Wetland"~e.5 :op2 "Park"~e.6)))) 
+      :location (c / continent :wiki "Asia" 
+            :name (n3 / name :op1 "Asia"~e.13)))
+
+# ::id bc.cctv_0000.125 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Each year , over 50,000 migratory birds fly over Hong Kong 's skyscrapers and choose to roost for winter here .
+# ::alignments 1-1.3.1.2 3-1.1.1.2 4-1.1.1.2.1 5-1.1.1.1 6-1.1.1 7-1.1 8-1.1.2 9-1.1.2.1.1.2.1 10-1.1.2.1.1.2.2 11-1.1.2.1.1.r 12-1.1.2.1 13-1 14-1.2 16-1.2.2 17-1.2.2.3.r 18-1.2.2.3.1 19-1.2.2.2
+(a / and~e.13 
+      :op1 (f / fly-01~e.7 
+            :ARG1 (b / bird~e.6 
+                  :ARG0-of (m / migrate-01~e.5) 
+                  :quant (o2 / over~e.3 :op1 50000~e.4)) 
+            :path (o / over~e.8 
+                  :op1 (s / skyscraper~e.12 
+                        :poss~e.11 (c / city :wiki "Hong_Kong" 
+                              :name (n / name :op1 "Hong"~e.9 :op2 "Kong"~e.10))))) 
+      :op2 (c4 / choose-01~e.14 
+            :ARG0 b 
+            :ARG1 (r / roost-01~e.16 
+                  :ARG0 b 
+                  :location (h3 / here~e.19) 
+                  :time~e.17 (d / date-entity 
+                        :season (w2 / winter~e.18)))) 
+      :frequency (r2 / rate-entity-91 
+            :ARG3 (t / temporal-quantity :quant 1 
+                  :unit (y2 / year~e.1))))
+
+# ::id bc.cctv_0000.126 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok As a result , three different types of aviaries were built in Hong Kong Wetland Park .
+# ::alignments 2-1.3 4-1.1.1.1 6-1.1.1 7-1.1.1.r 8-1.1 10-1 11-1.2.r 12-1.2.2.1 13-1.2.2.2 14-1.2.2.3 15-1.2.2.4
+(b / build-01~e.10 
+      :ARG1 (a / aviary~e.8 
+            :mod~e.7 (t / type~e.6 :quant 3~e.4 
+                  :ARG1-of (d / differ-01))) 
+      :location~e.11 (p / park :wiki "Hong_Kong_Wetland_Park" 
+            :name (n / name :op1 "Hong"~e.12 :op2 "Kong"~e.13 :op3 "Wetland"~e.14 :op4 "Park"~e.15)) 
+      :ARG2-of (r2 / result-01~e.2))
+
+# ::id bc.cctv_0000.127 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok These have become the best spots to observe birds .
+# ::alignments 0-1.1 2-1 4-1.2.2 4-1.2.2.1 4-1.2.2.1.r 5-1.2 7-1.2.1 8-1.2.1.1
+(b / become-01~e.2 
+      :ARG1 (t / this~e.0) 
+      :ARG2 (s / spot~e.5 
+            :location-of (o / observe-01~e.7 
+                  :ARG1 (b3 / bird~e.8)) 
+            :ARG1-of (g / good-02~e.4 
+                  :degree~e.4 (m / most~e.4))))
+
+# ::id bc.cctv_0000.128 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Among common birds , a rather special one is the black - faced spoonbill .
+# ::alignments 0-1.1.2 1-1.1.2.1.1 2-1.1.2.1 5-1.2 6-1 10-1.1.1.1 12-1.1.1 13-1.1
+(s / special-02~e.6 
+      :ARG1 (s2 / spoonbill~e.13 
+            :part (f / face~e.12 
+                  :ARG1-of (b / black-04~e.10)) 
+            :ARG1-of (i / include-91~e.0 
+                  :ARG2 (b2 / bird~e.2 
+                        :mod (c / common~e.1)))) 
+      :degree (r / rather~e.5))
+
+# ::id bc.cctv_0000.129 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It is an endangered bird species throughout the world .
+# ::alignments 3-1.2 4-1.1 5-1 6-1.2.1 8-1.2.1.1
+(s / species~e.5 
+      :mod (b / bird~e.4) 
+      :ARG1-of (e / endanger-01~e.3 
+            :location (t / throughout~e.6 
+                  :op1 (w / world~e.8))))
+
+# ::id bc.cctv_0000.130 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Uh @-@ huh .
+# ::alignments 0-1 2-1
+(u / uh-huh~e.0,2 :mode expressive)
+
+# ::id bc.cctv_0000.131 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , there are only about 1,500 in the world .
+# ::alignments 0-1.1.2 0-1.1.2.r 0-1.3 0-1.3.1 0-1.3.1.r 3-1 4-1.1.3 5-1.1 6-1.1.1 9-1.2
+(b2 / be-located-at-91~e.3 
+      :ARG1 (a / about~e.5 :op1 1500~e.6 :mode~e.0 expressive~e.0 
+            :mod (o / only~e.4)) 
+      :ARG2 (w / world~e.9) 
+      :mod (a2 / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.132 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Wow .
+# ::alignments 0-1 0-1.1 0-1.1.r
+(w / wow~e.0 :mode~e.0 expressive~e.0)
+
+# ::id bc.cctv_0000.133 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Um , however , each year , about two to three hundred of them come to Hong Kong to spend the winter .
+# ::alignments 0-1.2 2-1 5-1.1.3.1.2 7-1.1.1.1 10-1.1.1.1.1.2 11-1.1.1.1.1.2 12-1.1.1.1.r 13-1.1.1 14-1.1 15-1.1.2.r 16-1.1.2.2.1 17-1.1.2.2.2 19-1.1.4 21-1.1.4.2
+(h / have-concession-91~e.2 
+      :ARG1 (c4 / come-01~e.14 
+            :ARG1 (t / they~e.13 
+                  :quant~e.12 (a / about~e.7 
+                        :op1 (b / between :op1 200 :op2 300~e.10,11))) 
+            :ARG4~e.15 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.16 :op2 "Kong"~e.17)) 
+            :frequency (r / rate-entity-91 
+                  :ARG3 (t2 / temporal-quantity :quant 1 
+                        :unit (y / year~e.5))) 
+            :purpose (s / spend-02~e.19 
+                  :ARG0 t 
+                  :ARG1 (w / winter~e.21))) 
+      :mod (u / um~e.0 :mode expressive))
+
+# ::id bc.cctv_0000.134 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Some of them , er , have stayed in Hong Kong Wetland Park .
+# ::alignments 0-1.1.2 2-1.1.1.1 4-1.3 4-1.3.1 4-1.3.1.r 7-1 8-1.2.r 9-1.2.2.1 10-1.2.2.2 11-1.2.2.3 12-1.2.2.4
+(s / stay-01~e.7 
+      :ARG1 (t2 / thing 
+            :ARG1-of (i2 / include-91 
+                  :ARG2 (t3 / they~e.2)) 
+            :quant (s3 / some~e.0)) 
+      :location~e.8 (p2 / park :wiki "Hong_Kong_Wetland_Park" 
+            :name (n / name :op1 "Hong"~e.9 :op2 "Kong"~e.10 :op3 "Wetland"~e.11 :op4 "Park"~e.12)) 
+      :mod (e / er~e.4 :mode~e.4 expressive~e.4))
+
+# ::id bc.cctv_0000.135 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Uh @-@ huh .
+# ::alignments 0-1 2-1
+(u / uh-huh~e.0,2 :mode expressive)
+
+# ::id bc.cctv_0000.136 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So , our park 's logo is unique , featuring this black - faced spoonbill , which hopefully can draw people 's attention .
+# ::alignments 0-1.1 2-1.1.1.1.1.1 2-1.1.1.1.1.1.r 3-1.1.1.1.1 4-1.1.1.1.1.r 4-1.1.1.1.r 5-1.1.1.1 6-1.1.1.1.r 7-1.1.1 9-1.1.2 10-1.1.2.1.3 11-1.1.2.1.1.1 13-1.1.2.1.1 14-1.1.2.1 17-1.1.2.1.2.3 18-1.1.2.1.2.2 19-1.1.2.1.2 20-1.1.2.1.2.1.1 21-1.1.2.1.2.1.1.r 22-1.1.2.1.2.1
+(i / infer-01 
+      :ARG1 (c / cause-01~e.0 
+            :ARG0 (u / unique~e.7 
+                  :domain~e.4,6 (l / logo~e.5 
+                        :poss~e.4 (p / park~e.3 
+                              :poss~e.2 (w / we~e.2)))) 
+            :ARG1 (f / feature-01~e.9 
+                  :ARG1 (s / spoonbill~e.14 
+                        :part (f2 / face~e.13 
+                              :ARG1-of (b / black-04~e.11)) 
+                        :ARG0-of (d / draw-02~e.19 
+                              :ARG1 (a / attend-02~e.22 
+                                    :ARG0~e.21 (p3 / person~e.20)) 
+                              :ARG1-of (p4 / possible-01~e.18) 
+                              :ARG1-of (h3 / hope-01~e.17)) 
+                        :mod (t / this~e.10)))))
+
+# ::id bc.cctv_0000.137 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Uh @-@ huh .
+# ::alignments 0-1 2-1
+(u / uh-huh~e.0,2 :mode expressive)
+
+# ::id bc.cctv_0000.138 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Wetland Park workers are now in the middle of intensive work .
+# ::alignments 0-1.1.1.1.2.1 1-1.1.1.1.2.2 2-1.1 2-1.1.1 2-1.1.1.r 3-1 4-1.3 7-1.2 8-1.2.1.r 9-1.2.1.1 10-1.2.1
+(b / be-temporally-at-91~e.3 
+      :ARG1 (p / person~e.2 
+            :ARG0-of~e.2 (w2 / work-01~e.2 
+                  :ARG2 (p3 / park :wiki "Hong_Kong_Wetland_Park" 
+                        :name (n2 / name :op1 "Wetland"~e.0 :op2 "Park"~e.1)))) 
+      :ARG2 (m / middle~e.7 
+            :part-of~e.8 (w3 / work-01~e.10 
+                  :manner (i / intensive~e.9))) 
+      :time (n / now~e.4))
+
+# ::id bc.cctv_0000.139 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok They will complete the park 's entire construction by the beginning of 2006 , to be able to participate in the 2006 Discover Hong Kong Year campaign .
+# ::alignments 0-1.1 2-1 4-1.2.1 5-1.2.1.r 6-1.2.2 7-1.2 8-1.3 10-1.3.1 11-1.3.1.1.r 12-1.3.1.1.1 16-1.4 18-1.4.1 19-1.4.1.2.r 21-1.4.1.2.3 22-1.4.1.2.2.1 23-1.4.1.2.2.2 24-1.4.1.2.2.3 25-1.4.1.2.2.4 26-1.4.1.2
+(c / complete-01~e.2 
+      :ARG0 (t / they~e.0) 
+      :ARG1 (c2 / construct-01~e.7 
+            :ARG1~e.5 (p / park~e.4) 
+            :extent (e2 / entire~e.6)) 
+      :time (b / by~e.8 
+            :op1 (b3 / begin-01~e.10 
+                  :ARG1~e.11 (d3 / date-entity :year 2006~e.12))) 
+      :purpose (p2 / possible-01~e.16 
+            :ARG1 (p3 / participate-01~e.18 
+                  :ARG0 p 
+                  :ARG1~e.19 (c4 / campaign~e.26 :wiki - 
+                        :name (n2 / name :op1 "Discover"~e.22 :op2 "Hong"~e.23 :op3 "Kong"~e.24 :op4 "Year"~e.25) 
+                        :time d3~e.21))))
+
+# ::id bc.cctv_0000.140 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , we have established the year 2006 as Discover Hong Kong Year .
+# ::alignments 0-1.4 0-1.4.1 0-1.4.1.r 2-1.1 4-1 6-1.2.1.r 7-1.2.1 8-1.3.r 9-1.3.2.1 10-1.3.2.2 11-1.3.2.3 12-1.3.2.4
+(e / establish-01~e.4 
+      :ARG0 (w / we~e.2) 
+      :ARG1 (d2 / date-entity :year~e.6 2006~e.7) 
+      :ARG2~e.8 (e2 / event :wiki - 
+            :name (n / name :op1 "Discover"~e.9 :op2 "Hong"~e.10 :op3 "Kong"~e.11 :op4 "Year"~e.12)) 
+      :mod (a / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.141 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Why is that ?
+# ::alignments 0-1 0-1.1 0-1.1.r 2-1.2
+(c / cause-01~e.0 
+      :ARG0~e.0 (a / amr-unknown~e.0) 
+      :ARG1 (t / that~e.2))
+
+# ::id bc.cctv_0000.142 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Because , as everyone knows , our Disneyland will open in September of this year .
+# ::alignments 0-1 2-1.1.3.r 3-1.1.2.1 4-1.1.2 6-1.1.1.3 6-1.1.1.3.r 7-1.1.1.2.1 9-1.1 11-1.1.3.1 11-1.1.3.1.r 13-1.1.3.2.1 14-1.1.3.2
+(c / cause-01~e.0 
+      :ARG1 (o / open-01~e.9 
+            :ARG1 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Disneyland"~e.7) 
+                  :poss~e.6 (w / we~e.6)) 
+            :ARG1-of (k / know-01~e.4 
+                  :ARG0 (e / everyone~e.3)) 
+            :time~e.2 (d2 / date-entity :month~e.11 9~e.11 
+                  :mod (y / year~e.14 
+                        :mod (t / this~e.13)))))
+
+# ::id bc.cctv_0000.143 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In addition , we will have Ngong Ping 360 , that is , the cable car , er , to the Giant Buddha .
+# ::alignments 1-1.3 3-1.1 5-1 6-1.2.2.1 7-1.2.2.2 8-1.2.2.3 14-1.2.3 15-1.2 17-1.2.4.3 17-1.2.4.3.1 17-1.2.4.3.1.r 19-1.2.4.r 21-1.2.4.2.1 22-1.2.4.2.2
+(h / have-03~e.5 
+      :ARG0 (w / we~e.3) 
+      :ARG1 (c3 / car~e.15 :wiki "Ngong_Ping_360" 
+            :name (n2 / name :op1 "Ngong"~e.6 :op2 "Ping"~e.7 :op3 360~e.8) 
+            :mod (c2 / cable~e.14) 
+            :destination~e.19 (w2 / work-of-art :wiki "Tian_Tan_Buddha" 
+                  :name (n3 / name :op1 "Giant"~e.21 :op2 "Buddha"~e.22) 
+                  :mod (e / er~e.17 :mode~e.17 expressive~e.17))) 
+      :ARG1-of (a / add-01~e.1))
+
+# ::id bc.cctv_0000.144 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok They add to what we already have , like the Avenue of Stars , which is also very famous .
+# ::alignments 0-1.1 1-1 2-1.2.r 3-1.2 4-1.2.1.1 5-1.2.1.2 6-1.2.1 8-1.2.2.r 10-1.2.2.2.1 11-1.2.2.2.2 12-1.2.2.2.3 16-1.2.2.3.1 17-1.2.2.3.2 18-1.2.2 18-1.2.2.3 18-1.2.2.3.r
+(a2 / add-02~e.1 
+      :ARG0 (t / they~e.0) 
+      :ARG2~e.2 (t2 / thing~e.3 
+            :ARG1-of (h / have-03~e.6 
+                  :ARG0 (w / we~e.4) 
+                  :time (a3 / already~e.5)) 
+            :example~e.8 (f / facility~e.18 :wiki "Avenue_of_Stars,_Hong_Kong" 
+                  :name (n / name :op1 "Avenue"~e.10 :op2 "of"~e.11 :op3 "Stars"~e.12) 
+                  :ARG1-of~e.18 (f2 / fame-01~e.18 
+                        :mod (a4 / also~e.16) 
+                        :mod (v / very~e.17)))))
+
+# ::id bc.cctv_0000.145 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Moreover , er , we are including our software .
+# ::alignments 0-1 2-1.2 2-1.2.1 2-1.2.1.r 4-1.1.1 6-1.1 7-1.1.2.1 7-1.1.2.1.r 8-1.1.2
+(a / and~e.0 
+      :op2 (i / include-01~e.6 
+            :ARG0 (w / we~e.4) 
+            :ARG1 (s / software~e.8 
+                  :poss~e.7 w~e.7)) 
+      :mod (e / er~e.2 :mode~e.2 expressive~e.2))
+
+# ::id bc.cctv_0000.146 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong 's software is very well known .
+# ::alignments 0-1.1.1.2.1 1-1.1.1.2.2 2-1.1.1.r 3-1.1 5-1.2.1 6-1.2 7-1
+(k / know-02~e.7 
+      :ARG1 (s / software~e.3 
+            :poss~e.2 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1))) 
+      :degree (w / well~e.6 
+            :degree (v / very~e.5)))
+
+# ::id bc.cctv_0000.147 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Like what 's used in our Symphony of Lights .
+# ::alignments 0-1 1-1.1 3-1.1.1 4-1.1.1.1.r 5-1.1.1.1.3 5-1.1.1.1.3.r 6-1.1.1.1.2.1 7-1.1.1.1.2.2 8-1.1.1.1.2.3
+(r / resemble-01~e.0 
+      :ARG2 (t / thing~e.1 
+            :ARG1-of (u / use-01~e.3 
+                  :ARG2~e.4 (e2 / event :wiki "A_Symphony_of_Lights" 
+                        :name (n / name :op1 "Symphony"~e.6 :op2 "of"~e.7 :op3 "Lights"~e.8) 
+                        :poss~e.5 (w / we~e.5)))))
+
+# ::id bc.cctv_0000.148 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok We hope to use , er , a variety of hardware and software to package this entire 2006 Discover Hong Kong Year .
+# ::alignments 0-1.1 1-1 3-1.2 5-1.2.4 5-1.2.4.1 5-1.2.4.1.r 8-1.2.2 9-1.2.2.1.r 10-1.2.2.1.1 11-1.2.2.1 12-1.2.2.1.2 14-1.2.3 15-1.2.3.2.5 16-1.2.3.2.3 17-1.2.3.2.4.1 18-1.2.3.2.2.1 19-1.2.3.2.2.2 20-1.2.3.2.2.3 21-1.2.3.2.2.4
+(h / hope-01~e.1 
+      :ARG0 (w / we~e.0) 
+      :ARG1 (u / use-01~e.3 
+            :ARG0 w 
+            :ARG1 (v / variety~e.8 
+                  :domain~e.9 (a / and~e.11 
+                        :op1 (h2 / hardware~e.10) 
+                        :op2 (s / software~e.12))) 
+            :ARG2 (p / package-01~e.14 
+                  :ARG0 w 
+                  :ARG1 (e2 / event :wiki - 
+                        :name (n / name :op1 "Discover"~e.18 :op2 "Hong"~e.19 :op3 "Kong"~e.20 :op4 "Year"~e.21) 
+                        :mod (e3 / entire~e.16) 
+                        :time (d3 / date-entity :year 2006~e.17) 
+                        :mod (t / this~e.15))) 
+            :mod (e / er~e.5 :mode~e.5 expressive~e.5)))
+
+# ::id bc.cctv_0000.149 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Without planning it in advance , they chose to settle here .
+# ::alignments 0-1.3.1 0-1.3.1.r 1-1.3 3-1.3.4 4-1.3.4 6-1.1 7-1 9-1.2 10-1.2.2
+(c / choose-01~e.7 
+      :ARG0 (t / they~e.6) 
+      :ARG1 (s / settle-03~e.9 
+            :ARG1 t 
+            :ARG4 (h / here~e.10)) 
+      :manner (p / plan-01~e.1 :polarity~e.0 -~e.0 
+            :ARG0 t 
+            :ARG1 s 
+            :manner (i / in-advance~e.3,4)))
+
+# ::id bc.cctv_0000.150 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok A dream that has been anticipated for more than twenty years will soon come true here .
+# ::alignments 1-1.1 1-1.1.1 1-1.1.1.r 5-1.1.1.1 6-1.1.1.1.1.r 7-1.1.1.1.1 8-1.1.1.1.1 9-1.1.1.1.1.1.1 10-1.1.1.1.1.1.2 12-1.3 13-1 14-1.2 15-1.4
+(c / come-04~e.13 
+      :ARG1 (t / thing~e.1 
+            :ARG1-of~e.1 (d / dream-01~e.1 
+                  :ARG1-of (a / anticipate-01~e.5 
+                        :duration~e.6 (m2 / more-than~e.7,8 
+                              :op1 (t2 / temporal-quantity :quant 20~e.9 
+                                    :unit (y2 / year~e.10)))))) 
+      :ARG2 (t3 / true-01~e.14 
+            :ARG1 t) 
+      :time (s / soon~e.12) 
+      :location (h / here~e.15))
+
+# ::id bc.cctv_0000.151 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Because your line connects us with two --
+# ::alignments 0-1 1-1.1.1.1 1-1.1.1.1.r 2-1.1.1 3-1.1 4-1.1.2 5-1.1.3.r 6-1.1.3.1
+(c2 / cause-01~e.0 
+      :ARG0 (c / connect-01~e.3 
+            :ARG0 (l / line~e.2 
+                  :poss~e.1 (y / you~e.1)) 
+            :ARG1 (w / we~e.4) 
+            :ARG2~e.5 (t / thing :quant 2~e.6)))
+
+# ::id bc.cctv_0000.152 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In recent years , Hong Kong 's tourist attractions have gradually moved from Hong Kong Island to Kowloon and the New Territory .
+# ::alignments 1-1.4.1 2-1.4 4-1.1.2.2.1 5-1.1.2.2.2 6-1.1.2.r 7-1.1.1.1 7-1.1.1.1.1 7-1.1.1.1.1.r 8-1.1 8-1.1.1 8-1.1.1.r 10-1.3 10-1.3.r 11-1 12-1.1.3.r 13-1.1.3.2.1 14-1.1.3.2.2 15-1.1.3.2.3 16-1.2.r 17-1.2.1.2.1 18-1.2 20-1.2.2.2.1 21-1.2.2.2.2
+(m / move-01~e.11 
+      :ARG1 (t / thing~e.8 
+            :ARG0-of~e.8 (a / attract-01~e.8 
+                  :ARG1 (p / person~e.7 
+                        :ARG0-of~e.7 (t2 / tour-01~e.7))) 
+            :poss~e.6 (c / city :wiki "Hong_Kong" 
+                  :name (n2 / name :op1 "Hong"~e.4 :op2 "Kong"~e.5)) 
+            :source~e.12 (i / island :wiki "Hong_Kong_Island" 
+                  :name (n5 / name :op1 "Hong"~e.13 :op2 "Kong"~e.14 :op3 "Island"~e.15))) 
+      :ARG2~e.16 (a2 / and~e.18 
+            :op1 (c4 / city :wiki "Kowloon" 
+                  :name (n3 / name :op1 "Kowloon"~e.17)) 
+            :op2 (l2 / local-region :wiki "New_Territories" 
+                  :name (n4 / name :op1 "New"~e.20 :op2 "Territory"~e.21))) 
+      :manner~e.10 (g3 / gradual~e.10) 
+      :time (y / year~e.2 
+            :mod (r / recent~e.1)))
+
+# ::id bc.cctv_0000.153 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Two out of the four new attractions participating in the 2006 Discover Hong Kong Year are located on Lantau Island of the New Territory .
+# ::alignments 0-1.1.1 4-1.1.2.1.1 5-1.1.2.1.4 6-1.1.2.1 6-1.1.2.1.2 6-1.1.2.1.2.r 7-1.1.2.1.3 8-1.1.2.1.3.1.r 10-1.1.2.1.3.1.3.1 11-1.1.2.1.3.1.2.1 12-1.1.2.1.3.1.2.2 13-1.1.2.1.3.1.2.3 14-1.1.2.1.3.1.2.4 15-1 16-1 18-1.2.2.1 19-1.2.2.2 22-1.2.3.2.1 23-1.2.3.2.2
+(b / be-located-at-91~e.15,16 
+      :ARG1 (t / thing :quant 2~e.0 
+            :ARG1-of (i3 / include-91 
+                  :ARG2 (t2 / thing~e.6 :quant 4~e.4 
+                        :ARG0-of~e.6 (a2 / attract-01~e.6) 
+                        :ARG0-of (p2 / participate-01~e.7 
+                              :ARG1~e.8 (e2 / event :wiki - 
+                                    :name (n3 / name :op1 "Discover"~e.11 :op2 "Hong"~e.12 :op3 "Kong"~e.13 :op4 "Year"~e.14) 
+                                    :time (d3 / date-entity :year 2006~e.10))) 
+                        :ARG1-of (n / new-01~e.5)))) 
+      :ARG2 (i2 / island :wiki "Lantau_Island" 
+            :name (n4 / name :op1 "Lantau"~e.18 :op2 "Island"~e.19) 
+            :part-of (l3 / local-region :wiki "New_Territories" 
+                  :name (n5 / name :op1 "New"~e.22 :op2 "Territory"~e.23))))
+
+# ::id bc.cctv_0000.154 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For this reason , Lantau Island has become a new Hong Kong tourism popular spot .
+# ::alignments 1-1.1 2-1 4-1.2.1.2.1 5-1.2.1.2.2 7-1.2 9-1.2.2.3 10-1.2.2.2.2.1 11-1.2.2.2.2.2 12-1.2.2.1.1 13-1.2.2.1 14-1.2.2
+(c4 / cause-01~e.2 
+      :ARG0 (t2 / this~e.1) 
+      :ARG1 (b / become-01~e.7 
+            :ARG1 (i / island :wiki "Lantau_Island" 
+                  :name (n / name :op1 "Lantau"~e.4 :op2 "Island"~e.5)) 
+            :ARG2 (s / spot~e.14 
+                  :ARG1-of (p / popular-02~e.13 
+                        :ARG2 (t3 / tourism~e.12)) 
+                  :location (c / city :wiki "Hong_Kong" 
+                        :name (n2 / name :op1 "Hong"~e.10 :op2 "Kong"~e.11)) 
+                  :ARG1-of (n3 / new-01~e.9))))
+
+# ::id bc.cctv_0000.155 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The earliest to settle here was this world 's largest outdoor seated bronze Buddha .
+# ::alignments 1-1.3 1-1.3.1 1-1.3.1.r 3-1 4-1.2 6-1.1.7 7-1.1.5.2 8-1.1.5.2.r 9-1.1.5 9-1.1.5.1 9-1.1.5.1.r 10-1.1.6 11-1.1.4 12-1.1.3 13-1.1.2.1
+(s / settle-03~e.3 
+      :ARG1 (w / work-of-art :wiki "Tian_Tan_Buddha" 
+            :name (n / name :op1 "Buddha"~e.13) 
+            :consist-of (b / bronze~e.12) 
+            :ARG1-of (s2 / seat-01~e.11) 
+            :mod (l / large~e.9 
+                  :degree~e.9 (m / most~e.9) 
+                  :compared-to~e.8 (w2 / world~e.7)) 
+            :location (o / outdoor~e.10) 
+            :mod (t / this~e.6)) 
+      :ARG4 (h / here~e.4) 
+      :time (e / early~e.1 
+            :degree~e.1 (m2 / most~e.1)))
+
+# ::id bc.cctv_0000.156 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In Chinese Buddhism , there are five directions - east , west , south , north , and center - and five Buddhas .
+# ::alignments 1-1.1.3.2.1 2-1.1.2.1 5-1.2.1.2.r 6-1.2.1.1 7-1.2.1 9-1.2.1.2.1 11-1.2.1.2.2 13-1.2.1.2.3 15-1.2.1.2.4 17-1.2.1.2 18-1.2.1.2.5 20-1.2.1.2 21-1.2.1.1 21-1.2.2.1 22-1.2.2.3.1
+(h / have-03 
+      :ARG0 (r / religious-group :wiki "Buddhism" 
+            :name (n4 / name :op1 "Buddhism"~e.2) 
+            :mod (c4 / country :wiki "China" 
+                  :name (n5 / name :op1 "China"~e.1))) 
+      :ARG1 (a / and 
+            :op1 (d / direction~e.7 :quant 5~e.6,21 
+                  :domain~e.5 (a2 / and~e.17,20 
+                        :op1 (e / east~e.9) 
+                        :op2 (w / west~e.11) 
+                        :op3 (s / south~e.13) 
+                        :op4 (n2 / north~e.15) 
+                        :op5 (c3 / center~e.18))) 
+            :op2 (p / person :quant 5~e.21 :wiki "Gautama_Buddha" 
+                  :name (n3 / name :op1 "Buddha"~e.22))))
+
+# ::id bc.cctv_0000.157 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Therefore , Hong Kong 's Tian Tan Giant Buddha at the most southern tip of China , together with Lingshan Giant Buddha in the east , Leshan Giant Buddha in the west , Yungang Giant Buddha in the north , and Longmen Giant Buddha in the Central Plains , exist as the representative Buddhas for each of the five directions of China .
+# ::alignments 0-1 2-1.1.1.1.3.2.1 3-1.1.1.1.3.2.2 4-1.1.1.1.3.r 5-1.1.1.1.2.1 6-1.1.1.1.2.2 7-1.1.1.1.2.3 8-1.1.1.1.2.4 11-1.1.1.1.4.2.1 12-1.1.1.1.4.2 13-1.1.1.1.4 14-1.1.1.1.4.1.r 15-1.1.1.1.4.1.2.1 19-1.1.1.2.2.1 20-1.1.1.2.2.2 21-1.1.1.2.2.3 24-1.1.1.2.3 26-1.1.1.3.2.1 28-1.1.1.3.2.2 28-1.1.1.5.2.2 31-1.1.1.3.3 33-1.1.1.4.2.1 34-1.1.1.4.2.2 35-1.1.1.4.2.3 38-1.1.1.4.3 40-1.1.1 41-1.1.1.5.2.1 43-1.1.1.5.2.2 46-1.1.1.5.3.2.1 47-1.1.1.5.3.2.2 49-1.1 50-1.1.2.r 52-1.1.2 53-1.1.2.1 54-1.1.2.2.r 55-1.1.2.2.2 58-1.1.2.2.1 59-1.1.2.2 60-1.1.2.1 60-1.1.2.2.3.r 61-1.1.2.2.3
+(i / infer-01~e.0 
+      :ARG1 (e / exist-01~e.49 
+            :ARG1 (a2 / and~e.40 
+                  :op1 (w / work-of-art :wiki "Tian_Tan_Buddha" 
+                        :name (n / name :op1 "Tian"~e.5 :op2 "Tan"~e.6 :op3 "Giant"~e.7 :op4 "Buddha"~e.8) 
+                        :poss~e.4 (c / city :wiki "Hong_Kong" 
+                              :name (n2 / name :op1 "Hong"~e.2 :op2 "Kong"~e.3)) 
+                        :location (t / tip~e.13 
+                              :part-of~e.14 (c7 / country :wiki "China" 
+                                    :name (n3 / name :op1 "China"~e.15)) 
+                              :mod (s / south~e.12 
+                                    :degree (m / most~e.11)))) 
+                  :op2 (w2 / work-of-art :wiki "Grand_Buddha_at_Ling_Shan" 
+                        :name (n4 / name :op1 "Lingshan"~e.19 :op2 "Giant"~e.20 :op3 "Buddha"~e.21) 
+                        :location (e2 / east~e.24)) 
+                  :op3 (w3 / work-of-art :wiki "Leshan_Giant_Buddha" 
+                        :name (n5 / name :op1 "Leshan"~e.26 :op2 "Buddha"~e.28) 
+                        :location (w4 / west~e.31)) 
+                  :op4 (w5 / work-of-art :wiki "Yungang_Grottoes" 
+                        :name (n6 / name :op1 "Yungang"~e.33 :op2 "Giant"~e.34 :op3 "Buddha"~e.35) 
+                        :location (n7 / north~e.38)) 
+                  :op5 (w6 / work-of-art :wiki "Longmen_Grottoes" 
+                        :name (n8 / name :op1 "Longmen"~e.41 :op2 "Buddha"~e.28,43) 
+                        :location (c8 / country-region :wiki "Central_Plain_(China)" 
+                              :name (n9 / name :op1 "Central"~e.46 :op2 "Plains"~e.47)))) 
+            :ARG2~e.50 (r / represent-01~e.52 
+                  :ARG0 a2~e.53,60 
+                  :ARG1~e.54 (d / direction~e.59 :quant 5~e.58 
+                        :mod (e3 / each~e.55) 
+                        :part-of~e.60 c7~e.61))))
+
+# ::id bc.cctv_0000.158 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok As a result , this place has become holy land in the hearts of male and female devotees .
+# ::alignments 4-1.1.1.1 5-1.1.1 7-1.1 8-1.1.2.1 9-1.1.2 10-1.1.3.r 12-1.1.3 13-1.1.3.1.r 14-1.1.3.1.1.1 15-1.1.3.1 16-1.1.3.1.2.1 17-1.1.3.1.1 17-1.1.3.1.1.2 17-1.1.3.1.1.2.r
+(c / cause-01 
+      :ARG1 (b / become-01~e.7 
+            :ARG1 (p / place~e.5 
+                  :mod (t / this~e.4)) 
+            :ARG2 (l / land~e.9 
+                  :mod (h / holy~e.8)) 
+            :location~e.10 (h2 / heart~e.12 
+                  :part-of~e.13 (a2 / and~e.15 
+                        :op1 (p2 / person~e.17 
+                              :op1 (m / male~e.14) 
+                              :ARG1-of~e.17 (d / devote-01~e.17)) 
+                        :op2 (p3 / person 
+                              :op2 (f / female~e.16) 
+                              :ARG1-of d)))))
+
+# ::id bc.cctv_0000.159 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , to common tourists , more of what this place brings them is wonder and awe .
+# ::alignments 0-1 3-1.1.3.2 4-1.1.3 4-1.1.3.1 4-1.1.3.1.r 6-1.1.2.3 7-1.1.2.3.r 9-1.1.1.1 10-1.1.1 11-1.1 12-1.1.2.1.1 14-1.1.2.1 15-1.1.2 16-1.1.2.2
+(h / have-concession-91~e.0 
+      :ARG2 (b / bring-01~e.11 
+            :ARG0 (p / place~e.10 
+                  :mod (t / this~e.9)) 
+            :ARG1 (a / and~e.15 
+                  :op1 (w / wonder-02~e.14 
+                        :ARG0 p2~e.12) 
+                  :op2 (a2 / awe-01~e.16 
+                        :ARG1 p2) 
+                  :quant~e.7 (m / more~e.6)) 
+            :ARG2 (p2 / person~e.4 
+                  :ARG0-of~e.4 (t2 / tour-01~e.4) 
+                  :mod (c2 / common~e.3))))
+
+# ::id bc.cctv_0000.160 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Since this giant bronze Buddha settled on Lantau Island , the world renowned Hong Kong International Airport at Chek Lap Kok and Disneyland have also been constructed here in succession .
+# ::alignments 0-1.5 1-1.5.1.1.5 2-1.5.1.1.3 3-1.5.1.1.4 4-1.5.1.1.2.1 5-1.5.1 6-1.5.1.2.r 7-1.5.1.2.2.1 8-1.5.1.2.2.2 11-1.1.1.3.1 13-1.1.1.2.1 14-1.1.1.2.2 15-1.1.1.2.3 16-1.1.1.2.4 18-1.1.1.4.2.1 19-1.1.1.4.2.2 20-1.1.1.4.2.3 21-1.1 22-1.1.2.2.1 24-1.2 26-1 27-1.3
+(c2 / construct-01~e.26 
+      :ARG1 (a / and~e.21 
+            :op1 (a2 / airport :wiki "Hong_Kong_International_Airport" 
+                  :name (n / name :op1 "Hong"~e.13 :op2 "Kong"~e.14 :op3 "International"~e.15 :op4 "Airport"~e.16) 
+                  :mod (r / renown 
+                        :location (w / world~e.11)) 
+                  :location (i / island :wiki "Chek_Lap_Kok" 
+                        :name (n2 / name :op1 "Chek"~e.18 :op2 "Lap"~e.19 :op3 "Kok"~e.20))) 
+            :op2 (a3 / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n3 / name :op1 "Disneyland"~e.22))) 
+      :mod (a4 / also~e.24) 
+      :location (h2 / here~e.27) 
+      :manner (s / succeed-03 
+            :ARG1 a2 
+            :ARG2 a3) 
+      :time (s2 / since~e.0 
+            :op1 (s3 / settle-03~e.5 
+                  :ARG1 (w2 / work-of-art :wiki "Tian_Tan_Buddha" 
+                        :name (n4 / name :op1 "Buddha"~e.4) 
+                        :mod (g2 / giant~e.2) 
+                        :consist-of (b / bronze~e.3) 
+                        :mod (t / this~e.1)) 
+                  :ARG4~e.6 (i2 / island :wiki "Lantau_Island" 
+                        :name (n5 / name :op1 "Lantau"~e.7 :op2 "Island"~e.8)))))
+
+# ::id bc.cctv_0000.161 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The important status of Lantau Island is increasingly apparent .
+# ::alignments 1-1.1.1.1 2-1.1.1 3-1.1.1.2.r 4-1.1.1.2.2.1 5-1.1.1.2.2.2 7-1
+(i / increase-01~e.7 
+      :ARG1 (a / appear-01 
+            :ARG1 (s / status~e.2 
+                  :mod (i2 / important~e.1) 
+                  :poss~e.3 (i3 / island :wiki "Lantau_Island" 
+                        :name (n / name :op1 "Lantau"~e.4 :op2 "Island"~e.5)))))
+
+# ::id bc.cctv_0000.162 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok No , it was totally inaccessible in the past .
+# ::alignments 0-1.1 0-1.1.r 2-1.2.1 4-1.3 5-1.1 8-1.2.2
+(p2 / possible-01 :polarity~e.0 -~e.0,5 
+      :ARG1 (a / access-01 
+            :ARG1 (i2 / it~e.2) 
+            :time (p / past~e.8)) 
+      :degree (t / total~e.4))
+
+# ::id bc.cctv_0000.163 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In the near future , construction will also begin on a cross @-@ sea bridge connecting Hong Kong , Zhuhai , and Macao .
+# ::alignments 2-1.3.1 3-1.3 5-1.1 7-1.2 8-1 9-1.1.1.r 11-1.1.1.2 13-1.1.1.2.1 14-1.1.1 15-1.1.1.1 16-1.1.1.1.1.1.2.1 17-1.1.1.1.1.1.2.2 19-1.1.1.1.1.2.2.1 21-1.1.1.1.1 22-1.1.1.1.1.3.2.1
+(b / begin-01~e.8 
+      :ARG1 (c4 / construct-01~e.5 
+            :ARG1~e.9 (b2 / bridge~e.14 
+                  :ARG0-of (c6 / connect-01~e.15 
+                        :ARG1 (a / and~e.21 
+                              :op1 (c2 / city :wiki "Hong_Kong" 
+                                    :name (n / name :op1 "Hong"~e.16 :op2 "Kong"~e.17)) 
+                              :op2 (c8 / city :wiki "Zhuhai" 
+                                    :name (n2 / name :op1 "Zhuhai"~e.19)) 
+                              :op3 (c3 / city :wiki "Macau" 
+                                    :name (n3 / name :op1 "Macao"~e.22)))) 
+                  :ARG0-of (c / cross-02~e.11 
+                        :ARG1 (s / sea~e.13)))) 
+      :mod (a2 / also~e.7) 
+      :time (f / future~e.3 
+            :ARG1-of (n4 / near-02~e.2)))
+
+# ::id bc.cctv_0000.164 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok In 1992 --
+# ::alignments 1-1.1
+(d2 / date-entity :year 1992~e.1)
+
+# ::id bc.cctv_0000.165 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Could n't go in summer --
+# ::alignments 0-1 1-1.1 1-1.1.r 2-1.2 3-1.2.1.r 4-1.2.1.1
+(p / possible-01~e.0 :polarity~e.1 -~e.1 
+      :ARG1 (g / go-02~e.2 
+            :time~e.3 (d / date-entity 
+                  :season (s / summer~e.4))))
+
+# ::id bc.cctv_0000.166 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So , after their return , Macao , and Hong Kong , the two special administrative regions , are basically still using ships and helicopters to stay connected .
+# ::alignments 2-1.1.4 3-1.1.4.1.1 3-1.1.4.1.1.r 4-1.1.4.1 6-1.1.1.1.2.1 8-1.1.1 9-1.1.1.2.2.1 10-1.1.1.2.2.2 13-1.1.1.3.1 14-1.1.1.3.2 15-1.1.1.3.3 16-1.1.1.3 18-1.1.1.3.r 19-1.1.5 20-1.1.6 21-1.1 22-1.1.2.1 23-1.1.2 24-1.1.2.2 26-1.1.3 27-1.1.3.2
+(i / infer-01 
+      :ARG1 (u / use-01~e.21 
+            :ARG0 (a2 / and~e.8 
+                  :op1 (c / city :wiki "Macau" 
+                        :name (n / name :op1 "Macao"~e.6)) 
+                  :op2 (c2 / city :wiki "Hong_Kong" 
+                        :name (n2 / name :op1 "Hong"~e.9 :op2 "Kong"~e.10)) 
+                  :domain~e.18 (r2 / region~e.16 :quant 2~e.13 
+                        :ARG1-of (s / special-02~e.14) 
+                        :ARG1-of (a3 / administrate-01~e.15))) 
+            :ARG1 (a4 / and~e.23 
+                  :op1 (s3 / ship~e.22) 
+                  :op2 (h3 / helicopter~e.24)) 
+            :ARG2 (s4 / stay-01~e.26 
+                  :ARG1 a2 
+                  :ARG3 (c6 / connect-01~e.27 
+                        :ARG1 a2)) 
+            :time (a / after~e.2 
+                  :op1 (r / return-01~e.4 
+                        :ARG1~e.3 a2~e.3)) 
+            :mod (b / basic~e.19) 
+            :mod (s2 / still~e.20)))
+
+# ::id bc.cctv_0000.167 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It 's extremely troublesome to get there via land .
+# ::alignments 1-1.2.r 2-1.1 3-1 5-1.2 6-1.2.1 7-1.2.2.r 8-1.2.2
+(t2 / troublesome~e.3 
+      :degree (e / extreme~e.2) 
+      :domain~e.1 (g / get-05~e.5 
+            :ARG2 (t / there~e.6) 
+            :path~e.7 (l / land~e.8)))
+
+# ::id bc.cctv_0000.168 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok One has to go up to Shenzhen , Dongguan , then go through Panyu , keep going up , to Zhongshan , and certainly go to Zhuhai , then pass through Zhuhai to get to Macao .
+# ::alignments 0-1.1 1-1 2-1 3-1.2.4.2 4-1.2.4.2.3 6-1.2.1.2.2.1 8-1.2.2.2.2.1 10-1.2.3.3 11-1.2.3 12-1.2.3.2 13-1.2.3.2.1.2.1 15-1.2.4 16-1.2.4.2 17-1.2.4.2.3 19-1.2.4.2.2.r 20-1.2.4.2.2.2.1 22-1.2 23-1.2.5.3 24-1.2.1 24-1.2.2 24-1.2.5 25-1.2.5.2.r 26-1.2.5.2.2.1 28-1.2.3.2.1.3 28-1.2.6.3 29-1.2.6 30-1.2.6.2.r 31-1.2.6.2 33-1.2.6.4 34-1.2.6.4.2.r 35-1.2.6.4.2.2.1
+(o / obligate-01~e.1,2 
+      :ARG1 (o2 / one~e.0) 
+      :ARG2 (a2 / and~e.22 
+            :op1 (g2 / go-02~e.24 
+                  :ARG0 o2 
+                  :ARG4 (c3 / city :wiki "Shenzhen" 
+                        :name (n2 / name :op1 "Shenzhen"~e.6))) 
+            :op2 (g3 / go-02~e.24 
+                  :ARG0 o2 
+                  :ARG4 (c4 / city :wiki "Dongguan" 
+                        :name (n3 / name :op1 "Dongguan"~e.8))) 
+            :op3 (g / go-02~e.11 
+                  :ARG0 o2 
+                  :ARG1 (t3 / through~e.12 
+                        :op1 (l / local-region :wiki "Panyu_District" 
+                              :name (n4 / name :op1 "Panyu"~e.13) 
+                              :time (t2 / then~e.28))) 
+                  :time (t4 / then~e.10)) 
+            :op4 (k / keep-02~e.15 
+                  :ARG0 o2 
+                  :ARG1 (g4 / go-02~e.3,16 
+                        :ARG0 o2 
+                        :ARG4~e.19 (c5 / city :wiki "Zhongshan" 
+                              :name (n5 / name :op1 "Zhongshan"~e.20)) 
+                        :direction (u2 / up~e.4,17))) 
+            :op5 (g5 / go-02~e.24 
+                  :ARG0 o2 
+                  :ARG4~e.25 (c6 / city :wiki "Zhuhai" 
+                        :name (n6 / name :op1 "Zhuhai"~e.26)) 
+                  :mod (c7 / certain~e.23)) 
+            :op6 (p / pass-03~e.29 
+                  :ARG1 o2 
+                  :path~e.30 c6~e.31 
+                  :time (t5 / then~e.28) 
+                  :purpose (g8 / get-05~e.33 
+                        :ARG0 o2 
+                        :ARG2~e.34 (c / city :wiki "Macau" 
+                              :name (n / name :op1 "Macao"~e.35))))))
+
+# ::id bc.cctv_0000.169 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok For a Hong Kong person choosing to go there via land , it 's extremely inconvenient .
+# ::alignments 2-1.2.1.1.2.1 3-1.2.1.1.2.2 4-1.2.1 5-1.2 7-1.2.2 8-1.2.2.2 9-1.2.2.3.r 10-1.2.2.3 12-1.2.2.1 13-1.2.r 14-1.3 15-1 15-1.1 15-1.1.r
+(c2 / convenience~e.15 :polarity~e.15 -~e.15 
+      :domain~e.13 (c3 / choose-01~e.5 
+            :ARG0 (p / person~e.4 
+                  :source (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.2 :op2 "Kong"~e.3))) 
+            :ARG1 (g / go-02~e.7 
+                  :ARG0 p~e.12 
+                  :ARG4 (t / there~e.8) 
+                  :path~e.9 (l / land~e.10))) 
+      :degree (e / extreme~e.14))
+
+# ::id bc.cctv_0000.170 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok A full twenty years ago , Hopewell Holdings Group Chairman Wu Ying - sheung , a well - known construction tycoon , boldly made a cross @-@ sea bridge proposal .
+# ::alignments 1-1.4.2.3 2-1.4.2.1 3-1.4.2.2 4-1.4 4-1.4.1 4-1.4.1.r 6-1.1.3.1.2.1 7-1.1.3.1.2.2 8-1.1.3.1.2.3 9-1.1.3.2 10-1.1.2.1 11-1.1.2.2 13-1.1.2.2 16-1.1.4.1.1 18-1.1.4.1 19-1.1.4.2 20-1.1.4 22-1.3 23-1 25-1.2.1 27-1.2.1.1 28-1.2 29-1
+(p / propose-01~e.23,29 
+      :ARG0 (p4 / person :wiki - 
+            :name (n4 / name :op1 "Wu"~e.10 :op2 "Ying-sheung"~e.11,13) 
+            :ARG0-of (h / have-org-role-91 
+                  :ARG1 (c / company :wiki "Hopewell_Holdings" 
+                        :name (n2 / name :op1 "Hopewell"~e.6 :op2 "Holdings"~e.7 :op3 "Group"~e.8)) 
+                  :ARG2 (c4 / chairman~e.9)) 
+            :mod (t / tycoon~e.20 
+                  :ARG1-of (k / know-02~e.18 
+                        :degree (w2 / well~e.16)) 
+                  :mod (c3 / construct-01~e.19))) 
+      :ARG1 (b2 / bridge~e.28 
+            :ARG0-of (c2 / cross-02~e.25 
+                  :ARG1 (s / sea~e.27))) 
+      :ARG1-of (b / bold-02~e.22 
+            :ARG0 p4) 
+      :time (b3 / before~e.4 
+            :op1~e.4 (n / now~e.4) 
+            :quant (t2 / temporal-quantity :quant 20~e.2 
+                  :unit (y / year~e.3) 
+                  :mod (f / full~e.1))))
+
+# ::id bc.cctv_0000.171 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok With this bridge , the distance would be very small , only a little over one kilometer .
+# ::alignments 1-1.1.1 2-1.1 5-1.2.1 5-1.2.1.1.1 8-1.2.2 9-1.2 11-1.2.1.1.2.1 13-1.2.1.1.2 14-1.2.1.1 15-1.2.1.1.1.1 16-1.2.1.1.1.2
+(c / cause-01 
+      :ARG0 (b2 / bridge~e.2 
+            :mod (t2 / this~e.1)) 
+      :ARG1 (s2 / small~e.9 
+            :mod (d3 / distance~e.5 
+                  :quant (o / over~e.14 
+                        :op1 (d2 / distance-quantity~e.5 :quant 1~e.15 
+                              :unit (k / kilometer~e.16)) 
+                        :degree (l / little~e.13 
+                              :mod (o2 / only~e.11)))) 
+            :degree (v2 / very~e.8)))
+
+# ::id bc.cctv_0000.172 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , due to various reasons , bridge construction was put off .
+# ::alignments 0-1 2-1.1.2 3-1.1.2 4-1.1.2.1.1 5-1.1.2 5-1.1.2.1 5-1.1.2.1.r 7-1.1.1.1 8-1.1.1 10-1.1 11-1.1
+(h / have-concession-91~e.0 
+      :ARG2 (p / put-off-06~e.10,11 
+            :ARG1 (c2 / construct-01~e.8 
+                  :ARG1 (b / bridge~e.7)) 
+            :ARG1-of (c3 / cause-01~e.2,3,5 
+                  :ARG0~e.5 (r / reason~e.5 
+                        :mod (v / various~e.4)))))
+
+# ::id bc.cctv_0000.173 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This is what we have seen since 1999 .
+# ::alignments 0-1.2 3-1.1 5-1 6-1.3 7-1.3.1.1
+(s / see-01~e.5 
+      :ARG0 (w / we~e.3) 
+      :ARG1 (t / this~e.0) 
+      :time (s2 / since~e.6 
+            :op1 (d2 / date-entity :year 1999~e.7)))
+
+# ::id bc.cctv_0000.174 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Anticipated for 20 years , today this dream is finally coming true .
+# ::alignments 0-1.1.1 1-1.1.1.1.r 2-1.1.1.1.1 3-1.1.1.1.2 5-1.3 6-1.1.3 7-1.1 7-1.1.2 7-1.1.2.r 9-1.4 10-1 11-1.2
+(c / come-04~e.10 
+      :ARG1 (t / thing~e.7 
+            :ARG1-of (a / anticipate-01~e.0 
+                  :duration~e.1 (t5 / temporal-quantity :quant 20~e.2 
+                        :unit (y2 / year~e.3))) 
+            :ARG1-of~e.7 (d / dream-01~e.7) 
+            :mod (t2 / this~e.6)) 
+      :ARG2 (t3 / true-01~e.11 
+            :ARG1 t) 
+      :time (t4 / today~e.5) 
+      :time (f / final~e.9))
+
+# ::id bc.cctv_0000.175 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Well , originally the construction of the new --
+# ::alignments 0-1.3 2-1.2 2-1.2.r 4-1 5-1.1.r 7-1.1 7-1.1.1 7-1.1.1.r
+(c / construct-01~e.4 
+      :ARG1~e.5 (t / thing~e.7 
+            :ARG1-of~e.7 (n / new-01~e.7)) 
+      :manner~e.2 (o / original~e.2) 
+      :mod (w / well~e.0))
+
+# ::id bc.cctv_0000.176 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok With this new Hong Kong - Zhuhai - Macao bridge that basically leads to all three places , Hong Kong , Macao , and Zhuhai , basically , at the start of the bridge , you can get on the separate road to the place you want to go .
+# ::alignments 1-1.1.4 2-1.1.3 3-1.1.2 4-1.1.2 5-1.1.2 6-1.1.2 7-1.1.2 8-1.1.2 9-1.1 11-1.1.1.2 12-1.1.1 13-1.1.1.1.r 14-1.1.1.1.4 16-1.2.1.2.1 18-1.1.1.1.1.2.1 19-1.1.1.1.1.2.2 21-1.1.1.1.3.2.1 23-1.1.1.1 24-1.1.1.1.2.2.1 26-1.2.1.4 30-1.2.1.3 31-1.2.1.3.1.r 33-1.2.1.3.1 35-1.2.1.1 36-1.2 37-1.2.1 40-1.2.1.2.2 41-1.2.1.2 42-1.2.1.2.1.r 44-1.2.1.2.1 45-1.2.1.2.1.1.2.1 46-1.2.1.2.1.1.2 48-1.2.1.2.1.1
+(c / cause-01 
+      :ARG0 (b / bridge~e.9 
+            :ARG0-of (l / lead-01~e.12 
+                  :ARG4~e.13 (a2 / and~e.23 
+                        :op1 (c3 / city :wiki "Hong_Kong" 
+                              :name (n / name :op1 "Hong"~e.18 :op2 "Kong"~e.19)) 
+                        :op2 (c5 / city :wiki "Zhuhai" 
+                              :name (n2 / name :op1 "Zhuhai"~e.24)) 
+                        :op3 (c2 / city :wiki "Macau" 
+                              :name (n3 / name :op1 "Macao"~e.21)) 
+                        :mod (a / all~e.14)) 
+                  :mod (b3 / basic~e.11)) 
+            :destination a2~e.3,4,5,6,7,8 
+            :ARG1-of (n4 / new-01~e.2) 
+            :mod (t / this~e.1)) 
+      :ARG1 (p / possible-01~e.36 
+            :ARG1 (g / get-05~e.37 
+                  :ARG1 (y / you~e.35) 
+                  :ARG2 (r / road~e.41 
+                        :destination~e.42 (p2 / place~e.16,44 
+                              :ARG4-of (g4 / go-02~e.48 
+                                    :ARG0 y 
+                                    :ARG1-of (w / want-01~e.46 
+                                          :ARG0 y~e.45))) 
+                        :ARG1-of (s2 / separate-02~e.40)) 
+                  :location (s / start-01~e.30 
+                        :ARG1~e.31 b~e.33) 
+                  :mod (b2 / basic~e.26))))
+
+# ::id bc.cctv_0000.177 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Macao is this way , and Zhuhai is this way .
+# ::alignments 0-1.1.2.1 2-1.1.3 2-1.2.3 5-1 6-1.2.2.1 8-1.1.3 8-1.2.3
+(a / and~e.5 
+      :op1 (c / city :wiki "Macau" 
+            :name (n / name :op1 "Macao"~e.0) 
+            :direction (t / this~e.2,8)) 
+      :op2 (c3 / city :wiki "Zhuhai" 
+            :name (n2 / name :op1 "Zhuhai"~e.6) 
+            :direction (t2 / this~e.2,8)))
+
+# ::id bc.cctv_0000.178 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok From the perspective of either Hong Kong , Macao , or Zhuhai , our concept is a tourism zone .
+# ::alignments 2-1.2 5-1.2.1.1.2.1 6-1.2.1.1.2.2 8-1.2.1.2.2.1 10-1.2.1 11-1.2.1.3.2.1 13-1.3 13-1.3.r 14-1 17-1.1.1 18-1.1
+(c4 / concept~e.14 
+      :mod (z / zone~e.18 
+            :mod (t / tourism~e.17)) 
+      :manner (p / perspective~e.2 
+            :poss (o / or~e.10 
+                  :op1 (c / city :wiki "Hong_Kong" 
+                        :name (n / name :op1 "Hong"~e.5 :op2 "Kong"~e.6)) 
+                  :op2 (c2 / city :wiki "Macau" 
+                        :name (n2 / name :op1 "Macao"~e.8)) 
+                  :op3 (c7 / city :wiki "Zhuhai" 
+                        :name (n3 / name :op1 "Zhuhai"~e.11)))) 
+      :poss~e.13 (w / we~e.13))
+
+# ::id bc.cctv_0000.179 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Er , %pw Zhuhai for sightseeing tours , Macao for entertainment , and we have Disneyland and other , other attractions in Hong Kong .
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 3-1.1.1.1.2.1 5-1.1.1.2.1 6-1.1.1.2 8-1.1.2.1.2.1 10-1.1.2.2 12-1 12-1.1 12-1.1.r 13-1.2.1 14-1.2 15-1.2.2.1.2.1 16-1.2.2 17-1.2.2.2.1 19-1.2.2.2.1 20-1.2.2.2 20-1.2.2.2.2 20-1.2.2.2.2.r 21-1.2.3.r 22-1.2.3.2.1 23-1.2.3.2.2
+(a5 / and~e.12 
+      :op1~e.12 (a / and~e.12 
+            :op1 (h / have-purpose-91 
+                  :ARG1 (c4 / city :wiki "Zhuhai" 
+                        :name (n / name :op1 "Zhuhai"~e.3)) 
+                  :ARG2 (t / tour-01~e.6 
+                        :mod (s / sightsee-01~e.5))) 
+            :op2 (h3 / have-purpose-91 
+                  :ARG1 (c / city :wiki "Macau" 
+                        :name (n2 / name :op1 "Macao"~e.8)) 
+                  :ARG2 (e / entertain-01~e.10))) 
+      :op2 (h2 / have-03~e.14 
+            :ARG0 (w / we~e.13) 
+            :ARG1 (a3 / and~e.16 
+                  :op1 (a2 / amusement-park :wiki "Hong_Kong_Disneyland" 
+                        :name (n3 / name :op1 "Disneyland"~e.15)) 
+                  :op2 (t2 / thing~e.20 
+                        :mod (o / other~e.17,19) 
+                        :ARG0-of~e.20 (a4 / attract-01~e.20))) 
+            :location~e.21 (c2 / city :wiki "Hong_Kong" 
+                  :name (n4 / name :op1 "Hong"~e.22 :op2 "Kong"~e.23))) 
+      :mod (e2 / er~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.180 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Each place has different attractions of its own .
+# ::alignments 0-1.1.1 1-1.1 2-1 3-1.2.3 4-1.2 4-1.2.2 4-1.2.2.r 5-1.2.1.r 6-1.2.1
+(h / have-03~e.2 
+      :ARG0 (p / place~e.1 
+            :mod (e / each~e.0)) 
+      :ARG1 (t / thing~e.4 
+            :poss~e.5 p~e.6 
+            :ARG0-of~e.4 (a / attract-01~e.4) 
+            :ARG1-of (d / differ-02~e.3)))
+
+# ::id bc.cctv_0000.181 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So , with this bridge , when some old friends , friends from mainland China or from foreign countries come to our place , it seems they can basically enjoy a complete tour with great convenience in several days , before , ha , going home .
+# ::alignments 0-1.1 2-1.1.1.r 3-1.1.1.1 4-1.1.1 6-1.1.2.1.1.4.r 7-1.1.2.1.1.1.1 8-1.1.2.1.1.1.3.2 9-1.1.2.1.1.1.3.1 11-1.1.2.1.1.1.3.1 12-1.1.2.1.1.1.2.r 13-1.1.2.1.1.1.2.1 14-1.1.2.1.1.1.2.1.1.2.1 15-1.1.2.1.1.1.2 16-1.1.2.1.1.1.2.r 17-1.1.2.1.1.1.2.2.1 18-1.1.2.1.1.1.2.2 19-1.1.2.1.1.4 20-1.1.2.1.1.4.2.r 21-1.1.2.1.1.4.2.1 21-1.1.2.1.1.4.2.1.r 22-1.1.2.1.1.4.2 24-1.1.2.1.1.4.1 25-1.1.2 27-1.1.2.1 28-1.1.2.1.1.3 29-1.1.2.1.1 31-1.1.2.1.1.2.2 32-1.1.2.1.1.2 33-1.1.2.1.1.2.3.r 34-1.1.2.1.1.2.3.1 35-1.1.2.1.1.2.3 36-1.1.2.1.1.2.5.r 37-1.1.2.1.1.2.5 38-1.1.2.1.1.2.5.1.2 40-1.1.2.1.1.2.4 42-1.1.2.1.1.2.4.2 44-1.1.2.1.1.2.4.1 45-1.1.2.1.1.2.4.1.2
+(i / infer-01 
+      :ARG1 (c6 / cause-01~e.0 
+            :ARG0~e.2 (b3 / bridge~e.4 
+                  :mod (t3 / this~e.3)) 
+            :ARG1 (s / seem-01~e.25 
+                  :ARG1 (p2 / possible-01~e.27 
+                        :ARG1 (e / enjoy-01~e.29 
+                              :ARG0 (p3 / person 
+                                    :quant (s2 / some~e.7) 
+                                    :source~e.12,16 (o / or~e.15 
+                                          :op1 (m / mainland~e.13 
+                                                :part-of (c / country :wiki "China" 
+                                                      :name (n / name :op1 "China"~e.14))) 
+                                          :op2 (c2 / country~e.18 
+                                                :mod (f2 / foreign~e.17))) 
+                                    :ARG0-of (h3 / have-rel-role-91 
+                                          :ARG2 (f / friend~e.9,11) 
+                                          :mod (o2 / old~e.8))) 
+                              :ARG1 (t / tour-01~e.32 
+                                    :ARG0 p3 
+                                    :ARG1-of (c4 / complete-02~e.31) 
+                                    :mod~e.33 (c5 / convenience~e.35 
+                                          :degree (g / great~e.34)) 
+                                    :time (b2 / before~e.40 
+                                          :op1 (g2 / go-02~e.44 
+                                                :ARG0 p3 
+                                                :ARG4 (h / home~e.45)) 
+                                          :mod (h2 / ha~e.42 :mode expressive)) 
+                                    :duration~e.36 (s5 / several~e.37 
+                                          :op1 (t2 / temporal-quantity :quant 1 
+                                                :unit (d / day~e.38)))) 
+                              :manner (b / basic~e.28) 
+                              :time~e.6 (c3 / come-01~e.19 
+                                    :ARG1 p3~e.24 
+                                    :ARG4~e.20 (p / place~e.22 
+                                          :poss~e.21 (w / we~e.21))))))))
+
+# ::id bc.cctv_0000.182 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Once the Zhuhai - Hong Kong - Macao bridge is built , it will no longer be a dream of tourists to enjoy gourmet food in Macao before having fun at Disneyland just an hour later .
+# ::alignments 0-1.3.4.1.4.1.1 0-1.5 2-1.5.1.1.2.1 4-1.5.1.1.2.2 5-1.5.1.1.2.2 7-1.5.1.1.2.3 8-1.5.1.1.2.4 10-1.5.1 14-1.1 14-1.1.r 15-1.4 18-1 19-1.2.r 20-1.2 20-1.2.1 20-1.2.1.r 22-1.3 23-1.3.2.1 24-1.3.2 25-1.3.3.r 26-1.3.3.2.1 27-1.3.4 28-1.3.4.1 29-1.3.4.1.2 30-1.3.4.1.3.r 31-1.3.4.1.3.2.1 32-1.3.4.1.4.1.3 33-1.3.4.1.4.1.1 34-1.3.4.1.4.1.2 35-1.3.4.1.4 35-1.3.4.1.4.2 35-1.3.4.1.4.2.r
+(d2 / dream-01~e.18 :polarity~e.14 -~e.14 
+      :ARG0~e.19 (p / person~e.20 
+            :ARG0-of~e.20 (t / tour-01~e.20)) 
+      :ARG1 (e / enjoy-01~e.22 
+            :ARG0 p 
+            :ARG1 (f2 / food~e.24 
+                  :mod (g2 / gourmet~e.23)) 
+            :location~e.25 (c / city :wiki "Macau" 
+                  :name (n / name :op1 "Macao"~e.26)) 
+            :time (b / before~e.27 
+                  :op1 (h / have-06~e.28 
+                        :ARG0 p 
+                        :ARG1 (f / fun-01~e.29 
+                              :ARG0 p) 
+                        :location~e.30 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                              :name (n2 / name :op1 "Disneyland"~e.31)) 
+                        :time (l / late~e.35 
+                              :op1 (t2 / temporal-quantity :quant 1~e.0,33 
+                                    :unit (h2 / hour~e.34) 
+                                    :mod (j / just~e.32)) 
+                              :degree~e.35 (m2 / more~e.35))))) 
+      :ARG1-of (l2 / long-03~e.15) 
+      :time (o / once~e.0 
+            :op1 (b2 / build-01~e.10 
+                  :ARG1 (b3 / bridge :wiki "Hong_Kong–Zhuhai–Macau_Bridge" 
+                        :name (n3 / name :op1 "Zhuhai"~e.2 :op2 "Hong-Kong"~e.4,5 :op3 "Macao"~e.7 :op4 "Bridge"~e.8)))))
+
+# ::id bc.cctv_0000.183 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Promotion of Hong Kong Disneyland has long since begun .
+# ::alignments 0-1.1 1-1.1.1.r 2-1.1.1.2.1 3-1.1.1.2.2 4-1.1.1.2.3 6-1.3.2 7-1.2 8-1
+(b / begin-01~e.8 
+      :ARG1 (p / promote-02~e.0 
+            :ARG2~e.1 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Hong"~e.2 :op2 "Kong"~e.3 :op3 "Disneyland"~e.4))) 
+      :time (s / since~e.7) 
+      :time (b2 / before 
+            :op1 (n2 / now) 
+            :quant (l / long-03~e.6)))
+
+# ::id bc.cctv_0000.184 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok However , even though it has entered the last countdown period before its final opening , this wonderland is still unwilling to take off its mysterious veil .
+# ::alignments 0-1 2-1 3-1 4-1.2.1 5-1 6-1.2 8-1.2.2.3 8-1.2.2.3.1 8-1.2.2.3.1.r 8-1.2.2.3.r 9-1.2.2.1 10-1.2.2 11-1.2.2.2 12-1.2.2.2.1.1 12-1.2.2.2.1.1.r 13-1.2.2.2.1.2 14-1.2.2.2.1 16-1.1.2.1 17-1.1.2 19-1.1.4 20-1.1 20-1.1.1 20-1.1.1.r 21-1.1.3.r 22-1.1.3 23-1.1.3 24-1.1.3.2.2 24-1.1.3.2.2.r 25-1.1.3.2.1 26-1.1.3.2
+(h / have-concession-91~e.0,2,3,5 
+      :ARG1 (w2 / will-02~e.20 :polarity~e.20 -~e.20 
+            :ARG0 (w / wonderland~e.17 
+                  :mod (t2 / this~e.16)) 
+            :ARG1~e.21 (t / take-off-07~e.22,23 
+                  :ARG0 w 
+                  :ARG1 (v / veil~e.26 
+                        :mod (m / mystery~e.25) 
+                        :poss~e.24 w~e.24)) 
+            :mod (s / still~e.19)) 
+      :ARG2 (e2 / enter-01~e.6 
+            :ARG0 w~e.4 
+            :ARG1 (p / period~e.10 
+                  :mod (c / countdown~e.9) 
+                  :time (b / before~e.11 
+                        :op1 (o / open-01~e.14 
+                              :ARG1~e.12 w~e.12 
+                              :mod (f / final~e.13))) 
+                  :ord~e.8 (o2 / ordinal-entity~e.8 :value~e.8 -1~e.8))))
+
+# ::id bc.cctv_0000.185 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , currently it has been decided that Disney will open on September 12 .
+# ::alignments 0-1.1.1.1 0-1.1.1.1.r 0-1.3 0-1.3.1 0-1.3.1.r 2-1.2 6-1 7-1.1.r 8-1.1.1.3.1 10-1.1 11-1.1.2.r 12-1.1.2.1 12-1.1.2.1.r 13-1.1.2.2
+(d3 / decide-01~e.6 
+      :ARG1~e.7 (o / open-01~e.10 
+            :ARG1 (a / amusement-park :mode~e.0 expressive~e.0 :wiki "Hong_Kong_Disneyland" 
+                  :name (n / name :op1 "Disney"~e.8)) 
+            :time~e.11 (d4 / date-entity :month~e.12 9~e.12 :day 12~e.13)) 
+      :time (c / current~e.2) 
+      :mod (a2 / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.186 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok There 's also what we call soft opening .
+# ::alignments 2-1.2 3-1 4-1.1.1 5-1.1 6-1.1.2.1 7-1.1.2
+(t2 / thing~e.3 
+      :ARG1-of (c / call-01~e.5 
+            :ARG0 (w / we~e.4) 
+            :ARG2 (o / open-01~e.7 
+                  :ARG1-of (s / soft-02~e.6))) 
+      :mod (a / also~e.2))
+
+# ::id bc.cctv_0000.187 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , they are now rehearsing .
+# ::alignments 0-1.2 0-1.2.1 0-1.2.1.r 2-1.1 4-1.1.1 5-1
+(r / rehearse-01~e.5 
+      :ARG0 (t / they~e.2 
+            :time (n / now~e.4)) 
+      :mod (a / ah~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bc.cctv_0000.188 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Ah , different , ah , some groups , they are rehearsing their service , well , hoping that they will become used to the service , be familiar with it , when our tourists come in September .
+# ::alignments 0-1.1.1 0-1.1.1.1 0-1.1.1.1.r 2-1.1 4-1.1.1 4-1.1.1.1 4-1.1.1.1.r 6-1.2.1.1 7-1.2.1 11-1.2 12-1.2.2.1 12-1.2.2.1.r 13-1.2.2 15-1.2.3.1.3 17-1.2.3.1 21-1.2.3.1.2.1 22-1.2.3.1.2.1.2 23-1.2.3 23-1.2.3.1.2.1.2 25-1.2.2 28-1.2.3.1.2.2 32-1.2.3.1.2.3.2.r 32-1.2.3.1.2.3.r 33-1.2.3.1.2.3.2.1.2 33-1.2.3.1.2.3.2.1.2.r 34-1.2.3.1.2.3.2.1 34-1.2.3.1.2.3.2.1.1 34-1.2.3.1.2.3.2.1.1.r 35-1.2.3.1.2.3.2 37-1.2.3.1.2.3.1 37-1.2.3.1.2.3.1.r
+(m / multi-sentence 
+      :snt1 (d / differ-02~e.2 
+            :mod (a3 / ah~e.0,4 :mode~e.0,4 expressive~e.0,4)) 
+      :snt2 (r / rehearse-01~e.11 
+            :ARG0 (g / group~e.7 
+                  :quant (s / some~e.6)) 
+            :ARG1 (s2 / service~e.13,25 
+                  :poss~e.12 g~e.12) 
+            :ARG1-of (c2 / cause-01~e.23 
+                  :ARG0 (h / hope-01~e.17 
+                        :ARG0 g 
+                        :ARG1 (a2 / and 
+                              :op1 (b / become-01~e.21 
+                                    :ARG1 g 
+                                    :ARG2 (u / use-02~e.22,23 
+                                          :ARG0 g 
+                                          :ARG1 s2)) 
+                              :op2 (f / familiarize-01~e.28 
+                                    :ARG1 g 
+                                    :ARG2 s2) 
+                              :time~e.32 (d3 / date-entity :month~e.37 9~e.37 
+                                    :time-of~e.32 (c / come-01~e.35 
+                                          :ARG1 (p / person~e.34 
+                                                :ARG0-of~e.34 (t / tour-01~e.34) 
+                                                :poss~e.33 (w / we~e.33))))) 
+                        :mod (w2 / well~e.15)))))
+
+# ::id bc.cctv_0000.189 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Well , I am very confident , that when our tourists come to Disneyland , they will certainly return home very satisfied .
+# ::alignments 0-1.4 2-1.1 4-1.3 5-1 8-1.2.4.r 9-1.2.1.2 9-1.2.1.2.r 10-1.2.1 10-1.2.1.1 10-1.2.1.1.r 11-1.2.4 12-1.2.4.2.r 13-1.2.4.2.2.1 15-1.2.4.1 17-1.2.5 18-1.2 19-1.2.2 20-1.2.3.2 21-1.2.3
+(c / confident-01~e.5 
+      :ARG1 (i / i~e.2) 
+      :ARG2 (r / return-01~e.18 
+            :ARG1 (p / person~e.10 
+                  :ARG0-of~e.10 (t / tour-01~e.10) 
+                  :poss~e.9 (w / we~e.9)) 
+            :ARG4 (h / home~e.19) 
+            :manner (s / satisfy-01~e.21 
+                  :ARG1 p 
+                  :degree (v2 / very~e.20)) 
+            :time~e.8 (c2 / come-01~e.11 
+                  :ARG1 p~e.15 
+                  :ARG4~e.12 (a / amusement-park :wiki "Hong_Kong_Disneyland" 
+                        :name (n / name :op1 "Disneyland"~e.13))) 
+            :mod (c3 / certain~e.17)) 
+      :degree (v / very~e.4) 
+      :mod (w2 / well~e.0))
+
+# ::id bc.cctv_0000.190 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The Wonder Tour will start from Hong Kong .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 2-1.1.2.3 4-1 5-1.2.r 6-1.2.2.1 7-1.2.2.2
+(s / start-01~e.4 
+      :ARG1 (e2 / event :wiki - 
+            :name (n / name :op1 "The"~e.0 :op2 "Wonder"~e.1 :op3 "Tour"~e.2)) 
+      :source~e.5 (c / city :wiki "Hong_Kong" 
+            :name (n2 / name :op1 "Hong"~e.6 :op2 "Kong"~e.7)))
+
+# ::id bc.cctv_0000.191 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This dynamic metropolis never ceases its movement .
+# ::alignments 0-1.1.1 1-1.1.2 2-1.1 3-1.3 3-1.3.1 3-1.3.1.r 4-1 5-1.2.1 5-1.2.1.r 6-1.2
+(c / cease-01~e.4 
+      :ARG0 (m / metropolis~e.2 
+            :mod (t / this~e.0) 
+            :mod (d / dynamic~e.1)) 
+      :ARG1 (m2 / move-01~e.6 
+            :ARG1~e.5 m~e.5) 
+      :time (e / ever~e.3 :polarity~e.3 -~e.3))
+
+# ::id bc.cctv_0000.192 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It continues to explore ; it continues to open new worlds .
+# ::alignments 0-1.1.1 1-1.1 3-1.1.2 5-1.2.1 6-1.2 8-1.2.2 9-1.2.2.2.1 10-1.2.2.2
+(m / multi-sentence 
+      :snt1 (c / continue-01~e.1 
+            :ARG0 (i / it~e.0) 
+            :ARG1 (e / explore-01~e.3 
+                  :ARG0 i)) 
+      :snt2 (c2 / continue-01~e.6 
+            :ARG0 (i2 / it~e.5) 
+            :ARG1 (o / open-01~e.8 
+                  :ARG0 i2 
+                  :ARG1 (w / world~e.10 
+                        :ARG1-of (n / new-02~e.9)))))
+
+# ::id bc.cctv_0000.193 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Each day , there is always something new for people to experience and to love about this city .
+# ::alignments 1-1.6.1.2 5-1.4 6-1 7-1.1 8-1.2.r 9-1.2.1 11-1.2 14-1.5 15-1.3.r 16-1.3.1 17-1.3
+(s2 / something~e.6 
+      :ARG1-of (n / new-02~e.7) 
+      :ARG1-of~e.8 (e / experience-01~e.11 
+            :ARG0 (p / person~e.9)) 
+      :topic~e.15 (c / city~e.17 
+            :mod (t / this~e.16)) 
+      :time (a2 / always~e.5) 
+      :ARG1-of (l / love-01~e.14 
+            :ARG0 p) 
+      :frequency (r / rate-entity-91 
+            :ARG3 (t2 / temporal-quantity :quant 1 
+                  :unit (d / day~e.1))))
+
+# ::id bc.cctv_0000.194 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hong Kong is a world famous shopping paradise .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 2-1.1.r 4-1.2.1 5-1.2 6-1.3 7-1
+(p / paradise~e.7 
+      :domain~e.2 (c / city :wiki "Hong_Kong" 
+            :name (n / name :op1 "Hong"~e.0 :op2 "Kong"~e.1)) 
+      :ARG1-of (f / fame-01~e.5 
+            :location (w / world~e.4)) 
+      :topic (s / shop-01~e.6))
+
+# ::id bc.cctv_0000.195 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok What determined the position of Hong Kong as a shopping paradise ?
+# ::alignments 0-1.1 1-1 3-1.2 4-1.2.1.r 5-1.2.1.2.1 6-1.2.1.2.2 7-1.2.2.r 9-1.2.2.1 10-1.2.2
+(d / determine-01~e.1 
+      :ARG0 (a / amr-unknown~e.0) 
+      :ARG1 (p / position-01~e.3 
+            :ARG1~e.4 (c / city :wiki "Hong_Kong" 
+                  :name (n / name :op1 "Hong"~e.5 :op2 "Kong"~e.6)) 
+            :ARG2~e.7 (p2 / paradise~e.10 
+                  :topic (s / shop-01~e.9))))
+
+# ::id bc.cctv_0000.196 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Is it because of abundant merchandise or high quality at low prices ?
+# ::alignments 2-1 3-1.2.r 4-1.2.1.1 5-1.2.1 6-1.2 7-1.2.2.1 8-1.2.2 9-1.2.2.2.r 10-1.2.2.2.1 11-1.2.2.2 12-1.1 12-1.1.r
+(c / cause-01~e.2 :mode~e.12 interrogative~e.12 
+      :ARG0~e.3 (o / or~e.6 
+            :op1 (m / merchandise~e.5 
+                  :mod (a / abundance~e.4)) 
+            :op2 (q / quality~e.8 
+                  :ARG1-of (h / high-02~e.7) 
+                  :ARG1-of~e.9 (p / price-01~e.11 
+                        :ARG2 (l / low-04~e.10)))))
+
+# ::id bc.cctv_0000.197 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Is it a paradise for the rich or the general public ?
+# ::alignments 0-1.2.r 1-1.2 3-1 4-1.3.r 6-1.3.1 7-1.3 9-1.3.2.1 10-1.3.2 11-1.1 11-1.1.r
+(p / paradise~e.3 :mode~e.11 interrogative~e.11 
+      :domain~e.0 (i / it~e.1) 
+      :beneficiary~e.4 (o / or~e.7 
+            :op1 (r / rich~e.6) 
+            :op2 (p2 / public~e.10 
+                  :ARG1-of (g / general-02~e.9))))
+
+# ::id bc.cctv_0000.198 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok After all , what are the joyful memories from inside paradise ?
+# ::alignments 0-1.4 1-1.4.1 3-1.2 4-1.2.r 6-1.1 7-1 8-1.3.r 9-1.3 10-1.3.1
+(m / memory~e.7 
+      :mod (j / joyful~e.6) 
+      :domain~e.4 (a / amr-unknown~e.3) 
+      :source~e.8 (i / inside~e.9 
+            :op1 (p / paradise~e.10)) 
+      :time (a2 / after~e.0 
+            :op1 (a3 / all~e.1)))
+
+# ::id bc.cctv_0000.199 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok We respectfully invite you to watch Hong Kong : a Shopping Paradise in this edition of Across China .
+# ::alignments 0-1.1 1-1.4 2-1 3-1.2 5-1.3 6-1.3.2.2.1 7-1.3.2.2.2 9-1.3.2.2.3 10-1.3.2.2.4 11-1.3.2.2.5 12-1.3.3.r 13-1.3.3.1 14-1.3.3 15-1.3.3.2.r 16-1.3.3.2.2.1 17-1.3.3.2.2.2
+(i / invite-01~e.2 
+      :ARG0 (w / we~e.0) 
+      :ARG1 (y / you~e.3) 
+      :ARG2 (w2 / watch-01~e.5 
+            :ARG0 y 
+            :ARG1 (b / broadcast-program :wiki - 
+                  :name (n / name :op1 "Hong"~e.6 :op2 "Kong:"~e.7 :op3 "A"~e.9 :op4 "Shopping"~e.10 :op5 "Paradise"~e.11)) 
+            :part-of~e.12 (e / edition~e.14 
+                  :mod (t / this~e.13) 
+                  :domain~e.15 (b2 / broadcast-program :wiki "AcrossChina" 
+                        :name (n2 / name :op1 "Across"~e.16 :op2 "China"~e.17)))) 
+      :manner (r / respect-01~e.1))
+
+# ::id bc.cctv_0000.200 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hello , everyone .
+# ::alignments 0-1.1 2-1.2
+(s / say-01 
+      :ARG1 (h / hello~e.0) 
+      :ARG2 (e / everyone~e.2))
+
+# ::id bc.cctv_0000.201 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This is the Cross Strait program on CCTV International Channel .
+# ::alignments 0-1.3 1-1.3.r 3-1.2.1 4-1.2.2 5-1 7-1.4.2.1 8-1.4.2.2 9-1.4.2.3
+(b / broadcast-program~e.5 :wiki - 
+      :name (n / name :op1 "Cross"~e.3 :op2 "Strait"~e.4) 
+      :domain~e.1 (t / this~e.0) 
+      :medium (c3 / channel :wiki "CCTV_Channels" 
+            :name (n2 / name :op1 "CCTV"~e.7 :op2 "International"~e.8 :op3 "Channel"~e.9)))
+
+# ::id bc.cctv_0000.202 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Welcome to our program .
+# ::alignments 0-1 1-1.1.r 2-1.1.1 2-1.1.1.r 3-1.1
+(w / welcome-01~e.0 
+      :ARG2~e.1 (p / program~e.3 
+            :poss~e.2 (w2 / we~e.2)))
+
+# ::id bc.cctv_0000.203 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok First let 's focus on the main contents of today 's program .
+# ::alignments 0-1.1 0-1.1.r 1-1 2-1.2.1 3-1.2 4-1.2.2.r 6-1.2.2.1 7-1.2.2 7-1.2.2.2 7-1.2.2.2.r 8-1.2.2.2.1.r 9-1.2.2.2.1.1 10-1.2.2.2.1.1.r 11-1.2.2.2.1
+(l / let-01~e.1 :li~e.0 1~e.0 
+      :ARG1 (f / focus-01~e.3 
+            :ARG0 (w / we~e.2) 
+            :ARG2~e.4 (t2 / thing~e.7 
+                  :mod (m / main~e.6) 
+                  :ARG1-of~e.7 (c / contain-01~e.7 
+                        :ARG0~e.8 (p / program~e.11 
+                              :time~e.10 (t / today~e.9))))))
+
+# ::id bc.cctv_0000.204 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Wang Jin - pyng says that he has decided not to continue serving as KMT vice chairman .
+# ::alignments 0-1.1.2.1 1-1.1.2.2 3-1.1.2.2 4-1 5-1.2.r 6-1.2.1 8-1.2 9-1.2.2.1 9-1.2.2.1.r 11-1.2.2 12-1.2.2.3 13-1.2.2.3.3.r 14-1.2.2.3.3.2.1 15-1.2.2.3.2.1 16-1.2.2.3.2
+(s / say-01~e.4 
+      :ARG0 (p2 / person :wiki "Wang_Jin-pyng" 
+            :name (n / name :op1 "Wang"~e.0 :op2 "Jin-pyng"~e.1,3)) 
+      :ARG1~e.5 (d / decide-01~e.8 
+            :ARG0 p2~e.6 
+            :ARG1 (c / continue-01~e.11 :polarity~e.9 -~e.9 
+                  :ARG0 p2 
+                  :ARG1 (s2 / serve-01~e.12 
+                        :ARG0 p2 
+                        :ARG1 (c2 / chairman~e.16 
+                              :mod (v / vice~e.15)) 
+                        :ARG2~e.13 (p / political-party :wiki "Kuomintang" 
+                              :name (n2 / name :op1 "KMT"~e.14))))))
+
+# ::id bc.cctv_0000.205 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Candidates for the giant pandas to be presented to Taiwan as gifts from the mainland may increase .
+# ::alignments 0-1.1.1 1-1.1.1.1.r 3-1.1.1.1.1 4-1.1.1.1 7-1.1.1.1.2 8-1.1.1.1.2.1.r 9-1.1.1.1.2.1.2.1 10-1.1.1.1.2.2.r 11-1.1.1.1.2.2 12-1.1.1.1.2.2.1.r 14-1.1.1.1.2.2.1 15-1 16-1.1
+(p / possible-01~e.15 
+      :ARG1 (i / increase-01~e.16 
+            :ARG1 (c2 / candidate~e.0 
+                  :prep-for~e.1 (p2 / panda~e.4 
+                        :mod (g / giant~e.3) 
+                        :ARG1-of (p3 / present-01~e.7 
+                              :ARG2~e.8 (c3 / country :wiki "Taiwan" 
+                                    :name (n / name :op1 "Taiwan"~e.9)) 
+                              :ARG3~e.10 (g2 / gift-01~e.11 
+                                    :ARG0~e.12 (m / mainland~e.14) 
+                                    :ARG1 p2))))))
+
+# ::id bc.cctv_0000.206 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Taiwan 's military uses Taipei Aerospace Exhibition as an opportunity for pressing arms procurement .
+# ::alignments 0-1.1.1.2.1 1-1.1.1.r 2-1.1 3-1 4-1.2.2.1 5-1.2.2.2 6-1.2.2.3 7-1.3.r 9-1.3 10-1.3.1.r 11-1.3.1 12-1.3.1.1.1 13-1.3.1.1
+(u / use-01~e.3 
+      :ARG0 (m / military~e.2 
+            :poss~e.1 (c2 / country :wiki "Taiwan" 
+                  :name (n / name :op1 "Taiwan"~e.0))) 
+      :ARG1 (e2 / event :wiki - 
+            :name (n2 / name :op1 "Taipei"~e.4 :op2 "Aerospace"~e.5 :op3 "Exhibition"~e.6)) 
+      :ARG2~e.7 (o / opportunity~e.9 
+            :purpose~e.10 (p / press-01~e.11 
+                  :ARG2 (p2 / procure-01~e.13 
+                        :ARG1 (a / arms~e.12)))))
+
+# ::id bc.cctv_0000.207 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Recently , the 2005 Ningxia Investment and Trade Fair and Ningxia - Taiwan Economic and Trade Cooperation Seminar were held in the city of Yinchuan .
+# ::alignments 0-1.2 3-1.1.3.1 4-1.1.1.2.1 5-1.1.1.2.2 6-1.1.1.2.3 7-1.1.1.2.4 8-1.1.1.2.5 9-1.1 9-1.1.2.2.3 10-1.1.2.2.1 12-1.1.2.2.1 13-1.1.2.2.2 14-1.1.2.2.3 15-1.1.2.2.4 16-1.1.2.2.5 17-1.1.2.2.6 19-1 20-1.3.r 22-1.3 24-1.3.2.1
+(h / hold-04~e.19 
+      :ARG1 (a / and~e.9 
+            :op1 (e3 / event :wiki - 
+                  :name (n3 / name :op1 "Ningxia"~e.4 :op2 "Investment"~e.5 :op3 "and"~e.6 :op4 "Trade"~e.7 :op5 "Fair"~e.8)) 
+            :op2 (e4 / event :wiki - 
+                  :name (n4 / name :op1 "Ningxia-Taiwan"~e.10,12 :op2 "Economic"~e.13 :op3 "and"~e.9,14 :op4 "Trade"~e.15 :op5 "Cooperation"~e.16 :op6 "Seminar"~e.17)) 
+            :time (d2 / date-entity :year 2005~e.3)) 
+      :time (r / recent~e.0) 
+      :location~e.20 (c / city~e.22 :wiki "Yinchuan" 
+            :name (n5 / name :op1 "Yinchuan"~e.24)))
+
+# ::id bc.cctv_0000.208 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok More than three hundred Taiwanese businesspeople gathered in this land known as " lush southern - type fields north of the Great Wall , " beginning their tour and inspection journey .
+# ::alignments 0-1.1.1.2 1-1.1.1.2 2-1.1.1.2.1 3-1.1.1.2.1 4-1.1.1.1.2.1 6-1.1 7-1.1.2.r 8-1.1.2.2 9-1.1.2 10-1.1.2.1 13-1.1.2.1.1.1 14-1.1.2.1.1.2.1 16-1.1.2.1.1.2 17-1.1.2.1.1 18-1.1.2.1.1.3.2 21-1.1.2.1.1.3.1.2.1 22-1.1.2.1.1.3.1.2.2 25-1.2 27-1.2.2.1 28-1.2.2 29-1.2.2.2.2 30-1.2.2.2
+(a / and 
+      :op1 (g / gather-03~e.6 
+            :ARG0 (p / person 
+                  :source (c2 / country :wiki "Taiwan" 
+                        :name (n / name :op1 "Taiwan"~e.4)) 
+                  :quant (m / more-than~e.0,1 :op1 300~e.2,3) 
+                  :mod (b / business)) 
+            :location~e.7 (l / land~e.9 
+                  :ARG1-of (k / know-02~e.10 
+                        :ARG2 (f / field~e.17 
+                              :mod (l2 / lush~e.13) 
+                              :mod (t / type~e.16 
+                                    :mod (s / south~e.14)) 
+                              :location (r / relative-position 
+                                    :op1 (f2 / facility :wiki "Great_Wall_of_China" 
+                                          :name (n3 / name :op1 "Great"~e.21 :op2 "Wall"~e.22)) 
+                                    :direction (n2 / north~e.18)))) 
+                  :mod (t3 / this~e.8))) 
+      :op2 (b2 / begin-01~e.25 
+            :ARG0 p 
+            :ARG1 (a2 / and~e.28 
+                  :op1 (t2 / tour-01~e.27 
+                        :ARG0 p) 
+                  :op2 (j / journey-01~e.30 
+                        :ARG0 p 
+                        :purpose (i / inspect-01~e.29 
+                              :ARG0 p)))))
+
+# ::id bc.cctv_0000.209 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Well , what is the unique charm in Ningxia of the western region that has attracted the attention of so many Taiwanese businesspeople ?
+# ::alignments 0-1.5 2-1.4 5-1.2 6-1 7-1.3.r 8-1.3.2.1 9-1.1.r 11-1.1.1 12-1.1 15-1.1.2 17-1.1.2.1 18-1.1.2.1.1.r 19-1.1.2.1.1.2.1 20-1.1.2.1.1.2 21-1.1.2.1.1.1.2.1
+(c2 / charm-01~e.6 
+      :ARG0~e.9 (r / region~e.12 
+            :mod (w / west~e.11) 
+            :ARG0-of (a / attract-01~e.15 
+                  :ARG1 (a2 / attend-02~e.17 
+                        :ARG0~e.18 (p / person 
+                              :source (c4 / country :wiki "Taiwan" 
+                                    :name (n3 / name :op1 "Taiwan"~e.21)) 
+                              :quant (m / many~e.20 
+                                    :degree (s / so~e.19)) 
+                              :mod (b / business)) 
+                        :ARG1 c3))) 
+      :mod (u / unique~e.5) 
+      :location~e.7 (c3 / city :wiki "Ningxia" 
+            :name (n2 / name :op1 "Ningxia"~e.8)) 
+      :manner (a3 / amr-unknown~e.2) 
+      :mod (w2 / well~e.0))
+
+# ::id bc.cctv_0000.210 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Please watch this edition of Hot Topic Analysis for a detailed report .
+# ::alignments 0-1.2 0-1.2.r 1-1 2-1.4.1 3-1.4 4-1.4.2.r 5-1.4.2.2.1 6-1.4.2.2.2 7-1.4.2.2.3 8-1.5.r 10-1.5.1 11-1.5
+(w / watch-01~e.1 :mode imperative :polite~e.0 +~e.0 
+      :ARG0 (y / you) 
+      :ARG1 (e / edition~e.3 
+            :mod (t / this~e.2) 
+            :mod~e.4 (b / broadcast-program :wiki - 
+                  :name (n / name :op1 "Hot"~e.5 :op2 "Topic"~e.6 :op3 "Analysis"~e.7))) 
+      :purpose~e.8 (r / report-01~e.11 
+            :ARG0-of (d / detail-01~e.10)))
+
+# ::id bc.cctv_0000.211 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The KMT vice chairman arrived at party headquarters to meet with KMT Chairman Lien Chan on the afternoon of %pw .
+# ::alignments 1-1.1.1.1.2.1 2-1.1.1.2.1 3-1.1.1.2 4-1 5-1.2.r 6-1.2.1.1 7-1.2.1 9-1.3 10-1.3.2.r 11-1.3.2.3.1 12-1.3.2.3.2 13-1.3.2.2.1 14-1.3.2.2.2 15-1.3.3.r 17-1.3.3.1
+(a / arrive-01~e.4 
+      :ARG1 (p2 / person 
+            :ARG0-of (h2 / have-org-role-91 
+                  :ARG1 (p / political-party :wiki "Kuomintang" 
+                        :name (n / name :op1 "KMT"~e.1)) 
+                  :ARG2 (c / chairman~e.3 
+                        :mod (v / vice~e.2)))) 
+      :ARG4~e.5 (t / thing 
+            :location-of (h / headquarter-01~e.7 
+                  :ARG1 p~e.6)) 
+      :purpose (m / meet-03~e.9 
+            :ARG0 p2 
+            :ARG1~e.10 (p4 / person :wiki "Lien_Chan" 
+                  :name (n2 / name :op1 "Lien"~e.13 :op2 "Chan"~e.14) 
+                  :ARG0-of (h3 / have-org-role-91 
+                        :ARG1 p~e.11 
+                        :ARG2 (c2 / chairman~e.12))) 
+            :time~e.15 (d / date-entity 
+                  :dayperiod (a2 / afternoon~e.17))))
+
+# ::id bc.cctv_0000.212 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok After a long talk of over an hour , Wang Jin - pyng expressed his wish not to renew his term as KMT vice chairman .
+# ::alignments 0-1.3 2-1.3.1.1 3-1.3.1 4-1.3.1.1.1.r 5-1.3.1.1.1 6-1.3.1.1.1.1.1 7-1.3.1.1.1.1.2 9-1.1.2.1 10-1.1.2.2 12-1.1.2.2 13-1 14-1.2.1 14-1.2.1.r 15-1.2 16-1.2.2.1 16-1.2.2.1.r 18-1.2.2 19-1.2.2.3.1 19-1.2.2.3.1.r 20-1.2.2.3 21-1.2.2.3.2.r 22-1.2.2.3.2.2.1.2.1 23-1.2.2.3.2.1 24-1.2.2.3.2
+(e / express-01~e.13 
+      :ARG0 (p2 / person :wiki "Wang_Jin-pyng" 
+            :name (n / name :op1 "Wang"~e.9 :op2 "Jin-pyng"~e.10,12)) 
+      :ARG1 (w2 / wish-01~e.15 
+            :ARG0~e.14 p2~e.14 
+            :ARG1 (r / renew-01~e.18 :polarity~e.16 -~e.16 
+                  :ARG0 p2 
+                  :ARG1 (t2 / term~e.20 
+                        :poss~e.19 p2~e.19 
+                        :prep-as~e.21 (c / chairman~e.24 
+                              :mod (v / vice~e.23) 
+                              :ARG2-of (h / have-org-role-91 
+                                    :ARG1 (o3 / organization :wiki "Kuomintang" 
+                                          :name (n2 / name :op1 "KMT"~e.22))))))) 
+      :time (a / after~e.0 
+            :op1 (t3 / talk-01~e.3 
+                  :ARG1-of (l / long-03~e.2 
+                        :ARG2~e.4 (o4 / over~e.5 
+                              :op1 (t4 / temporal-quantity :quant 1~e.6 
+                                    :unit (h2 / hour~e.7)))))))
+
+# ::id bc.cctv_0000.213 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok He said that he will follow Lien Chan as a lifelong volunteer .
+# ::alignments 0-1.1 1-1 2-1.2.r 3-1.2.1 5-1.2 6-1.2.2.2.1 7-1.2.2.2.2 11-1.2.3
+(s / say-01~e.1 
+      :ARG0 (h / he~e.0) 
+      :ARG1~e.2 (f / follow-01~e.5 
+            :ARG1 h~e.3 
+            :ARG2 (p2 / person :wiki "Lien_Chan" 
+                  :name (n / name :op1 "Lien"~e.6 :op2 "Chan"~e.7)) 
+            :manner (v / volunteer-01~e.11 
+                  :ARG0 h 
+                  :duration (l / live-01 
+                        :ARG0 h))))
+
+# ::id bc.cctv_0000.214 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok %pw
+# ::alignments 
+(t / thing)
