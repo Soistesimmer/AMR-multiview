@@ -38,11 +38,13 @@ class MultiHeadedAttention(nn.Module):
                                        head_count * self.dim_per_head)
         self.linear_query = nn.Linear(model_dim,
                                       head_count * self.dim_per_head)
+        self.linear_structure_k = nn.Linear(64, 64)
+        self.linear_structure_v = nn.Linear(64, 64)
         self.softmax = nn.Softmax(dim=-1)
         self.dropout = nn.Dropout(dropout)
         self.final_linear = nn.Linear(model_dim, model_dim)
 
-    def forward(self, key, value, query, mask=None,
+    def forward(self, key, value, query, structure=None, mask=None,
                 layer_cache=None, type=None):
         """
         Compute the context vector and the attention vectors.
@@ -62,24 +64,7 @@ class MultiHeadedAttention(nn.Module):
            * output context vectors `[batch, query_len, dim]`
            * one of the attention vectors `[batch, query_len, key_len]`
         """
-
-        # CHECKS
-        # batch, k_len, d = key.size()
-        # batch_, k_len_, d_ = value.size()
-        # aeq(batch, batch_)
-        # aeq(k_len, k_len_)
-        # aeq(d, d_)
-        # batch_, q_len, d_ = query.size()
-        # aeq(batch, batch_)
-        # aeq(d, d_)
-        # aeq(self.model_dim % 8, 0)
-        # if mask is not None:
-        #    batch_, q_len_, k_len_ = mask.size()
-        #    aeq(batch_, batch)
-        #    aeq(k_len_, k_len)
-        #    aeq(q_len_ == q_len)
-        # END CHECKS
-
+        global structure_k, structure_v
         batch_size = key.size(0)
         dim_per_head = self.dim_per_head
         head_count = self.head_count
@@ -88,13 +73,11 @@ class MultiHeadedAttention(nn.Module):
 
         def shape(x):
             """  projection """
-            return x.view(batch_size, -1, head_count, dim_per_head) \
-                .transpose(1, 2)
+            return x.view(batch_size, -1, head_count, dim_per_head).transpose(1, 2)
 
         def unshape(x):
             """  compute context """
-            return x.transpose(1, 2).contiguous() \
-                .view(batch_size, -1, head_count * dim_per_head)
+            return x.transpose(1, 2).contiguous().view(batch_size, -1, head_count * dim_per_head)
 
         # 1) Project key, value, and query.
         if layer_cache is not None:
@@ -103,6 +86,12 @@ class MultiHeadedAttention(nn.Module):
                                     self.linear_keys(query), \
                                     self.linear_values(query)
 
+                if structure is not None:
+                    structure_k, structure_v = self.linear_structure_k(structure), \
+                                               self.linear_structure_v(structure)
+                else:
+                    structure_k = None
+                    structure_v = None
                 key = shape(key)
                 value = shape(value)
 
@@ -140,6 +129,13 @@ class MultiHeadedAttention(nn.Module):
             key = self.linear_keys(key)
             value = self.linear_values(value)
             query = self.linear_query(query)
+
+            if structure is not None:
+                structure_k, structure_v = self.linear_structure_k(structure), \
+                                           self.linear_structure_v(structure)
+            else:
+                structure_k = None
+                structure_v = None
             key = shape(key)
             value = shape(value)
 
@@ -152,6 +148,15 @@ class MultiHeadedAttention(nn.Module):
         query = query / math.sqrt(dim_per_head)
         scores = torch.matmul(query, key.transpose(2, 3))
 
+        if structure_k is not None:
+            q = query.transpose(1, 2)
+
+            # print(q.size(), structure_k.transpose(2,3).size())
+
+            scores_k = torch.matmul(q, structure_k.transpose(2, 3))
+            scores_k = scores_k.transpose(1, 2)
+            # print (scores.size(),scores_k.size())
+            scores = scores + scores_k
         if mask is not None:
             mask = mask.unsqueeze(1)  # [B, 1, 1, T_values]
             scores = scores.masked_fill(mask, -1e18)
@@ -159,14 +164,15 @@ class MultiHeadedAttention(nn.Module):
         # 3) Apply attention dropout and compute context vectors.
         attn = self.softmax(scores)
         drop_attn = self.dropout(attn)
-        context = unshape(torch.matmul(drop_attn, value))
-
+        context = torch.matmul(drop_attn, value)
+        if structure_v is not None:
+            drop_attn_v = drop_attn.transpose(1, 2)
+            context_v = torch.matmul(drop_attn_v, structure_v)
+            context_v = context_v.transpose(1, 2)
+            # print(context.size(),context_v.size())
+            context = context + context_v
+        context = unshape(context)
         output = self.final_linear(context)
-        # CHECK
-        # batch_, q_len_, d_ = output.size()
-        # aeq(q_len, q_len_)
-        # aeq(batch, batch_)
-        # aeq(d, d_)
 
         # Return one attn
         top_attn = attn \
@@ -178,7 +184,7 @@ class MultiHeadedAttention(nn.Module):
 
 
 class PositionwiseFeedForward(nn.Module):
-    """ A two-layer Feed-Forward-Network with residual layer norm.
+    """ A two-layer Feed-Forward-Network.
 
         Args:
             d_model (int): the size of input for the first-layer of the FFN.
@@ -191,10 +197,8 @@ class PositionwiseFeedForward(nn.Module):
         super(PositionwiseFeedForward, self).__init__()
         self.w_1 = nn.Linear(d_model, d_ff)
         self.w_2 = nn.Linear(d_ff, d_model)
-        self.layer_norm = nn.LayerNorm(d_model, eps=1e-6)
         self.dropout_1 = nn.Dropout(dropout)
         self.relu = nn.ReLU()
-        self.dropout_2 = nn.Dropout(dropout)
 
     def forward(self, x):
         """
@@ -207,6 +211,6 @@ class PositionwiseFeedForward(nn.Module):
         Returns:
             output: [ batch_size, input_len, model_dim ]
         """
-        inter = self.dropout_1(self.relu(self.w_1(self.layer_norm(x))))
-        output = self.dropout_2(self.w_2(inter))
-        return output + x
+        inter = self.dropout_1(self.relu(self.w_1(x)))
+        output = self.w_2(inter)
+        return output

@@ -111,8 +111,8 @@ class TransformerDecoder(nn.Module):
 
     def forward(self, tgt, step=None):
         """
-        See :obj:`onmt.modules.RNNDecoderBase.forward()`
-        """
+    See :obj:`onmt.modules.RNNDecoderBase.forward()`
+    """
         if step == 0:
             self._init_cache(self.num_layers)
 

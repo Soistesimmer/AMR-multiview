@@ -43,10 +43,12 @@ class Translator(object):
     def build_tokens(self, idx, side="tgt"):
         assert side in ["src", "tgt"], "side should be either src or tgt"
         vocab = self.fields[side].vocab
+
         if side == "tgt":
             eos_id = self.tgt_eos_id
         else:
             eos_id = self.src_eos_id
+
         tokens = []
         for tok in idx:
             if tok == eos_id:
@@ -55,11 +57,12 @@ class Translator(object):
                 tokens.append(vocab.itos[tok])
         return tokens
 
-    def translate(self, src_data_iter, tgt_data_iter, batch_size, out_file=None):
-        data = build_dataset(self.fields,
-                             src_data_iter=src_data_iter,
-                             tgt_data_iter=tgt_data_iter,
-                             use_filter_pred=False)
+    def translate(self, src_data_iter, tgt_data_iter, structure_iter, batch_size, out_file=None):
+
+        data = build_dataset(self.fields, src_data_iter, tgt_data_iter, None, structure_iter, use_filter_pred=False)
+
+        # for line in data:
+        #   print(line.__dict__)    {src:  , indices:   structure: }
 
         def sort_translation(indices, translation):
             ordered_transalation = [None] * len(translation)
@@ -76,19 +79,30 @@ class Translator(object):
             dataset=data, device=cur_device,
             batch_size=batch_size, train=False, sort=True,
             sort_within_batch=True, shuffle=True)
+
         start_time = time.time()
         print("Begin decoding ...")
         batch_count = 0
         all_translation = []
+
         for batch in data_iter:
+            '''
+            batch
+            [torchtext.data.batch.Batch of size 30]
+            [.src]:('[torch.LongTensor of size 4x30]', '[torch.LongTensor of size 30]')
+            [.indices]:[torch.LongTensor of size 30]
+            [.structure]:[torch.LongTensor of size 30x4x4]
+            '''
             hyps, scores = self.translate_batch(batch)
             assert len(batch) == len(hyps)
             batch_transtaltion = []
             for src_idx_seq, tran_idx_seq, score in zip(batch.src[0].transpose(0, 1), hyps, scores):
                 src_words = self.build_tokens(src_idx_seq, side='src')
                 src = ' '.join(src_words)
+
                 tran_words = self.build_tokens(tran_idx_seq, side='tgt')
                 tran = ' '.join(tran_words)
+
                 batch_transtaltion.append(tran)
                 print("SOURCE: " + src + "\nOUTPUT: " + tran + "\n")
             for index, tran in zip(batch.indices.data, batch_transtaltion):
@@ -121,8 +135,7 @@ class Translator(object):
 
             return beamed_tensor
 
-        def beam_decode_step(
-                inst_dec_beams, len_dec_seq, inst_idx_to_position_map, n_bm):
+        def beam_decode_step(inst_dec_beams, len_dec_seq, inst_idx_to_position_map, n_bm):
             ''' Decode and update beam status, and then return active beam idx '''
 
             # len_dec_seq: i (starting from 0)
@@ -178,8 +191,7 @@ class Translator(object):
 
             return active_inst_idx_list
 
-        def collate_active_info(
-                src_seq, src_enc, inst_idx_to_position_map, active_inst_idx_list):
+        def collate_active_info(src_seq, src_enc, inst_idx_to_position_map, active_inst_idx_list):
             # Sentences which are still active are collected,
             # so the decoder will not run on completed sentences.
             n_prev_active_inst = len(inst_idx_to_position_map)
@@ -204,8 +216,15 @@ class Translator(object):
         with torch.no_grad():
             # -- Encode
             src_seq = make_features(batch, 'src')
+            src_seq = src_seq[1:]
             # src: (seq_len_src, batch_size)
-            src_emb, src_enc, _ = self.model.encoder(src_seq)
+            # print(src_seq.size()) 4*30
+            structure = make_features(batch, 'structure')
+            structure = structure.transpose(0, 1)
+            structure = structure.transpose(1, 2)
+            # print(structure.size()) 30*4*4
+
+            src_emb, src_enc, _ = self.model.encoder(src_seq, structure)
             # src_emb: (seq_len_src, batch_size, emb_size)
             # src_end: (seq_len_src, batch_size, hid_size)
             self.model.decoder.init_state(src_seq, src_enc)
