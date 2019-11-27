@@ -1,5 +1,5 @@
 #!/bin/bash
-base_dir=/home/wangante/work-code-20190910/AMRdata-master/LDC2015
+base_dir=/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015
 ori_dir=/home/wangante/work-code-20190910/LDC2015E86/data/alignments/split
 
 echo "Spliting files ..."
