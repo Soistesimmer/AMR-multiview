@@ -8,7 +8,7 @@ target=test
 
 train_test_data_dir='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0'
 model_file='./workspace/model/_step_'
-reference="/home/wangante/work-code-20190910/AMRdata-master/LDC2015/${target}.reference"
+reference="/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/${target}.reference"
 output_dir='./workspace/translate-result'
 
 if [ ! -d "$output_dir" ]; then mkdir -p "$output_dir"; fi
