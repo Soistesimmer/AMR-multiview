@@ -1,10 +1,10 @@
 #!/bin/bash
 
 data_prefix='./workspace/data/gq'
-model_dir='./workspace/model/'
+model_dir='./workspace/model27/'
 if [ ! -d "$model_dir" ]; then mkdir -p "$model_dir"; fi
 
-CUDA_VISIBLE_DEVICES=0  nohup python3 train.py \
+CUDA_VISIBLE_DEVICES=3  nohup python3 train.py \
                         -data $data_prefix \
                         -save_model $model_dir \
                         -world_size 1 \
@@ -35,6 +35,6 @@ CUDA_VISIBLE_DEVICES=0  nohup python3 train.py \
                         -param_init_glorot \
                         -valid_batch_size 8 \
                         -ratio 0.15 \
-                        -ratio2 0.05 >  combine.log 2>&1 &
+                        -ratio2 0.03 >  combine.log 2>&1 &
 
 

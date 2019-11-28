@@ -15,7 +15,6 @@ from utils.report_manager import build_report_manager
 from utils.statistics import Statistics
 from utils.distributed import all_gather_list, all_reduce_and_rescale_tensors
 from inputters.dataset import make_features
-import torch.nn as nn
 
 
 def build_trainer(opt, device_id, model, fields,
@@ -31,8 +30,8 @@ def build_trainer(opt, device_id, model, fields,
         model_saver(:obj:`onmt.models.ModelSaverBase`): the utility object
             used to save the model
     """
-    train_loss = [build_loss_compute(
-        model, fields["tgt"].vocab, opt), nn.NLLLoss(reduction='sum')]
+    train_loss = build_loss_compute(
+        model, fields["tgt"].vocab, opt)
     valid_loss = build_loss_compute(
         model, fields["tgt"].vocab, opt, train=False)
 
@@ -87,8 +86,7 @@ class Trainer(object):
                  gpu_verbose_level=0, report_manager=None, model_saver=None):
         # Basic attributes.
         self.model = model
-        self.train_loss = train_loss[0]
-        self.train_relation_loss = train_loss[1]
+        self.train_loss = train_loss
         self.valid_loss = valid_loss
         self.optim = optim
         self.trunc_size = trunc_size
@@ -274,10 +272,6 @@ class Trainer(object):
             mask = mask.byte()
             mask = mask.transpose(0, 1)
 
-            relation = make_features(batch, 'relation')
-            relation = relation.transpose(0, 1)
-            relation = relation[relation != 1]
-
             for j in range(0, target_size - 1, trunc_size):
                 # 1. Create truncated target.
                 tgt = tgt_outer[j: j + trunc_size]
@@ -286,25 +280,15 @@ class Trainer(object):
                 if self.grad_accum_count == 1:
                     self.model.zero_grad()
 
-                outputs, attns, p, rels = \
+                outputs, attns, p = \
                     self.model(src, tgt, structure, mask, src_lengths)
 
                 # 3. Compute loss in shards for memory efficiency.
                 batch_stats = self.train_loss.sharded_compute_loss(
                     batch, outputs, attns, j,
                     trunc_size, self.shard_size, normalization, 1. - ratio)
-
-                # # for test
-                # batch_stats = self.train_loss.sharded_compute_loss(
-                #     batch, outputs, attns, j,
-                #     trunc_size, self.shard_size, normalization, 1.)
-
-                relation_loss = self.train_relation_loss(rels, relation)
-                loss = p + relation_loss / relation.size(0)
-                # loss=p
-                loss = loss * ratio
+                loss = p * ratio
                 loss.backward()
-
                 total_stats.update(batch_stats)
                 report_stats.update(batch_stats)
 

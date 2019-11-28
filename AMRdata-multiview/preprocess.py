@@ -54,10 +54,12 @@ if __name__ == '__main__':
             id = item['id']
             [ori_ali, ori_sent, al2] = origin_amr[id]
 
+            # 使用json文件中处理后的amr
             simplified_amr = remove_wiki(item['amr'].strip().split())
             amrs.append(' '.join(simplified_amr))
 
             a_length=len(ori_sent.split())
+            # 此处将引号的使用统一
             ori_sent=ori_sent.replace('\'\'','"')
             ori_sent = ori_sent.replace('``', '"')
             ori_sent = ori_sent.replace('\' ', '" ')
@@ -69,13 +71,15 @@ if __name__ == '__main__':
             total_number+=1
             if sent != ori_sent:
                 inconsist_sent_counter += 1
-            tokens=nlp.word_tokenize(sent)
-            sent=re.sub(r'\s@\s?(.)\s?@\s',lambda m: ' @'+m.group(1)+'@ ',' '.join(tokens))
-            sent=re.sub(r'([a-zA-Z0-9]+)\s@\s-@([a-zA-Z]+)', lambda m: m.group(1) + ' @-@ ' + m.group(2),
-                              sent)
+            # tokens=nlp.word_tokenize(sent)
+            # sent=re.sub(r'\s@\s?(.)\s?@\s',lambda m: ' @'+m.group(1)+'@ ',' '.join(tokens))
+            # sent=re.sub(r'([a-zA-Z0-9]+)\s@\s-@([a-zA-Z]+)', lambda m: m.group(1) + ' @-@ ' + m.group(2),
+            #                   sent)
             un_toks.append(ori_sent)
             ori_tokens=nlp.word_tokenize(ori_sent)
+            # tokenize会把形如'@-@'变为'@ - @'，此处还原，避免过多不具实际意义的tok使结果偏高
             ori_sent=re.sub(r'\s@\s?(.)\s?@\s',lambda m: ' @'+m.group(1)+'@ ',' '.join(ori_tokens))
+
             # # 超麻烦的alignment迁移 **这部分已换到a2b.py实现
             # length=len(tokens)
             # ori_tokens=ori_sent.split()
@@ -105,7 +109,8 @@ if __name__ == '__main__':
             alignments.append(ori_ali)
             al2s.append(al2)
             text.append(ori_sent)
-            gold_reference.append(sent)
+            # 统一使用原文件，reference与tok.sent文件已不再有区别
+            gold_reference.append(ori_sent)
             # text.append(' '.join(tokens))
             # text.append(sent)
             concepts.append(' '.join(get_concepts(simplified_amr)))

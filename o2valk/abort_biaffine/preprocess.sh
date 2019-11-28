@@ -9,9 +9,11 @@ data_prefix="$data_dir/gq"
 python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -train_tgt $train_test_data_dir/train.tok.sent.bpe \
                         -train_structure  $train_test_data_dir/train.path  \
+                        -train_mask $train_test_data_dir/train.align \
                         -valid_src $train_test_data_dir/dev.concept.bpe  \
                         -valid_tgt $train_test_data_dir/dev.tok.sent.bpe \
                         -valid_structure $train_test_data_dir/dev.path   \
+                        -valid_mask $train_test_data_dir/dev.align   \
                         -save_data $data_prefix \
                         -src_vocab_size 10000  \
                         -tgt_vocab_size 10000 \
