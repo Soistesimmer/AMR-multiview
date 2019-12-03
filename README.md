@@ -1,23 +1,43 @@
 # Multi-View Autoencoding Losses
 
-### Data Processing
+This repository contains the code for our paper ["Structural Information Preserving for Graph-to-Text Generation"](https://)
 
-  - AMRdata-origin 是原数据处理文件
-  - AMRdata-multiview 是改动后的文件
+The code is developed under Pytorch 1.0 Due to the compitibility reason of Pytorch, it may not be loaded by some lower version (such as 0.4.0).
+
+## Data preprocessing 
+The codes of data preprocessing could be found in folder [AMRdata-multiview](https://github.com/Soistesimmer/work-code-20190910/tree/master/AMRdata-multiview). Modify the PATH within [preprocess.sh](https://github.com/Soistesimmer/work-code-20190910/blob/master/AMRdata-multiview/preprocess.sh) and run ```sh preprocess.sh```
+
+For every model, you need to run the preprocess.sh under its dir using the files generated above. Remember modifying the PATH first.
+
+### Baseline 
+
+Our baseline uses one of methods proposed by [Zhu et al.](https://github.com/Amazing-J/structural-transformer) named Feature-based. We follows the data preprocessing of (Zhu et al.) where concept sequences, label sequences and references are extracted from dataset. You could get more detailed descriptions from [README.md](https://github.com/Amazing-J/structural-transformer/blob/master/README.md) of their work.
+
+### View 1: Triples Relations
+
+For AMR-to-Text, We use node-to-word alignments dataset produced by the ISI aligner (Pourdamghani et al.).
+```
+# ::id bolt12_07_4800.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Establishing Models in Industrial Innovation
+# ::alignments 0-1 1-1.1 2-1.1.1.r 3-1.1.1.1 4-1.1.1
+(e / establish-01~e.0 
+      :ARG1 (m / model~e.1 
+            :mod~e.2 (i / innovate-01~e.4 
+                  :ARG1 (i2 / industry~e.3))))
+```
+Take node 'model~e.1' as an example. It means this node is correspond with the word 'Models'(at position 1 if start from 0) in tok. Notice that we use toks as references in all experiments.
+
+### View 2: Linearized Graphs
+
+We use the depth-first traversal strategy as in [Konstas et al.](https://github.com/sinantie/NeuralAmr) to linearize AMR graphs to obtain reconstructed AMRs. We also try other methods, such as concept sequences same as the encoder inputs, and random graph linearization, where the order for picking children is random rather than following the left-to-right order at each stage of the depth-ﬁrst traversal procedure.
 
 
-使用方法:
-  - 设置 preprocess.py 中standford Corenlp的路径
-  - 设置 preprocess.sh 中json文件（和原数据集文件）路径
-  - 运行 preprocess.sh
+## Training 
 
-### Training
-    
-- o2valk有baseline, biaffine, reconstructor, combine四个模型
+First, modify the PATH within "train.sh". "data_prefix" is the preprocessing directory generated above. Note the prefix gq. For example "./workspace/data/gq". Finally, execute the corresponding script file, such as ```sh train.sh```.
 
-使用方法：
-  - 设置 preprocess.sh, train.sh, translate.sh 中的文件路径
-  - 运行 preprocess.sh
-  - 运行 train.sh
-  - 运行 translate.sh
-  - 结果默认在对应模型 workplace 目录下
+## Decoding 
+
+You should change the PATH in the "translate.sh" accordingly, and then execute ```bash translate.sh```. 
+
+## Cite 
