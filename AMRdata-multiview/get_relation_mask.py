@@ -3,8 +3,8 @@ if __name__ == '__main__':
     mask='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0/train.align'
     relation='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0/train.al2'
     vocab='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/gq_relation_vocab'
-    output='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/train.rm'
-
+    output='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0/train.rm'
+    vocab_size=50
     with open(mask,'r')as file:
         mask=[line for line in file.readlines()]
         for index, x in enumerate(mask):
@@ -16,7 +16,7 @@ if __name__ == '__main__':
         relation=[line.split() for line in file.readlines()]
     with open(vocab,'r')as file:
         vocab=[line.split() for line in file.readlines()]
-        vocab_size=len(vocab)
+        # vocab_size=len(vocab)
         vocab={line[1]:int(line[0]) for line in vocab}
     relation_mask=[]
     for x, y in zip(mask, relation):

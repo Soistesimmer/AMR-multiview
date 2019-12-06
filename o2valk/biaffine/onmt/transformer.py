@@ -61,6 +61,7 @@ class Biaffine(nn.Module):
 
     def forward(self, input, mask):
         input = input.transpose(0, 1)
+        batch_size=input.size(0)
         o_head = self.head_mlp(input)
         o_dep = self.dep_mlp(input)
         out = torch.matmul(o_head, self.U)
@@ -69,8 +70,6 @@ class Biaffine(nn.Module):
         out = out + out_ + self.b
         # out = F.log_softmax(out, 2)
         out = F.softmax(out, 2)
-        batch_size = out.size(0)
-        seq_length = out.size(1)
 
         l_head = self.label_head_mlp(input)
         l_dep = self.label_dep_mlp(input)
@@ -78,9 +77,8 @@ class Biaffine(nn.Module):
         l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
         l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
         l_out = l_out + l_out_ + self.label_b
-        l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask)
+        l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask.reshape(batch_size,-1))
 
-        mask = mask.reshape(batch_size, seq_length, seq_length)
         tmp = mask.sum(2)
         out = out.masked_fill(1 - mask, value=torch.tensor(0.))
         out = out.sum(2)

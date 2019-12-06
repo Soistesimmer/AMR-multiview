@@ -110,7 +110,9 @@ def get_mask_fields(fields=None):
     if fields is None:
         fields={}
 
-    fields["mask"] = torchtext.data.Field(sequential=True, pad_token=Constants.PAD_WORD)
+    nesting_field = torchtext.data.Field(
+        pad_token=Constants.PAD_WORD)
+    fields["mask"] = torchtext.data.NestedField(nesting_field, pad_token=Constants.PAD_WORD)
 
     fields["indices"] = torchtext.data.Field(
         use_vocab=False, dtype=torch.long,
@@ -162,6 +164,7 @@ def load_fields(opt, checkpoint):
     else:
         fields = load_fields_from_vocab(torch.load(opt.data + '_vocab.pt'))
     fields['structure'].nesting_field.vocab = fields['structure'].vocab
+    fields['mask'].nesting_field.vocab = fields['mask'].vocab
     logger.info(' * vocabulary size. source = %d; target = %d; structure = %d; mask = %d; relation = %d' %
                 (len(fields['src'].vocab), len(fields['tgt'].vocab), len(fields['structure'].nesting_field.vocab), len(fields['mask'].vocab), len(fields['relation'].vocab)))
 
@@ -295,7 +298,7 @@ def build_dataset(fields,
         structure_examples_iter = None
 
     if mask_data_iter != None:
-        mask_examples_iter=Dataset.make_examples(mask_data_iter, None, 'mask')
+        mask_examples_iter=Dataset.make_nested_examples(mask_data_iter, None, 'mask')
     else:
         mask_examples_iter=None
 

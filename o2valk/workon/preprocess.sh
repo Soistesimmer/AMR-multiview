@@ -20,7 +20,7 @@ python3 ./preprocess.py -train_src $train_test_data_dir/train.concept.bpe \
                         -src_vocab_size 10000  \
                         -tgt_vocab_size 10000 \
                         -structure_vocab_size 5000 \
-                        -relation_vocab_size 128 \
+                        -relation_vocab_size 50 \
                         -src_seq_length 10000 \
                         -tgt_seq_length 10000 \
                         -share_vocab

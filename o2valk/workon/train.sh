@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES=0  nohup python3 train.py \
                         -param_init 0.0 \
                         -param_init_glorot \
                         -valid_batch_size 8 \
-                        -relation_vocab_size 128 \
+                        -relation_vocab_size 50 \
                         -ratio 0.05 > biaffine.log 2>&1 &
 
 

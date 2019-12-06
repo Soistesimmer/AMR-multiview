@@ -272,7 +272,6 @@ class Trainer(object):
             mask = mask - 2
             mask[mask <= 0] = 0
             mask = mask.byte()
-            mask = mask.transpose(0, 1)
 
             relation = make_features(batch, 'relation')
             relation = relation.transpose(0, 1)
