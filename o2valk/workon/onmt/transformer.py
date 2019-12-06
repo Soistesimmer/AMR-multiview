@@ -26,20 +26,21 @@ class NMTModel(nn.Module):
         self.decoder = decoder
         self.biaffine = biaffine
 
-    def forward(self, src, tgt, structure, mask, lengths):
+    def forward(self, src, tgt, structure, mask, lengths, relation):
         tgt = tgt[:-1]  # exclude last target from inputs
         _, memory_bank, lengths = self.encoder(src, structure, lengths)  # src: ......<EOS>
         self.decoder.init_state(src, memory_bank)
         dec_out, attns = self.decoder(tgt)
         if mask is not None:
-            bi_out, label_out = self.biaffine(dec_out[1:], mask)
+            bi_out, label_out = self.biaffine(dec_out[1:], mask, relation)
             return dec_out, attns, bi_out, label_out
         return dec_out, attns
 
 
 class Biaffine(nn.Module):
-    def __init__(self, in_size, dropout, generator):
+    def __init__(self, in_size, dropout, relation_vocab_size):
         super(Biaffine, self).__init__()
+        self.relation_vocab_size = relation_vocab_size
         self.head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
                                       nn.Linear(in_size, in_size))
         self.dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
@@ -52,14 +53,12 @@ class Biaffine(nn.Module):
         self.W = nn.Parameter(torch.randn(2 * in_size))
         self.b = nn.Parameter(torch.randn(1))
 
-        self.label_U = nn.Parameter(torch.randn(in_size, in_size))
-        self.label_W = nn.Parameter(torch.randn(2 * in_size))
-        self.label_b = nn.Parameter(torch.randn(1))
-
-        self.generator = generator
+        self.label_U = nn.Bilinear(in_size,in_size,self.relation_vocab_size,bias=None)
+        self.label_W = nn.Linear(2 * in_size, self.relation_vocab_size,bias=None)
+        self.label_b = nn.Parameter(torch.Tensor(self.relation_vocab_size))
 
 
-    def forward(self, input, mask):
+    def forward(self, input, mask, relation):
         input = input.transpose(0, 1)
         o_head = self.head_mlp(input)
         o_dep = self.dep_mlp(input)
@@ -69,22 +68,20 @@ class Biaffine(nn.Module):
         out = out + out_ + self.b
         # out = F.log_softmax(out, 2)
         out = F.softmax(out, 2)
-        batch_size = out.size(0)
-        seq_length = out.size(1)
 
         l_head = self.label_head_mlp(input)
         l_dep = self.label_dep_mlp(input)
-        l_out = torch.matmul(l_head, self.label_U)
-        l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
-        l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
-        l_out = l_out + l_out_ + self.label_b
-        l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask)
+        l_out = self.label_U(l_head, l_dep) + self.label_W(torch.cat((l_head, l_dep), 2)) + self.label_b
+        l_out=F.softmax(l_out,2)
+        # l_out = torch.matmul(l_head, self.label_U)
+        # l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
+        # l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
+        # l_out = l_out + l_out_ + self.label_b
+        # l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask)
 
-        mask = mask.reshape(batch_size, seq_length, seq_length)
         tmp = mask.sum(2)
         out = out.masked_fill(1 - mask, value=torch.tensor(0.))
         out = out.sum(2)
-
         count = tmp[tmp > 0].size(0)
         tmp[tmp>0]=1
         tmp=tmp.byte()
@@ -92,9 +89,17 @@ class Biaffine(nn.Module):
         out=torch.log(out)
         out = out.sum() / count
 
-        l_out = l_out.reshape(-1, 1)
-        l_out = self.generator(l_out)
-        return -out, l_out
+        tmp = relation.sum(2)
+        l_out = l_out.masked_fill(1 - relation, value=torch.tensor(0.))
+        l_out = l_out.sum(2)
+        l_count = tmp[tmp > 0].size(0)
+        tmp[tmp > 0] = 1
+        tmp = tmp.byte()
+        l_out = l_out.masked_select(tmp)
+        l_out = torch.log(l_out)
+        l_out = l_out.sum() / l_count
+
+        return -out, -l_out
 
 
 def build_embeddings(opt, word_dict, for_encoder='src'):
@@ -154,13 +159,8 @@ def build_decoder(opt, embeddings):
     return TransformerDecoder(opt.dec_layers, opt.dec_rnn_size, opt.heads, opt.transformer_ff, opt.dropout, embeddings)
 
 
-def build_biaffine(opt, fields):
-    gen_func = nn.LogSoftmax(dim=-1)
-    label_generator = nn.Sequential(
-        nn.Linear(1, len(fields["relation"].vocab)),
-        gen_func
-    )
-    return Biaffine(opt.dec_rnn_size, opt.dropout, label_generator)
+def build_biaffine(opt):
+    return Biaffine(opt.dec_rnn_size, opt.dropout, opt.relation_vocab_size)
 
 
 def load_test_model(opt, dummy_opt, model_path=None):
@@ -223,7 +223,7 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
     # Build decoder.
     decoder = build_decoder(model_opt, tgt_embeddings)
 
-    biaffine = build_biaffine(model_opt, fields)
+    biaffine = build_biaffine(model_opt)
 
     # Build NMTModel(= encoder + decoder).
     device = torch.device("cuda:0" if gpu else "cpu")
@@ -260,8 +260,8 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
                 p.data.uniform_(-model_opt.param_init, model_opt.param_init)
             for p in generator.parameters():
                 p.data.uniform_(-model_opt.param_init, model_opt.param_init)
-            for p in biaffine.generator.parameters():
-                p.data.uniform_(-model_opt.param_init, model_opt.param_init)
+            # for p in biaffine.generator.parameters():
+            #     p.data.uniform_(-model_opt.param_init, model_opt.param_init)
         if model_opt.param_init_glorot:
             for p in model.parameters():
                 if p.dim() > 1:
@@ -269,9 +269,9 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
             for p in generator.parameters():
                 if p.dim() > 1:
                     xavier_uniform_(p)
-            for p in biaffine.generator.parameters():
-                if p.dim() > 1:
-                    xavier_uniform_(p)
+            # for p in biaffine.generator.parameters():
+            #     if p.dim() > 1:
+            #         xavier_uniform_(p)
 
         if hasattr(model.encoder, 'embeddings'):
             model.encoder.embeddings.load_pretrained_vectors(

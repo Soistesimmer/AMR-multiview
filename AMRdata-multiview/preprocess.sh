@@ -64,9 +64,9 @@ subword-nmt apply-bpe -c $codes_file --vocabulary $vocab_concept --vocabulary-th
 subword-nmt apply-bpe -c $codes_file --vocabulary $vocab_sent --vocabulary-threshold $freq < $test_sent > $test_sent_bpe
 
 echo "Making alignment.."
-python a2b.py $base_dir/train.sent $base_dir/$version/train.tok.sent.bpe $base_dir/train.align $base_dir/train.al2 $base_dir/$version/train.align $base_dir/$version/train.al2 True
-python a2b.py $base_dir/dev.sent $base_dir/$version/dev.tok.sent.bpe $base_dir/dev.align $base_dir/dev.al2 $base_dir/$version/dev.align $base_dir/$version/dev.al2 True
-python a2b.py $base_dir/test.sent $base_dir/$version/test.tok.sent.bpe $base_dir/test.align $base_dir/test.al2 $base_dir/$version/test.align $base_dir/$version/test.al2 True
+python a2b.py $base_dir/train.sent $base_dir/$version/train.tok.sent.bpe $base_dir/train.align $base_dir/train.al2 $base_dir/$version/train.align $base_dir/$version/train.al2 False
+python a2b.py $base_dir/dev.sent $base_dir/$version/dev.tok.sent.bpe $base_dir/dev.align $base_dir/dev.al2 $base_dir/$version/dev.align $base_dir/$version/dev.al2 False
+python a2b.py $base_dir/test.sent $base_dir/$version/test.tok.sent.bpe $base_dir/test.align $base_dir/test.al2 $base_dir/$version/test.align $base_dir/$version/test.al2 False
 
 python postprocess_concept_bpe.py $train_concept_bpe_tmp $train_concept_bpe
 python postprocess_concept_bpe.py $dev_concept_bpe_tmp $dev_concept_bpe

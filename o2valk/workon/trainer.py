@@ -272,11 +272,11 @@ class Trainer(object):
             mask = mask - 2
             mask[mask <= 0] = 0
             mask = mask.byte()
-            mask = mask.transpose(0, 1)
 
             relation = make_features(batch, 'relation')
-            relation = relation.transpose(0, 1)
-            relation = relation[relation != 1]
+            relation =relation-2
+            relation[relation<0]=0
+            relation = relation.byte()
 
             for j in range(0, target_size - 1, trunc_size):
                 # 1. Create truncated target.
@@ -287,7 +287,7 @@ class Trainer(object):
                     self.model.zero_grad()
 
                 outputs, attns, p, rels = \
-                    self.model(src, tgt, structure, mask, src_lengths)
+                    self.model(src, tgt, structure, mask, src_lengths, relation)
 
                 # 3. Compute loss in shards for memory efficiency.
                 batch_stats = self.train_loss.sharded_compute_loss(
@@ -299,8 +299,7 @@ class Trainer(object):
                 #     batch, outputs, attns, j,
                 #     trunc_size, self.shard_size, normalization, 1.)
 
-                relation_loss = self.train_relation_loss(rels, relation)
-                loss = p + relation_loss / relation.size(0)
+                loss = p + rels
                 # loss=p
                 loss = loss * ratio
                 loss.backward()
