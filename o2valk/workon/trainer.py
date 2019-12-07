@@ -300,7 +300,7 @@ class Trainer(object):
 
                 relation_loss = self.train_relation_loss(rels, relation)
                 loss = (-p + relation_loss) / relation.size(0)
-                print(p, relation_loss)
+                # print(p, relation_loss)
                 # loss=p
                 loss = loss * ratio
                 loss.backward()
