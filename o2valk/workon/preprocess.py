@@ -62,7 +62,7 @@ def build_vocab(train_dataset_files, fields, share_vocab,
                 val = getattr(ex, k, None)
                 if not fields[k].sequential:
                     continue
-                if k == 'structure' or k=='mask' or k=='relation':
+                if k == 'structure' or k=='mask':
                     for i in val:
                         counter[k].update(i)
                 else:
@@ -96,7 +96,7 @@ def build_vocab(train_dataset_files, fields, share_vocab,
     logger.info(" * mask vocab size: %d." % len(fields["mask"].vocab))
 
     build_field_vocab(fields["relation"], counter["relation"],
-                      max_size=2,
+                      max_size=relation_vocab_size,
                       min_freq=0)
     logger.info(" * relation vocab size: %d." % len(fields["relation"].vocab))
 
@@ -227,7 +227,7 @@ def build_save_in_shards_using_shards_size(src_corpus, tgt_corpus, structure_cor
             src_seq_length=opt.src_seq_length,
             tgt_seq_length=opt.tgt_seq_length,
             src_seq_length_trunc=opt.src_seq_length_trunc,
-            tgt_seq_length_trunc=opt.tgt_seq_length_trunc, opt=opt
+            tgt_seq_length_trunc=opt.tgt_seq_length_trunc
         )
 
         pt_file = "{:s}_{:s}.{:d}.pt".format(opt.save_data, corpus_type, index)  # ..../gq_coupus_type.{0,1}.pt

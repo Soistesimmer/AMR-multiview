@@ -4,7 +4,7 @@ if __name__ == '__main__':
     relation='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0/train.al2'
     vocab='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/gq_relation_vocab'
     output='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0/train.rm'
-    vocab_size=50
+    vocab_size=30
     with open(mask,'r')as file:
         mask=[line for line in file.readlines()]
         for index, x in enumerate(mask):

@@ -124,9 +124,7 @@ def get_relation_fields(fields=None):
     if fields is None:
         fields={}
 
-    nesting_field = torchtext.data.Field(
-        pad_token=Constants.PAD_WORD)
-    fields["relation"] = torchtext.data.NestedField(nesting_field, pad_token=Constants.PAD_WORD)
+    fields["relation"] = torchtext.data.Field(sequential=True, pad_token=Constants.PAD_WORD, unk_token=Constants.UNK_WORD)
 
     fields["indices"] = torchtext.data.Field(
         use_vocab=False, dtype=torch.long,
@@ -167,7 +165,6 @@ def load_fields(opt, checkpoint):
         fields = load_fields_from_vocab(torch.load(opt.data + '_vocab.pt'))
     fields['structure'].nesting_field.vocab = fields['structure'].vocab
     fields['mask'].nesting_field.vocab = fields['mask'].vocab
-    fields['relation'].nesting_field.vocab = fields['relation'].vocab
     logger.info(' * vocabulary size. source = %d; target = %d; structure = %d; mask = %d; relation = %d' %
                 (len(fields['src'].vocab), len(fields['tgt'].vocab), len(fields['structure'].nesting_field.vocab), len(fields['mask'].vocab), len(fields['relation'].vocab)))
 
@@ -286,7 +283,7 @@ def build_dataset(fields,
                   relation_data_iter,
                   src_seq_length=0, tgt_seq_length=0,
                   src_seq_length_trunc=0, tgt_seq_length_trunc=0,
-                  use_filter_pred=True, opt=None):
+                  use_filter_pred=True):
     assert src_data_iter != None
     src_examples_iter = Dataset.make_examples(src_data_iter, src_seq_length_trunc, "src")
 
@@ -306,7 +303,7 @@ def build_dataset(fields,
         mask_examples_iter=None
 
     if relation_data_iter != None:
-        relation_examples_iter=Dataset.make_nested_examples2(relation_data_iter, None, 'relation',opt.relation_vocab_size)
+        relation_examples_iter=Dataset.make_examples(relation_data_iter, None, 'relation')
     else:
         relation_examples_iter=None
 
@@ -427,16 +424,6 @@ class Dataset(torchtext.data.Dataset):
             line = line.strip().split()
             length = len(line)
             src_length = int(math.sqrt(length))
-            words = (line[j: j + src_length] for j in range(0, len(line), src_length))
-            example_dict = {side: tuple(words), "indices": i}
-            yield example_dict
-
-    @staticmethod
-    def make_nested_examples2(text_iter, truncate, side, vocab_size):
-        for i, line in enumerate(text_iter):
-            line = line.strip().split()
-            length = len(line)
-            src_length = vocab_size
             words = (line[j: j + src_length] for j in range(0, len(line), src_length))
             example_dict = {side: tuple(words), "indices": i}
             yield example_dict

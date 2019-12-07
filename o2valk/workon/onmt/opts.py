@@ -29,9 +29,7 @@ def model_opts(parser):
     group.add('--tgt_word_vec_size', '-tgt_word_vec_size',
               type=int, default=512,
               help='Word embedding size for tgt.')
-    group.add('--relation_vocab_size', '-relation_vocab_size',
-              type=int, default=128,
-              help='Relation vocab size.')
+
     group.add('--share_decoder_embeddings', '-share_decoder_embeddings',
               action='store_true',
               help="""Use a shared weight matrix for the input and

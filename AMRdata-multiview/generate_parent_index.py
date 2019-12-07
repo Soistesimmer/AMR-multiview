@@ -13,7 +13,7 @@ def charge_one_dot(str):
         return False
 
 
-def gen_par_index_seq(example, with_r, al2):
+def gen_par_index_seq(example, with_r, al2, multi_in):
     tokens = example.split()
     alignment = {}
     root_f = {}
@@ -32,7 +32,8 @@ def gen_par_index_seq(example, with_r, al2):
                 if alignment[ali] in root_f:
                     if alignment[ali2] not in root_f[alignment[ali]]:
                         root_f[alignment[ali]].append(alignment[ali2])
-                        root_r[alignment[ali]].append(find_al2(al2, alignment[ali2], alignment[ali]))
+                        if multi_in=='True':
+                            root_r[alignment[ali]].append(find_al2(al2, alignment[ali2], alignment[ali]))
                         # print('WARN: multi-in alert!', example)
                 else:
                     root_f[alignment[ali]] = [alignment[ali2]]

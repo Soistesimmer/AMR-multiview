@@ -6,7 +6,7 @@ from generate_parent_index import gen_par_index_seq
 import re
 from sys import exit
 
-def a2b(sent, bpe_sent, ori_ali, with_r, al2):
+def a2b(sent, bpe_sent, ori_ali, with_r, al2, multi_in):
     bpe_sent=re.sub(r'@@','',bpe_sent)
     tokens = sent.split()
     bpe_tokens=bpe_sent.split()
@@ -34,7 +34,7 @@ def a2b(sent, bpe_sent, ori_ali, with_r, al2):
         for x in y:
             new_al2.append([int(x), item[2].split(',')[0]])
     al2=new_al2
-    ali, ali2 = gen_par_index_seq(ori_ali, with_r, al2)
+    ali, ali2 = gen_par_index_seq(ori_ali, with_r, al2, multi_in)
     ali_seq = []
     ali_seq2= []
     # print(ali)
@@ -58,7 +58,7 @@ def a2b(sent, bpe_sent, ori_ali, with_r, al2):
     for x in ali_seq:
         if x==1:
             count+=1
-    assert count==len(ali_seq2),(count, len(ali_seq2), ali, ali2)
+    # assert count==len(ali_seq2),(count, len(ali_seq2), ali, ali2)
     ali_seq = ' '.join([str(x) for x in ali_seq])
     ali_seq2 = ' '.join([str(x) for x in ali_seq2])
     return ali_seq, ali_seq2
@@ -77,7 +77,7 @@ if __name__ == '__main__':
  # ['8', 'such~e.8', ':mod']]
  #    print(a2b(sent, bpe_sent, ali, False, al2))
  #    exit()
-    in_file1, in_file2, in_file3, in_file4, o_file1, o_file2, with_r= sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7]
+    in_file1, in_file2, in_file3, in_file4, o_file1, o_file2, with_r, multi_in= sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8]
     with open(in_file1,'r')as f:
         sents=f.readlines()
     with open(in_file2, 'r')as f:
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         al2=al2s[i]
         # print(sent)
         # print(bpe_sent)
-        ali_seqs.append(a2b(sent, bpe_sent, ali, with_r, al2))
+        ali_seqs.append(a2b(sent, bpe_sent, ali, with_r, al2, multi_in))
     with open(o_file1,'w')as f:
         f.write('\n'.join([x for x,y in ali_seqs]))
     with open(o_file2,'w')as f:
