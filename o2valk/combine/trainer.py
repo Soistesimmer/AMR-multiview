@@ -289,12 +289,13 @@ class Trainer(object):
             batch_stats = self.train_loss.sharded_compute_loss(
                 batch, (outputs, s_outputs), stgt, self.shard_size, normalization, ratio1=1,
                 ratio2=ratio)
-            relation_loss = self.train_relation_loss(rels, relation)
-            loss = (-p + relation_loss) / relation.size(0)
-            # print(p, relation_loss)
-            # loss=p
-            loss = loss * ratio2
-            loss.backward()
+            if relation.size(0)>0:
+                relation_loss = self.train_relation_loss(rels, relation)
+                loss = (-p + relation_loss) / relation.size(0)
+                # print(p, relation_loss)
+                # loss=p
+                loss = loss * ratio2
+                loss.backward()
             total_stats.update(batch_stats)
             report_stats.update(batch_stats)
 
