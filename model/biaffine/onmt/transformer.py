@@ -43,14 +43,10 @@ class Biaffine(nn.Module):
         super(Biaffine, self).__init__()
         self.in_size=in_size
         self.out_size=out_size
-        self.head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
-                                      nn.Linear(in_size, in_size))
-        self.dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
-                                     nn.Linear(in_size, in_size))
-        self.label_head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
-                                            nn.Linear(in_size, in_size))
-        self.label_dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
-                                           nn.Linear(in_size, in_size))
+        self.head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
+        self.dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
+        self.label_head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
+        self.label_dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
         self.U = nn.Parameter(torch.Tensor(in_size, in_size))
         self.W = nn.Parameter(torch.Tensor(2 * in_size))
         self.b = nn.Parameter(torch.Tensor(1))
@@ -64,12 +60,21 @@ class Biaffine(nn.Module):
         self.gen_func = nn.LogSoftmax(dim=-1)
 
     def reset_parameters(self):
+        nn.init.xavier_uniform_(self.head_mlp[0].weight)
+        nn.init.constant_(self.head_mlp[0].bias, 0.)
+        nn.init.xavier_uniform_(self.dep_mlp[0].weight)
+        nn.init.constant_(self.dep_mlp[0].bias, 0.)
+        nn.init.xavier_uniform_(self.label_head_mlp[0].weight)
+        nn.init.constant_(self.label_head_mlp[0].bias, 0.)
+        nn.init.xavier_uniform_(self.label_dep_mlp[0].weight)
+        nn.init.constant_(self.label_dep_mlp[0].bias, 0.)
         bound = 1 / math.sqrt(self.in_size*2)
         nn.init.uniform_(self.W, -bound, bound)
         nn.init.constant_(self.b, 0.)
         nn.init.xavier_uniform_(self.U)
-        nn.init.xavier_uniform_(self.label_W_1)
-        nn.init.xavier_uniform_(self.label_W_2)
+        bound = 1 / math.sqrt(self.in_size)
+        nn.init.uniform_(self.label_W_1, -bound, bound)
+        nn.init.uniform_(self.label_W_2, -bound, bound)
         nn.init.xavier_uniform_(self.label_U)
         nn.init.constant_(self.label_b, 0.)
 
@@ -109,7 +114,7 @@ class Biaffine(nn.Module):
         l_head = self.label_head_mlp(input)
         l_dep = self.label_dep_mlp(input)
         l_out = self.bilinear_(l_head, l_dep)
-        l_out = l_out + self.linear_(l_head, l_dep)
+        l_out = l_out + self.linear_(l_head, l_dep)+self.label_b
         # l_out = torch.matmul(l_head, self.label_U)
         # l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
         # l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
