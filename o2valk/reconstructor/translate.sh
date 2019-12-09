@@ -3,8 +3,8 @@
 total_step=300000
 gap=10000
 
-cate=dev
-tag='reconstructor'
+cate=test
+tag='reconstructor.newtok'
 
 train_test_data_dir='/home/wangante/work-code-20190910/AMRdata-multiview/LDC2015/0'
 model_file='./workspace/model_new/_step_'

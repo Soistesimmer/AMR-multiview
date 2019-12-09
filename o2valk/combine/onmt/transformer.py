@@ -2,6 +2,7 @@
 This file is for models creation, which consults options
 and creates each encoder and decoder accordingly.
 """
+import math
 import re
 import torch
 import torch.nn as nn
@@ -43,8 +44,10 @@ class NMTModel(nn.Module):
 
 
 class Biaffine(nn.Module):
-    def __init__(self, in_size, dropout, generator):
+    def __init__(self, in_size, dropout, out_size):
         super(Biaffine, self).__init__()
+        self.in_size=in_size
+        self.out_size=out_size
         self.head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
                                       nn.Linear(in_size, in_size))
         self.dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
@@ -53,18 +56,51 @@ class Biaffine(nn.Module):
                                             nn.Linear(in_size, in_size))
         self.label_dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ReLU(),
                                            nn.Linear(in_size, in_size))
-        self.U = nn.Parameter(torch.randn(in_size, in_size))
-        self.W = nn.Parameter(torch.randn(2 * in_size))
-        self.b = nn.Parameter(torch.randn(1))
+        self.U = nn.Parameter(torch.Tensor(in_size, in_size))
+        self.W = nn.Parameter(torch.Tensor(2 * in_size))
+        self.b = nn.Parameter(torch.Tensor(1))
 
-        self.label_U = nn.Parameter(torch.randn(in_size, in_size))
-        self.label_W = nn.Parameter(torch.randn(2 * in_size))
-        self.label_b = nn.Parameter(torch.randn(1))
+        self.label_U = nn.Parameter(torch.Tensor(out_size, in_size, in_size))
+        self.label_W_1 = nn.Parameter(torch.Tensor(in_size, out_size))
+        self.label_W_2 = nn.Parameter(torch.Tensor(in_size, out_size))
+        self.label_b = nn.Parameter(torch.Tensor(out_size))
 
-        self.generator = generator
+        self.reset_parameters()
+        self.gen_func = nn.LogSoftmax(dim=-1)
+
+    def reset_parameters(self):
+        bound = 1 / math.sqrt(self.in_size*2)
+        nn.init.uniform_(self.W, -bound, bound)
+        nn.init.constant_(self.b, 0.)
+        nn.init.xavier_uniform_(self.U)
+        nn.init.xavier_uniform_(self.label_W_1)
+        nn.init.xavier_uniform_(self.label_W_2)
+        nn.init.xavier_uniform_(self.label_U)
+        nn.init.constant_(self.label_b, 0.)
+
+    def bilinear_(self, head, dep):
+        out=torch.zeros([head.size(0),head.size(1),head.size(1),self.out_size]).cuda()
+        for k in range(self.label_U.shape[0]):
+            x=torch.matmul(head,self.label_U[k])
+            x=torch.matmul(x,dep.transpose(1,2))
+            out[:,:,:,k]=x
+        return out
+
+    def linear_(self, head, dep):
+        out=torch.zeros([head.size(1),head.size(0),head.size(1),self.out_size]).cuda()
+        x=torch.matmul(head, self.label_W_1)
+        y = torch.matmul(dep, self.label_W_2)
+        batch_size = x.size(0)
+        x=x.transpose(0,1)
+        for k in range(x.size(0)):
+            out[k]=x[k].view(batch_size,1,self.out_size)+y
+        out=out.transpose(0,1)
+        return out
 
     def forward(self, input, mask):
         input = input.transpose(0, 1)
+        batch_size=input.size(0)
+        seq_len=input.size(1)
         o_head = self.head_mlp(input)
         o_dep = self.dep_mlp(input)
         out = torch.matmul(o_head, self.U)
@@ -72,26 +108,36 @@ class Biaffine(nn.Module):
         out_ = torch.matmul((torch.cat((o_head, o_dep), 2)), self.W).unsqueeze(2)
         out = out + out_ + self.b
         out = F.log_softmax(out, 2)
-        batch_size = out.size(0)
-        seq_length = out.size(1)
-        out = torch.masked_select(out.reshape(batch_size, -1), mask)
+        out=out.view(batch_size,seq_len,seq_len,1)
 
         l_head = self.label_head_mlp(input)
         l_dep = self.label_dep_mlp(input)
-        l_out = torch.matmul(l_head, self.label_U)
-        l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
-        l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
-        l_out = l_out + l_out_ + self.label_b
-        l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask)
+        l_out = self.bilinear_(l_head, l_dep)
+        l_out = l_out + self.linear_(l_head, l_dep)
+        # l_out = torch.matmul(l_head, self.label_U)
+        # l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
+        # l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
+        # l_out = l_out + l_out_ + self.label_b
+        # l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask.reshape(batch_size,-1))
 
-        mask = mask.reshape(batch_size, seq_length, seq_length)
-        tmp = mask.sum(2)
-        count = tmp[tmp > 0].size(0)
-        out = out.sum() / count
-
-        l_out = l_out.reshape(-1, 1)
-        l_out = self.generator(l_out)
-        return -out, l_out
+        out=out[mask]
+        out=out.sum()
+        l_out = l_out[mask]
+        l_out=self.gen_func(l_out)
+        # tmp = mask.sum(2)
+        # out = out.masked_fill(1 - mask, value=torch.tensor(0.))
+        # out = out.sum(2)
+        # count = tmp[tmp > 0].size(0)
+        # tmp[tmp>0]=1
+        # tmp=tmp.byte()
+        # out=out.masked_select(tmp)
+        # out=torch.log(out)
+        # out = out.sum() / count
+        # l_out = l_out.reshape(-1,self.out_size)
+        # tmp=tmp.reshape(-1)
+        # l_out=l_out[tmp,:]
+        # l_out = self.gen_func(l_out)
+        return out, l_out
 
 
 def build_embeddings(opt, word_dict, for_encoder='src'):
@@ -154,12 +200,7 @@ def build_decoder(opt, embeddings):
 
 
 def build_biaffine(opt, fields):
-    gen_func = nn.LogSoftmax(dim=-1)
-    label_generator = nn.Sequential(
-        nn.Linear(1, len(fields["relation"].vocab)),
-        gen_func
-    )
-    return Biaffine(opt.dec_rnn_size, opt.dropout, label_generator)
+    return Biaffine(opt.dec_rnn_size, opt.dropout, len(fields["relation"].vocab))
 
 
 def load_test_model(opt, dummy_opt, model_path=None):
@@ -263,8 +304,8 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
                 p.data.uniform_(-model_opt.param_init, model_opt.param_init)
             for p in generator.parameters():
                 p.data.uniform_(-model_opt.param_init, model_opt.param_init)
-            for p in biaffine.generator.parameters():
-                p.data.uniform_(-model_opt.param_init, model_opt.param_init)
+            # for p in biaffine.generator.parameters():
+            #     p.data.uniform_(-model_opt.param_init, model_opt.param_init)
         if model_opt.param_init_glorot:
             for p in model.parameters():
                 if p.dim() > 1:
@@ -272,9 +313,9 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
             for p in generator.parameters():
                 if p.dim() > 1:
                     xavier_uniform_(p)
-            for p in biaffine.generator.parameters():
-                if p.dim() > 1:
-                    xavier_uniform_(p)
+            # for p in biaffine.generator.parameters():
+            #     if p.dim() > 1:
+            #         xavier_uniform_(p)
 
         if hasattr(model.encoder, 'embeddings'):
             model.encoder.embeddings.load_pretrained_vectors(

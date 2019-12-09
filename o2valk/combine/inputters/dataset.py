@@ -129,7 +129,9 @@ def get_mask_fields(fields=None):
     if fields is None:
         fields={}
 
-    fields["mask"] = torchtext.data.Field(sequential=True, pad_token=Constants.PAD_WORD)
+    nesting_field = torchtext.data.Field(
+        pad_token=Constants.PAD_WORD)
+    fields["mask"] = torchtext.data.NestedField(nesting_field, pad_token=Constants.PAD_WORD)
 
     fields["indices"] = torchtext.data.Field(
         use_vocab=False, dtype=torch.long,
@@ -141,7 +143,7 @@ def get_relation_fields(fields=None):
     if fields is None:
         fields={}
 
-    fields["relation"] = torchtext.data.Field(sequential=True, pad_token=Constants.PAD_WORD)
+    fields["relation"] = torchtext.data.Field(sequential=True, pad_token=Constants.PAD_WORD, unk_token=Constants.UNK_WORD)
 
     fields["indices"] = torchtext.data.Field(
         use_vocab=False, dtype=torch.long,
@@ -182,6 +184,7 @@ def load_fields(opt, checkpoint):
     else:
         fields = load_fields_from_vocab(torch.load(opt.data + '_vocab.pt'))
     fields['structure'].nesting_field.vocab = fields['structure'].vocab
+    fields['mask'].nesting_field.vocab = fields['mask'].vocab
     fields['stgt'].nesting_field.vocab = fields['stgt'].vocab
     logger.info(' * vocabulary size. source = %d; target = %d; structure = %d; mask = %d; relation = %d' %
                 (len(fields['src'].vocab), len(fields['tgt'].vocab), len(fields['structure'].nesting_field.vocab), len(fields['mask'].vocab), len(fields['relation'].vocab)))
@@ -301,7 +304,7 @@ def build_dataset(fields,
                   mask_data_iter,
                   relation_data_iter,
                   src_seq_length=0, tgt_seq_length=0,
-                  src_seq_length_trunc=0, tgt_seq_length_trunc=0,abundancy=10,
+                  src_seq_length_trunc=0, tgt_seq_length_trunc=0,abundancy=1,
                   use_filter_pred=True):
     assert src_data_iter != None
     src_examples_iter = Dataset.make_examples(src_data_iter, src_seq_length_trunc, "src")
@@ -322,7 +325,7 @@ def build_dataset(fields,
         structure_examples_iter = None
 
     if mask_data_iter != None:
-        mask_examples_iter=Dataset.make_examples(mask_data_iter, None, 'mask')
+        mask_examples_iter=Dataset.make_nested_examples(mask_data_iter, None, 'mask')
     else:
         mask_examples_iter=None
 
@@ -388,7 +391,7 @@ class Dataset(torchtext.data.Dataset):
             return dict(chain(*[d.items() for d in args]))
 
         out_fields = get_source_fields()
-        if tgt_examples_iter is not None and structure_examples_iter is not None and mask_examples_iter is not None:
+        if tgt_examples_iter is not None and structure_examples_iter is not None and mask_examples_iter is not None and relation_examples_iter is not None:
             examples_iter = (_join_dicts(src, tgt, stgt, structure, mask, relation) for src, tgt, stgt, structure, mask, relation in
                              zip(src_examples_iter, tgt_examples_iter, stgt_examples_iter, structure_examples_iter, mask_examples_iter, relation_examples_iter))
             out_fields = get_target_fields(out_fields)

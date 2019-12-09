@@ -197,7 +197,7 @@ class Trainer(object):
                             self._report_step(self.optim.learning_rate,
                                               step, valid_stats=valid_stats)
 
-                        if self.gpu_rank == 0 and 1. * step / train_steps > 0.67:
+                        if self.gpu_rank == 0 and 1. * step / train_steps > 0.5:
                             self._maybe_save(step)
                         step += 1
                         if step > train_steps:
@@ -298,11 +298,13 @@ class Trainer(object):
                 #     batch, outputs, attns, j,
                 #     trunc_size, self.shard_size, normalization, 1.)
 
-                relation_loss = self.train_relation_loss(rels, relation)
-                loss = p + relation_loss / relation.size(0)
-                # loss=p
-                loss = loss * ratio
-                loss.backward()
+                if relation.size(0)>0:
+                    relation_loss = self.train_relation_loss(rels, relation)
+                    loss = (-p + relation_loss) / relation.size(0)
+                    # print(p, relation_loss)
+                    # loss=p
+                    loss = loss * ratio
+                    loss.backward()
 
                 total_stats.update(batch_stats)
                 report_stats.update(batch_stats)

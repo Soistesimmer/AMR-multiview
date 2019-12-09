@@ -62,7 +62,7 @@ def build_vocab(train_dataset_files, fields, share_vocab,
                 val = getattr(ex, k, None)
                 if not fields[k].sequential:
                     continue
-                if k == 'structure' or k=='stgt':
+                if k == 'structure' or k=='stgt' or k=='mask':
                     for i in val:
                         counter[k].update(i)
                 else:

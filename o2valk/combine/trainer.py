@@ -198,7 +198,7 @@ class Trainer(object):
                             self._report_step(self.optim.learning_rate,
                                               step, valid_stats=valid_stats)
 
-                        if self.gpu_rank == 0 and 1.*step/train_steps>0.67:
+                        if self.gpu_rank == 0 and 1.*step/train_steps>0.5:
                             self._maybe_save(step)
                         step += 1
                         if step > train_steps:
@@ -274,7 +274,6 @@ class Trainer(object):
             mask = mask - 2
             mask[mask <= 0] = 0
             mask = mask.byte()
-            mask = mask.transpose(0, 1)
 
             relation = make_features(batch, 'relation')
             relation = relation.transpose(0, 1)
@@ -288,10 +287,12 @@ class Trainer(object):
 
             # 3. Compute loss in shards for memory efficiency.
             batch_stats = self.train_loss.sharded_compute_loss(
-                batch, (outputs, s_outputs), stgt, self.shard_size, normalization, ratio1=1 - ratio - ratio2,
+                batch, (outputs, s_outputs), stgt, self.shard_size, normalization, ratio1=1,
                 ratio2=ratio)
             relation_loss = self.train_relation_loss(rels, relation)
-            loss = p + relation_loss / relation.size(0)
+            loss = (-p + relation_loss) / relation.size(0)
+            # print(p, relation_loss)
+            # loss=p
             loss = loss * ratio2
             loss.backward()
             total_stats.update(batch_stats)
