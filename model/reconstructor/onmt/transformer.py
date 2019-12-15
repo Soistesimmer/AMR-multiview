@@ -95,6 +95,16 @@ def build_decoder(opt, embeddings):
     """
     return TransformerDecoder(opt.dec_layers, opt.dec_rnn_size, opt.heads, opt.transformer_ff, opt.dropout, embeddings)
 
+def build_reconstructor(opt, embeddings):
+    """
+    Various decoder dispatcher function.
+    Args:
+        opt: the option in current environment.
+        embeddings (Embeddings): vocab embeddings for this decoder.
+    """
+    return TransformerDecoder(opt.rec_layers, opt.dec_rnn_size, opt.heads, opt.transformer_ff, opt.dropout, embeddings)
+
+
 
 def load_test_model(opt, dummy_opt, model_path=None):
     if model_path is None:
@@ -159,7 +169,7 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
         tgt_embeddings.word_lut.weight = src_embeddings.word_lut.weight
         stgt_embeddings.word_lut.weight = src_embeddings.word_lut.weight
     # Build decoder.
-    decoder = [build_decoder(model_opt, tgt_embeddings), build_decoder(model_opt, stgt_embeddings)]
+    decoder = [build_decoder(model_opt, tgt_embeddings), build_reconstructor(model_opt, stgt_embeddings)]
 
     # Build NMTModel(= encoder + decoder).
     device = torch.device("cuda:0" if gpu else "cpu")

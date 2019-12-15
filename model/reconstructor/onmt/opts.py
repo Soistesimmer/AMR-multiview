@@ -49,6 +49,8 @@ def model_opts(parser):
               help='Number of layers in the encoder')
     group.add('--dec_layers', '-dec_layers', type=int, default=6,
               help='Number of layers in the decoder')
+    group.add('--rec_layers', '-rec_layers', type=int, default=3,
+              help='Number of layers in the reconstructor')
     group.add('--enc_rnn_size', '-enc_rnn_size', type=int, default=512,
               help="""Size of encoder rnn hidden states.
                        Must be equal to dec_rnn_size except for
