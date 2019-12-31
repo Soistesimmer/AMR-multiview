@@ -34,6 +34,6 @@ CUDA_VISIBLE_DEVICES=0  nohup python3 train.py \
                         -param_init 0.0 \
                         -param_init_glorot \
                         -valid_batch_size 8 \
-                        -ratio 0.85 > reconstructor.log 2>&1 &
+                        -ratio 0.15 > reconstructor.log 2>&1 &
 
 

@@ -259,17 +259,18 @@ class Trainer(object):
             _, src_lengths = batch.src
 
             tgt = make_features(batch, 'tgt')
-
+            # reconstructor input
             stgt = make_features(batch, 'stgt')
             stgt = stgt.transpose(0, 1)
             stgt = stgt.transpose(1, 2)
+            # randomly traversal sequence
             choice = random.randint(0, stgt.size(0) - 1)
             stgt = stgt[choice][:-1]
 
             structure = make_features(batch, 'structure')
             structure = structure.transpose(0, 1)
             structure = structure.transpose(1, 2)
-
+            # bad code
             mask = make_features(batch, 'mask')
             mask = mask - 2
             mask[mask <= 0] = 0
@@ -287,13 +288,11 @@ class Trainer(object):
 
             # 3. Compute loss in shards for memory efficiency.
             batch_stats = self.train_loss.sharded_compute_loss(
-                batch, (outputs, s_outputs), stgt, self.shard_size, normalization, ratio1=1,
+                batch, (outputs, s_outputs), stgt, self.shard_size, normalization, ratio1=1-ratio,
                 ratio2=ratio)
             if relation.size(0)>0:
                 relation_loss = self.train_relation_loss(rels, relation)
                 loss = (-p + relation_loss) / relation.size(0)
-                # print(p, relation_loss)
-                # loss=p
                 loss = loss * ratio2
                 loss.backward()
             total_stats.update(batch_stats)

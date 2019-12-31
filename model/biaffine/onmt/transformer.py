@@ -28,6 +28,15 @@ class NMTModel(nn.Module):
         self.biaffine = biaffine
 
     def forward(self, src, tgt, structure, mask, lengths):
+        '''
+
+        :param src:
+        :param tgt:
+        :param structure:
+        :param mask: for every sentence, mask is a dependency matrix with size [tgt_length, tgt_length]
+        :param lengths:
+        :return: the output of decoder and biaffine module if train
+        '''
         tgt = tgt[:-1]  # exclude last target from inputs
         _, memory_bank, lengths = self.encoder(src, structure, lengths)  # src: ......<EOS>
         self.decoder.init_state(src, memory_bank)
@@ -39,18 +48,24 @@ class NMTModel(nn.Module):
 
 
 class Biaffine(nn.Module):
+    '''
+    code for loss 1 in paper
+    '''
     def __init__(self, in_size, dropout, out_size):
         super(Biaffine, self).__init__()
         self.in_size=in_size
         self.out_size=out_size
+
+        # code for MLP in paper
         self.head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
         self.dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
         self.label_head_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
         self.label_dep_mlp = nn.Sequential(nn.Linear(in_size, in_size), nn.Dropout(dropout), nn.ELU())
+        # arc
         self.U = nn.Parameter(torch.Tensor(in_size, in_size))
         self.W = nn.Parameter(torch.Tensor(2 * in_size))
         self.b = nn.Parameter(torch.Tensor(1))
-
+        # label
         self.label_U = nn.Parameter(torch.Tensor(out_size, in_size, in_size))
         self.label_W_1 = nn.Parameter(torch.Tensor(in_size, out_size))
         self.label_W_2 = nn.Parameter(torch.Tensor(in_size, out_size))
@@ -98,6 +113,12 @@ class Biaffine(nn.Module):
         return out
 
     def forward(self, input, mask):
+        '''
+
+        :param input: output of decoder
+        :param mask: dependency matrix of target sentence
+        :return:
+        '''
         input = input.transpose(0, 1)
         batch_size=input.size(0)
         seq_len=input.size(1)
@@ -107,7 +128,6 @@ class Biaffine(nn.Module):
         out = torch.matmul(out, o_dep.transpose(1, 2))
         out_ = torch.matmul((torch.cat((o_head, o_dep), 2)), self.W).unsqueeze(2)
         out = out + out_ + self.b
-        # out = F.log_softmax(out, 2)
         out = F.log_softmax(out, 2)
         out=out.view(batch_size,seq_len,seq_len,1)
 
@@ -115,29 +135,12 @@ class Biaffine(nn.Module):
         l_dep = self.label_dep_mlp(input)
         l_out = self.bilinear_(l_head, l_dep)
         l_out = l_out + self.linear_(l_head, l_dep)+self.label_b
-        # l_out = torch.matmul(l_head, self.label_U)
-        # l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
-        # l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
-        # l_out = l_out + l_out_ + self.label_b
-        # l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask.reshape(batch_size,-1))
 
         out=out[mask]
         out=out.sum()
         l_out = l_out[mask]
         l_out=self.gen_func(l_out)
-        # tmp = mask.sum(2)
-        # out = out.masked_fill(1 - mask, value=torch.tensor(0.))
-        # out = out.sum(2)
-        # count = tmp[tmp > 0].size(0)
-        # tmp[tmp>0]=1
-        # tmp=tmp.byte()
-        # out=out.masked_select(tmp)
-        # out=torch.log(out)
-        # out = out.sum() / count
-        # l_out = l_out.reshape(-1,self.out_size)
-        # tmp=tmp.reshape(-1)
-        # l_out=l_out[tmp,:]
-        # l_out = self.gen_func(l_out)
+
         return out, l_out
 
 
@@ -261,7 +264,7 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
         tgt_embeddings.word_lut.weight = src_embeddings.word_lut.weight
     # Build decoder.
     decoder = build_decoder(model_opt, tgt_embeddings)
-
+    # build biaffine.
     biaffine = build_biaffine(model_opt, fields)
 
     # Build NMTModel(= encoder + decoder).

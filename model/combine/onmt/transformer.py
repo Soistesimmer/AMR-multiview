@@ -21,6 +21,9 @@ from inputters.dataset import load_fields_from_vocab
 
 
 class NMTModel(nn.Module):
+    '''
+    combine the code of biaffine and reconstructor
+    '''
     def __init__(self, encoder, decoder, biaffine):
         super(NMTModel, self).__init__()
         self.encoder = encoder
@@ -119,29 +122,12 @@ class Biaffine(nn.Module):
         l_dep = self.label_dep_mlp(input)
         l_out = self.bilinear_(l_head, l_dep)
         l_out = l_out + self.linear_(l_head, l_dep)+self.label_b
-        # l_out = torch.matmul(l_head, self.label_U)
-        # l_out = torch.matmul(l_out, l_dep.transpose(1, 2))
-        # l_out_ = torch.matmul((torch.cat((l_head, l_dep), 2)), self.label_W).unsqueeze(2)
-        # l_out = l_out + l_out_ + self.label_b
-        # l_out = torch.masked_select(l_out.reshape(batch_size, -1), mask.reshape(batch_size,-1))
 
         out=out[mask]
         out=out.sum()
         l_out = l_out[mask]
         l_out=self.gen_func(l_out)
-        # tmp = mask.sum(2)
-        # out = out.masked_fill(1 - mask, value=torch.tensor(0.))
-        # out = out.sum(2)
-        # count = tmp[tmp > 0].size(0)
-        # tmp[tmp>0]=1
-        # tmp=tmp.byte()
-        # out=out.masked_select(tmp)
-        # out=torch.log(out)
-        # out = out.sum() / count
-        # l_out = l_out.reshape(-1,self.out_size)
-        # tmp=tmp.reshape(-1)
-        # l_out=l_out[tmp,:]
-        # l_out = self.gen_func(l_out)
+
         return out, l_out
 
 

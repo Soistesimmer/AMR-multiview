@@ -161,6 +161,7 @@ class LossComputeBase(nn.Module):
             loss, stats = self._compute_loss(batch, **shard)
             loss *= ratio2
             loss.div(float(normalization)).backward(retain_graph=True)
+            # loss.div(float(normalization)).backward()
             batch_stats.update(stats)
         return batch_stats
 

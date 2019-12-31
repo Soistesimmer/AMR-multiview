@@ -196,7 +196,7 @@ class Trainer(object):
                             self._report_step(self.optim.learning_rate,
                                               step, valid_stats=valid_stats)
 
-                        if self.gpu_rank == 0 and 1.*step/train_steps>0.67:
+                        if self.gpu_rank == 0:
                             self._maybe_save(step)
                         step += 1
                         if step > train_steps:
@@ -257,9 +257,11 @@ class Trainer(object):
 
             tgt = make_features(batch, 'tgt')
 
+            # reconstructor input
             stgt=make_features(batch,'stgt')
             stgt=stgt.transpose(0,1)
             stgt = stgt.transpose(1, 2)
+            # if choose child randomly, make sequence different from the deep first traversal method
             choice=random.randint(0,stgt.size(0)-1)
             stgt=stgt[choice][:-1]
 

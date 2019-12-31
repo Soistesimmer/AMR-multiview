@@ -197,7 +197,7 @@ class Trainer(object):
                             self._report_step(self.optim.learning_rate,
                                               step, valid_stats=valid_stats)
 
-                        if self.gpu_rank == 0 and 1. * step / train_steps > 0.5:
+                        if self.gpu_rank == 0:
                             self._maybe_save(step)
                         step += 1
                         if step > train_steps:
@@ -268,11 +268,13 @@ class Trainer(object):
             structure = structure.transpose(0, 1)
             structure = structure.transpose(1, 2)
 
+            # bad code
             mask = make_features(batch, 'mask')
             mask = mask - 2
             mask[mask <= 0] = 0
             mask = mask.byte()
 
+            # ground truth label of biaffine relation
             relation = make_features(batch, 'relation')
             relation = relation.transpose(0, 1)
             relation = relation[relation != 1]
@@ -293,16 +295,11 @@ class Trainer(object):
                     batch, outputs, attns, j,
                     trunc_size, self.shard_size, normalization, 1.)
 
-                # # for test
-                # batch_stats = self.train_loss.sharded_compute_loss(
-                #     batch, outputs, attns, j,
-                #     trunc_size, self.shard_size, normalization, 1.)
-
                 if relation.size(0)>0:
+                    # compute loss for label prediction
                     relation_loss = self.train_relation_loss(rels, relation)
+                    # total loss of biaffine module
                     loss = (-p + relation_loss) / relation.size(0)
-                    # print(p, relation_loss)
-                    # loss=p
                     loss = loss * ratio
                     loss.backward()
 

@@ -20,12 +20,26 @@ from inputters.dataset import load_fields_from_vocab
 
 class NMTModel(nn.Module):
     def __init__(self, encoder, decoder):
+        '''
+
+        :param encoder:
+        :param decoder: decoder is a list---[decoder(transformer),reconstructor]
+        '''
         super(NMTModel, self).__init__()
         self.encoder = encoder
         self.decoder = decoder[0]
         self.ddecoder = decoder[1]
 
     def forward(self, src, tgt, stgt, structure, lengths):
+        '''
+        same as baseline exclude param stgt
+        :param src:
+        :param tgt:
+        :param stgt: reconstructor input
+        :param structure:
+        :param lengths:
+        :return: the output of decoder and reconstructor if train, only decoder's else
+        '''
         tgt = tgt[:-1]  # exclude last target from inputs
         _, memory_bank, lengths = self.encoder(src[1:], structure, lengths-1)  # src: ......<EOS>
         self.decoder.init_state(src[1:], memory_bank)
@@ -155,7 +169,7 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
     tgt_dict = fields["tgt"].vocab
     tgt_embeddings = build_embeddings(model_opt, tgt_dict, for_encoder='tgt')
 
-    # Build decoder.
+    # Build reconstructor.
     stgt_dict = fields["stgt"].vocab
     stgt_embeddings = build_embeddings(model_opt, stgt_dict, for_encoder='stgt')
 
@@ -168,7 +182,7 @@ def build_base_model(model_opt, fields, gpu, checkpoint=None):
 
         tgt_embeddings.word_lut.weight = src_embeddings.word_lut.weight
         stgt_embeddings.word_lut.weight = src_embeddings.word_lut.weight
-    # Build decoder.
+    # Build decoder --- transformer decoder and reconstructor.
     decoder = [build_decoder(model_opt, tgt_embeddings), build_reconstructor(model_opt, stgt_embeddings)]
 
     # Build NMTModel(= encoder + decoder).
