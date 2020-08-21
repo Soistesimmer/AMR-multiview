@@ -35,9 +35,12 @@ We use the depth-first traversal strategy as in [Konstas et al.](https://github.
 ## Training 
 
 First, modify the PATH within "train.sh". "data_prefix" is the preprocessing directory generated above. Note the prefix gq. For example "./workspace/data/gq". Finally, execute the corresponding script file, such as ```sh train.sh```.
+> thanks to [@xdqkid](https://github.com/xdqkid), the [issue](https://github.com/Soistesimmer/AMR-multiview/issues/1) is corrected in [reconstructor_v2](https://github.com/Soistesimmer/AMR-multiview/tree/master/model/reconstructor_v2) directory. The mistake influences the hyperparameter β of view 2. According to the additional experiments below, 0.4 is best choice because linearized graph is always longer than the target sentence.
+
+|0.3|  0.35   | 0.4  | 0.45 | 0.5 |
+|  :----:  | :----:  |:---:|  :----:  | :----:  |
+| 30.84  | 31.06 | 31.50 | 31.39 | 30.93 |
 
 ## Decoding 
 
 You should change the PATH in the "translate.sh" accordingly, and then execute ```bash translate.sh```. 
-
-## Cite 
